@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace Assets.Scripts.Minigame.Models
+{
+    public class ListOfUser
+    {
+        public static List<User> SECTORHOLDERS;
+        public static List<User> ALLUSERS = new List<User>();
+    }
+}

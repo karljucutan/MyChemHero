@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 10367c6c67143f1468d373d2e39e2b55
+timeCreated: 1513755745
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: arch20_027_07
+    100002: Arch27_072_00
+    100004: Arch27_072_01
+    100006: Arch27_072_02
+    100008: Arch27_072_03
+    100010: Arch27_072_04
+    100012: Arch27_072_05
+    100014: Arch27_072_06
+    100016: Arch27_072_07
+    100018: Arch27_072_08
+    100020: Arch27_072_09
+    100022: Arch27_072_10
+    100024: Arch27_072_11
+    100026: Arch27_072_12
+    100028: Arch27_072_13
+    100030: Arch27_072_14
+    100032: Arch27_072_15
+    100034: Arch27_072_16
+    100036: Arch27_072_17
+    100038: Arch27_072_18
+    100040: Arch27_072_19
+    100042: Arch27_072_20
+    100044: Arch27_072_21
+    100046: //RootNode
+    400000: arch20_027_07
+    400002: Arch27_072_00
+    400004: Arch27_072_01
+    400006: Arch27_072_02
+    400008: Arch27_072_03
+    400010: Arch27_072_04
+    400012: Arch27_072_05
+    400014: Arch27_072_06
+    400016: Arch27_072_07
+    400018: Arch27_072_08
+    400020: Arch27_072_09
+    400022: Arch27_072_10
+    400024: Arch27_072_11
+    400026: Arch27_072_12
+    400028: Arch27_072_13
+    400030: Arch27_072_14
+    400032: Arch27_072_15
+    400034: Arch27_072_16
+    400036: Arch27_072_17
+    400038: Arch27_072_18
+    400040: Arch27_072_19
+    400042: Arch27_072_20
+    400044: Arch27_072_21
+    400046: //RootNode
+    2300000: Arch27_072_00
+    2300002: Arch27_072_01
+    2300004: Arch27_072_02
+    2300006: Arch27_072_03
+    2300008: Arch27_072_04
+    2300010: Arch27_072_05
+    2300012: Arch27_072_06
+    2300014: Arch27_072_07
+    2300016: Arch27_072_08
+    2300018: Arch27_072_09
+    2300020: Arch27_072_10
+    2300022: Arch27_072_11
+    2300024: Arch27_072_12
+    2300026: Arch27_072_13
+    2300028: Arch27_072_14
+    2300030: Arch27_072_15
+    2300032: Arch27_072_16
+    2300034: Arch27_072_17
+    2300036: Arch27_072_18
+    2300038: Arch27_072_19
+    2300040: Arch27_072_20
+    2300042: Arch27_072_21
+    3300000: Arch27_072_00
+    3300002: Arch27_072_01
+    3300004: Arch27_072_02
+    3300006: Arch27_072_03
+    3300008: Arch27_072_04
+    3300010: Arch27_072_05
+    3300012: Arch27_072_06
+    3300014: Arch27_072_07
+    3300016: Arch27_072_08
+    3300018: Arch27_072_09
+    3300020: Arch27_072_10
+    3300022: Arch27_072_11
+    3300024: Arch27_072_12
+    3300026: Arch27_072_13
+    3300028: Arch27_072_14
+    3300030: Arch27_072_15
+    3300032: Arch27_072_16
+    3300034: Arch27_072_17
+    3300036: Arch27_072_18
+    3300038: Arch27_072_19
+    3300040: Arch27_072_20
+    3300042: Arch27_072_21
+    4300000: Arch27_072_00
+    4300002: Arch27_072_01
+    4300004: Arch27_072_02
+    4300006: Arch27_072_03
+    4300008: Arch27_072_04
+    4300010: Arch27_072_05
+    4300012: Arch27_072_06
+    4300014: Arch27_072_07
+    4300016: Arch27_072_08
+    4300018: Arch27_072_09
+    4300020: Arch27_072_10
+    4300022: Arch27_072_11
+    4300024: Arch27_072_12
+    4300026: Arch27_072_13
+    4300028: Arch27_072_14
+    4300030: Arch27_072_15
+    4300032: Arch27_072_16
+    4300034: Arch27_072_17
+    4300036: Arch27_072_18
+    4300038: Arch27_072_19
+    4300040: Arch27_072_20
+    4300042: Arch27_072_21
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
