@@ -45,6 +45,9 @@ public class DataPersistor : MonoBehaviour {
     //state kung may team na
     public string state = "";
 
+    //team creation
+
+
     void Awake()
     {
         if (persist == null)

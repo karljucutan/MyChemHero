@@ -257,9 +257,9 @@ public class SectorScript : MonoBehaviour {
         gameObject.GetComponentInParent<DisablerEnabler>().btnDisabler(gameObject.GetComponent<Button>());
     }
 
-    private void conquerorsProfile(int factionId, int face, int hair, int eyes, int nose, int mouth, string username, string score)
+    private void conquerorsProfile(int teamId, int face, int hair, int eyes, int nose, int mouth, string username, string score)
     {
-        //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[factionId];
+        //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[teamId];
         //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[face];
         //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[hair];
         //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[eyes];
@@ -285,7 +285,7 @@ public class SectorScript : MonoBehaviour {
             ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>(), 255, 255, 255, 255);
             ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>(), 255, 255, 255, 255);
             ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>(), 255, 255, 255, 255);
-            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[factionId];
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[teamId - 1];
             GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[face];
             GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[hair];
             GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[eyes];
