@@ -192,7 +192,7 @@ public class SectorScript : MonoBehaviour {
             gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[conqueror.UserCharacter.Eyes];
             gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[conqueror.UserCharacter.Nose];
             gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[conqueror.UserCharacter.Mouth];
-            gameObject.transform.Find("Flag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[conqueror.FactionId];
+            gameObject.transform.Find("Flag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[conqueror.TeamId - 1];
 
             //yung mga parts pa ng character        
 
@@ -232,8 +232,8 @@ public class SectorScript : MonoBehaviour {
 
         if (sectorInfo[0] != "")
         {
-            conquerorsProfile(conqueror.FactionId, conqueror.UserCharacter.Face, conqueror.UserCharacter.Hair, conqueror.UserCharacter.Eyes, conqueror.UserCharacter.Nose, conqueror.UserCharacter.Mouth, conqueror.UserName, sectorInfo[1].ToString());
-            //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[conqueror.FactionId];
+            conquerorsProfile(conqueror.TeamId, conqueror.UserCharacter.Face, conqueror.UserCharacter.Hair, conqueror.UserCharacter.Eyes, conqueror.UserCharacter.Nose, conqueror.UserCharacter.Mouth, conqueror.UserName, sectorInfo[1].ToString());
+            //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[conqueror.TeamId];
             //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[conqueror.UserCharacter.Face];
             //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[conqueror.UserCharacter.Hair];
             //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[conqueror.UserCharacter.Eyes];

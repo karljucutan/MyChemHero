@@ -13,7 +13,7 @@ namespace Assets.Scripts.Minigame.Models
         public Character UserCharacter;
         public int SectorsHold;
         public int HelpsMade;
-        public int FactionId;
+        public int TeamId;
         public List<string> Badges = new List<string>();
 
     }

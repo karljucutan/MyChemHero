@@ -11,7 +11,7 @@ public class DataPersistor : MonoBehaviour {
     public static DataPersistor persist;
     public Dictionary<string, string> elementDictionary;
 
-    public Color color;
+    public string colorStr;
     public string compoundNeeded;
     public ModelTime mTime;
 
@@ -33,12 +33,10 @@ public class DataPersistor : MonoBehaviour {
     public int totalPoints = 0;
     public int helpsMade = 0;
 
-    private bool gettingSession = false;
     private bool gettingid = false;
     //setting of ConquerorsProfile
     public int currentSectorNumber;
     private string name = "";
-    public int id = 0;
 
     //list of gameobjects para mapersist sa next scene in MinigameDragDrop
     public List<string> bagCompounds;// = new List<GameObject>();
@@ -62,11 +60,10 @@ public class DataPersistor : MonoBehaviour {
             Destroy(gameObject);
             
         }
+
         user = new User();
         user.UserCharacter = new Character();
-        StartCoroutine(GetPlayerSession());
-        StartCoroutine(GetPlayerId());
-        //StartCoroutine(RetrieveUserInfo());
+
         StartCoroutine(RetrieveAllUsersInfo());
        
         StartCoroutine(starPolling());
@@ -202,30 +199,6 @@ public class DataPersistor : MonoBehaviour {
         };
 
     }
-
-    void OnGUI()
-    {
-      //  GUI.Label(new Rect(10, 10, 200, 50), "Color: " + color.ToString());
-    }
-
-    public void setColor(string _color)
-    {
-        Color newColor = new Color();
-        switch(_color)
-        {
-            case "blue": newColor = Color.blue; SetTeamId(1); break;
-            case "red": newColor = Color.red; SetTeamId(2); break;
-            case "green": newColor = Color.green; SetTeamId(3); break;
-            case "yellow": newColor = Color.yellow; SetTeamId(4); break;
-        }
-        color = newColor;
-    }
-    // 1 = blue 2 = red 3 = green 4 = yellow
-    private void SetTeamId(int colorId)
-    {
-        teamId = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(colorId)).Select(t => t.teamId).SingleOrDefault();
-    }
-
     private IEnumerator starPolling ()
     {
         while(true)
@@ -248,57 +221,9 @@ public class DataPersistor : MonoBehaviour {
     {
         while (true)
         {
-            StartCoroutine(RetrieveUserInfo());
             StartCoroutine(RetrieveUserBadges());
             yield return new WaitForSeconds(2);
         }
-    }
-    IEnumerator GetPlayerSession()
-    {
-        gettingSession = true;
-        WWW get = new WWW(Configuration.BASE_ADDRESS + "unityLink.php");
-        yield return get;
-
-        if (get.error != null)
-        {
-            Debug.Log("There was an error getting the high score: " + get.error);
-
-        }
-        else
-        {
-            // name =get.text;
-            name = "Karl";
-            Debug.Log("name is: "+name);
-        }
-
-        gettingSession = false;
-    }
-    IEnumerator GetPlayerId()
-    {
-        while (gettingSession)
-        {
-            yield return new WaitForSeconds(0.1f);
-        }
-            gettingid = true;
-            Debug.Log("name is: " + name);
-            gettingid = false;
-            WWW get = new WWW(Configuration.BASE_ADDRESS + "getplayerid.php?name="+name);
-            yield return get;
-
-            if (get.error != null)
-            {
-                Debug.Log("There was an error getting the high score: " + get.error);
-
-            }
-            else
-            {
-                user.ID = int.Parse(get.text);
-                id = user.ID;
-                Debug.Log("id is" + user.ID+"we done here");
-            }
-            gettingid = false;
-            StartCoroutine(RetrieveUserInfo());
-        
     }
     IEnumerator GetSectorHolderScores()
     {
@@ -320,44 +245,6 @@ public class DataPersistor : MonoBehaviour {
         }
 
     }
-
-    public IEnumerator RetrieveUserInfo()//FOR USERS INFO
-    {
-    
-            WWW hs_get = new WWW(Configuration.BASE_ADDRESS + "RetrieveInfo.php?pid=" + user.ID);
-            yield return hs_get;
-
-            if (hs_get.error != null)
-            {
-                Debug.Log("There was an error getting the high score: " + hs_get.error);
-
-            }
-            else
-            {
-                string help = hs_get.text;
-                string[] userInfo = help.Split(';');
-
-                //temporary lng to kukuha pa sa php session ng value
-                if (userInfo[1] != "")
-                {
-                    user.UserName = userInfo[0];
-                    user.UserCharacter.Face = int.Parse(userInfo[1]);
-                    user.UserCharacter.Hair = int.Parse(userInfo[2]);
-                    user.UserCharacter.Eyes = int.Parse(userInfo[3]);
-                    user.UserCharacter.Nose = int.Parse(userInfo[4]);
-                    user.UserCharacter.Mouth = int.Parse(userInfo[5]);
-                    user.TotalScore = int.Parse(userInfo[6]);
-                    user.HelpsMade = int.Parse(userInfo[7]);
-                    user.SectorsHold = int.Parse(userInfo[8]);
-                    user.FactionId = int.Parse(userInfo[9]);
-                }
-                //user.SectorsHold = int.Parse();
-
-
-            }
-        
-    }
-
     private IEnumerator RetrieveAllUsersInfo()
     {
         WWW hs_get = new WWW(Configuration.BASE_ADDRESS + "GetAllUsers.php");
@@ -380,7 +267,7 @@ public class DataPersistor : MonoBehaviour {
                 TempUser.UserCharacter = new Character();
                 TempUser.ID = int.Parse(individualValues[0]);
                 TempUser.UserName = individualValues[1];
-                TempUser.FactionId = int.Parse(individualValues[2]);
+                TempUser.TeamId = int.Parse(individualValues[2]);
                 TempUser.TotalScore = int.Parse(individualValues[3]);
                 TempUser.UserCharacter.Face = int.Parse(individualValues[4]);
                 TempUser.UserCharacter.Hair = int.Parse(individualValues[5]);
@@ -395,7 +282,6 @@ public class DataPersistor : MonoBehaviour {
 
         }
     }
-
     private IEnumerator RetrieveUserBadges()
     {
         WWW get = new WWW(Configuration.BASE_ADDRESS + "GetBadges.php?playerid="+user.ID);

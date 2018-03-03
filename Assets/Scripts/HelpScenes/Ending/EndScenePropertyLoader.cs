@@ -35,7 +35,7 @@ public class EndScenePropertyLoader : MonoBehaviour {
         CharacterEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[DataPersistor.persist.user.UserCharacter.Eyes];
         CharacterNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[DataPersistor.persist.user.UserCharacter.Nose];
         CharacterMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[DataPersistor.persist.user.UserCharacter.Mouth];
-        CharacterFlag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[DataPersistor.persist.user.FactionId];
+        CharacterFlag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[DataPersistor.persist.user.TeamId];
         UserName.GetComponent<Text>().text = DataPersistor.persist.user.UserName;
     }
 

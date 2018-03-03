@@ -29,14 +29,13 @@ public class CharacterSetter : MonoBehaviour {
         StartCoroutine(PostPresets());
     }
 
-    
     IEnumerator PostTeam()
     {
         postteam_running = true;
         Debug.Log("POSTTEAM");
         //string post_url = Configuration.BASE_ADDRESS + "InsertUser.php?userid="+DataPersistor.persist.user.ID+
         
-        string post_url = Configuration.BASE_ADDRESS + "InsertUser.php?playerid=" + DataPersistor.persist.id+ "&team_id=" + DataPersistor.persist.teamId;
+        string post_url = Configuration.BASE_ADDRESS + "InsertUser.php?playerid=" + DataPersistor.persist.user.ID + "&team_id=" + DataPersistor.persist.teamId;
         WWW hs_post = new WWW(post_url);
         yield return hs_post; // Wait until the download is done
 
@@ -55,7 +54,7 @@ public class CharacterSetter : MonoBehaviour {
         }
 
         Debug.Log("POSTPRESETS");
-        string post_url = Configuration.BASE_ADDRESS + "AddPlayerPreset.php?playerid=" + DataPersistor.persist.id + "&face=" + face_index + "&hair=" + hair_index + "&eyes=" + eyes_index + "&nose=" + nose_index + "&mouth=" + mouth_index;
+        string post_url = Configuration.BASE_ADDRESS + "AddPlayerPreset.php?playerid=" + DataPersistor.persist.user.ID + "&face=" + face_index + "&hair=" + hair_index + "&eyes=" + eyes_index + "&nose=" + nose_index + "&mouth=" + mouth_index;
 
         // Post the URL to the site and create a download object to get the result.
         WWW hs_post = new WWW(post_url);

@@ -14,7 +14,7 @@ public class ButtonConfirm : MonoBehaviour {
     {
         if (DataPersistor.persist != null)
         {
-            DataPersistor.persist.setColor(color);
+            DataPersistor.persist.colorStr = color;
         }
     }
 }
