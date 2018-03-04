@@ -36,7 +36,6 @@ public class LoadScreeenControl : MonoBehaviour {
     }
     IEnumerator GetPlayerId()
     {
-        Debug.Log("name is: " + name);
         WWW get = new WWW(Configuration.BASE_ADDRESS + "getplayerid.php?name=" + name);
         yield return get;
 
@@ -92,7 +91,7 @@ public class LoadScreeenControl : MonoBehaviour {
 
         DataPersistor.persist.state = get.text;
         Debug.Log("STATE:   " + DataPersistor.persist.state);
-        Debug.Log("GET:   " + get.text);
+        //Debug.Log("GET:   " + get.text);
         if (get.error != null)
         {
             Debug.Log("There was an error getting the high score: " + get.error);

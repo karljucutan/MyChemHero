@@ -16,7 +16,7 @@ public class CharacterSetter : MonoBehaviour {
     private int mouth_index;
 
     private bool postteam_running = false;
-    private bool postpresets_running = false;
+    //private bool postpresets_running = false;
 
     public void SendCharacterPreSet()
     {

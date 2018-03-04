@@ -31,7 +31,6 @@ public class LevelManager : MonoBehaviour {
         else
         {
             string help = get.text;
-            Debug.Log(help + "");
             DataPersistor.persist.values = help.Split('+');
         }
         StartCoroutine(GetSectorHolderScores());
@@ -70,7 +69,6 @@ public class LevelManager : MonoBehaviour {
 
                 if(ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
                     ListOfUser.ALLUSERS.Add(TempUser);
-                Debug.Log("List of User Count: " + ListOfUser.ALLUSERS.Count.ToString());
 
             }
 
@@ -96,7 +94,7 @@ public class LevelManager : MonoBehaviour {
             for (int i = 0; i < badges.Length - 1; i++)
             {
                 DataPersistor.persist.user.Badges.Add(badges[i]);
-                Debug.Log(DataPersistor.persist.user.Badges[i] + "BADGETO");
+                //Debug.Log(DataPersistor.persist.user.Badges[i] + "BADGETO");
             }
 
         }

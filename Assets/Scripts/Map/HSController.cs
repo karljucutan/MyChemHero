@@ -26,9 +26,9 @@ public class HSController : MonoBehaviour
         HSController.Instance.startGetScores();
 	}
 
-	private string secretKey = "123456789"; // Edit this value and make sure it's the same as the one stored on the server
-    string addScoreURL = "leaderboardtry.000webhostapp.com/addscore.php?"; //be sure to add a ? to your url
-    string highscoreURL = "leaderboardtry.000webhostapp.com/display.php";
+	//private string secretKey = "123456789"; // Edit this value and make sure it's the same as the one stored on the server
+    //string addScoreURL = "leaderboardtry.000webhostapp.com/addscore.php?"; //be sure to add a ? to your url
+    //string highscoreURL = "leaderboardtry.000webhostapp.com/display.php";
 
 	//for testing
 	public string uniqueID;

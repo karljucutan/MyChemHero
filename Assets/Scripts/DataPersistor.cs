@@ -32,10 +32,9 @@ public class DataPersistor : MonoBehaviour {
     public int totalPoints = 0;
     public int helpsMade = 0;
 
-    private bool gettingid = false;
     //setting of ConquerorsProfile
     public int currentSectorNumber;
-    private string name = "";
+    //private string name = "";
 
     //list of gameobjects para mapersist sa next scene in MinigameDragDrop
     public List<string> bagCompounds;// = new List<GameObject>();
@@ -248,7 +247,6 @@ public class DataPersistor : MonoBehaviour {
 
                 if (ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
                     ListOfUser.ALLUSERS.Add(TempUser);
-                Debug.Log("List of User Count: " + ListOfUser.ALLUSERS.Count.ToString());
 
             }
 
