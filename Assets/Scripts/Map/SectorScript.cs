@@ -29,7 +29,8 @@ public class SectorScript : MonoBehaviour {
     {
        
         confirm = GameObject.Find("ConfirmDialog");
-        
+        conqueror = new User();
+        conqueror.UserCharacter = new Character();
       
     }
     void Start()
@@ -164,20 +165,18 @@ public class SectorScript : MonoBehaviour {
             
         };
 
-        string numberString;
-        elementNumberDictionary.TryGetValue(gameObject.name, out numberString);
-        sectorNumber = int.Parse(numberString);
+        string numberString;                                                    //
+        elementNumberDictionary.TryGetValue(gameObject.name, out numberString); //
+        sectorNumber = int.Parse(numberString);                                 //setting of sector number; dependent with individual, manually encoded button names
     }
 
     // Update is called once per frame
     void Update()
     {
-
         sectorInfo = DataPersistor.persist.values[sectorNumber - 1].Split(';');
         if (sectorInfo[0] != "")
         {
             conqueror = ListOfUser.ALLUSERS.Where(u => u.ID.Equals(int.Parse(sectorInfo[0]))).FirstOrDefault();
-
 
             // gameObject.transform.Find("Conqueror").GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("BannerRed");
             ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>(), 255, 255, 255, 255);
@@ -186,6 +185,7 @@ public class SectorScript : MonoBehaviour {
             ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>(), 255, 255, 255, 255);
             ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>(), 255, 255, 255, 255);
             ChangeColorAlpha(gameObject.transform.Find("Flag").GetComponent<Image>(), 255, 255, 255, 255);
+
 
             gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[conqueror.UserCharacter.Face];
             gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[conqueror.UserCharacter.Hair];

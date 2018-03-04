@@ -9,15 +9,14 @@ using System.Linq;
 public class DataPersistor : MonoBehaviour {
 
     public static DataPersistor persist;
-    public Dictionary<string, string> elementDictionary;
+    public Dictionary<string, string> elementNameDictionary;
 
     public string colorStr;
     public string compoundNeeded;
     public ModelTime mTime;
 
     public User user;
-    public User TempUser;
-    public string[] values;
+    public string[] values; //sector holder values
 
     //teamselection and character customization
     public int teamSelecetionFactionId;// TEAM ID NA GAGAMITIN
@@ -63,15 +62,11 @@ public class DataPersistor : MonoBehaviour {
             Destroy(gameObject);
             
         }
-
         user = new User();
         user.UserCharacter = new Character();
+        StartCoroutine(getSectorHolderValuesOnce());
+        StartCoroutine(populateListOfUsersOnce());
 
-        StartCoroutine(RetrieveAllUsersInfo());
-       
-        StartCoroutine(starPolling());
-        StartCoroutine(starPollingNewUsers());
-        StartCoroutine(starPollingUser());
     }
 
     void Start()
@@ -79,7 +74,7 @@ public class DataPersistor : MonoBehaviour {
         DataPersistor.persist.bagCompounds = new List<string>();
         mTime = new ModelTime();
 
-        elementDictionary = new Dictionary<string, string>
+        elementNameDictionary = new Dictionary<string, string>
         {
             {"H","Hydrogen"},
             {"He","Helium"},
@@ -202,54 +197,27 @@ public class DataPersistor : MonoBehaviour {
         };
 
     }
-    private IEnumerator starPolling ()
-    {
-        while(true)
-        {
-            StartCoroutine(GetSectorHolderScores());
-           
-            yield return new WaitForSeconds(2);
-        }
-    }
-    private IEnumerator starPollingNewUsers()
-    {
-        while (true)
-        {
-            StartCoroutine(RetrieveAllUsersInfo());
 
-            yield return new WaitForSeconds(3);
-        }
-    }
-    private IEnumerator starPollingUser()
+    IEnumerator getSectorHolderValuesOnce()
     {
-        while (true)
-        {
-            StartCoroutine(RetrieveUserBadges());
-            yield return new WaitForSeconds(2);
-        }
-    }
-    IEnumerator GetSectorHolderScores()
-    {
-        
         WWW get = new WWW(Configuration.BASE_ADDRESS + "GetSectorHolders.php");
         yield return get;
 
         if (get.error != null)
         {
             Debug.Log("There was an error getting the high score: " + get.error);
-
         }
         else
         {
             string help = get.text;
-            Debug.Log(help + "");
             values = help.Split('+');
-
         }
-
-    }
-    private IEnumerator RetrieveAllUsersInfo()
+        Debug.Log("Done getting SectorValues once");
+    }//need para hindi mag out of bounds error yung polling ng sector values sa Map
+    private IEnumerator populateListOfUsersOnce()
     {
+        User TempUser = new User();
+
         WWW hs_get = new WWW(Configuration.BASE_ADDRESS + "GetAllUsers.php");
         yield return hs_get;
 
@@ -263,7 +231,7 @@ public class DataPersistor : MonoBehaviour {
             string help = hs_get.text;
 
             string[] userInfo = help.Split('+');
-            for (int i = 0; i < userInfo.Length-1; i++)
+            for (int i = 0; i < userInfo.Length - 1; i++)
             {
                 string[] individualValues = userInfo[i].Split(';');
                 TempUser = new User();
@@ -278,41 +246,13 @@ public class DataPersistor : MonoBehaviour {
                 TempUser.UserCharacter.Nose = int.Parse(individualValues[7]);
                 TempUser.UserCharacter.Mouth = int.Parse(individualValues[8]);
 
-                ListOfUser.ALLUSERS.Add(TempUser);
+                if (ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
+                    ListOfUser.ALLUSERS.Add(TempUser);
+                Debug.Log("List of User Count: " + ListOfUser.ALLUSERS.Count.ToString());
 
-               
             }
 
         }
-    }
-    private IEnumerator RetrieveUserBadges()
-    {
-        WWW get = new WWW(Configuration.BASE_ADDRESS + "GetBadges.php?playerid="+user.ID);
-        yield return get;
-
-        if (get.error != null)
-        {
-            Debug.Log("There was an error getting the high score: " + get.error);
-        }
-        else
-        {
-            user.Badges.Clear();
-            string help = get.text;
-            //Debug.Log(help + "");
-            string[] badges = help.Split(';');
-            
-            for(int i = 0; i < badges.Length-1; i++)
-            {
-               user.Badges.Add(badges[i]);
-               Debug.Log(user.Badges[i]+"BADGETO");
-            }
-
-        }
-    }
-
-   
-
-   
-
-  
+        Debug.Log("Done populating ListOfUser once");
+    } //need para hindi object reference not set to an instance of an object yung conqueror.UserCharacter.Face
 }
