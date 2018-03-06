@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using Assets.Scripts;
 
 public class SectorScript : MonoBehaviour {
     
@@ -178,6 +179,12 @@ public class SectorScript : MonoBehaviour {
         {
             conqueror = ListOfUser.ALLUSERS.Where(u => u.ID.Equals(int.Parse(sectorInfo[0]))).FirstOrDefault();
 
+            var city = ListOfCity.Cities.FirstOrDefault(c => c.Sectors.Any(s => s.sectorNumber.Equals(sectorNumber)));
+            var sector = city.Sectors.Where(s => s.sectorNumber.Equals(sectorNumber)).FirstOrDefault();
+            sector.conqueror.ID = conqueror.ID;
+            sector.conqueror.TeamId = conqueror.TeamId;
+            sector.conqueror.UserName = conqueror.UserName;
+
             // gameObject.transform.Find("Conqueror").GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("BannerRed");
             ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>(), 255, 255, 255, 255);
             ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>(), 255, 255, 255, 255);
@@ -215,6 +222,8 @@ public class SectorScript : MonoBehaviour {
 
     public void clicked()
     {
+	    var sad = ListOfCity.Cities;
+
         confirm.SetActive(true);
     
         switch(gameObject.tag)
