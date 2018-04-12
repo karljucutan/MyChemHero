@@ -1380,6 +1380,17 @@ MonoBehaviour:
           m_StringArgument: green
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1360575910}
+        m_MethodName: setTeamid
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &774311865
@@ -2221,6 +2232,17 @@ MonoBehaviour:
           m_StringArgument: blue
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1360575910}
+        m_MethodName: setTeamid
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1049017022
@@ -2388,6 +2410,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: yellow
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1360575910}
+        m_MethodName: setTeamid
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -3350,6 +3383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d4b71913ba9d3458619edc1bfd4cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sectorHolderValues: []
 --- !u!1 &1815380155
 GameObject:
   m_ObjectHideFlags: 0
@@ -3754,6 +3788,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: red
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1360575910}
+        m_MethodName: setTeamid
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

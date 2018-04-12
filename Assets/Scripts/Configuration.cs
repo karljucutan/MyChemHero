@@ -7,7 +7,7 @@ namespace Assets.Scripts
 {
     public class Configuration
     {
-        public const string BASE_ADDRESS = "http://192.168.0.9/MyChemHero/";
+        public const string BASE_ADDRESS = "http://localhost/ChemHero/";
        
     }
 }

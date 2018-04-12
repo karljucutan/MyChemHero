@@ -10,26 +10,50 @@ public class FeatureManager : MonoBehaviour {
 
     void OnEnable()
     {
-        LoadFeatures();
+        LoadMaleFeatures();
+        setBody(DataPersistor.persist.teamId - 1); // INDEX OF THE TEAM FOR THE BODY
     }
-    void OnDisable() 
+    //void OnDisable()
+    //{
+    //    SaveFeatures();
+    //}
+
+    public void LoadMaleFeatures()
     {
-        SaveFeatures();
+        features = new List<Feature>();
+        features.Add(new Feature("MALE SET/BODY/800px", transform.Find("Body").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("MALE SET/HAIR/800px", transform.Find("Body").transform.Find("Hair").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("MALE SET/BROWS/800px", transform.Find("Body").transform.Find("EyeBrows").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("MALE SET/EYES/800px", transform.Find("Body").transform.Find("Eyes").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("MALE SET/NOSE/800px", transform.Find("Body").transform.Find("Nose").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("MALE SET/MOUTH/800px", transform.Find("Body").transform.Find("Mouth").GetComponent<SpriteRenderer>()));
+
+        setBody(DataPersistor.persist.teamId - 1);// INDEX OF THE TEAM FOR THE BODY
     }
-    void LoadFeatures()
+    public void LoadFemaleFeatures()
     { 
         features = new List<Feature>();
-        features.Add(new Feature("Face", transform.Find("Face").GetComponent<SpriteRenderer>()));
-        features.Add(new Feature("Hair", transform.Find("Face").transform.Find("Hair").GetComponent<SpriteRenderer>()));
-        features.Add(new Feature("Eyes", transform.Find("Face").transform.Find("Eyes").GetComponent<SpriteRenderer>()));
-        features.Add(new Feature("Nose", transform.Find("Face").transform.Find("Nose").GetComponent<SpriteRenderer>()));
-        features.Add(new Feature("Mouth", transform.Find("Face").transform.Find("Mouth").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("FEMALE SET/BODY/800px", transform.Find("Body").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("FEMALE SET/HAIR/800px", transform.Find("Body").transform.Find("Hair").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("FEMALE SET/BROWS/800px", transform.Find("Body").transform.Find("EyeBrows").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("FEMALE SET/EYES/800px", transform.Find("Body").transform.Find("Eyes").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("FEMALE SET/NOSE/800px", transform.Find("Body").transform.Find("Nose").GetComponent<SpriteRenderer>()));
+        features.Add(new Feature("FEMALE SET/MOUTH/800px", transform.Find("Body").transform.Find("Mouth").GetComponent<SpriteRenderer>()));
+
+        setBody(DataPersistor.persist.teamId - 1);// INDEX OF THE TEAM FOR THE BODY
     }
-    void SaveFeatures()
-    { 
+    //void SaveFeatures()
+    //{ 
         
 
+    //}
+    void setBody(int index)
+    {
+        CheckFeatureIfNull();
+        features[0].currIndex = index;
+        features[0].UpdateFeature();
     }
+
     public void SetCurrent(int index)
     {
         CheckFeatureIfNull();
@@ -73,9 +97,10 @@ public class Feature
         UpdateFeature();
     }
 
-    public void UpdateFeature() 
-    {
-        choices = Resources.LoadAll<Sprite>("CharacterCustomization/" + ID);
+    public void UpdateFeature() { 
+    
+       
+        choices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/" + ID);
 
         if (choices == null || renderer == null)
           return;
