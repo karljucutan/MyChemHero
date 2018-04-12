@@ -22,7 +22,7 @@ public class ButtonConfirm : MonoBehaviour {
         if (DataPersistor.persist != null)
         {
             DataPersistor.persist.colorStr = color;
-            DataPersistor.persist.teamId = teamid;
+            DataPersistor.persist.teamSelecetionFactionId = teamid;
         }
     }
 }

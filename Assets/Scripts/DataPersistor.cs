@@ -19,8 +19,8 @@ public class DataPersistor : MonoBehaviour {
     public string[] values; //sector holder values
 
     //teamselection and character customization
-    //public int teamSelecetionFactionId;// TEAM ID NA GAGAMITIN
-    public int teamId;   // yung color ng team 1= blue 2= red 3= green  4= yellow
+    public int teamSelecetionFactionId; // TEAM COLORID 
+    public int teamId;   
     //public string teamName;
     //public int teamColorId;
 

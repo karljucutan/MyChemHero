@@ -11,7 +11,8 @@ public class FeatureManager : MonoBehaviour {
     void OnEnable()
     {
         LoadMaleFeatures();
-        setBody(DataPersistor.persist.teamId - 1); // INDEX OF THE TEAM FOR THE BODY
+        setBody(DataPersistor.persist.teamSelecetionFactionId - 1); // INDEX OF THE TEAM FOR THE BODY
+      
     }
     //void OnDisable()
     //{
@@ -28,7 +29,8 @@ public class FeatureManager : MonoBehaviour {
         features.Add(new Feature("MALE SET/NOSE/800px", transform.Find("Body").transform.Find("Nose").GetComponent<SpriteRenderer>()));
         features.Add(new Feature("MALE SET/MOUTH/800px", transform.Find("Body").transform.Find("Mouth").GetComponent<SpriteRenderer>()));
 
-        setBody(DataPersistor.persist.teamId - 1);// INDEX OF THE TEAM FOR THE BODY
+        setBody(DataPersistor.persist.teamSelecetionFactionId - 1);// INDEX OF THE TEAM FOR THE BODY
+
     }
     public void LoadFemaleFeatures()
     { 
@@ -40,7 +42,8 @@ public class FeatureManager : MonoBehaviour {
         features.Add(new Feature("FEMALE SET/NOSE/800px", transform.Find("Body").transform.Find("Nose").GetComponent<SpriteRenderer>()));
         features.Add(new Feature("FEMALE SET/MOUTH/800px", transform.Find("Body").transform.Find("Mouth").GetComponent<SpriteRenderer>()));
 
-        setBody(DataPersistor.persist.teamId - 1);// INDEX OF THE TEAM FOR THE BODY
+        setBody(DataPersistor.persist.teamSelecetionFactionId - 1);// INDEX OF THE TEAM FOR THE BODY
+      
     }
     //void SaveFeatures()
     //{ 
