@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Assets.Scripts.Minigame.Models;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System;
 
 public class TeamCreation : MonoBehaviour
 {
@@ -67,14 +68,26 @@ public class TeamCreation : MonoBehaviour
 
     public void CreateTeam()
     {
-        StartCoroutine(PostCreatedTeam());
+        DataPersistor.persist.teamSelecetionFactionId = teamColor;
+        // check kung may kapangalan yung team at validations kung may team na or team name
+        var has = ListOfTeams.TeamList.Any(t => t.teamName.Equals(teamNameInputField.text));
+
+        if (teamColor != 0 && teamNameInputField.text != "" && has != true)
+        {
+            // check kung di pa na ccreate yung team
+            var teamIsCreated = ListOfTeams.TeamList.Any(t => t.teamColorId.Equals(teamColor));
+            if (!teamIsCreated)
+            {
+                StartCoroutine(PostCreatedTeam());
+            }
+          
+        }
+
 
     }
    
     IEnumerator PostCreatedTeam()
     {
-        // CHECK KUNG MAY KAPANGALAN
-        // LAGAY TO DUN SA CHAR CUSTOMIZAITON
 
         string post_url = Configuration.BASE_ADDRESS + "createTeam.php?team_name=" + teamName + "&team_colorid=" + teamColor + "&leaderid=" + DataPersistor.persist.user.ID ;
 
@@ -88,10 +101,10 @@ public class TeamCreation : MonoBehaviour
         }
 
         DataPersistor.persist.teamId = int.Parse(CT_post.text);
-      
+        DataPersistor.persist.teamCreator = true;
 
         teamNameInputField.text = "";
-      
+        
         SceneManager.LoadScene("Character Customization");
     }
 
@@ -181,14 +194,12 @@ public class TeamCreation : MonoBehaviour
         for (int i = 0; i < size; i++)
         {
             Debug.Log("LIST OF TEAM: " + ListOfTeams.TeamList.Count);
+            
         }
 
 
-        //var size = ListOfUser.ALLUSERS.Count;
-        //for (int i = 0; i < size; i++)
-        //{
-        //    Debug.Log("LIST OF USER: " + ListOfUser.ALLUSERS);
-        //}
+      
+
     }
 
 

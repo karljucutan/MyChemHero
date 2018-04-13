@@ -7,10 +7,12 @@ public class FeatureManager : MonoBehaviour {
 
     public List<Feature> features;
     public int currentFeature;
+    public string gender;
 
     void OnEnable()
     {
         LoadMaleFeatures();
+        gender = "male";
         setBody(DataPersistor.persist.teamSelecetionFactionId - 1); // INDEX OF THE TEAM FOR THE BODY
       
     }
@@ -30,7 +32,7 @@ public class FeatureManager : MonoBehaviour {
         features.Add(new Feature("MALE SET/MOUTH/800px", transform.Find("Body").transform.Find("Mouth").GetComponent<SpriteRenderer>()));
 
         setBody(DataPersistor.persist.teamSelecetionFactionId - 1);// INDEX OF THE TEAM FOR THE BODY
-
+        gender = "male";
     }
     public void LoadFemaleFeatures()
     { 
@@ -43,7 +45,7 @@ public class FeatureManager : MonoBehaviour {
         features.Add(new Feature("FEMALE SET/MOUTH/800px", transform.Find("Body").transform.Find("Mouth").GetComponent<SpriteRenderer>()));
 
         setBody(DataPersistor.persist.teamSelecetionFactionId - 1);// INDEX OF THE TEAM FOR THE BODY
-      
+        gender = "female";
     }
     //void SaveFeatures()
     //{ 

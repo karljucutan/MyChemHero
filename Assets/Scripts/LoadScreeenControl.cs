@@ -69,15 +69,17 @@ public class LoadScreeenControl : MonoBehaviour {
             if (userInfo[1] != "")
             {
                 DataPersistor.persist.user.UserName = userInfo[0];
-                DataPersistor.persist.user.UserCharacter.Face = int.Parse(userInfo[1]);
+                DataPersistor.persist.user.UserCharacter.Body = int.Parse(userInfo[1]);
                 DataPersistor.persist.user.UserCharacter.Hair = int.Parse(userInfo[2]);
-                DataPersistor.persist.user.UserCharacter.Eyes = int.Parse(userInfo[3]);
-                DataPersistor.persist.user.UserCharacter.Nose = int.Parse(userInfo[4]);
-                DataPersistor.persist.user.UserCharacter.Mouth = int.Parse(userInfo[5]);
-                DataPersistor.persist.user.TotalScore = int.Parse(userInfo[6]);
-                DataPersistor.persist.user.HelpsMade = int.Parse(userInfo[7]);
-                DataPersistor.persist.user.SectorsHold = int.Parse(userInfo[8]);
-                DataPersistor.persist.user.TeamId = int.Parse(userInfo[9]);
+                DataPersistor.persist.user.UserCharacter.EyeBrows = int.Parse(userInfo[3]);
+                DataPersistor.persist.user.UserCharacter.Eyes = int.Parse(userInfo[4]);
+                DataPersistor.persist.user.UserCharacter.Nose = int.Parse(userInfo[5]);
+                DataPersistor.persist.user.UserCharacter.Mouth = int.Parse(userInfo[6]);
+                DataPersistor.persist.user.UserCharacter.Gender = userInfo[7].ToString();
+                DataPersistor.persist.user.TotalScore = int.Parse(userInfo[8]);
+                DataPersistor.persist.user.HelpsMade = int.Parse(userInfo[9]);
+                DataPersistor.persist.user.SectorsHold = int.Parse(userInfo[10]);
+                DataPersistor.persist.user.TeamId = int.Parse(userInfo[11]);
             }
             //user.SectorsHold = int.Parse();
         }

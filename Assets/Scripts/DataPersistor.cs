@@ -21,8 +21,8 @@ public class DataPersistor : MonoBehaviour {
     //teamselection and character customization
     public int teamSelecetionFactionId; // TEAM COLORID 
     public int teamId;   
-    //public string teamName;
-    //public int teamColorId;
+    public bool teamCreator; //bolean if team creator for disabling backbutton in character customization
+    
 
     //end scene
     public string endSceneBG;
@@ -43,7 +43,7 @@ public class DataPersistor : MonoBehaviour {
     //state kung may team na
     public string state = "";
 
-    //team creation
+   
 
 
     void Awake()
@@ -239,11 +239,13 @@ public class DataPersistor : MonoBehaviour {
                 TempUser.UserName = individualValues[1];
                 TempUser.TeamId = int.Parse(individualValues[2]);
                 TempUser.TotalScore = int.Parse(individualValues[3]);
-                TempUser.UserCharacter.Face = int.Parse(individualValues[4]);
+                TempUser.UserCharacter.Body = int.Parse(individualValues[4]);
                 TempUser.UserCharacter.Hair = int.Parse(individualValues[5]);
-                TempUser.UserCharacter.Eyes = int.Parse(individualValues[6]);
-                TempUser.UserCharacter.Nose = int.Parse(individualValues[7]);
-                TempUser.UserCharacter.Mouth = int.Parse(individualValues[8]);
+                TempUser.UserCharacter.EyeBrows = int.Parse(individualValues[6]);
+                TempUser.UserCharacter.Eyes = int.Parse(individualValues[7]);
+                TempUser.UserCharacter.Nose = int.Parse(individualValues[8]);
+                TempUser.UserCharacter.Mouth = int.Parse(individualValues[9]);
+                TempUser.UserCharacter.Gender = individualValues[10].ToString();
 
                 if (ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
                     ListOfUser.ALLUSERS.Add(TempUser);

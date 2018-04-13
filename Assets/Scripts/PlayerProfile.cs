@@ -50,11 +50,12 @@ public class PlayerProfile : MonoBehaviour {
         //StartCoroutine(DataPersistor.persist.RetrieveUserInfo());
 
         UserName.GetComponent<Text>().text = DataPersistor.persist.user.UserName;
-        UserCharFace.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[DataPersistor.persist.user.UserCharacter.Face];
-        UserCharHair.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[DataPersistor.persist.user.UserCharacter.Hair];
-        UserCharEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[DataPersistor.persist.user.UserCharacter.Eyes];
-        UserCharNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[DataPersistor.persist.user.UserCharacter.Nose];
-        UserCharMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[DataPersistor.persist.user.UserCharacter.Mouth];
+        //KAKACOMMENT KO LANG PARA SA TESTING NG INSERTION NG NEW PRESETS
+        //UserCharFace.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[DataPersistor.persist.user.UserCharacter.Face];
+        //UserCharHair.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[DataPersistor.persist.user.UserCharacter.Hair];
+        //UserCharEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[DataPersistor.persist.user.UserCharacter.Eyes];
+        //UserCharNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[DataPersistor.persist.user.UserCharacter.Nose];
+        //UserCharMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[DataPersistor.persist.user.UserCharacter.Mouth];
         UserTotalPoints.GetComponent<Text>().text = DataPersistor.persist.user.TotalScore.ToString();
         UserId.GetComponent<Text>().text = DataPersistor.persist.user.ID.ToString();
         UserNoOfSectorsHold.GetComponent<Text>().text = DataPersistor.persist.user.SectorsHold.ToString();

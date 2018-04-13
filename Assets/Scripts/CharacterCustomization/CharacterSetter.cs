@@ -9,22 +9,26 @@ using System.Linq;
 public class CharacterSetter : MonoBehaviour {
 
     public GameObject FeatureManager;
-    private int face_index;
+    private int body_index;
     private int hair_index;
+    private int eyebrows_index;
     private int eyes_index;
     private int nose_index;
     private int mouth_index;
+    private string gender;
 
     private bool postteam_running = false;
     //private bool postpresets_running = false;
 
     public void SendCharacterPreSet()
     {
-        face_index = FeatureManager.GetComponent<FeatureManager>().features[0].currIndex;
+        body_index = FeatureManager.GetComponent<FeatureManager>().features[0].currIndex;
         hair_index = FeatureManager.GetComponent<FeatureManager>().features[1].currIndex;
-        eyes_index = FeatureManager.GetComponent<FeatureManager>().features[2].currIndex;
-        nose_index = FeatureManager.GetComponent<FeatureManager>().features[3].currIndex;
-        mouth_index = FeatureManager.GetComponent<FeatureManager>().features[4].currIndex;
+        eyebrows_index = FeatureManager.GetComponent<FeatureManager>().features[2].currIndex;
+        eyes_index = FeatureManager.GetComponent<FeatureManager>().features[3].currIndex;
+        nose_index = FeatureManager.GetComponent<FeatureManager>().features[4].currIndex;
+        mouth_index = FeatureManager.GetComponent<FeatureManager>().features[5].currIndex;
+        gender = FeatureManager.GetComponent<FeatureManager>().gender;
         StartCoroutine(PostTeam());
         StartCoroutine(PostPresets());
     }
@@ -54,7 +58,7 @@ public class CharacterSetter : MonoBehaviour {
         }
 
         Debug.Log("POSTPRESETS");
-        string post_url = Configuration.BASE_ADDRESS + "AddPlayerPreset.php?playerid=" + DataPersistor.persist.user.ID + "&face=" + face_index + "&hair=" + hair_index + "&eyes=" + eyes_index + "&nose=" + nose_index + "&mouth=" + mouth_index;
+        string post_url = Configuration.BASE_ADDRESS + "AddPlayerPreset.php?playerid=" + DataPersistor.persist.user.ID + "&body=" + body_index + "&hair=" + hair_index + "&eyebrows="+ eyebrows_index + "&eyes=" + eyes_index + "&nose=" + nose_index + "&mouth=" + mouth_index + "&gender=" + gender;
 
         // Post the URL to the site and create a download object to get the result.
         WWW hs_post = new WWW(post_url);
