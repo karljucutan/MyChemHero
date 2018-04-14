@@ -189,12 +189,12 @@ public class SectorScript : MonoBehaviour {
             ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>(), 255, 255, 255, 255);
             ChangeColorAlpha(gameObject.transform.Find("Flag").GetComponent<Image>(), 255, 255, 255, 255);
 
-            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body").GetComponent<Image>().overrideSprite = GetCharacterBody();
-            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>().overrideSprite = GetCharacterHair();
-            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>().overrideSprite = GetCharacterEyebrows();
-            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>().overrideSprite = GetCharacterEyes();
-            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>().overrideSprite = GetCharacterNose();
-            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>().overrideSprite = GetCharacterMouth();
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterBody(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Body);
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterHair(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Hair);
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyebrows(conqueror.UserCharacter.Gender, conqueror.UserCharacter.EyeBrows);
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyes(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Eyes);
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterNose(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Nose);
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterMouth(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Mouth);
             gameObject.transform.Find("Flag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[conqueror.TeamId - 1];
 
              
@@ -280,13 +280,13 @@ public class SectorScript : MonoBehaviour {
             ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>(), 255, 255, 255, 255);
 
             GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Flag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[conqueror.TeamId - 1];
-            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body").GetComponent<Image>().overrideSprite = GetCharacterBody();
-            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>().overrideSprite = GetCharacterHair();
-            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>().overrideSprite = GetCharacterEyebrows();
-            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>().overrideSprite = GetCharacterEyes();
-            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>().overrideSprite = GetCharacterNose();
-            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>().overrideSprite = GetCharacterMouth();
-           
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterBody(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Body);
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterHair(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Hair);
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyebrows(conqueror.UserCharacter.Gender, conqueror.UserCharacter.EyeBrows);
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyes(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Eyes);
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterNose(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Nose);
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterMouth(conqueror.UserCharacter.Gender, conqueror.UserCharacter.Mouth);
+          
         }
     }
 
@@ -295,87 +295,5 @@ public class SectorScript : MonoBehaviour {
         img.color = new Color(r, g, b, a);
     }
 
-    private Sprite GetCharacterBody()
-    {
-        Sprite body;
-        if(conqueror.UserCharacter.Gender.Equals("male"))
-        {
-             body = profilesetter.GetComponent<ProfileSetter>().MaleBodyChoices[conqueror.UserCharacter.Body];
-        }
-        else
-        {
-             body = profilesetter.GetComponent<ProfileSetter>().FemaleBodyChoices[conqueror.UserCharacter.Body];
-        }
-        return body;
-    }
-
-    private Sprite GetCharacterHair()
-    {
-        Sprite hair;
-        if(conqueror.UserCharacter.Gender.Equals("male"))
-        {
-            hair = profilesetter.GetComponent<ProfileSetter>().MaleHairChoices[conqueror.UserCharacter.Hair];
-        }
-        else
-        {
-            hair = profilesetter.GetComponent<ProfileSetter>().FemaleHairChoices[conqueror.UserCharacter.Hair];
-        }
-        return hair;
-    }
-
-    private Sprite GetCharacterEyebrows()
-    {
-        Sprite eyebrows;
-        if (conqueror.UserCharacter.Gender.Equals("male"))
-        {
-            eyebrows = profilesetter.GetComponent<ProfileSetter>().MaleEyeBrowsChoices[conqueror.UserCharacter.EyeBrows];
-        }
-        else
-        {
-            eyebrows = profilesetter.GetComponent<ProfileSetter>().FemaleEyeBrowsChoices[conqueror.UserCharacter.EyeBrows];
-        }
-        return eyebrows;
-    }
-
-    private Sprite GetCharacterEyes()
-    {
-        Sprite eyes;
-        if (conqueror.UserCharacter.Gender.Equals("male"))
-        {
-            eyes = profilesetter.GetComponent<ProfileSetter>().MaleEyesChoices[conqueror.UserCharacter.Eyes];
-        }
-        else
-        {
-            eyes = profilesetter.GetComponent<ProfileSetter>().FemaleEyesChoices[conqueror.UserCharacter.Eyes];
-        }
-        return eyes;
-    }
-
-    private Sprite GetCharacterNose()
-    {
-        Sprite nose;
-        if (conqueror.UserCharacter.Gender.Equals("male"))
-        {
-            nose = profilesetter.GetComponent<ProfileSetter>().MaleNoseChoices[conqueror.UserCharacter.Nose];
-        }
-        else
-        {
-            nose = profilesetter.GetComponent<ProfileSetter>().FemaleNoseChoices[conqueror.UserCharacter.Nose];
-        }
-        return nose;
-    }
-
-    private Sprite GetCharacterMouth()
-    {
-        Sprite mouth;
-        if (conqueror.UserCharacter.Gender.Equals("male"))
-        {
-            mouth = profilesetter.GetComponent<ProfileSetter>().MaleMouthChoices[conqueror.UserCharacter.Mouth];
-        }
-        else
-        {
-            mouth = profilesetter.GetComponent<ProfileSetter>().FemaleMouthChoices[conqueror.UserCharacter.Mouth];
-        }
-        return mouth;
-    }
+   
 }

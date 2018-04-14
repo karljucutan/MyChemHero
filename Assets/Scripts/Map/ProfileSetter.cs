@@ -45,6 +45,90 @@ public class ProfileSetter : MonoBehaviour {
 
 
     }
-	
+
+    public Sprite GetCharacterBody(string gender, int index)
+    {
+        Sprite body;
+        if (gender.Equals("male"))
+        {
+            body = MaleBodyChoices[index];
+        }
+        else
+        {
+            body = FemaleBodyChoices[index];
+        }
+        return body;
+    }
+
+    public Sprite GetCharacterHair(string gender, int index)
+    {
+        Sprite hair;
+        if (gender.Equals("male"))
+        {
+            hair = MaleHairChoices[index];
+        }
+        else
+        {
+            hair = FemaleHairChoices[index];
+        }
+        return hair;
+    }
+
+    public Sprite GetCharacterEyebrows(string gender, int index)
+    {
+        Sprite eyebrows;
+        if (gender.Equals("male"))
+        {
+            eyebrows = MaleEyeBrowsChoices[index];
+        }
+        else
+        {
+            eyebrows = FemaleEyeBrowsChoices[index];
+        }
+        return eyebrows;
+    }
+
+    public Sprite GetCharacterEyes(string gender, int index)
+    {
+        Sprite eyes;
+        if (gender.Equals("male"))
+        {
+            eyes = MaleEyesChoices[index];
+        }
+        else
+        {
+            eyes = FemaleEyesChoices[index];
+        }
+        return eyes;
+    }
+
+    public Sprite GetCharacterNose(string gender, int index)
+    {
+        Sprite nose;
+        if (gender.Equals("male"))
+        {
+            nose = MaleNoseChoices[index];
+        }
+        else
+        {
+            nose = FemaleNoseChoices[index];
+        }
+        return nose;
+    }
+
+    public Sprite GetCharacterMouth(string gender, int index)
+    {
+        Sprite mouth;
+        if (gender.Equals("male"))
+        {
+            mouth = MaleMouthChoices[index];
+        }
+        else
+        {
+            mouth = FemaleMouthChoices[index];
+        }
+        return mouth;
+    }
+
 
 }
