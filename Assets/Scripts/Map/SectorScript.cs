@@ -15,11 +15,7 @@ public class SectorScript : MonoBehaviour {
     private GameObject resettimerMinigameTapTapCompound;
     // Use this for initialization
     //public GameObject sectorName;
-    private GameObject elements;
-    private GameObject[] columns;
-    private List<Button> buttons;
-
-    private int highScore;
+   
     private string[] sectorInfo;
     private GameObject profilesetter;
     private User conqueror;
@@ -185,20 +181,20 @@ public class SectorScript : MonoBehaviour {
             sector.conqueror.TeamId = conqueror.TeamId;
             sector.conqueror.UserName = conqueror.UserName;
 
-            // gameObject.transform.Find("Conqueror").GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("BannerRed");
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>(), 255, 255, 255, 255);
             ChangeColorAlpha(gameObject.transform.Find("Flag").GetComponent<Image>(), 255, 255, 255, 255);
-            //KAKACOMMENT KO LANG PARA SA TESTING NG INSERTION NG NEW PRESETS
 
-            //gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[conqueror.UserCharacter.Face];
-            //gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[conqueror.UserCharacter.Hair];
-            //gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[conqueror.UserCharacter.Eyes];
-            //gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[conqueror.UserCharacter.Nose];
-            //gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[conqueror.UserCharacter.Mouth];
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body").GetComponent<Image>().overrideSprite = GetCharacterBody();
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>().overrideSprite = GetCharacterHair();
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>().overrideSprite = GetCharacterEyebrows();
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>().overrideSprite = GetCharacterEyes();
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>().overrideSprite = GetCharacterNose();
+            gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>().overrideSprite = GetCharacterMouth();
             gameObject.transform.Find("Flag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[conqueror.TeamId - 1];
 
              
@@ -206,11 +202,12 @@ public class SectorScript : MonoBehaviour {
         }
         else
         {
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(gameObject.transform.Find("ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>(), 255, 255, 255, 0);
             ChangeColorAlpha(gameObject.transform.Find("Flag").GetComponent<Image>(), 255, 255, 255, 0);
         }
 
@@ -222,8 +219,8 @@ public class SectorScript : MonoBehaviour {
 
     public void clicked()
     {
-	    var sad = ListOfCity.Cities;
-
+        var sad = ListOfCity.Cities;
+        var asd = ListOfUser.ALLUSERS;
         confirm.SetActive(true);
     
         switch(gameObject.tag)
@@ -233,7 +230,7 @@ public class SectorScript : MonoBehaviour {
             //case "Metalloids": resettimerMiniGameDragDrop.GetComponent<ResetTimerSetter>().ResetTimer(); break;
             case "Unknown": resettimerMinigameTapTapCompound.GetComponent<ResetTimerSetter>().ResetTimer(); break;
         }
-       // resettimer.GetComponent<ResetTimerSetter>().ResetTimer();
+     
         DataPersistor.persist.currentSectorNumber = sectorNumber;
         DataPersistor.persist.sectorCity = gameObject.tag;
 
@@ -241,21 +238,17 @@ public class SectorScript : MonoBehaviour {
 
         if (sectorInfo[0] != "")
         {
-            //KAKACOMMENT KO LANG PARA SA TESTING NG INSERTION NG NEW PRESETS
-            // conquerorsProfile(conqueror.TeamId, conqueror.UserCharacter.Face, conqueror.UserCharacter.Hair, conqueror.UserCharacter.Eyes, conqueror.UserCharacter.Nose, conqueror.UserCharacter.Mouth, conqueror.UserName, sectorInfo[1].ToString());
-
-
-
+            conquerorsProfile(conqueror.UserName, sectorInfo[1].ToString());
         }
         else
         {
-            conquerorsProfile(0, 0, 0, 0, 0, 0, "???", "00");
+            conquerorsProfile("???", "00");
         }
 
         gameObject.GetComponentInParent<DisablerEnabler>().btnDisabler(gameObject.GetComponent<Button>());
     }
 
-    private void conquerorsProfile(int teamId, int face, int hair, int eyes, int nose, int mouth, string username, string score)
+    private void conquerorsProfile(string username, string score)
     {
         //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[teamId];
         //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[face];
@@ -268,33 +261,121 @@ public class SectorScript : MonoBehaviour {
 
         if(username.Equals("???"))
         {
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>(), 255, 255, 255, 0);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Flag").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>(), 255, 255, 255, 0);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>(), 255, 255, 255, 0);
         }
         else
         {
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>(), 255, 255, 255, 255);
-            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>(), 255, 255, 255, 255);
-            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserFlag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[teamId - 1];
-            //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterFace").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[face];
-            //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterHair").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[hair];
-            //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterEyes").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[eyes];
-            //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterNose").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[nose];
-            //GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/ImageUserCharacterMouth").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[mouth];
-            //KAKACOMMENT KO LANG PARA SA TESTING NG INSERTION NG NEW PRESETS
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Flag").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>(), 255, 255, 255, 255);
+            ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>(), 255, 255, 255, 255);
+
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Flag").GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[conqueror.TeamId - 1];
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body").GetComponent<Image>().overrideSprite = GetCharacterBody();
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Hair").GetComponent<Image>().overrideSprite = GetCharacterHair();
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyebrows").GetComponent<Image>().overrideSprite = GetCharacterEyebrows();
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Eyes").GetComponent<Image>().overrideSprite = GetCharacterEyes();
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Nose").GetComponent<Image>().overrideSprite = GetCharacterNose();
+            GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body/Mouth").GetComponent<Image>().overrideSprite = GetCharacterMouth();
+           
         }
     }
 
     private void ChangeColorAlpha(Image img, int r, int g, int b, int a)
     {
         img.color = new Color(r, g, b, a);
+    }
+
+    private Sprite GetCharacterBody()
+    {
+        Sprite body;
+        if(conqueror.UserCharacter.Gender.Equals("male"))
+        {
+             body = profilesetter.GetComponent<ProfileSetter>().MaleBodyChoices[conqueror.UserCharacter.Body];
+        }
+        else
+        {
+             body = profilesetter.GetComponent<ProfileSetter>().FemaleBodyChoices[conqueror.UserCharacter.Body];
+        }
+        return body;
+    }
+
+    private Sprite GetCharacterHair()
+    {
+        Sprite hair;
+        if(conqueror.UserCharacter.Gender.Equals("male"))
+        {
+            hair = profilesetter.GetComponent<ProfileSetter>().MaleHairChoices[conqueror.UserCharacter.Hair];
+        }
+        else
+        {
+            hair = profilesetter.GetComponent<ProfileSetter>().FemaleHairChoices[conqueror.UserCharacter.Hair];
+        }
+        return hair;
+    }
+
+    private Sprite GetCharacterEyebrows()
+    {
+        Sprite eyebrows;
+        if (conqueror.UserCharacter.Gender.Equals("male"))
+        {
+            eyebrows = profilesetter.GetComponent<ProfileSetter>().MaleEyeBrowsChoices[conqueror.UserCharacter.EyeBrows];
+        }
+        else
+        {
+            eyebrows = profilesetter.GetComponent<ProfileSetter>().FemaleEyeBrowsChoices[conqueror.UserCharacter.EyeBrows];
+        }
+        return eyebrows;
+    }
+
+    private Sprite GetCharacterEyes()
+    {
+        Sprite eyes;
+        if (conqueror.UserCharacter.Gender.Equals("male"))
+        {
+            eyes = profilesetter.GetComponent<ProfileSetter>().MaleEyesChoices[conqueror.UserCharacter.Eyes];
+        }
+        else
+        {
+            eyes = profilesetter.GetComponent<ProfileSetter>().FemaleEyesChoices[conqueror.UserCharacter.Eyes];
+        }
+        return eyes;
+    }
+
+    private Sprite GetCharacterNose()
+    {
+        Sprite nose;
+        if (conqueror.UserCharacter.Gender.Equals("male"))
+        {
+            nose = profilesetter.GetComponent<ProfileSetter>().MaleNoseChoices[conqueror.UserCharacter.Nose];
+        }
+        else
+        {
+            nose = profilesetter.GetComponent<ProfileSetter>().FemaleNoseChoices[conqueror.UserCharacter.Nose];
+        }
+        return nose;
+    }
+
+    private Sprite GetCharacterMouth()
+    {
+        Sprite mouth;
+        if (conqueror.UserCharacter.Gender.Equals("male"))
+        {
+            mouth = profilesetter.GetComponent<ProfileSetter>().MaleMouthChoices[conqueror.UserCharacter.Mouth];
+        }
+        else
+        {
+            mouth = profilesetter.GetComponent<ProfileSetter>().FemaleMouthChoices[conqueror.UserCharacter.Mouth];
+        }
+        return mouth;
     }
 }

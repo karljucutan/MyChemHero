@@ -69,7 +69,7 @@ public class CharacterSetter : MonoBehaviour {
             print("There was an error posting the high score: " + hs_post.error);
         }
 
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Map");
     }
 
     

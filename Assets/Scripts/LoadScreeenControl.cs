@@ -28,7 +28,7 @@ public class LoadScreeenControl : MonoBehaviour {
         else
         {
             // name =get.text;
-            name = "qwe";
+            name = "Karl";
             Debug.Log("name is: " + name);
         }
         StartCoroutine(GetPlayerId());

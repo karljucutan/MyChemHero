@@ -11,6 +11,7 @@ public class FeatureManager : MonoBehaviour {
 
     void OnEnable()
     {
+        LoadFemaleFeatures();
         LoadMaleFeatures();
         gender = "male";
         setBody(DataPersistor.persist.teamSelecetionFactionId - 1); // INDEX OF THE TEAM FOR THE BODY

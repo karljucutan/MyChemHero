@@ -7,18 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public string[] sectorHolderValues;
-    void Awake()
-    {
-        StartCoroutine(GetSectorHolderScores());
-        StartCoroutine(RetrieveAllUsersInfo());
-        StartCoroutine(RetrieveUserBadges());
-    }
+    //public string[] sectorHolderValues;
+    //void Awake()
+    //{
+    //    StartCoroutine(GetSectorHolderScores());
+    //    StartCoroutine(RetrieveAllUsersInfo());
+    //    StartCoroutine(RetrieveUserBadges());
+    //}
     public void LoadLevel(string levelname)
     {
         SceneManager.LoadScene(levelname);
     }
 
+    /*
     IEnumerator GetSectorHolderScores()
     {
         WWW get = new WWW(Configuration.BASE_ADDRESS + "GetSectorHolders.php");
@@ -37,6 +38,7 @@ public class LevelManager : MonoBehaviour {
     }
     private IEnumerator RetrieveAllUsersInfo()
     {
+        Debug.Log("GETTING ALL USERS FROM LEVELMANAGER");
         User TempUser = new User();
 
         WWW hs_get = new WWW(Configuration.BASE_ADDRESS + "GetAllUsers.php");
@@ -102,4 +104,5 @@ public class LevelManager : MonoBehaviour {
         }
         StartCoroutine(RetrieveUserBadges());
     }
+    */
 }
