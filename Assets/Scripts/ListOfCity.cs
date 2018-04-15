@@ -12,6 +12,7 @@ namespace Assets.Scripts
         {
             new City()
             {
+                //White
                 Name = "Group1",
                 Sectors = new List<Sector>()
                 {   new Sector(){sectorNumber=1, conqueror = new User()},
@@ -23,7 +24,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //red
                 Name = "Group2",
                 Sectors = new List<Sector>()
                 {
@@ -36,7 +37,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //blue
                 Name = "Group3",
                 Sectors = new List<Sector>()
                 {
@@ -48,7 +49,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //light Green
                 Name = "Group4",
                 Sectors = new List<Sector>()
                 {
@@ -61,7 +62,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //purple
                 Name = "Group5",
                 Sectors = new List<Sector>()
                 {
@@ -75,6 +76,7 @@ namespace Assets.Scripts
             },
             new City()
             {
+                //yellow
                 Name = "Group6",
                 Sectors = new List<Sector>()
                 {
@@ -87,7 +89,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //light brown
                 Name = "Group7",
                 Sectors = new List<Sector>()
                 {
@@ -101,6 +103,7 @@ namespace Assets.Scripts
             },
             new City()
             {
+                //light blue
                 Name = "Group8",
                 Sectors = new List<Sector>()
                 {
@@ -112,7 +115,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //pink
                 Name = "Group9",
                 Sectors = new List<Sector>()
                 {
@@ -125,6 +128,7 @@ namespace Assets.Scripts
             },
             new City()
             {
+                //green
                 Name = "Group10",
                 Sectors = new List<Sector>()
                 {
@@ -136,7 +140,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //orange
                 Name = "Group11",
                 Sectors = new List<Sector>()
                 {
@@ -148,7 +152,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {//rgb(20, 153, 145)
                 Name = "Group12",
                 Sectors = new List<Sector>()
                 {
@@ -160,7 +164,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {//flesh
                 Name = "Group13",
                 Sectors = new List<Sector>()
                 {
@@ -173,7 +177,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   // rgb 204, 255, 204
                 Name = "Group14",
                 Sectors = new List<Sector>()
                 {
@@ -185,7 +189,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //rgb 102 178 255
                 Name = "Group15",
                 Sectors = new List<Sector>()
                 {
@@ -197,7 +201,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {   //rgb 192 192 192
                 Name = "Group16",
                 Sectors = new List<Sector>()
                 {
@@ -209,7 +213,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {//	rgb(153, 255, 204)
                 Name = "Group17",
                 Sectors = new List<Sector>()
                 {
@@ -221,7 +225,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {//rgb(255, 153, 153)
                 Name = "Group18",
                 Sectors = new List<Sector>()
                 {
@@ -233,7 +237,7 @@ namespace Assets.Scripts
                 }
             },
             new City()
-            {
+            {//rgb(240, 255, 255)
                 Name = "Group19",
                 Sectors = new List<Sector>()
                 {
