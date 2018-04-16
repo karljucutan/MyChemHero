@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Team Selection.unity
     guid: 278efef375593094da823f745783f3d5
   - enabled: 1
-    path: Assets/_Scenes/MainMenu.unity
-    guid: 2cd39b534cad98746a8299f14c1ff2f9
-  - enabled: 1
     path: Assets/_Scenes/HelpScenes/Help_AsGoodAsNew.unity
     guid: cc47d5af639222246b59f6271029fb26
   - enabled: 1
@@ -69,11 +66,11 @@ EditorBuildSettings:
     path: Assets/_Scenes/MinigameTapCompound.unity
     guid: 1fe6d9d4c48c77048b87b762c50da297
   - enabled: 1
-    path: Assets/_Scenes/MyProfile.unity
+    path: 
     guid: 461fde96c480a57499ee6f56647d746d
   - enabled: 1
     path: Assets/_Scenes/Prologue.unity
     guid: 33ff445090150ba4382b94367c29069b
   - enabled: 1
-    path: Assets/_Scenes/Settings.unity
+    path: 
     guid: fd6e7cfdc95ec0341b0f474b086bb977
