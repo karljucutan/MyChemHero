@@ -7,18 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public string[] sectorHolderValues;
-    void Awake()
-    {
-        StartCoroutine(GetSectorHolderScores());
-        StartCoroutine(RetrieveAllUsersInfo());
-        StartCoroutine(RetrieveUserBadges());
-    }
+    //public string[] sectorHolderValues;
+    //void Awake()
+    //{
+    //    StartCoroutine(GetSectorHolderScores());
+    //    StartCoroutine(RetrieveAllUsersInfo());
+    //    StartCoroutine(RetrieveUserBadges());
+    //}
     public void LoadLevel(string levelname)
     {
         SceneManager.LoadScene(levelname);
     }
 
+    /*
     IEnumerator GetSectorHolderScores()
     {
         WWW get = new WWW(Configuration.BASE_ADDRESS + "GetSectorHolders.php");
@@ -37,6 +38,7 @@ public class LevelManager : MonoBehaviour {
     }
     private IEnumerator RetrieveAllUsersInfo()
     {
+        Debug.Log("GETTING ALL USERS FROM LEVELMANAGER");
         User TempUser = new User();
 
         WWW hs_get = new WWW(Configuration.BASE_ADDRESS + "GetAllUsers.php");
@@ -61,11 +63,13 @@ public class LevelManager : MonoBehaviour {
                 TempUser.UserName = individualValues[1];
                 TempUser.TeamId = int.Parse(individualValues[2]);
                 TempUser.TotalScore = int.Parse(individualValues[3]);
-                TempUser.UserCharacter.Face = int.Parse(individualValues[4]);
+                TempUser.UserCharacter.Body = int.Parse(individualValues[4]);
                 TempUser.UserCharacter.Hair = int.Parse(individualValues[5]);
-                TempUser.UserCharacter.Eyes = int.Parse(individualValues[6]);
-                TempUser.UserCharacter.Nose = int.Parse(individualValues[7]);
-                TempUser.UserCharacter.Mouth = int.Parse(individualValues[8]);
+                TempUser.UserCharacter.EyeBrows = int.Parse(individualValues[6]);
+                TempUser.UserCharacter.Eyes = int.Parse(individualValues[7]);
+                TempUser.UserCharacter.Nose = int.Parse(individualValues[8]);
+                TempUser.UserCharacter.Mouth = int.Parse(individualValues[9]);
+                TempUser.UserCharacter.Gender = individualValues[10].ToString();
 
                 if(ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
                     ListOfUser.ALLUSERS.Add(TempUser);
@@ -100,4 +104,5 @@ public class LevelManager : MonoBehaviour {
         }
         StartCoroutine(RetrieveUserBadges());
     }
+    */
 }

@@ -30,12 +30,12 @@ public class EndScenePropertyLoader : MonoBehaviour {
 
     private void Start()
     {
-        CharacterFace.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[DataPersistor.persist.user.UserCharacter.Face];
-        CharacterHair.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[DataPersistor.persist.user.UserCharacter.Hair];
-        CharacterEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[DataPersistor.persist.user.UserCharacter.Eyes];
-        CharacterNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[DataPersistor.persist.user.UserCharacter.Nose];
-        CharacterMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[DataPersistor.persist.user.UserCharacter.Mouth];
-        CharacterFlag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[DataPersistor.persist.user.TeamId - 1];
+        //CharacterFace.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[DataPersistor.persist.user.UserCharacter.Face];
+        //CharacterHair.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[DataPersistor.persist.user.UserCharacter.Hair];
+        //CharacterEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[DataPersistor.persist.user.UserCharacter.Eyes];
+        //CharacterNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[DataPersistor.persist.user.UserCharacter.Nose];
+        //CharacterMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[DataPersistor.persist.user.UserCharacter.Mouth];
+        CharacterFlag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[DataPersistor.persist.user.TeamId];
         UserName.GetComponent<Text>().text = DataPersistor.persist.user.UserName;
     }
 

@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class PlayerProfile : MonoBehaviour {
     //Myprofile
     public GameObject UserName;
-    public GameObject UserCharFace;
+    public GameObject UserCharBody;
     public GameObject UserCharHair;
+    public GameObject UserCharEyebrows;
     public GameObject UserCharEyes;
     public GameObject UserCharNose;
     public GameObject UserCharMouth;
@@ -17,15 +18,9 @@ public class PlayerProfile : MonoBehaviour {
     public GameObject UserNoOfSectorsHold;
     public GameObject UserHelpsMade;
     public GameObject PanelAchievement;
-    //public GameObject Badge2;
-    //public GameObject Badge3;
-    //public GameObject Badge4;
-    //public GameObject Badge5;
-   
 
     public GameObject profilesetter;
 
-    public Sprite[] TeamFlag;
     //TeamProfile
     //public GameObject;
     //public GameObject;
@@ -36,8 +31,6 @@ public class PlayerProfile : MonoBehaviour {
 
     void Start()
     {
-        
-
         for (int i = 0; i < DataPersistor.persist.user.Badges.Count; i++)
         {
 
@@ -50,11 +43,12 @@ public class PlayerProfile : MonoBehaviour {
         //StartCoroutine(DataPersistor.persist.RetrieveUserInfo());
 
         UserName.GetComponent<Text>().text = DataPersistor.persist.user.UserName;
-        UserCharFace.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[DataPersistor.persist.user.UserCharacter.Face];
-        UserCharHair.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[DataPersistor.persist.user.UserCharacter.Hair];
-        UserCharEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[DataPersistor.persist.user.UserCharacter.Eyes];
-        UserCharNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[DataPersistor.persist.user.UserCharacter.Nose];
-        UserCharMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[DataPersistor.persist.user.UserCharacter.Mouth];
+        UserCharBody.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterBody(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Body);
+        UserCharHair.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterHair(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Hair);
+        UserCharEyebrows.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyebrows(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.EyeBrows);
+        UserCharEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyes(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Eyes);
+        UserCharNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterNose(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Nose);
+        UserCharMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterMouth(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Mouth);
         UserTotalPoints.GetComponent<Text>().text = DataPersistor.persist.user.TotalScore.ToString();
         UserId.GetComponent<Text>().text = DataPersistor.persist.user.ID.ToString();
         UserNoOfSectorsHold.GetComponent<Text>().text = DataPersistor.persist.user.SectorsHold.ToString();
@@ -72,13 +66,10 @@ public class PlayerProfile : MonoBehaviour {
 
 
         //teamprofile
-        TeamFlag = Resources.LoadAll<Sprite>("Sprites/TeamFlag");
+      
 
     }
-    private void Awake()
-    {
    
-    }
 
    
 

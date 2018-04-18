@@ -14,7 +14,7 @@ public class SceneRandomizer : MonoBehaviour {
 
     public void loadrandomScene()
     {
-        randomNumber = Random.Range(3, 13);
+        randomNumber = Random.Range(2,12);
         SceneManager.LoadScene(randomNumber);
     }
 
