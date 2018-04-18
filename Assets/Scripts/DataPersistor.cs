@@ -65,6 +65,7 @@ public class DataPersistor : MonoBehaviour {
         user.UserCharacter = new Character();
         StartCoroutine(getSectorHolderValuesOnce());
         StartCoroutine(populateListOfUsersOnce());
+        StartCoroutine(GetTeamsCreated());
 
     }
 
@@ -255,4 +256,38 @@ public class DataPersistor : MonoBehaviour {
         }
         Debug.Log("Done populating ListOfUser once");
     } //need para hindi object reference not set to an instance of an object yung conqueror.UserCharacter.Face
+
+    private IEnumerator GetTeamsCreated()
+    {
+            WWW get = new WWW(Configuration.BASE_ADDRESS + "getTeam.php");
+            yield return get;
+
+            if (get.error != null)
+            {
+                Debug.Log("There was an error getting the team: " + get.error);
+
+            }
+            else
+            {
+                string teams = get.text;
+                Debug.Log(teams + "");
+                string[] teamInfo = teams.Split('+');
+                ListOfTeams.TeamList.Clear();
+                Team tempTeam = new Team();
+                for (int i = 0; i < teamInfo.Length - 1; i++)
+                {
+                    string[] individualValues = teamInfo[i].Split(';');
+                    tempTeam = new Team();
+                    tempTeam.teamId = int.Parse(individualValues[0]);
+                    tempTeam.teamName = individualValues[1];
+                    tempTeam.teamColorId = int.Parse(individualValues[2]);
+
+                    ListOfTeams.TeamList.Add(tempTeam);
+                }
+            }
+            yield return new WaitForSeconds(2f);
+        
+    }
+
+
 }

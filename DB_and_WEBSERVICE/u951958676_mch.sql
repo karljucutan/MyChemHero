@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2018 at 02:09 PM
+-- Generation Time: Apr 18, 2018 at 02:09 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.2.2
 
@@ -64,6 +64,7 @@ CREATE TABLE `player_badge` (
 --
 
 INSERT INTO `player_badge` (`player_id`, `badge`) VALUES
+('1', 'Nitro'),
 ('3', 'Salt');
 
 -- --------------------------------------------------------
@@ -85,8 +86,8 @@ CREATE TABLE `player_game` (
 --
 
 INSERT INTO `player_game` (`player_id`, `team_id`, `player_points`, `player_state`, `helps_made`) VALUES
-('1', 113, 0, 'returning', 0),
-('3', 114, 14, 'returning', 1);
+('1', 113, 106, 'returning', 1),
+('3', 114, 28, 'returning', 1);
 
 -- --------------------------------------------------------
 
@@ -116,6 +117,25 @@ INSERT INTO `player_preset` (`player_id`, `body_preset`, `hair_preset`, `eyebrow
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `score`
+--
+
+CREATE TABLE `score` (
+  `teamid` int(50) NOT NULL,
+  `cityid` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `score`
+--
+
+INSERT INTO `score` (`teamid`, `cityid`) VALUES
+(113, 10),
+(113, 13);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sector_score`
 --
 
@@ -131,23 +151,23 @@ CREATE TABLE `sector_score` (
 
 INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (1, '', 0),
-(2, '', 0),
+(2, '1', 5),
 (3, '', 0),
 (4, '', 0),
 (5, '', 0),
 (6, '', 0),
-(7, '', 0),
+(7, '1', 2),
 (8, '', 0),
 (9, '', 0),
-(10, '', 0),
+(10, '1', 1),
 (11, '', 0),
 (12, '', 0),
 (13, '', 0),
 (14, '', 0),
-(15, '', 0),
+(15, '1', 2),
 (16, '', 0),
 (17, '', 0),
-(18, '', 0),
+(18, '1', 4),
 (19, '', 0),
 (20, '', 0),
 (21, '', 0),
@@ -162,10 +182,10 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (30, '', 0),
 (31, '', 0),
 (32, '', 0),
-(33, '', 0),
+(33, '1', 4),
 (34, '', 0),
 (35, '', 0),
-(36, '', 0),
+(36, '1', 2),
 (37, '', 0),
 (38, '', 0),
 (39, '', 0),
@@ -180,10 +200,10 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (48, '', 0),
 (49, '', 0),
 (50, '', 0),
-(51, '', 0),
+(51, '1', 12),
 (52, '', 0),
 (53, '', 0),
-(54, '', 0),
+(54, '1', 1),
 (55, '', 0),
 (56, '', 0),
 (57, '', 0),
@@ -212,10 +232,10 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (80, '', 0),
 (81, '', 0),
 (82, '', 0),
-(83, '', 0),
+(83, '1', 20),
 (84, '3', 10),
 (85, '3', 4),
-(86, '', 0),
+(86, '1', 2),
 (87, '', 0),
 (88, '', 0),
 (89, '', 0),
@@ -297,6 +317,12 @@ ALTER TABLE `player_game`
 --
 ALTER TABLE `player_preset`
   ADD PRIMARY KEY (`player_id`);
+
+--
+-- Indexes for table `score`
+--
+ALTER TABLE `score`
+  ADD PRIMARY KEY (`teamid`,`cityid`);
 
 --
 -- Indexes for table `sector_score`
