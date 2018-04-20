@@ -139,7 +139,7 @@ public class ScoreManager : MonoBehaviour {
                     else
                     {
                         enemyTeam_ScoreOnes[i].GetComponent<Image>().overrideSprite = NumbersImages[(int)char.GetNumericValue(countCities[0])];
-                        Debug.Log("First Char" + countCities[0]);
+                        //Debug.Log("First Char" + countCities[0]);
                     }
                 }
             }
@@ -255,7 +255,7 @@ public class ScoreManager : MonoBehaviour {
                 }
             }
         }
-        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(GetTeamsScore());
         
     }
 

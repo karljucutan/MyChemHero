@@ -164,24 +164,28 @@ public class TeamCreation : MonoBehaviour
                     Blue.SetActive(true); BlueText.text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(1)).Select(t => t.teamName).FirstOrDefault();
                     //Blue.transform.SetSiblingIndex(ListOfTeams.TeamList.Count - 1); 
                     CreateBlue.enabled = false;
+                    CreateBlue.gameObject.SetActive(false);
                 }
                 if (ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(2)).Select(t => t.teamColorId).FirstOrDefault() == 2 && !Red.activeInHierarchy)
                 {
                     Red.SetActive(true); RedText.text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(2)).Select(t => t.teamName).FirstOrDefault();
                     // Red.transform.SetSiblingIndex(ListOfTeams.TeamList.Count - 1); 
-                    CreateRed.enabled = false; 
+                    CreateRed.enabled = false;
+                    CreateRed.gameObject.SetActive(false);
                 }
                 if (ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(3)).Select(t => t.teamColorId).FirstOrDefault() == 3 && !Green.activeInHierarchy)
                 {
                     Green.SetActive(true); GreenText.text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(3)).Select(t => t.teamName).FirstOrDefault();
                     //Green.transform.SetSiblingIndex(ListOfTeams.TeamList.Count - 1); 
                     CreateGreen.enabled = false;
+                    CreateGreen.gameObject.SetActive(false);
                 }
                 if (ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(4)).Select(t => t.teamColorId).FirstOrDefault() == 4  && !Yellow.activeInHierarchy)
                 {
                     Yellow.SetActive(true); YellowText.text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(4)).Select(t => t.teamName).FirstOrDefault();
                     //Yellow.transform.SetSiblingIndex(ListOfTeams.TeamList.Count - 1);
                     CreateYellow.enabled = false;
+                    CreateYellow.gameObject.SetActive(false);
                 }
             }
             yield return new WaitForSeconds(0.5f);
