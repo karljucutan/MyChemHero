@@ -28,7 +28,7 @@ public class LoadScreeenControl : MonoBehaviour {
         else
         {
             // name =get.text;
-            name = "qwe";
+            name = Configuration.NAME;
             Debug.Log("name is: " + name);
         }
         slider.value += 0.25f;
