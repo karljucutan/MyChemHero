@@ -215,6 +215,7 @@ public class ScoreManager : MonoBehaviour {
         WWW get = new WWW(Configuration.BASE_ADDRESS + "GetTeamScore.php");
         yield return get;
        
+        Debug.Log("POLLINGGETTEAMSCORE");
         if (get.error != null)
         {
             Debug.Log("There was an error getting the team: " + get.error);
@@ -251,12 +252,10 @@ public class ScoreManager : MonoBehaviour {
                             }
                         }
                     }
-                    
                 }
             }
         }
         StartCoroutine(GetTeamsScore());
-        
     }
 
     //IEnumerator PostTeamScore(int teamid, int cityid)

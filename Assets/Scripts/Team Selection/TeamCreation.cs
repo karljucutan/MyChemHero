@@ -179,6 +179,7 @@ public class TeamCreation : MonoBehaviour
                     //Green.transform.SetSiblingIndex(ListOfTeams.TeamList.Count - 1); 
                     CreateGreen.enabled = false;
                     CreateGreen.gameObject.SetActive(false);
+
                 }
                 if (ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(4)).Select(t => t.teamColorId).FirstOrDefault() == 4  && !Yellow.activeInHierarchy)
                 {

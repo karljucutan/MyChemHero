@@ -114,7 +114,6 @@ public class LoadScreeenControl : MonoBehaviour {
             //        break;
 
             //}
-
             slider.value += 0.25f;
             SceneManager.LoadScene("Lobby");  
         }
