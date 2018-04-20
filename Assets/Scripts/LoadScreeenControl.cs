@@ -28,9 +28,10 @@ public class LoadScreeenControl : MonoBehaviour {
         else
         {
             // name =get.text;
-            name = "Kealu";
+            name = "Karl";
             Debug.Log("name is: " + name);
         }
+        slider.value += 0.25f;
         StartCoroutine(GetPlayerId());
 
     }
@@ -47,6 +48,7 @@ public class LoadScreeenControl : MonoBehaviour {
         {
             DataPersistor.persist.user.ID = int.Parse(get.text);
         }
+        slider.value += 0.25f;
         StartCoroutine(RetrieveUserInfo());
     }
     public IEnumerator RetrieveUserInfo()//FOR USERS INFO
@@ -83,6 +85,7 @@ public class LoadScreeenControl : MonoBehaviour {
             }
             //user.SectorsHold = int.Parse();
         }
+        slider.value += 0.25f;
         StartCoroutine(LoadingScreen());
     }
     IEnumerator LoadingScreen()
@@ -100,17 +103,18 @@ public class LoadScreeenControl : MonoBehaviour {
         }
         else
         {
-                while (true)
-                {
+            //while (true)
+            //{
 
-                    if (slider.value != 1f)
-                    {
-                        slider.value += 0.4f;
-                    }
-                    else
-                        break;
+            //    if (slider.value != 1f)
+            //    {
+            //        slider.value += 0.4f;
+            //    }
+            //    else
+            //        break;
 
-                }
+            //}
+            slider.value += 0.25f;
                 SceneManager.LoadScene("Lobby");
             
            
