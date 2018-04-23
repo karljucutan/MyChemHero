@@ -24,25 +24,27 @@ public class ProfileSetter : MonoBehaviour {
     public Sprite[] TeamFlag;
 
 
+
     void Awake () {
 
         ////teamprofile
         TeamFlag = Resources.LoadAll<Sprite>("Sprites/TeamFlag");
         //myprofile
-        MaleBodyChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/BODY/400px");
-        MaleHairChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/HAIR/400px");
-        MaleEyeBrowsChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/BROWS/400px");
-        MaleEyesChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/EYES/400px");
-        MaleNoseChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/NOSE/400px");
-        MaleMouthChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/MOUTH/400px");
+        MaleBodyChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/BODY/800px");
+        MaleHairChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/HAIR/800px");
+        MaleEyeBrowsChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/BROWS/800px");
+        MaleEyesChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/EYES/800px");
+        MaleNoseChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/NOSE/800px");
+        MaleMouthChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/MALE SET/MOUTH/800px");
 
-        FemaleBodyChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/BODY/400px");
-        FemaleHairChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/HAIR/400px");
-        FemaleEyeBrowsChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/BROWS/400px");
-        FemaleEyesChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/EYES/400px");
-        FemaleNoseChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/NOSE/400px");
-        FemaleMouthChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/MOUTH/400px");
+        FemaleBodyChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/BODY/800px");
+        FemaleHairChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/HAIR/800px");
+        FemaleEyeBrowsChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/BROWS/800px");
+        FemaleEyesChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/EYES/800px");
+        FemaleNoseChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/NOSE/800px");
+        FemaleMouthChoices = Resources.LoadAll<Sprite>("CharacterandHeroAssets/FEMALE SET/MOUTH/800px");
 
+        
 
     }
 

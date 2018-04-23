@@ -43,7 +43,8 @@ public class DataPersistor : MonoBehaviour {
     //state kung may team na
     public string state = "";
 
-   
+    //loading allusers
+    public bool doneLoadingAllUsers = false;
 
 
     void Awake()
@@ -63,8 +64,9 @@ public class DataPersistor : MonoBehaviour {
         }
         user = new User();
         user.UserCharacter = new Character();
+        user.Badges = new List<string>();
         StartCoroutine(getSectorHolderValuesOnce());
-        StartCoroutine(populateListOfUsersOnce());
+       // StartCoroutine(populateListOfUsersOnce());
         StartCoroutine(GetTeamsCreated());
 
     }
@@ -247,8 +249,9 @@ public class DataPersistor : MonoBehaviour {
                 TempUser.UserCharacter.Nose = int.Parse(individualValues[8]);
                 TempUser.UserCharacter.Mouth = int.Parse(individualValues[9]);
                 TempUser.UserCharacter.Gender = individualValues[10].ToString();
-
-                if (ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
+                TempUser.HelpsMade = int.Parse(individualValues[11]);
+                TempUser.SectorsHold = int.Parse(individualValues[12]);
+                //if (ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
                     ListOfUser.ALLUSERS.Add(TempUser);
 
             }

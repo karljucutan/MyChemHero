@@ -8,9 +8,11 @@ public class wwwGET : MonoBehaviour {
     public string[] sectorHolderValues;
     void Awake()
     {
-        StartCoroutine(GetSectorHolderScores());
         StartCoroutine(RetrieveAllUsersInfo());
-        StartCoroutine(RetrieveUserBadges());
+        StartCoroutine(GetSectorHolderScores());
+
+        
+      //  StartCoroutine(RetrieveUserBadges());
     }
 
     IEnumerator GetSectorHolderScores()
@@ -48,7 +50,9 @@ public class wwwGET : MonoBehaviour {
            string help = hs_get.text;
 
            string[] userInfo = help.Split('+');
-           for (int i = 0; i < userInfo.Length - 1; i++)
+            ListOfUser.ALLUSERS = new List<User>();
+            Debug.Log("NEW LIST ALL USER");
+            for (int i = 0; i < userInfo.Length - 1; i++)
            {
                string[] individualValues = userInfo[i].Split(';');
                TempUser = new User();
@@ -64,39 +68,43 @@ public class wwwGET : MonoBehaviour {
                TempUser.UserCharacter.Nose = int.Parse(individualValues[8]);
                TempUser.UserCharacter.Mouth = int.Parse(individualValues[9]);
                TempUser.UserCharacter.Gender = individualValues[10].ToString();
-
-               if(ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
+               TempUser.HelpsMade = int.Parse(individualValues[11]);
+               TempUser.SectorsHold = int.Parse(individualValues[12]);
+               //if(ListOfUser.ALLUSERS.Exists(item => item.ID.Equals(TempUser.ID)) == false)
                    ListOfUser.ALLUSERS.Add(TempUser);
 
            }
+            DataPersistor.persist.doneLoadingAllUsers = true;
 
        }
        StartCoroutine(RetrieveAllUsersInfo());
    }
-   private IEnumerator RetrieveUserBadges()
-   {
-       WWW get = new WWW(Configuration.BASE_ADDRESS + "GetBadges.php?playerid=" + DataPersistor.persist.user.ID);
-       yield return get;
+   //private IEnumerator RetrieveUserBadges()
+   //{
+   //    WWW get = new WWW(Configuration.BASE_ADDRESS + "GetBadges.php?playerid=" + DataPersistor.persist.user.ID);
+   //    yield return get;
 
-       if (get.error != null)
-       {
-           Debug.Log("There was an error getting the high score: " + get.error);
-       }
-       else
-       {
-           DataPersistor.persist.user.Badges.Clear();
-           string help = get.text;
-           //Debug.Log(help + "");
-           string[] badges = help.Split(';');
+   //    if (get.error != null)
+   //    {
+   //        Debug.Log("There was an error getting the high score: " + get.error);
+   //    }
+   //    else
+   //    {
+   //        DataPersistor.persist.user.Badges.Clear();
+   //        string help = get.text;
+   //        //Debug.Log(help + "");
+   //        string[] badges = help.Split(';');
 
-           for (int i = 0; i < badges.Length - 1; i++)
-           {
-               DataPersistor.persist.user.Badges.Add(badges[i]);
-               //Debug.Log(DataPersistor.persist.user.Badges[i] + "BADGETO");
-           }
+   //        for (int i = 0; i < badges.Length - 1; i++)
+   //        {
+   //            DataPersistor.persist.user.Badges.Add(badges[i]);
+   //            //Debug.Log(DataPersistor.persist.user.Badges[i] + "BADGETO");
+   //        }
 
-       }
-       StartCoroutine(RetrieveUserBadges());
-   }
-  
+   //    }
+   //    StartCoroutine(RetrieveUserBadges());
+   //}
+
+    
+
 }

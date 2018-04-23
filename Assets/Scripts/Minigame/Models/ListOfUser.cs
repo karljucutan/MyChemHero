@@ -8,7 +8,7 @@ namespace Assets.Scripts.Minigame.Models
 {
     public class ListOfUser
     {
-        public static List<User> SECTORHOLDERS;
-        public static List<User> ALLUSERS = new List<User>();
+        //public static List<User> ALLUSERS = new List<User>();
+        public static List<User> ALLUSERS;
     }
 }

@@ -88,7 +88,7 @@ public class ScoreManager : MonoBehaviour {
 
                 StartCoroutine(PostTeamScore(www));
                 //StartCoroutine(PostTeamScore(cityid, DataPersistor.persist.user.TeamId));
-                  //  StartCoroutine(WaitPost());
+                
                     
                 }
             }   
@@ -258,28 +258,13 @@ public class ScoreManager : MonoBehaviour {
         StartCoroutine(GetTeamsScore());
     }
 
-    //IEnumerator PostTeamScore(int teamid, int cityid)
-    //{
-    //    postteam_running = true;
-    //    //Debug.Log("POSTTEAM");
-
-    //    string post_url = Configuration.BASE_ADDRESS + "PostTeamScore.php?teamid=" + teamid + "&cityid=" + cityid;
-    //    WWW hs_post = new WWW(post_url);
-    //    yield return hs_post; // Wait until the download is done
-
-    //    if (hs_post.error != null)
-    //    {
-    //        print("There was an error posting the team score: " + hs_post.error);
-    //    }
-    //    postteam_running = false;
-    //}
+  
     IEnumerator PostTeamScore(WWW www)
     {
         postteam_running = true;
-        //Debug.Log("POSTTEAM");
+        
         yield return www;
-        //string post_url = Configuration.BASE_ADDRESS + "PostTeamScore.php?teamid=" + teamid + "&cityid=" + cityid;
-        // WWW hs_post = new WWW(post_url);
+      
         if (www.error == null)
         {
             Debug.Log("WWW Ok!: " + www.text);
@@ -290,13 +275,6 @@ public class ScoreManager : MonoBehaviour {
         }
     }
 
-    IEnumerator WaitPost()
-    {
-        while(postteam_running)
-        {
-            yield return new WaitForSeconds(0.1f);
-        }
-        
-    }
+
 
 }
