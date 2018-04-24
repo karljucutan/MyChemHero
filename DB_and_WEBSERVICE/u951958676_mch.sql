@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2018 at 03:08 PM
+-- Generation Time: Apr 24, 2018 at 04:10 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.2.2
 
@@ -58,18 +58,6 @@ CREATE TABLE `player_badge` (
   `player_id` varchar(50) NOT NULL,
   `badge` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `player_badge`
---
-
-INSERT INTO `player_badge` (`player_id`, `badge`) VALUES
-('1', 'Agua Oxinada'),
-('1', 'Alcohol'),
-('1', 'Baking Soda'),
-('1', 'Nitro'),
-('1', 'Salt'),
-('1', 'Sodium Fluoride');
 
 -- --------------------------------------------------------
 

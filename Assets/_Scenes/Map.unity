@@ -18942,6 +18942,47 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!1 &1117830061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1117830063}
+  - component: {fileID: 1117830062}
+  m_Layer: 0
+  m_Name: BadgeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1117830062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117830061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59e8eab6e05520499910d168cad9808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doneRetrieveUserBadge: 0
+--- !u!4 &1117830063
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117830061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 307.5, y: 142.72261, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1121418740
 GameObject:
   m_ObjectHideFlags: 0
@@ -26088,6 +26129,57 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
     type: 2}
   m_PrefabInternal: {fileID: 1512111920}
+--- !u!1 &1520441678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1520441680}
+  - component: {fileID: 1520441679}
+  m_Layer: 0
+  m_Name: BadgeSetter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1520441679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520441678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9979600d0dde25479f20739bee7d09e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BadgeManager: {fileID: 1117830061}
+  Achievements:
+  - {fileID: 2056624398}
+  - {fileID: 1092220827}
+  - {fileID: 2034958984}
+  - {fileID: 1348832284}
+  - {fileID: 1863069462}
+  - {fileID: 1010321453}
+  - {fileID: 2040164699}
+  - {fileID: 915339924}
+  - {fileID: 936560244}
+--- !u!4 &1520441680
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520441678}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 307.5, y: 142.72261, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536205268
 GameObject:
   m_ObjectHideFlags: 0

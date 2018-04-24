@@ -31,18 +31,20 @@ public class MixedElementChecker : MonoBehaviour {
 
             //animate yung MIXING
 
+            /*AALISIN NA YUNG BADGES SA MIXING TOP 1 - 3 LANG MUNA
             //check sa userlistofbadges kung meron ng ganun
             if (!DataPersistor.persist.user.Badges.Contains(compound))
             {
                 //POST NA YUNG BADGE
 
-                StartCoroutine(PostBadge(compound));
+                StartCoroutine(PostBadge(compound)); 
 
                 TextBadgeName.GetComponent<Text>().text = compound + " Badge";
                 TextBadgeDescription.GetComponent<Text>().text = "You received a " + compound + " badge";
                 YourFunction(3);
                //pag nadagdagan na badge checker muna kung anong badge nareceive tapos pag madami nareceive na badage invoke nlng magkasunod 
             }
+            */
 
             GameObject.Find("MixButton").GetComponent<Button>().enabled = false;
             compoundCreatedPanel.SetActive(true);

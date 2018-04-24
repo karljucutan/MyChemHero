@@ -64,7 +64,6 @@ public class DataPersistor : MonoBehaviour {
         }
         user = new User();
         user.UserCharacter = new Character();
-        user.Badges = new List<string>();
         StartCoroutine(getSectorHolderValuesOnce());
        // StartCoroutine(populateListOfUsersOnce());
         StartCoroutine(GetTeamsCreated());

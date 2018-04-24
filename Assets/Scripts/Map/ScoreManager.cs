@@ -28,7 +28,7 @@ public class ScoreManager : MonoBehaviour {
     private List<int> enemyTeamColorId;
     private bool teamNotCompleted = true;
 
-    private bool postteam_running;
+    //private bool postteam_running;
     // 1 = blue 2 = red 3 = green 4 = yellow
     private void Awake()
     {
@@ -261,7 +261,7 @@ public class ScoreManager : MonoBehaviour {
   
     IEnumerator PostTeamScore(WWW www)
     {
-        postteam_running = true;
+        //postteam_running = true;
         
         yield return www;
       
