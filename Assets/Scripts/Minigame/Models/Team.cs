@@ -10,7 +10,7 @@ namespace Assets.Scripts.Minigame.Models
         public int teamId;
         public int teamColorId;
         public string teamName;
-        public List<User> members = new List<User>();
+        public List<User> members;
         public List<int> conqueredCities = new List<int>();
     }
 }

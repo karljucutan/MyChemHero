@@ -9,8 +9,11 @@ public class BadgeSetter : MonoBehaviour {
     public GameObject[] Achievements;
     //arrangement points, sectors, helpsmade
 
+    private Sprite[] medals;
+
     public void Start()
     {
+        medals = Resources.LoadAll<Sprite>("Badges/Medals");
         //Achievements[0].transform.GetChild(3).gameObject.SetActive(true);
         StartCoroutine(waitRetrieve());
     }
@@ -28,6 +31,18 @@ public class BadgeSetter : MonoBehaviour {
                 if (DataPersistor.persist.user.Badges[i].Equals(ListOfBadges.BadgesList[j]))
                 {
                     //PAG MAY EMPTY IMAGE NA NG BADGE CHANGE IMAGE
+                    if (j == 0 || j == 3 || j == 6)
+                    {
+                        Achievements[j].transform.GetChild(1).gameObject.GetComponent<Image>().overrideSprite = medals[1];
+                    }
+                    else if (j == 1 || j == 4 || j == 7)
+                    {
+                        Achievements[j].transform.GetChild(1).gameObject.GetComponent<Image>().overrideSprite = medals[2];
+                    }
+                    else if (j == 2 || j ==5 || j == 8)
+                    {
+                        Achievements[j].transform.GetChild(1).gameObject.GetComponent<Image>().overrideSprite = medals[3];
+                    }
                     Achievements[j].transform.GetChild(3).gameObject.SetActive(true);
                 }
             }

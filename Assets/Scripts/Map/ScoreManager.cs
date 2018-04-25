@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour {
     public GameObject[] enemyTeam_ScoreOnes = new GameObject[3];
     public GameObject[] enemyTeam_ScoreTens = new GameObject[3];
    
-    private Sprite[] TeamHeroes = new Sprite[4];
+    public Sprite[] TeamHeroes = new Sprite[4];
     private Sprite[] NumbersImages;
     private Sprite[] StarsImages;
 

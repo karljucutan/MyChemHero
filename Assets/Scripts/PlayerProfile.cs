@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Assets.Scripts.Minigame.Models;
 using System.Linq;
+using Assets.Scripts;
 
 public class PlayerProfile : MonoBehaviour {
     //Myprofile
@@ -15,31 +16,23 @@ public class PlayerProfile : MonoBehaviour {
     public GameObject UserCharNose;
     public GameObject UserCharMouth;
     public GameObject UserId;
-    public GameObject UserRank;
     public GameObject UserTotalPoints;
     public GameObject UserNoOfSectorsHold;
     public GameObject UserHelpsMade;
     
 
     public GameObject profilesetter;
-
+    public GameObject Prefabplayermember;
+    public Transform TeamContentSizeFilter;
+    public GameObject scoremanager;
     //TeamProfile
-    //public GameObject;
-    //public GameObject;
-    //public GameObject;
-    //public GameObject;
-    //public GameObject;
-    //public GameObject;
+    public GameObject TeamName;
+    public GameObject ProHero;
+    public GameObject TeamID;
+    public GameObject TeamTotalPoints;
+    public GameObject TeamNoOfSectorsHold;
+    public GameObject TeamHelpsMade;
 
-    void Start()
-    {
-        for (int i = 0; i < DataPersistor.persist.user.Badges.Count; i++)
-        {
-
-            Debug.Log(DataPersistor.persist.user.Badges.Count);
-            Debug.Log(DataPersistor.persist.user.Badges[i] + "BADGETO");
-        }
-    }
     private void OnEnable()
     {
         //StartCoroutine(DataPersistor.persist.RetrieveUserInfo());
@@ -58,22 +51,39 @@ public class PlayerProfile : MonoBehaviour {
             UserNoOfSectorsHold.GetComponent<Text>().text = user.SectorsHold.ToString();
             UserHelpsMade.GetComponent<Text>().text = user.HelpsMade.ToString();
 
-            for (int i = 0; i < DataPersistor.persist.user.Badges.Count - 1; i++)
+            var teammembers = ListOfUser.ALLUSERS.Where(u => u.TeamId.Equals(DataPersistor.persist.user.TeamId)).ToList();
+            var team = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(DataPersistor.persist.user.TeamId)).SingleOrDefault();
+            team.members = new List<User>();
+            team.members = teammembers;
+
+            ProHero.GetComponent<Image>().overrideSprite = scoremanager.GetComponent<ScoreManager>().TeamHeroes[team.teamColorId - 1];
+            TeamName.GetComponent<Text>().text = team.teamName;
+            TeamID.GetComponent<Text>().text = team.teamId.ToString();
+            TeamTotalPoints.GetComponent<Text>().text = team.members.Sum(u => u.TotalScore).ToString();
+            TeamNoOfSectorsHold.GetComponent<Text>().text = team.members.Sum(u => u.SectorsHold).ToString();
+            TeamHelpsMade.GetComponent<Text>().text = team.members.Sum(u => u.HelpsMade).ToString();
+
+            foreach (var player in team.members)
             {
-                // PanelAchievement.transform.Find("Badge" + i).GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("Badges/Badge" + DataPersistor.persist.user.Badges[i]);
+                var member = Instantiate(Prefabplayermember, TeamContentSizeFilter);
+                member.transform.GetChild(0).GetComponent<Text>().text = player.UserName;
+                member.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterBody(player.UserCharacter.Gender, player.UserCharacter.Body);
+                member.transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyebrows(player.UserCharacter.Gender, player.UserCharacter.EyeBrows);
+                member.transform.GetChild(1).GetChild(0).GetChild(0).GetChild(1).GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyes(player.UserCharacter.Gender, player.UserCharacter.Eyes);
+                member.transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterNose(player.UserCharacter.Gender, player.UserCharacter.Nose);
+                member.transform.GetChild(1).GetChild(0).GetChild(0).GetChild(3).GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterMouth(player.UserCharacter.Gender, player.UserCharacter.Mouth);
+                member.transform.GetChild(1).GetChild(0).GetChild(0).GetChild(4).GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterHair(player.UserCharacter.Gender, player.UserCharacter.Hair);
+
             }
-
-
         }
-
-        //teamprofile
-      
-
     }
-   
 
-   
-
- 
-
+    private void OnDisable()
+    {
+        for(int i = 2; i < TeamContentSizeFilter.childCount; i++)
+        {
+           Destroy(TeamContentSizeFilter.GetChild(i).gameObject);
+        }
+       
+    }
 }
