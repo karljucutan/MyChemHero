@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour {
     private Sprite[] NumbersImages;
     private Sprite[] StarsImages;
 
-    private List<int> enemyTeamColorId;
+    public List<int> enemyTeamColorId;
     private bool teamNotCompleted = true;
 
     //private bool postteam_running;
