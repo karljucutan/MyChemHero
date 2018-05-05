@@ -489,29 +489,6 @@ public class Dialogue : MonoBehaviour {
                     case "Metalloids": SceneManager.LoadScene("MinigameDodgeGame"); break;
                     case "Unknown": SceneManager.LoadScene("MinigameTapCompound"); break;
                 }
-                //// check yung tag kung anong city for minigames
-                //if (DataPersistor.persist.sectorCity.Equals("Metals"))
-                //{
-                //    //minigame combine elements
-                //    SceneManager.LoadScene("MinigameFullDragDrop");
-                //}
-                //else if (DataPersistor.persist.sectorCity.Equals("NonMetals"))
-                //{
-                //    // FreeThrow basketball
-                //    SceneManager.LoadScene("MinigameFreeThrow");
-                //}
-                //else if (DataPersistor.persist.sectorCity.Equals("Metalloids"))
-                //{
-                //    // DodgeGame
-                //    SceneManager.LoadScene("MinigameDodgeGame");
-                //}
-                //else if(DataPersistor.persist.sectorCity.Equals("Unknown"))
-                //{
-                //    // Tapcompound
-                //    SceneManager.LoadScene("MinigameTapCompound");
-                //}
-                  
-               
             }
         }
     }
@@ -519,7 +496,7 @@ public class Dialogue : MonoBehaviour {
     {
         postScoresRunning = true;
         string post_url = Configuration.BASE_ADDRESS+"AddNewHighScore.php?sector="+DataPersistor.persist.currentSectorNumber+"&playerid="+DataPersistor.persist.user.ID+"&pscore="+ DataPersistor.persist.totalPoints;
-        //string post_url = Configuration.BASE_ADDRESS + "AddNewHighScore.php?sector=" + 16 + "&playerid=" + 12+ "&pscore=" + 1000;
+        
         Debug.Log(DataPersistor.persist.currentSectorNumber);
         Debug.Log(DataPersistor.persist.user.ID);
         Debug.Log("KEALU nagana posting");

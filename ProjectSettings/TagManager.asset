@@ -3,7 +3,30 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NonMetals
+  - Metals
+  - Unknown
+  - Metalloids
+  - CityId_1
+  - CityId_2
+  - CityId_3
+  - CityId_4
+  - CityId_5
+  - CityId_6
+  - CityId_7
+  - CityId_8
+  - CityId_9
+  - CityId_10
+  - CityId_11
+  - CityId_12
+  - CityId_13
+  - CityId_14
+  - CityId_15
+  - CityId_16
+  - CityId_17
+  - CityId_18
+  - CityId_19
   layers:
   - Default
   - TransparentFX

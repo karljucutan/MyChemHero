@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2018 at 04:10 PM
+-- Generation Time: May 05, 2018 at 05:09 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.2.2
 
@@ -59,6 +59,22 @@ CREATE TABLE `player_badge` (
   `badge` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `player_badge`
+--
+
+INSERT INTO `player_badge` (`player_id`, `badge`) VALUES
+('1', 'Top1InHelpsMade'),
+('1', 'Top1InPoints'),
+('1', 'Top1InSectors'),
+('2', 'Top2InHelpsMade'),
+('2', 'Top3InHelpsMade'),
+('2', 'Top3InPoints'),
+('2', 'Top3InSectors'),
+('3', 'Top2InHelpsMade'),
+('3', 'Top2InPoints'),
+('3', 'Top2InSectors');
+
 -- --------------------------------------------------------
 
 --
@@ -78,8 +94,8 @@ CREATE TABLE `player_game` (
 --
 
 INSERT INTO `player_game` (`player_id`, `team_id`, `player_points`, `player_state`, `helps_made`) VALUES
-('1', 113, 358, 'returning', 14),
-('2', 0, 0, 'non', 0),
+('1', 113, 365, 'returning', 14),
+('2', 119, 20, 'returning', 2),
 ('3', 114, 53, 'returning', 1);
 
 -- --------------------------------------------------------
@@ -105,6 +121,7 @@ CREATE TABLE `player_preset` (
 
 INSERT INTO `player_preset` (`player_id`, `body_preset`, `hair_preset`, `eyebrows_preset`, `eyes_preset`, `nose_preset`, `mouth_preset`, `gender`) VALUES
 ('1', 1, 0, 0, 0, 0, 0, 'female'),
+('2', 3, 5, 2, 2, 4, 3, 'female'),
 ('3', 0, 0, 0, 0, 0, 0, 'male');
 
 -- --------------------------------------------------------
@@ -154,7 +171,7 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (6, '', 0),
 (7, '3', 2),
 (8, '3', 2),
-(9, '3', 1),
+(9, '1', 4),
 (10, '1', 1),
 (11, '1', 10),
 (12, '', 0),
@@ -166,7 +183,7 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (18, '1', 4),
 (19, '1', 10),
 (20, '', 0),
-(21, '', 0),
+(21, '2', 10),
 (22, '', 0),
 (23, '', 0),
 (24, '', 0),
@@ -184,7 +201,7 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (36, '1', 2),
 (37, '1', 30),
 (38, '', 0),
-(39, '', 0),
+(39, '2', 10),
 (40, '', 0),
 (41, '', 0),
 (42, '', 0),
@@ -284,7 +301,8 @@ CREATE TABLE `team` (
 
 INSERT INTO `team` (`team_id`, `team_name`, `team_colorID`, `team_leader`) VALUES
 (113, 'zxc', 2, 1),
-(114, 'asd', 1, 3);
+(114, 'asd', 1, 3),
+(119, 'QWE', 4, 2);
 
 --
 -- Indexes for dumped tables
@@ -346,7 +364,7 @@ ALTER TABLE `player`
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

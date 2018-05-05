@@ -69,8 +69,48 @@ public class CharacterSetter : MonoBehaviour {
             print("There was an error posting the high score: " + hs_post.error);
         }
 
-        SceneManager.LoadScene("Map");
+        //SceneManager.LoadScene("Map");
+        StartCoroutine(RetrieveUserInfo());
     }
 
-    
+    public IEnumerator RetrieveUserInfo()//FOR USERS INFO
+    {
+
+        WWW hs_get = new WWW(Configuration.BASE_ADDRESS + "RetrieveInfo.php?pid=" + DataPersistor.persist.user.ID);
+        yield return hs_get;
+
+        if (hs_get.error != null)
+        {
+            Debug.Log("There was an error getting the high score: " + hs_get.error);
+
+        }
+        else
+        {
+            string help = hs_get.text;
+            string[] userInfo = help.Split(';');
+
+            //temporary lng to kukuha pa sa php session ng value
+            if (userInfo[1] != "")
+            {
+                DataPersistor.persist.user.UserName = userInfo[0];
+                DataPersistor.persist.user.UserCharacter.Body = int.Parse(userInfo[1]);
+                DataPersistor.persist.user.UserCharacter.Hair = int.Parse(userInfo[2]);
+                DataPersistor.persist.user.UserCharacter.EyeBrows = int.Parse(userInfo[3]);
+                DataPersistor.persist.user.UserCharacter.Eyes = int.Parse(userInfo[4]);
+                DataPersistor.persist.user.UserCharacter.Nose = int.Parse(userInfo[5]);
+                DataPersistor.persist.user.UserCharacter.Mouth = int.Parse(userInfo[6]);
+                DataPersistor.persist.user.UserCharacter.Gender = userInfo[7].ToString();
+                DataPersistor.persist.user.TotalScore = int.Parse(userInfo[8]);
+                DataPersistor.persist.user.HelpsMade = int.Parse(userInfo[9]);
+                DataPersistor.persist.user.SectorsHold = int.Parse(userInfo[10]);
+                DataPersistor.persist.user.TeamId = int.Parse(userInfo[11]);
+
+                DataPersistor.persist.state = "returning";
+            }
+            SceneManager.LoadScene("Map");
+        }
+
+    }
+
+
 }

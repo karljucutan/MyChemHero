@@ -52,7 +52,7 @@ public class CityColorManager : MonoBehaviour {
     //private int[] CityId17;
     //private int[] CityId18;
     //private int[] CityId19;
-    private void Start()
+    private void Awake()
     {
         StartCoroutine(waitRetrieve());
     }
@@ -63,6 +63,9 @@ public class CityColorManager : MonoBehaviour {
             yield return new WaitForSeconds(0.1f);
 
         colorChanger();
+        
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(waitRetrieve());
     }
     void colorChanger()
     {
