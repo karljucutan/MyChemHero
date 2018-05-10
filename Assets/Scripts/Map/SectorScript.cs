@@ -10,9 +10,7 @@ public class SectorScript : MonoBehaviour {
     
     public int sectorNumber;
     GameObject confirm;
-    private GameObject resettimerMiniGameDragDrop;
-    private GameObject resettimerMinigameFreeThrow;
-    private GameObject resettimerMinigameTapTapCompound;
+    
     // Use this for initialization
     //public GameObject sectorName;
    
@@ -32,10 +30,8 @@ public class SectorScript : MonoBehaviour {
     }
     void Start()
     {
-        resettimerMiniGameDragDrop = GameObject.Find("MinigameFullDragDropResetTimer");
-        resettimerMinigameFreeThrow = GameObject.Find("MinigameFreeThrowResetTimer");
-        resettimerMinigameTapTapCompound = GameObject.Find("MinigameTapTapCompound");
-        // yung 1 games pa
+     
+
         gameObject.GetComponentInChildren<Text>().text = gameObject.name;
         profilesetter = GameObject.Find("ProfileSetter");
 
@@ -225,14 +221,6 @@ public class SectorScript : MonoBehaviour {
         var asd = ListOfUser.ALLUSERS;
         confirm.SetActive(true);
     
-        switch(gameObject.tag)
-        {
-            case "Metals": resettimerMiniGameDragDrop.GetComponent<ResetTimerSetter>().ResetTimer(); DataPersistor.persist.bagCompounds.Clear(); break;
-            case "NonMetals": resettimerMinigameFreeThrow.GetComponent<ResetTimerSetter>().ResetTimer(); break;
-            //case "Metalloids": resettimerMiniGameDragDrop.GetComponent<ResetTimerSetter>().ResetTimer(); break;
-            case "Unknown": resettimerMinigameTapTapCompound.GetComponent<ResetTimerSetter>().ResetTimer(); break;
-        }
-     
         DataPersistor.persist.currentSectorNumber = sectorNumber;
         DataPersistor.persist.sectorCity = gameObject.tag;
 
@@ -254,8 +242,12 @@ public class SectorScript : MonoBehaviour {
         
         GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/TextUserName").GetComponent<Text>().text = username;
         GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/TextScore").GetComponent<Text>().text = score;
+        var city = ListOfCity.Cities.FirstOrDefault(c => c.Sectors.Any(s => s.sectorNumber.Equals(sectorNumber)));
+        GameObject.Find("Dashboard/ConfirmDialog/CityName").GetComponent<Text>().text = city.Name;
 
-        if(username.Equals("???"))
+        GameObject.Find("Dashboard/ConfirmDialog/SectorName").GetComponent<Text>().text = DataPersistor.persist.elementNameDictionary.Where(e => e.Key.Equals(gameObject.name)).Select(e => e.Value).SingleOrDefault();
+
+        if (username.Equals("???"))
         {
             ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Flag").GetComponent<Image>(), 255, 255, 255, 0);
             ChangeColorAlpha(GameObject.Find("Dashboard/ConfirmDialog/PanelUserHolder/ImageUserCharacterContainer/Character/Body").GetComponent<Image>(), 255, 255, 255, 0);

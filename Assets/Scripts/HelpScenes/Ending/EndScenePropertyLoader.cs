@@ -24,7 +24,6 @@ public class EndScenePropertyLoader : MonoBehaviour {
     public GameObject ImageCompound;
     public GameObject Compound;
     public GameObject ElementsCombined;
-    public GameObject TimeLeft;
     public GameObject AccumulatedPoints;
     public GameObject TotalPoints;
 
@@ -53,16 +52,16 @@ public class EndScenePropertyLoader : MonoBehaviour {
         HeroImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/"+endSceneHeroImage);
         DialogueText.GetComponent<Dialogue>().dialogueString = endSceneDialogueString;
 
-        string time;
-        if (DataPersistor.persist.mTime.minutes <= 0 && DataPersistor.persist.mTime.seconds <= 0)
-        {
-            time = string.Format("{0:00}:{1:00}.{2:00}", 0, 0, 0);
-        }
-        else
-        {
-            time = string.Format("{0:00}:{1:00}.{2:00}", DataPersistor.persist.mTime.minutes, DataPersistor.persist.mTime.seconds, DataPersistor.persist.mTime.milliseconds);
-        }
-        TimeLeft.GetComponent<Text>().text += time;
+        //string time;
+        //if (DataPersistor.persist.mTime.minutes <= 0 && DataPersistor.persist.mTime.seconds <= 0)
+        //{
+        //    time = string.Format("{0:00}:{1:00}.{2:00}", 0, 0, 0);
+        //}
+        //else
+        //{
+        //    time = string.Format("{0:00}:{1:00}.{2:00}", DataPersistor.persist.mTime.minutes, DataPersistor.persist.mTime.seconds, DataPersistor.persist.mTime.milliseconds);
+        //}
+        //TimeLeft.GetComponent<Text>().text += time;
 
         AccumulatedPoints.GetComponent<Text>().text += DataPersistor.persist.accumulatedPoints.ToString();
         TotalPoints.GetComponent<Text>().text += DataPersistor.persist.totalPoints.ToString();

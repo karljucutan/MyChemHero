@@ -8,12 +8,18 @@ using UnityEngine.SceneManagement;
 public class MinigameFreeThrowTimer : MonoBehaviour {
 
     public Text Time;
-    private ModelTime mTime;
+    public ModelTime mTime;
     public GameObject panelStartTime;
     public GameObject panelGameOver;
     public Text textStartTime;
     private string time;
-    bool timeIsRunning = true;
+    public bool timeIsRunning = true;
+    public int minutes;
+    public int seconds;
+    public int milliSeconds;
+
+    public bool GameTimerStarts = false;
+    
 
     private void Start()
     {
@@ -49,7 +55,8 @@ public class MinigameFreeThrowTimer : MonoBehaviour {
     {
         mTime = DataPersistor.persist.mTime;
         InvokeRepeating("GameTimer", 0, 0.1f);
-
+        GameTimerStarts = true;
+        
     }
 
     private void GameTimer()

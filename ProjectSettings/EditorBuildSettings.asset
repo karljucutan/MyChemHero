@@ -54,23 +54,20 @@ EditorBuildSettings:
     path: Assets/_Scenes/Map.unity
     guid: d86f9fcffe43d53419cc1c8adfd4463e
   - enabled: 1
-    path: Assets/_Scenes/MinigameDodgeGame.unity
-    guid: c0d2254efa5de0f4ab222038a54b621c
-  - enabled: 1
     path: Assets/_Scenes/MinigameFreeThrow.unity
     guid: 094accba9b409374eaa142f715c6b2bf
   - enabled: 1
     path: Assets/_Scenes/MinigameFullDragDrop.unity
     guid: 0495d40bd880ca8498ab61ee211ca783
   - enabled: 1
-    path: Assets/_Scenes/MinigameTapCompound.unity
-    guid: 1fe6d9d4c48c77048b87b762c50da297
+    path: Assets/_Scenes/MinigameFreeThrowVer1.unity
+    guid: c272e9c75cdf4654c8a8972e5c77df36
   - enabled: 1
-    path: 
-    guid: 461fde96c480a57499ee6f56647d746d
+    path: Assets/_Scenes/MinigameFreeThrowVer2.unity
+    guid: 5ad548db95f3df64f9035067c8eed3b7
+  - enabled: 1
+    path: Assets/_Scenes/MinigameFreeThrowVer3.unity
+    guid: a0372a6f798dc9145b024ee5db89cc1b
   - enabled: 1
     path: Assets/_Scenes/Prologue.unity
     guid: 33ff445090150ba4382b94367c29069b
-  - enabled: 1
-    path: 
-    guid: fd6e7cfdc95ec0341b0f474b086bb977

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BallPressedChoices : MonoBehaviour {
+public class BallPressedChoicesVer1and3 : MonoBehaviour {
     public GameObject ball1Container;
     public GameObject ball2Container;
     public GameObject ball3Container;
@@ -45,7 +45,7 @@ public class BallPressedChoices : MonoBehaviour {
     }
     private void ChangeBallMaterial()
     {
-        Texture texture = Resources.Load("Ball/BallChoices/ " + TouchManager.ballname, typeof(Texture)) as Texture;
+        Texture texture = Resources.Load("Ball/BallChoices/" + TouchManagerVer1and3.ballname, typeof(Texture)) as Texture;
         TouchManagerVer1and3.ball.GetComponent<Renderer>().material.SetTexture("_MainTex", texture);
         TouchManagerVer1and3.ball.name = TouchManagerVer1and3.ballname;
     }
@@ -56,7 +56,7 @@ public class BallPressedChoices : MonoBehaviour {
         b.color = new Color32(145, 255, 0, 255);
     }
 
-    private void OriginalColor(GameObject ballContainer)
+    public void OriginalColor(GameObject ballContainer)
     {
         var b = ballContainer.GetComponent<Image>();
         b.color = new Color32(255, 255, 255, 255);

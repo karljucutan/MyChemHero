@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchManager : MonoBehaviour {
+public class TouchManagerVer2 : MonoBehaviour {
 
     private float initialTouchTime;
     private float finalTouchTime;
@@ -15,24 +15,20 @@ public class TouchManager : MonoBehaviour {
     public static Rigidbody ball;
     public GameObject ballPrefab;
     public GameObject touchManager;
-    public GameObject BallManager;
+
     GameObject clone;
     private bool leftClick;
 
     //ball
     public static string ballname;
 
-    private void Awake()
+    private void Start()
     {
-        
+        ballname = BallChoiceManagerVer2.ball[0];
         StartCoroutine(CreateBall());
+        Debug.Log(ballname);
+
     }
-    //private void Start()
-    //{
-       
-    //    ball.useGravity = false;
-        
-    //}
 
     private void Update()
     {

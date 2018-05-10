@@ -226,7 +226,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_7
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -379,7 +379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_15
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -527,7 +527,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Unknown
+      value: CityId_8
       objectReference: {fileID: 0}
     - target: {fileID: 114335716026848888, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -693,7 +693,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Unknown
+      value: CityId_10
       objectReference: {fileID: 0}
     - target: {fileID: 114335716026848888, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -1070,7 +1070,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_18
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -1223,7 +1223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_19
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -2062,7 +2062,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_8
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -2190,7 +2190,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_3
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -3103,6 +3103,80 @@ GameObject:
   m_PrefabParentObject: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
     type: 2}
   m_PrefabInternal: {fileID: 92360406}
+--- !u!1 &94408088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 94408089}
+  - component: {fileID: 94408091}
+  - component: {fileID: 94408090}
+  m_Layer: 5
+  m_Name: SectorName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &94408089
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94408088}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000422, y: 1.0000422, z: 0.99999183}
+  m_Children: []
+  m_Father: {fileID: 1475325333}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1016.1, y: 936.4501}
+  m_SizeDelta: {x: 575.6, y: 95}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &94408090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94408088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Sector
+--- !u!222 &94408091
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94408088}
 --- !u!1001 &106774088
 Prefab:
   m_ObjectHideFlags: 0
@@ -3221,7 +3295,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_9
       objectReference: {fileID: 0}
     - target: {fileID: 114335716026848888, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -3387,7 +3461,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_7
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -3540,7 +3614,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_16
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -4250,7 +4324,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_4
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -4917,7 +4991,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metalloids
+      value: CityId_8
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -5060,7 +5134,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_16
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -5213,7 +5287,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_17
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -5686,7 +5760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_4
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -5881,7 +5955,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &235087810
 Prefab:
@@ -6304,7 +6378,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_17
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -7224,7 +7298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_6
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -7377,7 +7451,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_7
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -7842,7 +7916,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_19
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -7904,7 +7978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &396335006
 MonoBehaviour:
@@ -8351,7 +8425,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_11
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -8418,7 +8492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 663.75, y: 966.62}
+  m_AnchoredPosition: {x: 663.75, y: 1153.3}
   m_SizeDelta: {x: 1951.2, y: 202.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427193571
@@ -8531,7 +8605,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4112081595464972, guid: 7e1329a8369c6264db9b1a1d66e319c0, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e1329a8369c6264db9b1a1d66e319c0, type: 2}
@@ -8660,7 +8734,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Unknown
+      value: CityId_12
       objectReference: {fileID: 0}
     - target: {fileID: 114335716026848888, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -9195,7 +9269,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_14
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -9343,7 +9417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_9
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -9486,7 +9560,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_6
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -9704,7 +9778,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_19
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -9981,6 +10055,80 @@ GameObject:
   m_PrefabParentObject: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
     type: 2}
   m_PrefabInternal: {fileID: 526779867}
+--- !u!1 &528388592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 528388593}
+  - component: {fileID: 528388595}
+  - component: {fileID: 528388594}
+  m_Layer: 5
+  m_Name: CityLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &528388593
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528388592}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000029, y: 1.000029, z: 1.0000031}
+  m_Children: []
+  m_Father: {fileID: 1475325333}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 349.25003, y: 1024.5}
+  m_SizeDelta: {x: 240, y: 81.199}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &528388594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528388592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: City
+--- !u!222 &528388595
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528388592}
 --- !u!1 &545152515
 GameObject:
   m_ObjectHideFlags: 0
@@ -10300,7 +10448,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_3
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -10714,7 +10862,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_13
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -11081,7 +11229,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_7
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -11116,6 +11264,80 @@ GameObject:
   m_PrefabParentObject: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
     type: 2}
   m_PrefabInternal: {fileID: 604373464}
+--- !u!1 &609462110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 609462111}
+  - component: {fileID: 609462113}
+  - component: {fileID: 609462112}
+  m_Layer: 5
+  m_Name: SectorLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &609462111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609462110}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000029, y: 1.000029, z: 1.0000031}
+  m_Children: []
+  m_Father: {fileID: 1475325333}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1016.09985, y: 1024.5}
+  m_SizeDelta: {x: 240, y: 95}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &609462112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609462110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Sector
+--- !u!222 &609462113
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609462110}
 --- !u!1 &611287142
 GameObject:
   m_ObjectHideFlags: 0
@@ -11413,8 +11635,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -200, y: -500}
+  m_AnchoredPosition: {x: 0, y: -57.7}
+  m_SizeDelta: {x: -200, y: -615.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624985278
 MonoBehaviour:
@@ -11567,7 +11789,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_5
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -12082,7 +12304,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_11
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -12235,7 +12457,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_10
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -12456,7 +12678,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_5
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -12604,7 +12826,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_3
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -12757,7 +12979,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_6
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -12792,6 +13014,80 @@ GameObject:
   m_PrefabParentObject: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
     type: 2}
   m_PrefabInternal: {fileID: 707017452}
+--- !u!1 &719989418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 719989419}
+  - component: {fileID: 719989421}
+  - component: {fileID: 719989420}
+  m_Layer: 5
+  m_Name: CityName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &719989419
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719989418}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000422, y: 1.0000422, z: 0.99999183}
+  m_Children: []
+  m_Father: {fileID: 1475325333}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 349.25, y: 936.45}
+  m_SizeDelta: {x: 657.49, y: 95}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &719989420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719989418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: City
+--- !u!222 &719989421
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719989418}
 --- !u!1001 &721461126
 Prefab:
   m_ObjectHideFlags: 0
@@ -12910,7 +13206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_13
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -13676,7 +13972,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_16
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -14453,7 +14749,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_15
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -14710,7 +15006,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Unknown
+      value: CityId_11
       objectReference: {fileID: 0}
     - target: {fileID: 114335716026848888, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -14998,7 +15294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_15
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -15146,7 +15442,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_4
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -15259,52 +15555,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 850317457}
---- !u!1 &851560276
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1207689145805336, guid: bb1b27b63ac3b884897780a7d333d89b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 851560278}
-  - component: {fileID: 851560277}
-  m_Layer: 0
-  m_Name: MinigameFullDragDropResetTimer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &851560277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114652310431201580, guid: bb1b27b63ac3b884897780a7d333d89b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 851560276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d61a4b26d725cb4291ae7e04d01b401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minutes: 0
-  seconds: 30
-  milliSeconds: 0
---- !u!4 &851560278
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4860121200185990, guid: bb1b27b63ac3b884897780a7d333d89b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 851560276}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -161.5054, y: 38.131355, z: -4.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856446288
 GameObject:
   m_ObjectHideFlags: 0
@@ -15491,7 +15741,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metalloids
+      value: CityId_9
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -16288,7 +16538,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_8
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -16416,7 +16666,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_7
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -16569,7 +16819,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_17
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -16886,7 +17136,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_5
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -17182,7 +17432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_11
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -17591,7 +17841,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_12
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -18991,7 +19241,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_12
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -19291,7 +19541,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_12
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -19432,7 +19682,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1121418740
 GameObject:
@@ -19625,7 +19875,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_10
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -20311,7 +20561,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_6
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -20929,7 +21179,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Unknown
+      value: CityId_13
       objectReference: {fileID: 0}
     - target: {fileID: 114335716026848888, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -21481,7 +21731,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_8
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -21692,7 +21942,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_13
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -21908,7 +22158,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_12
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -22061,7 +22311,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_15
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -22287,7 +22537,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_9
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -22498,7 +22748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_18
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -22835,7 +23085,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_14
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -23154,7 +23404,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_16
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -23608,7 +23858,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_13
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -23834,7 +24084,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_7
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -24141,6 +24391,10 @@ Prefab:
         type: 2}
       propertyPath: m_Color.a
       value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
+      propertyPath: m_TagString
+      value: CityId_12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
@@ -24487,7 +24741,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_4
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -24640,7 +24894,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_18
       objectReference: {fileID: 0}
     - target: {fileID: 224010516311026372, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -24680,51 +24934,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
     type: 2}
   m_PrefabInternal: {fileID: 1432665719}
---- !u!1 &1433963205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1207689145805336, guid: bb1b27b63ac3b884897780a7d333d89b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1433963208}
-  - component: {fileID: 1433963206}
-  m_Layer: 0
-  m_Name: MinigameTapTapCompound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1433963206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1433963205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d61a4b26d725cb4291ae7e04d01b401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minutes: 0
-  seconds: 10
-  milliSeconds: 0
---- !u!4 &1433963208
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4860121200185990, guid: bb1b27b63ac3b884897780a7d333d89b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1433963205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -161.5054, y: 38.131355, z: -4.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1437428242
 Prefab:
   m_ObjectHideFlags: 0
@@ -24828,7 +25037,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_4
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -25365,7 +25574,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_4
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -25433,13 +25642,17 @@ RectTransform:
   - {fileID: 14150663}
   - {fileID: 427193570}
   - {fileID: 624985277}
+  - {fileID: 528388593}
+  - {fileID: 609462111}
+  - {fileID: 719989419}
+  - {fileID: 94408089}
   m_Father: {fileID: 732669236}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1327.5, y: 1110}
+  m_AnchoredPosition: {x: 0, y: 36.1}
+  m_SizeDelta: {x: 1327.5, y: 1254.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475325334
 MonoBehaviour:
@@ -26144,7 +26357,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_13
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -26277,7 +26490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_9
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -26356,7 +26569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536205268
 GameObject:
@@ -26810,7 +27023,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_17
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -26958,7 +27171,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metalloids
+      value: CityId_9
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -27675,7 +27888,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_3
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -28249,7 +28462,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_6
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -29163,7 +29376,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_11
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -30142,7 +30355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_5
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -31121,7 +31334,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_16
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -31274,7 +31487,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_17
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -31632,7 +31845,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_19
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -31816,7 +32029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_14
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -31923,52 +32136,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855158266}
---- !u!1 &1856320588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1207689145805336, guid: bb1b27b63ac3b884897780a7d333d89b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1856320590}
-  - component: {fileID: 1856320589}
-  m_Layer: 0
-  m_Name: MinigameFreeThrowResetTimer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1856320589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114652310431201580, guid: bb1b27b63ac3b884897780a7d333d89b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1856320588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d61a4b26d725cb4291ae7e04d01b401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minutes: 0
-  seconds: 31
-  milliSeconds: 0
---- !u!4 &1856320590
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4860121200185990, guid: bb1b27b63ac3b884897780a7d333d89b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1856320588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -161.5054, y: 38.131355, z: -4.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861322463
 GameObject:
   m_ObjectHideFlags: 0
@@ -32258,7 +32425,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_18
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -32411,7 +32578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_14
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -32853,7 +33020,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_19
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -33066,7 +33233,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_5
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -33500,7 +33667,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_18
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -34501,7 +34668,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_6
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -34736,7 +34903,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_5
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -34986,7 +35153,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metalloids
+      value: CityId_10
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -35357,7 +35524,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_13
       objectReference: {fileID: 0}
     - target: {fileID: 114167276550647766, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -35680,7 +35847,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_14
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -35828,7 +35995,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metalloids
+      value: CityId_11
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -36118,7 +36285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: NonMetals
+      value: CityId_10
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -36271,7 +36438,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_15
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -36693,7 +36860,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_3
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -36846,7 +37013,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metals
+      value: CityId_8
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -36989,7 +37156,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
       propertyPath: m_TagString
-      value: Metalloids
+      value: CityId_10
       objectReference: {fileID: 0}
     - target: {fileID: 114161469624323720, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}

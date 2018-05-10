@@ -222,7 +222,6 @@ MonoBehaviour:
   ImageCompound: {fileID: 1556733363}
   Compound: {fileID: 1583614255}
   ElementsCombined: {fileID: 535245579}
-  TimeLeft: {fileID: 889548881}
   AccumulatedPoints: {fileID: 1005086898}
   TotalPoints: {fileID: 640691709}
 --- !u!4 &105277825
@@ -404,7 +403,6 @@ RectTransform:
   - {fileID: 1211899890}
   - {fileID: 1583614256}
   - {fileID: 535245580}
-  - {fileID: 889548882}
   - {fileID: 1005086899}
   - {fileID: 640691710}
   m_Father: {fileID: 87662893}
@@ -747,7 +745,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000114, y: 1.0000114, z: 1.0000114}
   m_Children: []
   m_Father: {fileID: 395877321}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1129,80 +1127,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 860466828}
---- !u!1 &889548881
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 889548882}
-  - component: {fileID: 889548884}
-  - component: {fileID: 889548883}
-  m_Layer: 5
-  m_Name: TimeLeft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &889548882
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 889548881}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000113, y: 1.0000113, z: 1.0000113}
-  m_Children: []
-  m_Father: {fileID: 395877321}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 446.2, y: 264.2}
-  m_SizeDelta: {x: 393.6, y: 49.6}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &889548883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 889548881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 50
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 0
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Time Left: '
---- !u!222 &889548884
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 889548881}
 --- !u!1 &1005086898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,11 +1155,11 @@ RectTransform:
   m_LocalScale: {x: 1.0000113, y: 1.0000113, z: 1.0000113}
   m_Children: []
   m_Father: {fileID: 395877321}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 446.2, y: 200.7}
+  m_AnchoredPosition: {x: 443.8, y: 264.20004}
   m_SizeDelta: {x: 393.6, y: 49.6}
   m_Pivot: {x: 0.50000006, y: 0.49999997}
 --- !u!114 &1005086900
@@ -2011,11 +1935,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353fb1eb5d076da4b8f3d4f653723f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FaceChoices: []
-  HairChoices: []
-  EyesChoices: []
-  NoseChoices: []
-  MouthChoices: []
+  MaleBodyChoices: []
+  MaleHairChoices: []
+  MaleEyeBrowsChoices: []
+  MaleEyesChoices: []
+  MaleNoseChoices: []
+  MaleMouthChoices: []
+  FemaleBodyChoices: []
+  FemaleHairChoices: []
+  FemaleEyeBrowsChoices: []
+  FemaleEyesChoices: []
+  FemaleNoseChoices: []
+  FemaleMouthChoices: []
   TeamFlag: []
 --- !u!4 &2002705351
 Transform:

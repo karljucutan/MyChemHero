@@ -11,6 +11,7 @@ public class ScoreScript : MonoBehaviour {
     {
         if (collide.gameObject.tag.Equals("Ball"))
         {
+            // CHANGE TO checking if the compound contains an element
             if (DataPersistor.persist.compoundNeeded.Equals(collide.gameObject.name) && (DataPersistor.persist.mTime.seconds > 0))
             {
                 DataPersistor.persist.totalPoints += 1;
