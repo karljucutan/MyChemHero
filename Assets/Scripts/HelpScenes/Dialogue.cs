@@ -58,6 +58,7 @@ public class Dialogue : MonoBehaviour
     List<string> gamesCityId_18 = new List<string>() { "G4", "G5", "G6", "G8" };
     List<string> gamesCityId_19 = new List<string>() { "Prologue", "Map" };
 
+    private string minigame;
     void Awake()
     {
         DialogueSetter();
@@ -65,71 +66,121 @@ public class Dialogue : MonoBehaviour
 
     private void DialogueSetter()
     {
-        string[] dialogue;
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "Help_AsGoodAsNew":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "HELPASGOODASNEW";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
+        RandomMinigameSetTimeandDialogue();
+        //string[] dialogue;
+        //switch (SceneManager.GetActiveScene().name)
+        //{
+        //    case "Help_AsGoodAsNew":
+        //        // random  minigame
+               
+        //        //switch (DataPersistor.persist.sectorCity)
+        //        //{
+        //        //    case "CityId_1":
 
-            case "Help_BakersDilemma":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_BakersDilemma";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-            case "Help_CloudSeeding":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_CloudSeeding";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-            case "Help_Fire":               
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_Fire";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-            case "Help_LandLubberScurvy":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_LandLubberScurvy";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-            case "Help_MedicPanic":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_MedicPanic";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-            case "Help_Shokugeki":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_Shokugeki";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-            case "Help_StayCleanStaySafe":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_StayCleanStaySafe";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-            case "Help_ToothFairy":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_ToothFairy";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-            case "Help_ToSpace":
-                dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                dialogue[0] = "Help_ToSpace";
-                dialogue[1] = DataPersistor.persist.sectorCity;
-                dialogueString = dialogue;
-                break;
-        }
+        //        //        DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" };
+        //        //        DataPersistor.persist.CompoundsList = new List<string>() { "H2O", "H2O2" };
+        //        //        DataPersistor.persist.ToxicList = new List<string>() { "H", "Li", "Na" };
+        //        //        DataPersistor.persist.NonToxicList = new List<string>() { "K", "Rb", "Cs" };
+
+                       
+        //        //        //var scene = Randomizer(gamesCityId_1);
+        //        //        //temporary Delete bot line uncomment up line
+        //        //        var scene = "MinigameFreeThrowVer2";
+        //        //        switch (scene)
+        //        //        {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+        //        //            case "MinigameFreeThrowVer1": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+        //        //            case "MinigameFreeThrowVer2": SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+        //        //            case "MinigameFreeThrowVer3": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+        //        //                //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+        //        //                //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+        //        //                //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+        //        //                //case "3rdgameVer1": SetTime(0, 30, 10); break;
+        //        //                //case "3rdgameVer2": SetTime(0, 30, 10); break;
+        //        //                //case "3rdgameVer3": SetTime(0, 30, 10); break;
+        //        //        }
+
+        //        //        break;
+
+        //        //    case "CityId_2": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_4": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_6": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_7": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_8": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_9": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_10": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_11": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_12": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_13": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_14": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_15": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_16": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_17": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_18": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //    case "CityId_19": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        //        //}
+
+
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "HELPASGOODASNEW";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+
+        //    case "Help_BakersDilemma":
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_BakersDilemma";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //    case "Help_CloudSeeding":
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_CloudSeeding";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //    case "Help_Fire":               
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_Fire";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //    case "Help_LandLubberScurvy":
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_LandLubberScurvy";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //    case "Help_MedicPanic":
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_MedicPanic";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //    case "Help_Shokugeki":
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_Shokugeki";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //    case "Help_StayCleanStaySafe":
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_StayCleanStaySafe";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //    case "Help_ToothFairy":
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_ToothFairy";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //    case "Help_ToSpace":
+        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+        //        //dialogue[0] = "Help_ToSpace";
+        //        //dialogue[1] = DataPersistor.persist.sectorCity;
+        //        //dialogueString = dialogue;
+        //        break;
+        //}
     }
 
 
@@ -237,54 +288,57 @@ public class Dialogue : MonoBehaviour
             }
             else// else punta sa mini games kasi same dialogue to sa help scenes
             {
+                SceneManager.LoadScene(minigame);
                 //loading of games depending on the city
-                switch (DataPersistor.persist.sectorCity)
-                {
-                    case "CityId_1":
+                //switch (DataPersistor.persist.sectorCity)
+                //{
+                //    case "CityId_1":
 
-                        DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" };
-                        DataPersistor.persist.CompoundsList = new List<string>() { "H2O", "H2O2" };
-                        DataPersistor.persist.ToxicList = new List<string>() { "H", "Li", "Na"};
-                        DataPersistor.persist.NonToxicList = new List<string>() { "K", "Rb", "Cs" };
-                        //var scene = RandomMinigame(gamesCityId_1);
-                        //temporary Delete bot line uncomment up line
-                        var scene = "MinigameFreeThrowVer2";
-                        switch (scene)
-                        {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                            case "MinigameFreeThrowVer1": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-                            case "MinigameFreeThrowVer2": SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                            case "MinigameFreeThrowVer3": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
-                            //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                            //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                            //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
-                            //case "3rdgameVer1": SetTime(0, 30, 10); break;
-                            //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                            //case "3rdgameVer3": SetTime(0, 30, 10); break;
-                        }
-                         SceneManager.LoadScene(scene); break;
+                //        DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" };
+                //        DataPersistor.persist.CompoundsList = new List<string>() { "H2O", "H2O2" };
+                //        DataPersistor.persist.ToxicList = new List<string>() { "H", "Li", "Na"};
+                //        DataPersistor.persist.NonToxicList = new List<string>() { "K", "Rb", "Cs" };
+                //        //var scene = Randomizer(gamesCityId_1);
+                //        //temporary Delete bot line uncomment up line
+                //        var scene = "MinigameFreeThrowVer2";
+                //        switch (scene)
+                //        {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                //            case "MinigameFreeThrowVer1": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                //            case "MinigameFreeThrowVer2": SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                //            case "MinigameFreeThrowVer3": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                //            //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                //            //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                //            //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                //            //case "3rdgameVer1": SetTime(0, 30, 10); break;
+                //            //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                //            //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                //        }
+                //         SceneManager.LoadScene(scene); break;
 
-                    case "CityId_2":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break; 
-                    case "CityId_4":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;   
-                    case "CityId_6":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_7":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_8":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_9":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_10":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_11":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_12":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_13":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_14":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_15":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_16":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_17":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_18":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                    case "CityId_19":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-                }
+                //    case "CityId_2":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break; 
+                //    case "CityId_4":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;   
+                //    case "CityId_6":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_7":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_8":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_9":    SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_10":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_11":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_12":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_13":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_14":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_15":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_16":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_17":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_18":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //    case "CityId_19":   SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+                //}
+
+
             }
         }
     }
 
-    private string RandomMinigame(List<string> minigameslist)
+    private string Randomizer(List<string> minigameslist)
     {
         var randomnum = Random.Range(0, minigameslist.Count);
         return minigameslist[randomnum];
@@ -368,5 +422,99 @@ public class Dialogue : MonoBehaviour
     private void ShowIcon()
     {
         continueIcon.SetActive(true);
+    }
+
+    //private void RandomMinigameSetTime()
+    //{
+    //    //minigame = Randomizer(gamesCityId_1);
+    //    //temporary Delete bot line uncomment up line
+    //    minigame = "MinigameFreeThrowVer2";
+    //    switch (minigame)
+    //    {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+    //        //case "MinigameFreeThrowVer1": SetTime(shootingV1_Min, shootingV1_Sec, shootingV1_Milli); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+    //        //case "MinigameFreeThrowVer2": SetTime(shootingV2_Min, shootingV2_Sec, shootingV2_Milli); DataPersistor.persist.Timechange = 10; break;
+    //        //case "MinigameFreeThrowVer3": SetTime(shootingV3_Min, shootingV3_Sec, shootingV3_Milli); DataPersistor.persist.Timechange = 10; break;
+
+    //            //case "MinigameFreeThrowVer1": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+    //            //case "MinigameFreeThrowVer2": SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+    //            //case "MinigameFreeThrowVer3": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+    //            //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+    //            //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+    //            //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+    //            //case "3rdgameVer1": SetTime(0, 30, 10); break;
+    //            //case "3rdgameVer2": SetTime(0, 30, 10); break;
+    //            //case "3rdgameVer3": SetTime(0, 30, 10); break;
+    //    }
+    //    //SceneManager.LoadScene(minigame); 
+    //}
+
+    private void RandomMinigameSetTimeandDialogue()
+    {
+        string[] dialogue;
+        switch (DataPersistor.persist.sectorCity)
+        {
+            case "CityId_1":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "H2O", "H2O2" };
+                DataPersistor.persist.ToxicList = new List<string>() { "H", "Li", "Na" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "K", "Rb", "Cs" };
+
+
+                minigame = Randomizer(gamesCityId_1);
+                //temporary Delete bot line uncomment up line
+                minigame = "MinigameFreeThrowVer2";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3": 
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    //case "3rdgameVer1": SetTime(0, 30, 10); break;
+                    //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                    //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+
+                break;
+
+            case "CityId_2": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_4": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_6": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_7": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_8": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_9": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_10": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_11": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_12": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_13": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_14": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_15": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_16": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_17": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_18": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_19": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+        }
+
+
     }
 }
