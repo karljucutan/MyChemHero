@@ -18,6 +18,7 @@ public class DataPersistor : MonoBehaviour {
     public List<string> ToxicList;
     public List<string> NonToxicList;
     public int Timechange; // Ballmangager script // every 5 seconds change ng compound sa freethrowgame
+    public float segregationTimer; //this is for segregation time
 
     public ModelTime mTime;
 

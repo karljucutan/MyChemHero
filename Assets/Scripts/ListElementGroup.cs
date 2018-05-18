@@ -8,7 +8,7 @@ namespace Assets.Scripts
     class ListElementGroup
     {
         public static List<ElementGroups> SOLIDLIQUIDGAS = new List<ElementGroups>(){
-            new ElementGroups{cityNum=1,elements=new List<Element>(){
+            new ElementGroups{city="CityId_1",elements=new List<Element>(){
                     new Element{
                         name="H",
                         tag="Gas"
@@ -35,7 +35,7 @@ namespace Assets.Scripts
                     }
                 }
             },     
-            new ElementGroups{cityNum=2,elements=new List<Element>(){
+            new ElementGroups{city="CityId_2",elements=new List<Element>(){
                     new Element{
                         name="Be",
                         tag="Solid"
@@ -62,7 +62,7 @@ namespace Assets.Scripts
                     },
                 }
            },
-           new ElementGroups{cityNum=3,elements=new List<Element>(){
+           new ElementGroups{city="CityId_3",elements=new List<Element>(){
                     new Element{
                         name="Sc",
                         tag="Solid"
@@ -85,7 +85,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=4,elements=new List<Element>(){
+           new ElementGroups{city="CityId_4",elements=new List<Element>(){
                     new Element{
                         name="V",
                         tag="Solid"
@@ -112,7 +112,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=5,elements=new List<Element>(){
+           new ElementGroups{city="CityId_5",elements=new List<Element>(){
                     new Element{
                         name="Mn",
                         tag="Solid"
@@ -139,7 +139,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=6,elements=new List<Element>(){
+           new ElementGroups{city="CityId_6",elements=new List<Element>(){
                     new Element{
                         name="Co",
                         tag="Solid"
@@ -166,7 +166,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=8,elements=new List<Element>(){
+           new ElementGroups{city="CityId_7",elements=new List<Element>(){
                     new Element{
                         name="B",
                         tag="Solid"
@@ -189,7 +189,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=9,elements=new List<Element>(){
+           new ElementGroups{city="CityId_9",elements=new List<Element>(){
                     new Element{
                         name="C",
                         tag="Solid"
@@ -212,7 +212,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=10,elements=new List<Element>(){
+           new ElementGroups{city="CityId_10",elements=new List<Element>(){
                     new Element{
                         name="N",
                         tag="Gas"
@@ -258,7 +258,7 @@ namespace Assets.Scripts
            //         }
            //     }
            //},
-           new ElementGroups{cityNum=12,elements=new List<Element>(){
+           new ElementGroups{city="CityId_12",elements=new List<Element>(){
                     new Element{
                         name="F",
                         tag="Gas"
@@ -281,7 +281,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=13,elements=new List<Element>(){
+           new ElementGroups{city="CityId_13",elements=new List<Element>(){
                     new Element{
                         name="He",
                         tag="Gas"
@@ -308,7 +308,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=14,elements=new List<Element>(){
+           new ElementGroups{city="CityId_14",elements=new List<Element>(){
                     new Element{
                         name="La",
                         tag="Solid"
@@ -331,7 +331,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=15,elements=new List<Element>(){
+           new ElementGroups{city="CityId_15",elements=new List<Element>(){
                     new Element{
                         name="Sm",
                         tag="Solid"
@@ -354,7 +354,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=16,elements=new List<Element>(){
+           new ElementGroups{city="CityId_16",elements=new List<Element>(){
                     new Element{
                         name="Ho",
                         tag="Solid"
@@ -377,7 +377,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=17,elements=new List<Element>(){
+           new ElementGroups{city="CityId_17",elements=new List<Element>(){
                     new Element{
                         name="Ac",
                         tag="Solid"
@@ -400,7 +400,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=18,elements=new List<Element>(){
+           new ElementGroups{city="CityId_18",elements=new List<Element>(){
                     new Element{
                         name="Pu",
                         tag="Solid"
@@ -423,7 +423,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=19,elements=new List<Element>(){
+           new ElementGroups{city="CityId_19",elements=new List<Element>(){
                     new Element{
                         name="Es",
                         tag="Solid"
@@ -451,7 +451,7 @@ namespace Assets.Scripts
 
         //THIS IS FOR TOXICS AND NONTOXIC
         public static List<ElementGroups> TOXICNONTOXIC = new List<ElementGroups>(){
-            new ElementGroups{cityNum=1,elements=new List<Element>(){
+            new ElementGroups{city="CityId_1",elements=new List<Element>(){
                     new Element{
                         name="H",
                         tag="Toxic"
@@ -478,7 +478,7 @@ namespace Assets.Scripts
                     }
                 }
             },     
-            new ElementGroups{cityNum=2,elements=new List<Element>(){
+            new ElementGroups{city="CityId_2",elements=new List<Element>(){
                     new Element{
                         name="Be",
                         tag="Toxic"
@@ -505,7 +505,7 @@ namespace Assets.Scripts
                     },
                 }
            },
-           new ElementGroups{cityNum=3,elements=new List<Element>(){
+           new ElementGroups{city="CityId_3",elements=new List<Element>(){
                     new Element{
                         name="Sc",
                         tag="NonToxic"
@@ -528,7 +528,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=5,elements=new List<Element>(){
+           new ElementGroups{city="CityId_5",elements=new List<Element>(){
                     new Element{
                         name="Mn",
                         tag="NonToxic"
@@ -555,7 +555,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=7,elements=new List<Element>(){
+           new ElementGroups{city="CityId_7",elements=new List<Element>(){
                     new Element{
                         name="Cu",
                         tag="NonToxic"
@@ -582,7 +582,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=8,elements=new List<Element>(){
+           new ElementGroups{city="CityId_8",elements=new List<Element>(){
                     new Element{
                         name="B",
                         tag="Toxic"
@@ -605,7 +605,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=9,elements=new List<Element>(){
+           new ElementGroups{city="CityId_9",elements=new List<Element>(){
                     new Element{
                         name="C",
                         tag="NonToxic"
@@ -628,7 +628,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=10,elements=new List<Element>(){
+           new ElementGroups{city="CityId_10",elements=new List<Element>(){
                     new Element{
                         name="N",
                         tag="NonToxic"
@@ -651,7 +651,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=11,elements=new List<Element>(){
+           new ElementGroups{city="CityId_11",elements=new List<Element>(){
                     new Element{
                         name="O",
                         tag="NonToxic"
@@ -674,7 +674,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=12,elements=new List<Element>(){
+           new ElementGroups{city="CityId_12",elements=new List<Element>(){
                     new Element{
                         name="F",
                         tag="Toxic"
@@ -697,7 +697,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=16,elements=new List<Element>(){
+           new ElementGroups{city="CityId_16",elements=new List<Element>(){
                     new Element{
                         name="Ho",
                         tag="Toxic"
@@ -720,7 +720,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=17,elements=new List<Element>(){
+           new ElementGroups{city="CityId_17",elements=new List<Element>(){
                     new Element{
                         name="Ac",
                         tag="Toxic"
@@ -743,7 +743,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=18,elements=new List<Element>(){
+           new ElementGroups{city="CityId_18",elements=new List<Element>(){
                     new Element{
                         name="Pu",
                         tag="Toxic"
@@ -766,7 +766,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=19,elements=new List<Element>(){
+           new ElementGroups{city="CityId_19",elements=new List<Element>(){
                     new Element{
                         name="Es",
                         tag="Toxic"
@@ -794,7 +794,7 @@ namespace Assets.Scripts
 
         //THIS IS FOR METALS
         public static List<ElementGroups> METALS = new List<ElementGroups>(){
-            new ElementGroups{cityNum=1,elements=new List<Element>(){
+            new ElementGroups{city="CityId_1",elements=new List<Element>(){
                     new Element{
                         name="H",
                         tag="NonMetal"
@@ -821,7 +821,7 @@ namespace Assets.Scripts
                     }
                 }
             },     
-            new ElementGroups{cityNum=2,elements=new List<Element>(){
+            new ElementGroups{city="CityId_2",elements=new List<Element>(){
                     new Element{
                         name="Be",
                         tag="Metal"
@@ -848,7 +848,7 @@ namespace Assets.Scripts
                     },
                 }
            },
-           new ElementGroups{cityNum=3,elements=new List<Element>(){
+           new ElementGroups{city="CityId_3",elements=new List<Element>(){
                     new Element{
                         name="Sc",
                         tag="Metal"
@@ -871,7 +871,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=4,elements=new List<Element>(){
+           new ElementGroups{city="CityId_4",elements=new List<Element>(){
                     new Element{
                         name="V",
                         tag="Metal"
@@ -898,7 +898,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=5,elements=new List<Element>(){
+           new ElementGroups{city="CityId_5",elements=new List<Element>(){
                     new Element{
                         name="Mn",
                         tag="Metal"
@@ -925,7 +925,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=6,elements=new List<Element>(){
+           new ElementGroups{city="CityId_6",elements=new List<Element>(){
                     new Element{
                         name="Co",
                         tag="Metal"
@@ -952,7 +952,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=8,elements=new List<Element>(){
+           new ElementGroups{city="CityId_8",elements=new List<Element>(){
                     new Element{
                         name="B",
                         tag="Metalloid"
@@ -975,7 +975,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=9,elements=new List<Element>(){
+           new ElementGroups{city="CityId_9",elements=new List<Element>(){
                     new Element{
                         name="C",
                         tag="NonMetal"
@@ -998,7 +998,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=10,elements=new List<Element>(){
+           new ElementGroups{city="CityId_10",elements=new List<Element>(){
                     new Element{
                         name="N",
                         tag="NonMetal"
@@ -1021,7 +1021,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=11,elements=new List<Element>(){
+           new ElementGroups{city="CityId_11",elements=new List<Element>(){
                     new Element{
                         name="O",
                         tag="NonMetal"
@@ -1044,7 +1044,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=12,elements=new List<Element>(){
+           new ElementGroups{city="CityId_12",elements=new List<Element>(){
                     new Element{
                         name="F",
                         tag="NonMetal"
@@ -1067,7 +1067,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=13,elements=new List<Element>(){
+           new ElementGroups{city="CityId_13",elements=new List<Element>(){
                     new Element{
                         name="He",
                         tag="NonMetal"
@@ -1094,7 +1094,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=14,elements=new List<Element>(){
+           new ElementGroups{city="CityId_14",elements=new List<Element>(){
                     new Element{
                         name="La",
                         tag="Metal"
@@ -1117,7 +1117,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=15,elements=new List<Element>(){
+           new ElementGroups{city="CityId_15",elements=new List<Element>(){
                     new Element{
                         name="Sm",
                         tag="Metal"
@@ -1140,7 +1140,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=16,elements=new List<Element>(){
+           new ElementGroups{city="CityId_16",elements=new List<Element>(){
                     new Element{
                         name="Ho",
                         tag="Metal"
@@ -1163,7 +1163,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=17,elements=new List<Element>(){
+           new ElementGroups{city="CityId_17",elements=new List<Element>(){
                     new Element{
                         name="Ac",
                         tag="Metal"
@@ -1186,7 +1186,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=18,elements=new List<Element>(){
+           new ElementGroups{city="CityId_18",elements=new List<Element>(){
                     new Element{
                         name="Pu",
                         tag="Metal"
@@ -1209,7 +1209,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{cityNum=19,elements=new List<Element>(){
+           new ElementGroups{city="CityId_19",elements=new List<Element>(){
                     new Element{
                         name="Es",
                         tag="Metal"

@@ -463,7 +463,7 @@ public class Dialogue : MonoBehaviour
 
                 minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "MinigameFreeThrowVer2";
+                minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer1":
@@ -490,7 +490,13 @@ public class Dialogue : MonoBehaviour
                     //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
-                    //case "3rdgameVer1": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
                     //case "3rdgameVer2": SetTime(0, 30, 10); break;
                     //case "3rdgameVer3": SetTime(0, 30, 10); break;
                 }

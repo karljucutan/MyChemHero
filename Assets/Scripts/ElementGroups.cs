@@ -7,7 +7,7 @@ namespace Assets.Scripts
 {
     class ElementGroups
     {
-        public int cityNum { get; set; }
+        public String city { get; set; }
         public List<Element> elements;
     }
 }

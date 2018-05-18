@@ -24,6 +24,6 @@ public class BinScript : MonoBehaviour
     {
         Vector2 pos = new Vector2(this.transform.position.x, elem.GetComponent<ElementSpawner>().transform.position.y);
         Instantiate(elem.GetComponent<ElementSpawner>().element, pos, Quaternion.identity);
-        elem.GetComponent<ElementSpawner>().queueElement(1);
+        elem.GetComponent<ElementSpawner>().queueElement();
     }
 }

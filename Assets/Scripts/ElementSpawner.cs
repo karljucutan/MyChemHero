@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using Assets.Scripts;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class ElementSpawner : MonoBehaviour {
 
@@ -30,17 +31,40 @@ public class ElementSpawner : MonoBehaviour {
          ListElementGroup.TOXICNONTOXIC=for toxicity
          ETC.....
          */
-        var elemento = ListElementGroup.SOLIDLIQUIDGAS.Where(x => x.cityNum == 5).SingleOrDefault(); //change 5 depends sa citynum nung icoconquer
-        foreach (Element ele in elemento.elements)
+        Debug.Log(SceneManager.GetActiveScene().name);
+        if (SceneManager.GetActiveScene().name.Equals("SegregationVer1"))
         {
-            elementos.Add(ele);
+            var elemento = ListElementGroup.TOXICNONTOXIC.Where(x => x.city.Equals(DataPersistor.persist.sectorCity)).SingleOrDefault();
+            foreach (Element ele in elemento.elements)
+            {
+                elementos.Add(ele);
+            }
+            var asd = elementos;
         }
-        
+        else if (SceneManager.GetActiveScene().name.Equals("SegregationVer2"))
+        {
+            var elemento = ListElementGroup.METALS.Where(x => x.city.Equals(DataPersistor.persist.sectorCity)).SingleOrDefault();
+            foreach (Element ele in elemento.elements)
+            {
+                elementos.Add(ele);
+            }
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("SegregationVer3"))
+        {
+            var elemento = ListElementGroup.SOLIDLIQUIDGAS.Where(x => x.city.Equals(DataPersistor.persist.sectorCity)).SingleOrDefault();
+            foreach (Element ele in elemento.elements)
+            {
+                elementos.Add(ele);
+            }
+        }
+        // var elemento = ListElementGroup.SOLIDLIQUIDGAS.Where(x => x.cityNum == 5).SingleOrDefault(); //change 5 depends sa citynum nung icoconquer
+
+
         collider = GetComponent<BoxCollider>();
         x1 = transform.position.x - collider.bounds.size.x / 2f;
         x2 = transform.position.x + collider.bounds.size.x / 2f;
     }
-    public void queueElement(float time)
+    public void queueElement()
     {
         var randomizedElem=elementos[Random.Range(0,elementos.Count)];
         //element = elements[Random.Range(0, elements.Length)];
@@ -61,7 +85,7 @@ public class ElementSpawner : MonoBehaviour {
         
     }
 	void Start () {
-        queueElement(1);
+        queueElement();
 	}
 	
 
