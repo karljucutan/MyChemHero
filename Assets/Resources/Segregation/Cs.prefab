@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54422345406161020}
   m_Layer: 0
   m_Name: Cs
-  m_TagString: NonToxic
+  m_TagString: Liquid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

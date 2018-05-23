@@ -67,120 +67,7 @@ public class Dialogue : MonoBehaviour
     private void DialogueSetter()
     {
         RandomMinigameSetTimeandDialogue();
-        //string[] dialogue;
-        //switch (SceneManager.GetActiveScene().name)
-        //{
-        //    case "Help_AsGoodAsNew":
-        //        // random  minigame
-               
-        //        //switch (DataPersistor.persist.sectorCity)
-        //        //{
-        //        //    case "CityId_1":
-
-        //        //        DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" };
-        //        //        DataPersistor.persist.CompoundsList = new List<string>() { "H2O", "H2O2" };
-        //        //        DataPersistor.persist.ToxicList = new List<string>() { "H", "Li", "Na" };
-        //        //        DataPersistor.persist.NonToxicList = new List<string>() { "K", "Rb", "Cs" };
-
-                       
-        //        //        //var scene = Randomizer(gamesCityId_1);
-        //        //        //temporary Delete bot line uncomment up line
-        //        //        var scene = "MinigameFreeThrowVer2";
-        //        //        switch (scene)
-        //        //        {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-        //        //            case "MinigameFreeThrowVer1": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-        //        //            case "MinigameFreeThrowVer2": SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-        //        //            case "MinigameFreeThrowVer3": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
-        //        //                //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-        //        //                //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-        //        //                //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
-        //        //                //case "3rdgameVer1": SetTime(0, 30, 10); break;
-        //        //                //case "3rdgameVer2": SetTime(0, 30, 10); break;
-        //        //                //case "3rdgameVer3": SetTime(0, 30, 10); break;
-        //        //        }
-
-        //        //        break;
-
-        //        //    case "CityId_2": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_4": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_6": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_7": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_8": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_9": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_10": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_11": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_12": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_13": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_14": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_15": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_16": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_17": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_18": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //    case "CityId_19": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-        //        //}
-
-
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "HELPASGOODASNEW";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-
-        //    case "Help_BakersDilemma":
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_BakersDilemma";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //    case "Help_CloudSeeding":
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_CloudSeeding";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //    case "Help_Fire":               
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_Fire";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //    case "Help_LandLubberScurvy":
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_LandLubberScurvy";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //    case "Help_MedicPanic":
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_MedicPanic";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //    case "Help_Shokugeki":
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_Shokugeki";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //    case "Help_StayCleanStaySafe":
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_StayCleanStaySafe";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //    case "Help_ToothFairy":
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_ToothFairy";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //    case "Help_ToSpace":
-        //        //dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-        //        //dialogue[0] = "Help_ToSpace";
-        //        //dialogue[1] = DataPersistor.persist.sectorCity;
-        //        //dialogueString = dialogue;
-        //        break;
-        //}
+     
     }
 
 
@@ -424,29 +311,6 @@ public class Dialogue : MonoBehaviour
         continueIcon.SetActive(true);
     }
 
-    //private void RandomMinigameSetTime()
-    //{
-    //    //minigame = Randomizer(gamesCityId_1);
-    //    //temporary Delete bot line uncomment up line
-    //    minigame = "MinigameFreeThrowVer2";
-    //    switch (minigame)
-    //    {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-    //        //case "MinigameFreeThrowVer1": SetTime(shootingV1_Min, shootingV1_Sec, shootingV1_Milli); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-    //        //case "MinigameFreeThrowVer2": SetTime(shootingV2_Min, shootingV2_Sec, shootingV2_Milli); DataPersistor.persist.Timechange = 10; break;
-    //        //case "MinigameFreeThrowVer3": SetTime(shootingV3_Min, shootingV3_Sec, shootingV3_Milli); DataPersistor.persist.Timechange = 10; break;
-
-    //            //case "MinigameFreeThrowVer1": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-    //            //case "MinigameFreeThrowVer2": SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-    //            //case "MinigameFreeThrowVer3": SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
-    //            //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-    //            //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-    //            //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
-    //            //case "3rdgameVer1": SetTime(0, 30, 10); break;
-    //            //case "3rdgameVer2": SetTime(0, 30, 10); break;
-    //            //case "3rdgameVer3": SetTime(0, 30, 10); break;
-    //    }
-    //    //SceneManager.LoadScene(minigame); 
-    //}
 
     private void RandomMinigameSetTimeandDialogue()
     {
@@ -457,11 +321,11 @@ public class Dialogue : MonoBehaviour
 
                 DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "H2O", "H2O2" };
-                DataPersistor.persist.ToxicList = new List<string>() { "H", "Li", "Na" };
-                DataPersistor.persist.NonToxicList = new List<string>() { "K", "Rb", "Cs" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Na", "Li" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "H", "K", "Rb", "Cs" };
 
 
-                minigame = Randomizer(gamesCityId_1);
+                //minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
                 minigame = "SegregationVer3";
                 switch (minigame)
@@ -503,22 +367,836 @@ public class Dialogue : MonoBehaviour
 
                 break;
 
-            case "CityId_2": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_4": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_6": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_7": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_8": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_9": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_10": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_11": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_12": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_13": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_14": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_15": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_16": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_17": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_18": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
-            case "CityId_19": SceneManager.LoadScene("MinigameFreeThrowVer1"); break;
+            case "CityId_2":
+                DataPersistor.persist.ElementsList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Be", "Sr", "Ra"};
+                DataPersistor.persist.NonToxicList = new List<string>() { "Mg", "Ca", "Ba"};
+
+                //minigame = Randomizer(gamesCityId_2);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_3":
+                DataPersistor.persist.ElementsList = new List<string>() { "Sc", "Y", "Ti", "Zr", "Hf" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() {"Zr"};
+                DataPersistor.persist.NonToxicList = new List<string>() { "Sc", "Y", "Ti", "Hf"};
+
+                //minigame = Randomizer(gamesCityId_3);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_4":
+                DataPersistor.persist.ElementsList = new List<string>() { "V", "Nb", "Ta", "Cr", "Mo", "W" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+               
+
+                //minigame = Randomizer(gamesCityId_4);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+
+            case "CityId_5":
+                DataPersistor.persist.ElementsList = new List<string>() { "Mn", "Tc", "Re", "Fe", "Ru", "Os" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Tc", "Ru", "Os" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "Mn", "Re", "Fe" };
+
+                //minigame = Randomizer(gamesCityId_5);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_6":
+                DataPersistor.persist.ElementsList = new List<string>() { "Co", "Rh", "Ir", "Ni", "Pd", "Pt" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                
+                //minigame = Randomizer(gamesCityId_6);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+
+            case "CityId_7":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Cd", "Hg" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "Cu", "Ag", "Au", "Zn" };
+
+                //minigame = Randomizer(gamesCityId_7);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_8":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "B", "Al", "Ga", "In", "Tl" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "B", "Tl" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "Al", "Ga", "Au", "In" };
+
+                //minigame = Randomizer(gamesCityId_8);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+
+            case "CityId_9":
+                DataPersistor.persist.ElementsList = new List<string>() { "C", "Si", "Ge", "Sn", "Pb" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Pb" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "C", "Si", "Ge", "Sn" };
+
+                //minigame = Randomizer(gamesCityId_9);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_10":
+                DataPersistor.persist.ElementsList = new List<string>() { "N", "P", "As", "Sb", "Bi" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "As", "Bi" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "N", "P", "Sb"};
+
+                //minigame = Randomizer(gamesCityId_10);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_11":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "O", "S", "Se", "Te", "Po" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Te", "Po" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "O", "S", "Se" };
+
+                //minigame = Randomizer(gamesCityId_11);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_12":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "F", "Cl", "Br", "I", "At" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "F", "Cl", "Br" };
+                DataPersistor.persist.NonToxicList = new List<string>() { "I", "At" };
+
+                //minigame = Randomizer(gamesCityId_12);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_13":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "He", "Ne", "Ar", "Kr", "Xe", "Rn" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                
+                //minigame = Randomizer(gamesCityId_13);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_14":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "La", "Ce", "Pr", "Nd", "Pm" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+
+                //minigame = Randomizer(gamesCityId_14);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_15":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "Sm", "Eu", "Gd", "Tb", "Dy"};
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+
+                //minigame = Randomizer(gamesCityId_15);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_16":
+                DataPersistor.persist.ElementsList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
+                DataPersistor.persist.NonToxicList = new List<string>() { };
+
+                //minigame = Randomizer(gamesCityId_16);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_17":
+
+                DataPersistor.persist.ElementsList = new List<string>() { "Ac", "Th", "Pa", "U", "Np" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Ac", "Th", "Pa", "U", "Np" };
+                DataPersistor.persist.NonToxicList = new List<string>() { };
+
+                //minigame = Randomizer(gamesCityId_17);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_18":
+                DataPersistor.persist.ElementsList = new List<string>() { "Pu", "Am", "Cm", "Bk", "Cf" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Pu", "Am", "Cm", "Bk", "Cf" };
+                DataPersistor.persist.NonToxicList = new List<string>() { };
+
+                //minigame = Randomizer(gamesCityId_18);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
+            case "CityId_19":
+                DataPersistor.persist.ElementsList = new List<string>() { "Es", "Fm", "Md", "No", "Lr" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ToxicList = new List<string>() { "Es", "Fm", "Md", "No", "Lr" };
+                DataPersistor.persist.NonToxicList = new List<string>() { };
+
+                //minigame = Randomizer(gamesCityId_19);
+                //temporary Delete bot line uncomment up line
+                minigame = "SegregationVer3";
+                switch (minigame)
+                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFreeThrowVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    case "MinigameFreeThrowVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "MinigameFreeThrowVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        SetTime(0, 20, 10); DataPersistor.persist.Timechange = 10; break;
+                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
+                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break; //SetTime(0, 30, 10); break;
+                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
+                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                }
+                break;
         }
 
 

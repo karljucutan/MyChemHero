@@ -454,7 +454,7 @@ namespace Assets.Scripts
             new ElementGroups{city="CityId_1",elements=new List<Element>(){
                     new Element{
                         name="H",
-                        tag="Toxic"
+                        tag="NonToxic"
                     },
                     new Element{
                         name="Li",
