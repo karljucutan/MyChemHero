@@ -20,8 +20,8 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
     public Text CompoundText;
 
     public GameObject TimerObject;
-
-    public static Queue<string> Compounds;
+    public  static string randomItem;
+    //public static Queue<string> Compounds;
     private int seconds;
     // Use this for initialization
     void Awake() {
@@ -29,18 +29,12 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
         for (int i = 0; i < 3; i++)
         { ball[i] = ""; }
 
-        // sa una irandom yung list of compounds 
-        // get first index
-        // yung compound sa first index kunin yung mga elements
-        // irandom tapos lagay sa ball 0
-
-        // mag random sa list ng elements na ndi nag cocontain sa compound
-        // ilagay sa ball[1] and [2]
 
         ShuffleList(DataPersistor.persist.CompoundsList);
-        Compounds = new Queue<string>(DataPersistor.persist.CompoundsList);
+        //Compounds = new Queue<string>(DataPersistor.persist.CompoundsList);
+        
         BallAssignment();
-        CompoundText.text = Compounds.Peek();
+        //CompoundText.text = Compounds.Peek();
 
         AssignToGameObject("Ball/BallChoices/");
         seconds = DataPersistor.persist.mTime.seconds;
@@ -54,30 +48,38 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
         { 
             if (TimerObject.GetComponent<MinigameFreeThrowTimer>().mTime.seconds <= seconds - DataPersistor.persist.Timechange)
             {
-                if (Compounds.Count > 0)
-                {
-                    Compounds.Dequeue();
-                    if (Compounds.Count > 0)
-                    {
+                //if (Compounds.Count > 0)
+                //{
+                //   Compounds.Dequeue();
+                //    if (Compounds.Count > 0)
+                //    {
+
                         //SOUND EFFECT FOR CHANGES
-                        CompoundText.text = Compounds.Peek();
                         BallAssignment();
                         AssignToGameObject("Ball/BallChoices/");
                         var BPCscript = BallPressedChoicesVer1and3.GetComponent<BallPressedChoicesVer1and3>();
                         BPCscript.OriginalColor(BPCscript.ball1Container);
                         BPCscript.OriginalColor(BPCscript.ball2Container);
                         BPCscript.OriginalColor(BPCscript.ball3Container);
-                    }
+                    //}
                     seconds -= DataPersistor.persist.Timechange;
-                }
+                //}
             }
         }
     }
 
+    private int RandomCompound()
+    {
+        var length = DataPersistor.persist.CompoundsList.Count;
+        return UnityEngine.Random.Range(0, length);
+    }
+
     private void BallAssignment()
     {
-        var FirstItem = Compounds.Peek();
-        var elementsInCompounds = DataPersistor.persist.ElementsList.Where(e => FirstItem.Contains(e)).ToList();
+        //var FirstItem = Compounds.Peek();
+        randomItem = DataPersistor.persist.CompoundsList[RandomCompound()];
+        //var elementsInCompounds = DataPersistor.persist.ElementsList.Where(e => FirstItem.Contains(e)).ToList();
+        var elementsInCompounds = DataPersistor.persist.ElementsList.Where(e => randomItem.Contains(e)).ToList();
         ShuffleList(elementsInCompounds);
         ball[0] = elementsInCompounds[0];
 
@@ -87,6 +89,8 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
         ball[2] = listofelements[1];
 
         ShuffleArray(ball);
+
+        CompoundText.text = randomItem;
     }
 
     public void AssignToGameObject(string resourcepath)

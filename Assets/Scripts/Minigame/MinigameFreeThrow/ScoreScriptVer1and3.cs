@@ -20,7 +20,7 @@ public class ScoreScriptVer1and3 : MonoBehaviour {
             //    text.text = string.Format("{0:00}", DataPersistor.persist.totalPoints);
             //}
 
-            if(BallChoiceManagerVer1and3.Compounds.Peek().Contains(collide.gameObject.name) && DataPersistor.persist.mTime.seconds > 0)
+            if(BallChoiceManagerVer1and3.randomItem.Contains(collide.gameObject.name) && DataPersistor.persist.mTime.seconds > 0)
             {
                 DataPersistor.persist.totalPoints += 1;
                 DataPersistor.persist.accumulatedPoints = DataPersistor.persist.totalPoints;

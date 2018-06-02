@@ -13,7 +13,7 @@ public class ScoreScriptVer2 : MonoBehaviour {
         {
             if (collide.gameObject.name.Equals("toxic") && DataPersistor.persist.mTime.seconds > 0)
             {
-                if(DataPersistor.persist.ToxicList.Contains(BallChoiceManagerVer2.Elements.Peek()))
+                if(DataPersistor.persist.ToxicList.Contains(BallChoiceManagerVer2.randomElement))
                 {
                     DataPersistor.persist.totalPoints += 1;
                     DataPersistor.persist.accumulatedPoints = DataPersistor.persist.totalPoints;
@@ -24,7 +24,7 @@ public class ScoreScriptVer2 : MonoBehaviour {
 
             if(collide.gameObject.name.Equals("nontoxic") && DataPersistor.persist.mTime.seconds > 0)
             {
-                if (DataPersistor.persist.NonToxicList.Contains(BallChoiceManagerVer2.Elements.Peek()))
+                if (DataPersistor.persist.NonToxicList.Contains(BallChoiceManagerVer2.randomElement))
                 {
                     DataPersistor.persist.totalPoints += 1;
                     DataPersistor.persist.accumulatedPoints = DataPersistor.persist.totalPoints;
