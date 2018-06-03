@@ -22,10 +22,10 @@ public class ScoreScriptVer1and3 : MonoBehaviour {
 
             if(BallChoiceManagerVer1and3.randomItem.Contains(collide.gameObject.name) && DataPersistor.persist.mTime.seconds > 0)
             {
-                DataPersistor.persist.totalPoints += 1;
-                DataPersistor.persist.accumulatedPoints = DataPersistor.persist.totalPoints;
+                DataPersistor.persist.accumulatedPoints += 1;
+               
                 //SOUND EFFECT
-                text.text = string.Format("{0:00}", DataPersistor.persist.totalPoints);
+                text.text = string.Format("{0:00}", DataPersistor.persist.accumulatedPoints);
             }
         }
     }

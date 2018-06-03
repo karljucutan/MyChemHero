@@ -61,6 +61,7 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
                         BPCscript.OriginalColor(BPCscript.ball1Container);
                         BPCscript.OriginalColor(BPCscript.ball2Container);
                         BPCscript.OriginalColor(BPCscript.ball3Container);
+                        
                     //}
                     seconds -= DataPersistor.persist.Timechange;
                 //}

@@ -34,10 +34,10 @@ public class DataPersistor : MonoBehaviour {
 
     //end scene
     public string endSceneBG;
-    public string endSceneHeroImage;
     public string[] endSceneDialogueString; // dito nilalagay yung dialogue para sa endscene na galing sa unity editor
     public int accumulatedPoints = 0;
     public int totalPoints = 0;
+    public int difficultyMultiplier = 1;
     public int helpsMade = 0;
 
     //setting of ConquerorsProfile

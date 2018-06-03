@@ -57,10 +57,10 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
                         ElementText.text = randomElement;
 
                         //BallAssignment();
-                        AssignToGameObject("Ball/BallChoices/");
-                        var BPCscript = BallPressedChoicesVer2.GetComponent<BallPressedChoicesVer2>();
-                        BPCscript.OriginalColor(BPCscript.ball1Container);
-                        BPCscript.OriginalColor(BPCscript.ball2Container);
+                        //AssignToGameObject("Ball/BallChoices/");
+                        //var BPCscript = BallPressedChoicesVer2.GetComponent<BallPressedChoicesVer2>();
+                        //BPCscript.OriginalColor(BPCscript.ball1Container);
+                        //BPCscript.OriginalColor(BPCscript.ball2Container);
                         
                     //}
                     seconds -= DataPersistor.persist.Timechange;

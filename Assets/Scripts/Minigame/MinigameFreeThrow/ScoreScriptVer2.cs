@@ -15,10 +15,9 @@ public class ScoreScriptVer2 : MonoBehaviour {
             {
                 if(DataPersistor.persist.ToxicList.Contains(BallChoiceManagerVer2.randomElement))
                 {
-                    DataPersistor.persist.totalPoints += 1;
-                    DataPersistor.persist.accumulatedPoints = DataPersistor.persist.totalPoints;
+                    DataPersistor.persist.accumulatedPoints += 1;
                     //SOUND EFFECT
-                    text.text = string.Format("{0:00}", DataPersistor.persist.totalPoints);
+                    text.text = string.Format("{0:00}", DataPersistor.persist.accumulatedPoints);
                 }
             }
 
@@ -26,10 +25,9 @@ public class ScoreScriptVer2 : MonoBehaviour {
             {
                 if (DataPersistor.persist.NonToxicList.Contains(BallChoiceManagerVer2.randomElement))
                 {
-                    DataPersistor.persist.totalPoints += 1;
-                    DataPersistor.persist.accumulatedPoints = DataPersistor.persist.totalPoints;
+                    DataPersistor.persist.accumulatedPoints += 1;
                     //SOUND EFFECT
-                    text.text = string.Format("{0:00}", DataPersistor.persist.totalPoints);
+                    text.text = string.Format("{0:00}", DataPersistor.persist.accumulatedPoints);
                 }
             }
         }
