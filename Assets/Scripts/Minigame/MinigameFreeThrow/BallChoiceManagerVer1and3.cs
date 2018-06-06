@@ -91,7 +91,8 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
 
         ShuffleArray(ball);
 
-        CompoundText.text = randomItem;
+        CompoundText.text = PairOfElementCompound.listOfPairElementCompound.Where(ec => ec.elementcompound.Key == randomItem).Select(ec => ec.elementcompound.Value).SingleOrDefault();
+
     }
 
     public void AssignToGameObject(string resourcepath)
