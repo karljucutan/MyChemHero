@@ -38,7 +38,8 @@ public class Dialogue : MonoBehaviour
 
 
     //mingames scene name                           // Temporary Names //Replace with Scene Names
-    List<string> gamesCityId_1 = new List<string>() { "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9" };
+    List<string> gamesCityId_1 = new List<string>() { 
+        "SegregationVer2"};
     List<string> gamesCityId_2 = new List<string>() { "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9" };
     List<string> gamesCityId_3 = new List<string>() { "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9" };
     List<string> gamesCityId_4 = new List<string>() { "G1", "G2", "G3", "G5", "G6", "G7", "G9" };
@@ -293,9 +294,9 @@ public class Dialogue : MonoBehaviour
                 // Level of Difficulty Multiplier
                 DataPersistor.persist.difficultyMultiplier = 50;
 
-                //minigame = Randomizer(gamesCityId_1);
+                minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "MinigameFreeThrowVer1";
+                //minigame = "MinigameFreeThrowVer1";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer1":
@@ -345,6 +346,37 @@ public class Dialogue : MonoBehaviour
                     //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+
+                        DataPersistor.persist.segregationTimer = 30;break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+
+                        DataPersistor.persist.segregationTimer = 30;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";

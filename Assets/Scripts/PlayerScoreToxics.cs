@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScoreToxics : MonoBehaviour {
 
@@ -14,10 +15,14 @@ public class PlayerScoreToxics : MonoBehaviour {
 
     public GameObject toxicBroke;
     public GameObject nontoxicBroke;
+    public GameObject gameOverUI;
+    public GameObject goodJobUI;
+    public GameObject[] toxicsDisable;
 
     public GameObject sound;
 
     private Text scoreText;
+
     private int score = 0;
 
     private int toxicBrokeCount = 0;
@@ -46,9 +51,17 @@ public class PlayerScoreToxics : MonoBehaviour {
     {
         if (this.tag == target.tag)
         {
-            if (nontoxicCorrect == 10 || toxicCorrect == 10)
+            DataPersistor.persist.accumulatedPoints += 1;
+            scoreText.text = DataPersistor.persist.accumulatedPoints.ToString();
+
+            if (nontoxicCorrect == 9 || toxicCorrect == 9)
             {
-                //dito panalo na next scene save score sa datapersistor
+                foreach (GameObject jars in toxicsDisable)
+                {
+                    jars.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+                goodJobUI.SetActive(true);
+                StartCoroutine("LoadEndingScene");
             }
             Destroy(target.gameObject, 0.2f);
             if (this.tag.Equals("Toxic"))
@@ -62,9 +75,8 @@ public class PlayerScoreToxics : MonoBehaviour {
                 nontoxicRenderer.sprite = nontoxicContent[nontoxicCorrect];
                 nontoxicCorrect++;
             }
-          
-            score += 100;
-            scoreText.text = score.ToString();
+
+            
         }
         else
         {
@@ -72,44 +84,66 @@ public class PlayerScoreToxics : MonoBehaviour {
             Destroy(target.gameObject, 0.2f);
             if (this.tag.Equals("Toxic"))
             {
-                if (toxicBrokeCount <= 2)
+                toxicBrokeCount++;
+                if (toxicBrokeCount <= 3)
                 {
-                    toxicBrokeRenderer.sprite = brokenToxic[toxicBrokeCount];
-                    toxicBrokeCount++;
+                    toxicBrokeRenderer.sprite = brokenToxic[toxicBrokeCount-1];
+                    
                     sound.GetComponent<SoundManagerScript>().playSound("crack");
                 }
                 else
                 {
-                    toxicBrokeRenderer.sprite = brokenToxic[toxicBrokeCount];
-                    toxicRenderer.gameObject.SetActive(false);
+                    toxicBrokeRenderer.sprite = brokenToxic[toxicBrokeCount-1];
+                    toxicRenderer.sprite = null;
                     sound.GetComponent<SoundManagerScript>().playSound("break");
+                  
                 }
 
 
             }
             if (this.tag.Equals("NonToxic"))
             {
-                if (nontoxicBrokeCount <= 2)
+                nontoxicBrokeCount++;
+                if (nontoxicBrokeCount <= 3)
                 {
-                    nontoxicBrokeRenderer.sprite = brokenNonToxic[nontoxicBrokeCount];
-                    nontoxicBrokeCount++;
+                    nontoxicBrokeRenderer.sprite = brokenNonToxic[nontoxicBrokeCount-1];
+                    
                     sound.GetComponent<SoundManagerScript>().playSound("crack");
                 }
                 else
                 {
-                    nontoxicBrokeRenderer.sprite = brokenNonToxic[nontoxicBrokeCount];
-                    nontoxicRenderer.gameObject.SetActive(false);
+                    nontoxicBrokeRenderer.sprite = brokenNonToxic[nontoxicBrokeCount-1];
+                    nontoxicRenderer.sprite = null;
                     sound.GetComponent<SoundManagerScript>().playSound("break");
+                   
                 }
 
             }
 
+            if (nontoxicBrokeCount == 4 || toxicBrokeCount == 4)
+            {
+                foreach (GameObject jars in toxicsDisable)
+                {
+                    jars.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+                gameOverUI.SetActive(true);
+                StartCoroutine("LoadEndingScene");
+            }
+
+
             //Debug.Log("Mali");
         }
+        
     }
-	
-	// Update is called once per frame
-	void Update () {
+    private IEnumerator LoadEndingScene()
+    {
+        yield return new WaitForSeconds(4);
+
+        SceneManager.LoadScene("Help_EndingSceneForAll");
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

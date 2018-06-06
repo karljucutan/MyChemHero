@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScore : MonoBehaviour {
 
@@ -17,6 +18,9 @@ public class PlayerScore : MonoBehaviour {
     public GameObject solidBroke;
     public GameObject liquidBroke;
     public GameObject gasBroke;
+    public GameObject gameOverUI;
+    public GameObject goodJobUI;
+    public GameObject[] solidsDisable;
 
     public GameObject sound;
 
@@ -61,10 +65,17 @@ public class PlayerScore : MonoBehaviour {
         //if pag tama dito
         if (this.tag == target.tag)
         {
-            if (solidCorrect == 10 || liquidCorrect == 10 || gasCorrect == 10)
+            DataPersistor.persist.accumulatedPoints += 1;
+            scoreText.text = DataPersistor.persist.accumulatedPoints.ToString();
+
+            if (solidCorrect == 9 || liquidCorrect == 9 || gasCorrect == 9)
             {
-                //dito panalo na next scene save score sa datapersistor
-                Debug.Log("panalo");
+                foreach (GameObject jars in solidsDisable)
+                {
+                    jars.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+                goodJobUI.SetActive(true);
+                StartCoroutine("LoadEndingScene");
             }
             Destroy(target.gameObject, 0.2f);
             if (this.tag.Equals("Solid"))
@@ -84,9 +95,8 @@ public class PlayerScore : MonoBehaviour {
                 gasCorrect++;
             }
 
-            
-            score += 100;
-            scoreText.text = score.ToString();
+
+          
         }
         else
         {
@@ -95,60 +105,82 @@ public class PlayerScore : MonoBehaviour {
             //target.gameObject.SetActive(false);
             if (this.tag.Equals("Solid"))
             {
-                if (solidBrokeCount <=2)
+                solidBrokeCount++;
+                if (solidBrokeCount <=3)
                 {
-                    solidBrokeRenderer.sprite = brokenSolid[solidBrokeCount];
-                    solidBrokeCount++;
+                    solidBrokeRenderer.sprite = brokenSolid[solidBrokeCount-1];
+                    
                     sound.GetComponent<SoundManagerScript>().playSound("crack");
                 }
                 else
                 {
-                    solidBrokeRenderer.sprite = brokenSolid[solidBrokeCount];
-                    solidRenderer.gameObject.SetActive(false);
+                    solidBrokeRenderer.sprite = brokenSolid[solidBrokeCount-1];
+                    solidRenderer.sprite = null;
                     sound.GetComponent<SoundManagerScript>().playSound("break");
+                    
                 }
                 
 
             }
             if (this.tag.Equals("Liquid"))
             {
-                if (liquidBrokeCount <= 2)
+                liquidBrokeCount++;
+                if (liquidBrokeCount <= 3)
                 {
-                    liquidBrokeRenderer.sprite = brokenLiquid[liquidBrokeCount];
-                    liquidBrokeCount++;
+                    liquidBrokeRenderer.sprite = brokenLiquid[liquidBrokeCount-1];
+                    
                     sound.GetComponent<SoundManagerScript>().playSound("crack");
                 }
                 else
                 {
-                    liquidBrokeRenderer.sprite = brokenLiquid[liquidBrokeCount];
-                    liquidRenderer.gameObject.SetActive(false);
+                    liquidBrokeRenderer.sprite = brokenLiquid[liquidBrokeCount-1];
+                    liquidRenderer.sprite = null;
                     sound.GetComponent<SoundManagerScript>().playSound("break");
-                    
+                   
+
                 }
                 
             }
             if (this.tag.Equals("Gas"))
             {
-                if (gasBrokeCount <= 2)
+                gasBrokeCount++;
+                if (gasBrokeCount <= 3)
                 {
-                    gasBrokeRenderer.sprite = brokenGas[gasBrokeCount];
-                    gasBrokeCount++;
+                    gasBrokeRenderer.sprite = brokenGas[gasBrokeCount-1];
+                    
                     sound.GetComponent<SoundManagerScript>().playSound("crack");
                 }
                 else
                 {
-                    gasBrokeRenderer.sprite = brokenGas[gasBrokeCount];
-                    gasRenderer.gameObject.SetActive(false);
+                    gasBrokeRenderer.sprite = brokenGas[gasBrokeCount-1];
+                    gasRenderer.sprite = null;
                     sound.GetComponent<SoundManagerScript>().playSound("break");
+               
                 }
                 
             }
-            
+            if (solidBrokeCount == 4 || liquidBrokeCount == 4 || gasBrokeCount == 4)
+            {
+                foreach (GameObject jars in solidsDisable)
+                {
+                    jars.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+                gameOverUI.SetActive(true);
+                StartCoroutine("LoadEndingScene");
+            }
+
             //Debug.Log("Mali");
         }
     }
 
-	void Start () {
+    private IEnumerator LoadEndingScene()
+    {
+        yield return new WaitForSeconds(2);
+
+        SceneManager.LoadScene("Help_EndingSceneForAll");
+    }
+
+    void Start () {
 		
 	}
 	

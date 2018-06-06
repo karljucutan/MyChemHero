@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScoreMetals : MonoBehaviour {
 
@@ -17,7 +18,9 @@ public class PlayerScoreMetals : MonoBehaviour {
     public GameObject metalBroke;
     public GameObject metalloidBroke;
     public GameObject nonmetalBroke;
-
+    public GameObject gameOverPanel;
+    public GameObject goodJobUI;
+    public GameObject[] metalsDisable;
     public GameObject sound;
 
     private Text scoreText;
@@ -56,10 +59,18 @@ public class PlayerScoreMetals : MonoBehaviour {
     {
         if (this.tag == target.tag)
         {
+            DataPersistor.persist.accumulatedPoints += 1;
+            scoreText.text = DataPersistor.persist.accumulatedPoints.ToString();
             // check kung 10 na, 10 assets lng kasi meron kapag tama 
-            if (nonmetalCorrect == 10 || metalloidCorrect == 10 || metalCorrect == 10)
+            if (nonmetalCorrect == 9 || metalloidCorrect == 9 || metalCorrect == 9)
             {
                 //dito panalo na next scene save score sa datapersistor
+                foreach (GameObject jars in metalsDisable)
+                {
+                    jars.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+                goodJobUI.SetActive(true);
+                StartCoroutine("LoadEndingScene");
             }
 
             Destroy(target.gameObject, 0.2f);
@@ -80,9 +91,6 @@ public class PlayerScoreMetals : MonoBehaviour {
                 nonmetalCorrect++;
             }
 
-          
-            score += 100;
-            scoreText.text = score.ToString();
         }
         else
         {
@@ -90,16 +98,17 @@ public class PlayerScoreMetals : MonoBehaviour {
             Destroy(target.gameObject, 0.2f);
             if (this.tag.Equals("Metal"))
             {
-                if (metalBrokeCount <= 2)
+                metalBrokeCount++;
+                if (metalBrokeCount <= 3)
                 {
-                    metalBrokeRenderer.sprite = brokenMetal[metalBrokeCount];
-                    metalBrokeCount++;
+                    metalBrokeRenderer.sprite = brokenMetal[metalBrokeCount-1];
+                    
                     sound.GetComponent<SoundManagerScript>().playSound("crack");//play sound crack pag mali
                 }
                 else
                 {
-                    metalBrokeRenderer.sprite = brokenMetal[metalBrokeCount];
-                    metalRenderer.gameObject.SetActive(false);
+                    metalBrokeRenderer.sprite = brokenMetal[metalBrokeCount-1];
+                    metalRenderer.sprite = null;
                     sound.GetComponent<SoundManagerScript>().playSound("break");//play break sound pag naka tatlong mali na
                 }
 
@@ -107,44 +116,65 @@ public class PlayerScoreMetals : MonoBehaviour {
             }
             if (this.tag.Equals("Metalloid"))
             {
-                if (metalloidBrokeCount <= 2)
+                metalloidBrokeCount++;
+                if (metalloidBrokeCount <= 3)
                 {
-                    metalloidBrokeRenderer.sprite = brokenMetalloid[metalloidBrokeCount];
-                    metalloidBrokeCount++;
+                    metalloidBrokeRenderer.sprite = brokenMetalloid[metalloidBrokeCount-1];
+                    
                     sound.GetComponent<SoundManagerScript>().playSound("crack");
                 }
                 else
                 {
-                    metalloidBrokeRenderer.sprite = brokenMetalloid[metalloidBrokeCount];
-                    metalloidRenderer.gameObject.SetActive(false);
+                    metalloidBrokeRenderer.sprite = brokenMetalloid[metalloidBrokeCount-1];
+                    metalloidRenderer.sprite = null;
                     sound.GetComponent<SoundManagerScript>().playSound("break");
+               
 
                 }
 
             }
             if (this.tag.Equals("NonMetal"))
             {
-                if (nonmetalBrokeCount <= 2)
+                nonmetalBrokeCount++;
+                if (nonmetalBrokeCount <= 3)
                 {
-                    nonmetalBrokeRenderer.sprite = brokenNonMetal[nonmetalBrokeCount];
-                    nonmetalBrokeCount++;
+                    nonmetalBrokeRenderer.sprite = brokenNonMetal[nonmetalBrokeCount-1];
+                    
                     sound.GetComponent<SoundManagerScript>().playSound("crack");
                 }
                 else
                 {
-                    nonmetalBrokeRenderer.sprite = brokenNonMetal[nonmetalBrokeCount];
-                    nonmetalRenderer.gameObject.SetActive(false);
+                    nonmetalBrokeRenderer.sprite = brokenNonMetal[nonmetalBrokeCount-1];
+                    nonmetalRenderer.sprite = null;
                     sound.GetComponent<SoundManagerScript>().playSound("break");
+                    
                 }
 
+            }
+
+            if (metalBrokeCount == 4 || nonmetalBrokeCount == 4 || metalloidBrokeCount == 4)
+            {
+                foreach(GameObject jars in metalsDisable)
+                {
+                    jars.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+                gameOverPanel.SetActive(true);
+                StartCoroutine("LoadEndingScene");
             }
 
             //Debug.Log("Mali");
         }
     }
 
-	// Update is called once per frame
-	void Update () {
+    private IEnumerator LoadEndingScene()
+    {
+        yield return new WaitForSeconds(4);
+
+        SceneManager.LoadScene("Help_EndingSceneForAll");
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
