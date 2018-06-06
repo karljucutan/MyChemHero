@@ -164,7 +164,7 @@ public class Dialogue : MonoBehaviour
 
                     DataPersistor.persist.helpsMade = 0;
                     DataPersistor.persist.totalPoints = 0;
-
+                    DataPersistor.persist.accumulatedPoints = 0;
                     while (postPointsAndHelpsMadeRunning)
                     {
                         yield return new WaitForSeconds(0.1f);
