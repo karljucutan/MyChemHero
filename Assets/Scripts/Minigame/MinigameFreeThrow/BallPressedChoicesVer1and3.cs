@@ -45,7 +45,7 @@ public class BallPressedChoicesVer1and3 : MonoBehaviour {
     }
     private void ChangeBallMaterial()
     {
-        Texture texture = Resources.Load("Ball/BallChoices/" + TouchManagerVer1and3.ballname, typeof(Texture)) as Texture;
+        Texture texture = Resources.Load("Sprites/Minigame/ElementsSymbol/" + TouchManagerVer1and3.ballname, typeof(Texture)) as Texture;
         TouchManagerVer1and3.ball.GetComponent<Renderer>().material.SetTexture("_MainTex", texture);
         TouchManagerVer1and3.ball.name = TouchManagerVer1and3.ballname;
     }

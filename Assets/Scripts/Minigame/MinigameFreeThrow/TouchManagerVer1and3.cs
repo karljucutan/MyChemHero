@@ -84,7 +84,7 @@ public class TouchManagerVer1and3 : MonoBehaviour {
         clone.GetComponent<Rigidbody>().useGravity = false;
         ball = clone.GetComponent<Rigidbody>();
         ball.name = ballname;
-        Texture texture = Resources.Load("Ball/BallChoices/" + ballname, typeof(Texture)) as Texture;
+        Texture texture = Resources.Load("Sprites/Minigame/ElementsSymbol/" + ballname, typeof(Texture)) as Texture;
         ball.GetComponent<Renderer>().material.SetTexture("_MainTex", texture);
 
     }

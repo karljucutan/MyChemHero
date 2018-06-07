@@ -286,7 +286,7 @@ public class Dialogue : MonoBehaviour
         {
             case "CityId_1": // level 2 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" }; // ilagay yung iba pang elements na hindi part ng city pero pwede ipang mix sa ibang elements       
+                DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Mo"}; // ilagay yung iba pang elements na hindi part ng city pero pwede ipang mix sa ibang elements       
                 DataPersistor.persist.CompoundsList = new List<string>() { "H2O" };
                 DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "H", "Li", "Na", "K", "Rb", "Cs" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Na", "Li" };
@@ -296,7 +296,7 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "MinigameFreeThrowVer2";
+                minigame = "MinigameFreeThrowVer1";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer1":
@@ -458,6 +458,36 @@ public class Dialogue : MonoBehaviour
                     //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                    case "SegregationVer1":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer1";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 50;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 50;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -472,9 +502,8 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break;
+                   
                 }
                 break;
             case "CityId_3":// level 2 difficulty
@@ -580,20 +609,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-                    case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
+                    
                     case "MinigameFreeThrowVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -645,20 +661,7 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -673,9 +676,10 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer1";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -686,10 +690,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -704,9 +721,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
             case "CityId_6":// level 3 difficulty
@@ -720,9 +735,9 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
+                    case "SegregationVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[0] = "SegregationVer2";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -733,38 +748,8 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-                    case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 40;
+                        break; 
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -779,13 +764,11 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
 
-            case "CityId_7":// level 1 difficulty
+            case "CityId_7":// level 2 difficulty
 
                 DataPersistor.persist.ElementsList = new List<string>() { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
@@ -793,11 +776,11 @@ public class Dialogue : MonoBehaviour
                 DataPersistor.persist.ToxicList = new List<string>() { "Cd", "Hg" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "Cu", "Ag", "Au", "Zn" };
                 // Level of Difficulty Multiplier
-                DataPersistor.persist.difficultyMultiplier = 1;
+                DataPersistor.persist.difficultyMultiplier = 2;
 
                 //minigame = Randomizer(gamesCityId_7);
                 //temporary Delete bot line uncomment up line
-                minigame = "SegregationVer3";
+                minigame = "SegregationVer1";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer1":
@@ -813,7 +796,7 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -827,7 +810,7 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     case "MinigameFreeThrowVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -841,13 +824,11 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
-                    case "SegregationVer3":
+                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
+                   
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
+                        dialogue[0] = "SegregationVer1";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -858,7 +839,7 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        DataPersistor.persist.segregationTimer = 60;
+                        DataPersistor.persist.segregationTimer = 50;
                         break; //SetTime(0, 30, 10); break;
                                //case "3rdgameVer2": SetTime(0, 30, 10); break;
                                //case "3rdgameVer3": SetTime(0, 30, 10); break;
@@ -879,20 +860,7 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -907,9 +875,9 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer1";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -920,10 +888,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 30;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 30;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -938,9 +919,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 30;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
 
@@ -958,20 +937,7 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -986,9 +952,9 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer3";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -999,10 +965,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1017,9 +996,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
             case "CityId_10":// level 1 difficulty
@@ -1036,20 +1013,7 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -1064,9 +1028,9 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer1";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1077,10 +1041,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1095,12 +1072,10 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
-            case "CityId_11":// level 2 difficulty
+            case "CityId_11":// level 1 difficulty
 
                 DataPersistor.persist.ElementsList = new List<string>() { "O", "S", "Se", "Te", "Po" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
@@ -1108,27 +1083,13 @@ public class Dialogue : MonoBehaviour
                 DataPersistor.persist.ToxicList = new List<string>() { "Te", "Po" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "O", "S", "Se" };
                 // Level of Difficulty Multiplier
-                DataPersistor.persist.difficultyMultiplier = 2;
+                DataPersistor.persist.difficultyMultiplier = 1;
 
                 //minigame = Randomizer(gamesCityId_11);
                 //temporary Delete bot line uncomment up line
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -1142,10 +1103,10 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "SegregationVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer2";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1156,13 +1117,11 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
-                    case "SegregationVer3":
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
+                        dialogue[0] = "SegregationVer1";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1173,10 +1132,8 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        DataPersistor.persist.segregationTimer = 50;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break; 
                 }
                 break;
             case "CityId_12":// level 1 difficulty
@@ -1194,20 +1151,7 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -1222,9 +1166,9 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer1";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1235,10 +1179,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1253,9 +1210,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
             case "CityId_13":// level 3 difficulty
@@ -1270,9 +1225,9 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
+                    case "SegregationVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[0] = "SegregationVer3";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1283,38 +1238,8 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-                    case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 40;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1329,9 +1254,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
             case "CityId_14":// level 3 difficulty
@@ -1346,9 +1269,9 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
+                    case "SegregationVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[0] = "SegregationVer3";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1359,38 +1282,8 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-                    case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 40;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1405,9 +1298,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break;
                 }
                 break;
             case "CityId_15":// level 3 difficulty
@@ -1422,9 +1313,9 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
+                    case "SegregationVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
+                        dialogue[0] = "SegregationVer3";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1435,38 +1326,8 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
-                    case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 40, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 40;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1481,39 +1342,24 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break;
                 }
                 break;
-            case "CityId_16":// level 2 difficulty
+            case "CityId_16":// level 1 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
                 DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ho", "Er", "Tm", "Yb", "Lu" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
-                DataPersistor.persist.difficultyMultiplier = 2;
+                DataPersistor.persist.difficultyMultiplier = 1;
 
                 //minigame = Randomizer(gamesCityId_16);
                 //temporary Delete bot line uncomment up line
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -1527,10 +1373,10 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer2";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1541,10 +1387,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1558,10 +1417,8 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        DataPersistor.persist.segregationTimer = 50;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break; 
                 }
                 break;
             case "CityId_17":// level 1 difficulty
@@ -1579,20 +1436,7 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                    
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -1607,9 +1451,9 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer1";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1620,10 +1464,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1638,9 +1495,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
             case "CityId_18":// level 1 difficulty
@@ -1657,20 +1512,7 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                   
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -1685,9 +1527,9 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer1";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1698,10 +1540,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1716,9 +1571,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break;
                 }
                 break;
             case "CityId_19":// level 1 difficulty
@@ -1734,21 +1587,8 @@ public class Dialogue : MonoBehaviour
                 //temporary Delete bot line uncomment up line
                 minigame = "SegregationVer3";
                 switch (minigame)
-                {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
+                {   
+                   
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -1763,9 +1603,9 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
+                    case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
+                        dialogue[0] = "SegregationVer3";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
 
@@ -1776,10 +1616,23 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
-                    //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer3";
@@ -1794,9 +1647,7 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
         }

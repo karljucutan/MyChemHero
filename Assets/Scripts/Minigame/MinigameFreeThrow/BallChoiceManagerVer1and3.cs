@@ -36,7 +36,7 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
         BallAssignment();
         //CompoundText.text = Compounds.Peek();
 
-        AssignToGameObject("Ball/BallChoices/");
+        AssignToGameObject("Sprites/Minigame/ElementsSymbol/");
         seconds = DataPersistor.persist.mTime.seconds;
     }
 
@@ -56,7 +56,7 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
 
                         //SOUND EFFECT FOR CHANGES
                         BallAssignment();
-                        AssignToGameObject("Ball/BallChoices/");
+                        AssignToGameObject("Sprites/Minigame/ElementsSymbol/");
                         var BPCscript = BallPressedChoicesVer1and3.GetComponent<BallPressedChoicesVer1and3>();
                         BPCscript.OriginalColor(BPCscript.ball1Container);
                         BPCscript.OriginalColor(BPCscript.ball2Container);
