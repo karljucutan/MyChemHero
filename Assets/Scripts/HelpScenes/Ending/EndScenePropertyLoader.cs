@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using Assets.Scripts;
 
 public class EndScenePropertyLoader : MonoBehaviour {
     private string endSceneBG;
@@ -15,27 +16,39 @@ public class EndScenePropertyLoader : MonoBehaviour {
     public GameObject HeroImage;
     public GameObject DialogueText;
     public GameObject CharacterFlag;
-    public GameObject CharacterFace;
+
+    public GameObject CharacterBody;
     public GameObject CharacterHair;
+    public GameObject CharacterEyebrows;
     public GameObject CharacterEyes;
     public GameObject CharacterNose;
     public GameObject CharacterMouth;
-    public GameObject UserName;
-    public GameObject ImageCompound;
-    public GameObject Compound;
-    public GameObject ElementsCombined;
-    public GameObject AccumulatedPoints;
-    public GameObject TotalPoints;
 
+    public GameObject UserName;
+    public GameObject TeamName;
+
+    public GameObject AccumulatedPoints;
+    public GameObject Multiplier;
+    public GameObject TotalPoints;
+    private void Awake()
+    {
+        DialogueText.GetComponent<Dialogue>().dialogueString = DataPersistor.persist.endSceneDialogueString;
+    }
     private void Start()
     {
-        //CharacterFace.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().FaceChoices[DataPersistor.persist.user.UserCharacter.Face];
-        //CharacterHair.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().HairChoices[DataPersistor.persist.user.UserCharacter.Hair];
-        //CharacterEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().EyesChoices[DataPersistor.persist.user.UserCharacter.Eyes];
-        //CharacterNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().NoseChoices[DataPersistor.persist.user.UserCharacter.Nose];
-        //CharacterMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().MouthChoices[DataPersistor.persist.user.UserCharacter.Mouth];
-        CharacterFlag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[DataPersistor.persist.user.TeamId];
+        CharacterBody.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterBody(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Body);
+        CharacterHair.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterHair(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Hair);
+        CharacterEyebrows.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyebrows(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.EyeBrows);
+        CharacterEyes.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterEyes(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Eyes);
+        CharacterNose.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterNose(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Nose);
+        CharacterMouth.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().GetCharacterMouth(DataPersistor.persist.user.UserCharacter.Gender, DataPersistor.persist.user.UserCharacter.Mouth);
+        CharacterFlag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[DataPersistor.persist.user.TeamId - 1];
         UserName.GetComponent<Text>().text = DataPersistor.persist.user.UserName;
+        TeamName.GetComponent<Text>().text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(DataPersistor.persist.user.TeamId)).Select(t => t.teamName).SingleOrDefault();
+
+        AccumulatedPoints.GetComponent<Text>().text = DataPersistor.persist.accumulatedPoints.ToString();
+        Multiplier.GetComponent<Text>().text = DataPersistor.persist.difficultyMultiplier.ToString();
+        TotalPoints.GetComponent<Text>().text = (DataPersistor.persist.accumulatedPoints * DataPersistor.persist.difficultyMultiplier).ToString();
     }
 
 
@@ -43,32 +56,16 @@ public class EndScenePropertyLoader : MonoBehaviour {
     private void OnEnable ()
     {
         endSceneBG = DataPersistor.persist.endSceneBG;
-        endSceneHeroImage = DataPersistor.persist.endSceneHeroImage;
-        // end scene dialogue PWEDENG MAG CREATE NALANG NG ARRAY OF STRINGS NA IRARANDOM KUNG ANONG SASABIHIN
-        endSceneDialogueString = DataPersistor.persist.endSceneDialogueString;
 
-        // ILOAD SA UI!
         Background.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/"+endSceneBG);
-        HeroImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/"+endSceneHeroImage);
-        DialogueText.GetComponent<Dialogue>().dialogueString = endSceneDialogueString;
-
-        //string time;
-        //if (DataPersistor.persist.mTime.minutes <= 0 && DataPersistor.persist.mTime.seconds <= 0)
-        //{
-        //    time = string.Format("{0:00}:{1:00}.{2:00}", 0, 0, 0);
-        //}
-        //else
-        //{
-        //    time = string.Format("{0:00}:{1:00}.{2:00}", DataPersistor.persist.mTime.minutes, DataPersistor.persist.mTime.seconds, DataPersistor.persist.mTime.milliseconds);
-        //}
-        //TimeLeft.GetComponent<Text>().text += time;
+    
+        // HERO IMAGE GAWING NAG BABAGO BAGO
+        HeroImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + endSceneHeroImage);
 
         AccumulatedPoints.GetComponent<Text>().text += DataPersistor.persist.accumulatedPoints.ToString();
         TotalPoints.GetComponent<Text>().text += DataPersistor.persist.totalPoints.ToString();
 
-        ImageCompound.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("Compounds/"+DataPersistor.persist.compoundNeeded);
-        Compound.GetComponent<Text>().text = DataPersistor.persist.compoundNeeded;
-        ElementsCombined.GetComponent<Text>().text = PairOfElementCompound.listOfPairElementCompound.Where(ec => ec.elementcompound.Value.Equals(DataPersistor.persist.compoundNeeded)).Select(ec => ec.elementcompound.Key).SingleOrDefault();
+       
     }
 
 }

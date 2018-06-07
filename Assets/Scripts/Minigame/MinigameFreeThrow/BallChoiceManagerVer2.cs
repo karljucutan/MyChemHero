@@ -20,8 +20,8 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
     public Text ElementText;
 
     public GameObject TimerObject;
-
-    public static Queue<string> Elements;
+    public static string randomElement;
+    //public static Queue<string> Elements;
     private int seconds;
     // Use this for initialization
     void Awake() {
@@ -31,9 +31,10 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
         // sa una irandom yung list of elements
         // get first index
         ShuffleList(DataPersistor.persist.ElementsList);
-        Elements = new Queue<string>(DataPersistor.persist.ElementsList);
-        ElementText.text = Elements.Peek();
-
+        //Elements = new Queue<string>(DataPersistor.persist.ElementsList);
+        //ElementText.text = Elements.Peek();
+        randomElement = DataPersistor.persist.ElementsList[RandomNumber()];
+        ElementText.text = randomElement;
         AssignToGameObject("Ball/BallChoices/");
         seconds = DataPersistor.persist.mTime.seconds;
     }
@@ -46,24 +47,32 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
         { 
             if (TimerObject.GetComponent<MinigameFreeThrowTimer>().mTime.seconds <= seconds - DataPersistor.persist.Timechange)
             {
-                if (Elements.Count > 0)
-                {
-                    Elements.Dequeue();
-                    if (Elements.Count > 0)
-                    {
+                //if (Elements.Count > 0)
+                //{
+                //    Elements.Dequeue();
+                //    if (Elements.Count > 0)
+                //    {
                         //SOUND EFFECT FOR CHANGES
-                        ElementText.text = Elements.Peek();
-                        BallAssignment();
-                        AssignToGameObject("Ball/BallChoices/");
-                        var BPCscript = BallPressedChoicesVer2.GetComponent<BallPressedChoicesVer2>();
-                        BPCscript.OriginalColor(BPCscript.ball1Container);
-                        BPCscript.OriginalColor(BPCscript.ball2Container);
+                        randomElement = DataPersistor.persist.ElementsList[RandomNumber()];
+                        ElementText.text = randomElement;
+
+                        //BallAssignment();
+                        //AssignToGameObject("Ball/BallChoices/");
+                        //var BPCscript = BallPressedChoicesVer2.GetComponent<BallPressedChoicesVer2>();
+                        //BPCscript.OriginalColor(BPCscript.ball1Container);
+                        //BPCscript.OriginalColor(BPCscript.ball2Container);
                         
-                    }
+                    //}
                     seconds -= DataPersistor.persist.Timechange;
-                }
+                //}
             }
         }
+    }
+
+    private int RandomNumber()
+    {
+        var length = DataPersistor.persist.ElementsList.Count;
+        return UnityEngine.Random.Range(0, length);
     }
 
     private void BallAssignment()

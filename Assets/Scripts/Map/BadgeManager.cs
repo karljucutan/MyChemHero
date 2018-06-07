@@ -45,7 +45,7 @@ public class BadgeManager : MonoBehaviour {
 
     private void BadgeByPointsChecker()
     {
-        var playersByPoints = ListOfUser.ALLUSERS.Select(u => new { u.ID, u.TotalScore }).OrderByDescending(u => u.TotalScore).ToList();
+        var playersByPoints = ListOfUser.ALLUSERS.Where(u => u.TotalScore != 0).Select(u => new { u.ID, u.TotalScore }).OrderByDescending(u => u.TotalScore).ToList();
         int count = 3;
         if (playersByPoints.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
         if (playersByPoints.Count == 2) count = 2;
@@ -65,7 +65,7 @@ public class BadgeManager : MonoBehaviour {
 
     private void BadgeBySectorsChecker()
     {
-        var playersBySectors = ListOfUser.ALLUSERS.Select(u => new { u.ID, u.SectorsHold }).OrderByDescending(u => u.SectorsHold).ToList();
+        var playersBySectors = ListOfUser.ALLUSERS.Where(u => u.SectorsHold != 0).Select(u => new { u.ID, u.SectorsHold }).OrderByDescending(u => u.SectorsHold).ToList();
         int count = 3;
         if (playersBySectors.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
         if (playersBySectors.Count == 2) count = 2;
@@ -84,7 +84,7 @@ public class BadgeManager : MonoBehaviour {
 
     private void BadgeByHelpsMadeChecker()
     {
-        var playersBySectors = ListOfUser.ALLUSERS.Select(u => new { u.ID, u.HelpsMade }).OrderByDescending(u => u.HelpsMade).ToList();
+        var playersBySectors = ListOfUser.ALLUSERS.Where(u => u.HelpsMade != 0).Select(u => new { u.ID, u.HelpsMade }).OrderByDescending(u => u.HelpsMade).ToList();
         int count = 3;
         if (playersBySectors.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
         if (playersBySectors.Count == 2) count = 2;

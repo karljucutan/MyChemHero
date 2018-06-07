@@ -9,7 +9,7 @@ public class BallPressedChoicesVer1and3 : MonoBehaviour {
     public GameObject ball3Container;
    
     public static string currentBall;
-
+  
     private void Start()
     {
 
@@ -26,7 +26,7 @@ public class BallPressedChoicesVer1and3 : MonoBehaviour {
             case "Ball1":
                 TouchManagerVer1and3.ballname = BallChoiceManagerVer1and3.ball[0];
                 ChangeBallMaterial();
-                currentBall = BallChoiceManagerVer1and3.ball[0]; GreenColor(ball1Container); OriginalColor(ball2Container); OriginalColor(ball3Container);
+                currentBall = BallChoiceManagerVer1and3.ball[0]; GreenColor(ball1Container);  OriginalColor(ball2Container); OriginalColor(ball3Container);
                 break;
             case "Ball2":
                 TouchManagerVer1and3.ballname = BallChoiceManagerVer1and3.ball[1];
@@ -36,7 +36,7 @@ public class BallPressedChoicesVer1and3 : MonoBehaviour {
             case "Ball3":
                 TouchManagerVer1and3.ballname = BallChoiceManagerVer1and3.ball[2];
                 ChangeBallMaterial();
-                currentBall = BallChoiceManagerVer1and3.ball[2]; GreenColor(ball3Container); OriginalColor(ball1Container); OriginalColor(ball2Container);
+                currentBall = BallChoiceManagerVer1and3.ball[2]; GreenColor(ball3Container);  OriginalColor(ball1Container); OriginalColor(ball2Container);
                 break;
 
         }
@@ -45,12 +45,12 @@ public class BallPressedChoicesVer1and3 : MonoBehaviour {
     }
     private void ChangeBallMaterial()
     {
-        Texture texture = Resources.Load("Ball/BallChoices/" + TouchManagerVer1and3.ballname, typeof(Texture)) as Texture;
+        Texture texture = Resources.Load("Sprites/Minigame/ElementsSymbol/" + TouchManagerVer1and3.ballname, typeof(Texture)) as Texture;
         TouchManagerVer1and3.ball.GetComponent<Renderer>().material.SetTexture("_MainTex", texture);
         TouchManagerVer1and3.ball.name = TouchManagerVer1and3.ballname;
     }
 
-    private void GreenColor(GameObject ballContainer)
+    public void GreenColor(GameObject ballContainer)
     {
         var b = ballContainer.GetComponent<Image>();
         b.color = new Color32(145, 255, 0, 255);

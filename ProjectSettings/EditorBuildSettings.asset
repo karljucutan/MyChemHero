@@ -54,9 +54,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Map.unity
     guid: d86f9fcffe43d53419cc1c8adfd4463e
   - enabled: 1
-    path: Assets/_Scenes/MinigameFreeThrow.unity
-    guid: 094accba9b409374eaa142f715c6b2bf
-  - enabled: 1
     path: Assets/_Scenes/MinigameFullDragDrop.unity
     guid: 0495d40bd880ca8498ab61ee211ca783
   - enabled: 1
