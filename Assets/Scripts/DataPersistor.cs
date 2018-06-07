@@ -14,6 +14,7 @@ public class DataPersistor : MonoBehaviour {
     public string colorStr;
     public string compoundNeeded;   // CHANGE TO LIST OLD to be deleted
     public List<string> CompoundsList;  //new
+    public List<string> MixingList;
     public List<string> ElementsList;   //new 
     public List<string> ToxicList;
     public List<string> NonToxicList;

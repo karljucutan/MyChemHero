@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class ElementAtomicNumber : MonoBehaviour {
 
-    public int ATOMICNUMBER = 1; 
+    public int ATOMICNUMBER = 1;
+    public void ShowName()
+    {
+        Debug.Log(gameObject.name);
+    }
 }

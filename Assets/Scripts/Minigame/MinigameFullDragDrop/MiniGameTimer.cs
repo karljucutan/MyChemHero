@@ -14,12 +14,14 @@ public class MiniGameTimer : MonoBehaviour {
 
     bool timeIsRunning = true;
 
-   
+
     private void Start()
     {
+        mTime = new ModelTime();
         mTime = DataPersistor.persist.mTime;// para sa natitirang time
+
         InvokeRepeating("Timer", 0, 0.1f);
- 
+
     }
 
     private void Timer()

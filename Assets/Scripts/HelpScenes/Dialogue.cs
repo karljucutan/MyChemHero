@@ -318,8 +318,8 @@ public class Dialogue : MonoBehaviour
         switch (DataPersistor.persist.sectorCity)
         {
             case "CityId_1":
-
-                DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" };
+                DataPersistor.persist.MixingList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs", "O", "C", "Cl" };
+                DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs"};
                 DataPersistor.persist.CompoundsList = new List<string>() { "H2O", "H2O2" };
                 DataPersistor.persist.ToxicList = new List<string>() { "Na", "Li" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "H", "K", "Rb", "Cs" };
@@ -327,9 +327,16 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "SegregationVer3";
+                minigame = "MinigameFullDragDrop";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFullDragDrop":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFullDragDrop";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        SetTime(0, 20, 10); break;
+
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer1";
@@ -368,6 +375,7 @@ public class Dialogue : MonoBehaviour
                 break;
 
             case "CityId_2":
+                DataPersistor.persist.MixingList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra", "O", "C", "S", "F", "N" };
                 DataPersistor.persist.ElementsList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
                 DataPersistor.persist.ToxicList = new List<string>() { "Be", "Sr", "Ra"};
@@ -375,9 +383,16 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_2);
                 //temporary Delete bot line uncomment up line
-                minigame = "SegregationVer3";
+                minigame = "MinigameFullDragDrop";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFullDragDrop":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "MinigameFullDragDrop";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+                        SetTime(0, 20, 10); break;
+
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer1";
