@@ -30,10 +30,10 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
         BallAssignment();
         // sa una irandom yung list of elements
         // get first index
-        ShuffleList(DataPersistor.persist.ElementsListForToxicNonToxic);
+        ShuffleList(DataPersistor.persist.ElementsList);
         //Elements = new Queue<string>(DataPersistor.persist.ElementsList);
         //ElementText.text = Elements.Peek();
-        randomElement = DataPersistor.persist.ElementsListForToxicNonToxic[RandomNumber()];
+        randomElement = DataPersistor.persist.ElementsList[RandomNumber()];
         ElementText.text = randomElement;
         AssignToGameObject("Ball/BallChoices/");
         seconds = DataPersistor.persist.mTime.seconds;
@@ -53,7 +53,7 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
                 //    if (Elements.Count > 0)
                 //    {
                         //SOUND EFFECT FOR CHANGES
-                        randomElement = DataPersistor.persist.ElementsListForToxicNonToxic[RandomNumber()];
+                        randomElement = DataPersistor.persist.ElementsList[RandomNumber()];
                         ElementText.text = randomElement;
 
                         //BallAssignment();
@@ -71,7 +71,7 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
 
     private int RandomNumber()
     {
-        var length = DataPersistor.persist.ElementsListForToxicNonToxic.Count;
+        var length = DataPersistor.persist.ElementsList.Count;
         return UnityEngine.Random.Range(0, length);
     }
 

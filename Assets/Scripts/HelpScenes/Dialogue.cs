@@ -286,9 +286,9 @@ public class Dialogue : MonoBehaviour
         {
             case "CityId_1": // level 2 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Mo"}; // ilagay yung iba pang elements na hindi part ng city pero pwede ipang mix sa ibang elements       
+                DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" }; // ilagay yung iba pang elements na hindi part ng city pero pwede ipang mix sa ibang elements       
                 DataPersistor.persist.CompoundsList = new List<string>() { "H2O" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "H", "Li", "Na", "K", "Rb", "Cs" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "H", "Li", "Na", "K", "Rb", "Cs" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Na", "Li" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "H", "K", "Rb", "Cs" };
                 // Level of Difficulty Multiplier
@@ -296,7 +296,7 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "MinigameFreeThrowVer1";
+                minigame = "MinigameFreeThrowVer2";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer1":
@@ -402,7 +402,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_2":// level 2 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Be", "Sr", "Ra"};
                 DataPersistor.persist.NonToxicList = new List<string>() { "Mg", "Ca", "Ba"};
                 // Level of Difficulty Multiplier
@@ -509,7 +509,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_3":// level 2 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "Sc", "Y", "Ti", "Zr", "Hf" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Sc", "Y", "Ti", "Zr", "Hf" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Sc", "Y", "Ti", "Zr", "Hf" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() {"Zr"};
                 DataPersistor.persist.NonToxicList = new List<string>() { "Sc", "Y", "Ti", "Hf"};
                 // Level of Difficulty Multiplier
@@ -650,7 +650,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_5":// level 1 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "Mn", "Tc", "Re", "Fe", "Ru", "Os" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Mn", "Tc", "Re", "Fe", "Ru", "Os" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Mn", "Tc", "Re", "Fe", "Ru", "Os" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Tc", "Ru", "Os" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "Mn", "Re", "Fe" };
                 // Level of Difficulty Multiplier
@@ -772,7 +772,7 @@ public class Dialogue : MonoBehaviour
 
                 DataPersistor.persist.ElementsList = new List<string>() { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Cd", "Hg" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "Cu", "Ag", "Au", "Zn" };
                 // Level of Difficulty Multiplier
@@ -849,7 +849,7 @@ public class Dialogue : MonoBehaviour
 
                 DataPersistor.persist.ElementsList = new List<string>() { "B", "Al", "Ga", "In", "Tl" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "B", "Al", "Ga", "In", "Tl" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "B", "Al", "Ga", "In", "Tl" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "B", "Tl" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "Al", "Ga", "Au", "In" };
                 // Level of Difficulty Multiplier
@@ -926,7 +926,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_9":// level 1 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "C", "Si", "Ge", "Sn", "Pb" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "C", "Si", "Ge", "Sn", "Pb" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "C", "Si", "Ge", "Sn", "Pb" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Pb" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "C", "Si", "Ge", "Sn" };
                 // Level of Difficulty Multiplier
@@ -1002,7 +1002,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_10":// level 1 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "N", "P", "As", "Sb", "Bi" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "N", "P", "As", "Sb", "Bi" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "N", "P", "As", "Sb", "Bi" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "As", "Bi" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "N", "P", "Sb"};
                 // Level of Difficulty Multiplier
@@ -1079,7 +1079,7 @@ public class Dialogue : MonoBehaviour
 
                 DataPersistor.persist.ElementsList = new List<string>() { "O", "S", "Se", "Te", "Po" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "O", "S", "Se", "Te", "Po" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "O", "S", "Se", "Te", "Po" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Te", "Po" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "O", "S", "Se" };
                 // Level of Difficulty Multiplier
@@ -1140,7 +1140,7 @@ public class Dialogue : MonoBehaviour
 
                 DataPersistor.persist.ElementsList = new List<string>() { "F", "Cl", "Br", "I", "At" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "F", "Cl", "Br", "I", "At" }; // only elements na part ng city
+               // DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "F", "Cl", "Br", "I", "At" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "F", "Cl", "Br" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "I", "At" };
                 // Level of Difficulty Multiplier
@@ -1348,7 +1348,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_16":// level 1 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ho", "Er", "Tm", "Yb", "Lu" }; // only elements na part ng city
+               // DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ho", "Er", "Tm", "Yb", "Lu" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
@@ -1425,7 +1425,7 @@ public class Dialogue : MonoBehaviour
 
                 DataPersistor.persist.ElementsList = new List<string>() { "Ac", "Th", "Pa", "U", "Np" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ac", "Th", "Pa", "U", "Np" }; // only elements na part ng city
+               // DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ac", "Th", "Pa", "U", "Np" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Ac", "Th", "Pa", "U", "Np" };
                 DataPersistor.persist.NonToxicList = new List<string>() {"" };
                 // Level of Difficulty Multiplier
@@ -1501,7 +1501,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_18":// level 1 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "Pu", "Am", "Cm", "Bk", "Cf" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Pu", "Am", "Cm", "Bk", "Cf" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Pu", "Am", "Cm", "Bk", "Cf" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Pu", "Am", "Cm", "Bk", "Cf" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
@@ -1577,7 +1577,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_19":// level 1 difficulty
                 DataPersistor.persist.ElementsList = new List<string>() { "Es", "Fm", "Md", "No", "Lr" };
                 DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Es", "Fm", "Md", "No", "Lr" }; // only elements na part ng city
+               // DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Es", "Fm", "Md", "No", "Lr" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Es", "Fm", "Md", "No", "Lr" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "" };
                 // Level of Difficulty Multiplier

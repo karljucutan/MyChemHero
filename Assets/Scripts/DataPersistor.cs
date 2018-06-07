@@ -15,7 +15,7 @@ public class DataPersistor : MonoBehaviour {
     public string compoundNeeded;   // CHANGE TO LIST OLD to be deleted
     public List<string> CompoundsList;  //new
     public List<string> ElementsList;   //new 
-    public List<string> ElementsListForToxicNonToxic;
+    
     public List<string> ToxicList;
     public List<string> NonToxicList;
     public int Timechange; // Ballmangager script // every 5 seconds change ng compound sa freethrowgame
