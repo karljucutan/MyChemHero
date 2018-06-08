@@ -168,6 +168,33 @@ namespace Assets.Scripts
            },
            new ElementGroups{city="CityId_7",elements=new List<Element>(){
                     new Element{
+                        name="Cu",
+                        tag="Solid"
+                    },
+                    new Element{
+                        name="Ag",
+                        tag="Solid"
+                    },
+                    new Element{
+                        name="Au",
+                        tag="Solid"
+                    },
+                    new Element{
+                        name="Zn",
+                        tag="Solid"
+                    },
+                    new Element{
+                        name="Cd",
+                        tag="Solid"
+                    },
+                    new Element{
+                        name="Hg",
+                        tag="Liquid"
+                    }
+                }
+           },
+           new ElementGroups{city="CityId_8",elements=new List<Element>(){
+                    new Element{
                         name="B",
                         tag="Solid"
                     },
