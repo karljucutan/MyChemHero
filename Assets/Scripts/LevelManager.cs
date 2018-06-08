@@ -7,10 +7,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-   
+    public Animator animator;
+    private string levelToLoad;
+
     public void LoadLevel(string levelname)
     {
-        SceneManager.LoadScene(levelname);
+        levelToLoad = levelname;
+        animator.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(levelToLoad);
     }
 
 }
