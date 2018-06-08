@@ -30,13 +30,14 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
         BallAssignment();
         // sa una irandom yung list of elements
         // get first index
-        ShuffleList(DataPersistor.persist.ElementsList);
+        ShuffleList(DataPersistor.persist.ElementsListForToxicNonToxic);
         //Elements = new Queue<string>(DataPersistor.persist.ElementsList);
         //ElementText.text = Elements.Peek();
-        randomElement = DataPersistor.persist.ElementsList[RandomNumber()];
-        ElementText.text = randomElement;
+        randomElement = DataPersistor.persist.ElementsListForToxicNonToxic[RandomNumber()];
+        ElementText.text = DataPersistor.persist.elementNameDictionary.Where(e => e.Key.Equals(randomElement)).Select(e => e.Value).SingleOrDefault();
         AssignToGameObject("Ball/BallChoices/");
         seconds = DataPersistor.persist.mTime.seconds;
+
     }
 
     // every n seconds change na ng compound (DEQUEUE) tapos change narin yung ball choices
@@ -53,8 +54,8 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
                 //    if (Elements.Count > 0)
                 //    {
                         //SOUND EFFECT FOR CHANGES
-                        randomElement = DataPersistor.persist.ElementsList[RandomNumber()];
-                        ElementText.text = randomElement;
+                        randomElement = DataPersistor.persist.ElementsListForToxicNonToxic[RandomNumber()];
+                        ElementText.text = DataPersistor.persist.elementNameDictionary.Where(e => e.Key.Equals(randomElement)).Select(e => e.Value).SingleOrDefault(); 
 
                         //BallAssignment();
                         //AssignToGameObject("Ball/BallChoices/");
@@ -71,7 +72,7 @@ public class BallChoiceManagerVer2 : MonoBehaviour {
 
     private int RandomNumber()
     {
-        var length = DataPersistor.persist.ElementsList.Count;
+        var length = DataPersistor.persist.ElementsListForToxicNonToxic.Count;
         return UnityEngine.Random.Range(0, length);
     }
 
