@@ -285,10 +285,10 @@ public class Dialogue : MonoBehaviour
         switch (DataPersistor.persist.sectorCity)
         {
             case "CityId_1": // level 2 difficulty
-                DataPersistor.persist.MixingList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs", "O", "C", "Cl" };
-                DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" }; // ilagay yung iba pang elements na hindi part ng city pero pwede ipang mix sa ibang elements       
-                DataPersistor.persist.CompoundsList = new List<string>() { "H2O" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "H", "Li", "Na", "K", "Rb", "Cs" }; // only elements na part ng city
+                DataPersistor.persist.MixingList = new List<string>() { "Li", "Na", "Rb", "Cs", "Cl", "K", "H", "O", "C"  };
+                //DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" }; // ilagay yung iba pang elements na hindi part ng city pero pwede ipang mix sa ibang elements       
+                DataPersistor.persist.CompoundsList = new List<string>() { "NaCl" };//{ "H2O", "NaHCO3", "NaCl", "C4H10", "RbCl" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "H", "Li", "Na", "K", "Rb", "Cs" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Na", "Li" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "H", "K", "Rb", "Cs" };
                 // Level of Difficulty Multiplier
@@ -296,7 +296,7 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "MinigameFullDragDrop";
+                minigame = "MinigameFreeThrowVer2";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":
@@ -407,10 +407,10 @@ public class Dialogue : MonoBehaviour
                 break;
 
             case "CityId_2":// level 2 difficulty
-                DataPersistor.persist.MixingList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra", "O", "C", "S", "F", "N" };
-                DataPersistor.persist.ElementsList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" }; // only elements na part ng city
+                DataPersistor.persist.MixingList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra", "Co", "O", "C", "S", "F", "N" };
+                //DataPersistor.persist.ElementsList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "BeO", "SrCo3", "BaSO4", "BeF2", "CaCN2" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Be", "Sr", "Ra"};
                 DataPersistor.persist.NonToxicList = new List<string>() { "Mg", "Ca", "Ba"};
                 // Level of Difficulty Multiplier
@@ -524,9 +524,10 @@ public class Dialogue : MonoBehaviour
                 }
                 break;
             case "CityId_3":// level 2 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "Sc", "Y", "Ti", "Zr", "Hf" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Sc", "Y", "Ti", "Zr", "Hf" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "Sc", "Y", "Ti", "Zr", "Hf" };
+                DataPersistor.persist.MixingList = new List<string>() { "Sc", "Ti", "Zr", "Hf", "Cl", "O", "F", "Y" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "Sc2O3", "YF3", "TiCl4", "ZrO2", "HfO2" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Sc", "Y", "Ti", "Zr", "Hf" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() {"Zr"};
                 DataPersistor.persist.NonToxicList = new List<string>() { "Sc", "Y", "Ti", "Hf"};
                 // Level of Difficulty Multiplier
@@ -602,8 +603,9 @@ public class Dialogue : MonoBehaviour
                 }
                 break;
             case "CityId_4":// level 2 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "V", "Nb", "Ta", "Cr", "Mo", "W" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                //DataPersistor.persist.ElementsList = new List<string>() { "V", "Nb", "Ta", "Cr", "Mo", "W" };
+                DataPersistor.persist.MixingList = new List<string>() { "Nb", "Ta", "Cr", "Mo", "V", "W", "O", "S", "C" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "VO2", "Nb2O5", "MoS2", "WC", "Cr2O3" };
                 // Level of Difficulty Multiplier
                 DataPersistor.persist.difficultyMultiplier = 2;
 
@@ -658,16 +660,14 @@ public class Dialogue : MonoBehaviour
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break; 
                 }
                 break;
 
             case "CityId_5":// level 1 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "Mn", "Tc", "Re", "Fe", "Ru", "Os" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Mn", "Tc", "Re", "Fe", "Ru", "Os" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "Mn", "Tc", "Re", "Fe", "Ru", "Os" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Mn", "Tc", "Re", "Fe", "Ru", "Os" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Tc", "Ru", "Os" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "Mn", "Re", "Fe" };
                 // Level of Difficulty Multiplier
@@ -742,8 +742,8 @@ public class Dialogue : MonoBehaviour
                 }
                 break;
             case "CityId_6":// level 3 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "Co", "Rh", "Ir", "Ni", "Pd", "Pt" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                //DataPersistor.persist.ElementsList = new List<string>() { "Co", "Rh", "Ir", "Ni", "Pd", "Pt" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
                 DataPersistor.persist.difficultyMultiplier = 3;
 
@@ -785,35 +785,21 @@ public class Dialogue : MonoBehaviour
                 }
                 break;
 
-            case "CityId_7":// level 2 difficulty
+            case "CityId_7":// level 1 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Cu", "Ag", "Au", "Zn", "Cd", "Hg" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Cd", "Hg" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "Cu", "Ag", "Au", "Zn" };
                 // Level of Difficulty Multiplier
-                DataPersistor.persist.difficultyMultiplier = 2;
+                DataPersistor.persist.difficultyMultiplier = 1;
 
                 //minigame = Randomizer(gamesCityId_7);
                 //temporary Delete bot line uncomment up line
                 minigame = "SegregationVer1";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "MinigameFreeThrowVer2";
@@ -827,22 +813,7 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "MinigameFreeThrowVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
-                   
+                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "SegregationVer1";
@@ -856,17 +827,45 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        DataPersistor.persist.segregationTimer = 50;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer2";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer3":
+                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "SegregationVer3";
+                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
                 }
                 break;
             case "CityId_8":// level 1 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "B", "Al", "Ga", "In", "Tl" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "B", "Al", "Ga", "In", "Tl" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "B", "Al", "Ga", "In", "Tl" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "B", "Al", "Ga", "In", "Tl" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "B", "Tl" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "Al", "Ga", "Au", "In" };
                 // Level of Difficulty Multiplier
@@ -905,7 +904,7 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        DataPersistor.persist.segregationTimer = 30;
+                        DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
@@ -920,7 +919,7 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        DataPersistor.persist.segregationTimer = 30;
+                        DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
@@ -935,15 +934,15 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        DataPersistor.persist.segregationTimer = 30;
+                        DataPersistor.persist.segregationTimer = 60;
                         break; 
                 }
                 break;
 
             case "CityId_9":// level 1 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "C", "Si", "Ge", "Sn", "Pb" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "C", "Si", "Ge", "Sn", "Pb" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "C", "Si", "Ge", "Sn", "Pb" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "C", "Si", "Ge", "Sn", "Pb" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Pb" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "C", "Si", "Ge", "Sn" };
                 // Level of Difficulty Multiplier
@@ -1017,9 +1016,9 @@ public class Dialogue : MonoBehaviour
                 }
                 break;
             case "CityId_10":// level 1 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "N", "P", "As", "Sb", "Bi" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "N", "P", "As", "Sb", "Bi" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "N", "P", "As", "Sb", "Bi" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "N", "P", "As", "Sb", "Bi" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "As", "Bi" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "N", "P", "Sb"};
                 // Level of Difficulty Multiplier
@@ -1094,9 +1093,9 @@ public class Dialogue : MonoBehaviour
                 break;
             case "CityId_11":// level 1 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "O", "S", "Se", "Te", "Po" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "O", "S", "Se", "Te", "Po" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "O", "S", "Se", "Te", "Po" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "O", "S", "Se", "Te", "Po" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Te", "Po" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "O", "S", "Se" };
                 // Level of Difficulty Multiplier
@@ -1155,9 +1154,9 @@ public class Dialogue : MonoBehaviour
                 break;
             case "CityId_12":// level 1 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "F", "Cl", "Br", "I", "At" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-               // DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "F", "Cl", "Br", "I", "At" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "F", "Cl", "Br", "I", "At" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "F", "Cl", "Br", "I", "At" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "F", "Cl", "Br" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "I", "At" };
                 // Level of Difficulty Multiplier
@@ -1232,8 +1231,8 @@ public class Dialogue : MonoBehaviour
                 break;
             case "CityId_13":// level 3 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "He", "Ne", "Ar", "Kr", "Xe", "Rn" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                //DataPersistor.persist.ElementsList = new List<string>() { "He", "Ne", "Ar", "Kr", "Xe", "Rn" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
                 DataPersistor.persist.difficultyMultiplier = 3;
 
@@ -1276,8 +1275,8 @@ public class Dialogue : MonoBehaviour
                 break;
             case "CityId_14":// level 3 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "La", "Ce", "Pr", "Nd", "Pm" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                //DataPersistor.persist.ElementsList = new List<string>() { "La", "Ce", "Pr", "Nd", "Pm" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
                 DataPersistor.persist.difficultyMultiplier = 3;
 
@@ -1320,8 +1319,8 @@ public class Dialogue : MonoBehaviour
                 break;
             case "CityId_15":// level 3 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "Sm", "Eu", "Gd", "Tb", "Dy"};
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                //DataPersistor.persist.ElementsList = new List<string>() { "Sm", "Eu", "Gd", "Tb", "Dy"};
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
                 DataPersistor.persist.difficultyMultiplier = 3;
 
@@ -1363,9 +1362,9 @@ public class Dialogue : MonoBehaviour
                 }
                 break;
             case "CityId_16":// level 1 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-               // DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ho", "Er", "Tm", "Yb", "Lu" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ho", "Er", "Tm", "Yb", "Lu" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Ho", "Er", "Tm", "Yb", "Lu" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
@@ -1440,9 +1439,9 @@ public class Dialogue : MonoBehaviour
                 break;
             case "CityId_17":// level 1 difficulty
 
-                DataPersistor.persist.ElementsList = new List<string>() { "Ac", "Th", "Pa", "U", "Np" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-               // DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ac", "Th", "Pa", "U", "Np" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "Ac", "Th", "Pa", "U", "Np" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Ac", "Th", "Pa", "U", "Np" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Ac", "Th", "Pa", "U", "Np" };
                 DataPersistor.persist.NonToxicList = new List<string>() {"" };
                 // Level of Difficulty Multiplier
@@ -1516,9 +1515,9 @@ public class Dialogue : MonoBehaviour
                 }
                 break;
             case "CityId_18":// level 1 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "Pu", "Am", "Cm", "Bk", "Cf" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-                //DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Pu", "Am", "Cm", "Bk", "Cf" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "Pu", "Am", "Cm", "Bk", "Cf" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Pu", "Am", "Cm", "Bk", "Cf" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Pu", "Am", "Cm", "Bk", "Cf" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "" };
                 // Level of Difficulty Multiplier
@@ -1592,9 +1591,9 @@ public class Dialogue : MonoBehaviour
                 }
                 break;
             case "CityId_19":// level 1 difficulty
-                DataPersistor.persist.ElementsList = new List<string>() { "Es", "Fm", "Md", "No", "Lr" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "" };
-               // DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Es", "Fm", "Md", "No", "Lr" }; // only elements na part ng city
+                //DataPersistor.persist.ElementsList = new List<string>() { "Es", "Fm", "Md", "No", "Lr" };
+                //DataPersistor.persist.CompoundsList = new List<string>() { "" };
+                DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Es", "Fm", "Md", "No", "Lr" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Es", "Fm", "Md", "No", "Lr" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "" };
                 // Level of Difficulty Multiplier

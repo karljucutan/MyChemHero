@@ -23,7 +23,7 @@ public class BallChoiceManager : MonoBehaviour {
         for (int i = 0; i < 3; i++)
         { ball[i] = ""; }
        // DataPersistor.persist.compoundNeeded = "Salt";
-        ball[0] = DataPersistor.persist.compoundNeeded; // change to the needed compound 
+        //ball[0] = DataPersistor.persist.compoundNeeded; // change to the needed compound 
  
         for (int i = 0; i < ball.Length; i++)
             Debug.Log(ball[i]);

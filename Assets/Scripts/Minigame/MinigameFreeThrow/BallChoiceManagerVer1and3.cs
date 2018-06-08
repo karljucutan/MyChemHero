@@ -80,11 +80,11 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
         //var FirstItem = Compounds.Peek();
         randomItem = DataPersistor.persist.CompoundsList[RandomCompound()];
         //var elementsInCompounds = DataPersistor.persist.ElementsList.Where(e => FirstItem.Contains(e)).ToList();
-        var elementsInCompounds = DataPersistor.persist.ElementsList.Where(e => randomItem.Contains(e)).ToList();
+        var elementsInCompounds = DataPersistor.persist.MixingList.Where(e => randomItem.Contains(e)).ToList();
         ShuffleList(elementsInCompounds);
         ball[0] = elementsInCompounds[0];
 
-        var listofelements = DataPersistor.persist.ElementsList.Where(e => !e.Equals(ball[0])).ToList();
+        var listofelements = DataPersistor.persist.MixingList.Where(e => !e.Equals(ball[0])).ToList();
         ShuffleList(listofelements);
         ball[1] = listofelements[0];
         ball[2] = listofelements[1];
