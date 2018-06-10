@@ -146,29 +146,6 @@ public class ScoreManager : MonoBehaviour {
         }
 
 
-        //NAG + - ANG SCORE NG TEAM DEPENDE SA DAMI NG CURRENT CITY CONQUERED
-        //Counter for the number of cities conquery by enemies team
-        //if (ListOfTeams.TeamList.Count() > 1)
-        //{
-        //    for (int i = 0; i < enemyTeamColorId.Count(); i++)
-        //    {
-        //        var enemyCitiesConquered = from c in ListOfCity.Cities
-        //                                   where c.Sectors.All(s => s.conqueror.TeamId.Equals(enemyTeamColorId[i]))
-        //                                   select c;
-        //        var countCities = enemyCitiesConquered.Count().ToString();
-        //        if (countCities.Length > 1)
-        //        {
-        //            enemyTeam_ScoreTens[i].GetComponent<Image>().overrideSprite = NumbersImages[(int)char.GetNumericValue(countCities[0])];
-        //            enemyTeam_ScoreOnes[i].GetComponent<Image>().overrideSprite = NumbersImages[(int)char.GetNumericValue(countCities[1])];
-        //            Debug.Log("First Char" + countCities[0] + "SECOND CHAR" + countCities[1]);
-        //        }
-        //        else
-        //        {
-        //            enemyTeam_ScoreOnes[i].GetComponent<Image>().overrideSprite = NumbersImages[(int)char.GetNumericValue(countCities[0])];
-        //            Debug.Log("First Char" + countCities[0]);
-        //        }
-        //    }
-        //}
 
 
 
