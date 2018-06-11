@@ -115,7 +115,7 @@ public class LoadScreeenControl : MonoBehaviour {
 
             //}
             slider.value += 0.25f;
-            SceneManager.LoadScene("Lobby");  
+            GameObject.Find("LevelManager").GetComponent<LevelManager>().LoadLevel("Map"); 
         }
 
       
