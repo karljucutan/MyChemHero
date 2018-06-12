@@ -105,7 +105,8 @@ public class TeamCreation : MonoBehaviour
 
         teamNameInputField.text = "";
         
-        SceneManager.LoadScene("Character Customization");
+        //SceneManager.LoadScene("Character Customization");
+        LevelManager.lvlmgr.LoadLevel("Character Customization");
     }
 
     IEnumerator GetTeamId()

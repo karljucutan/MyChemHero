@@ -20,7 +20,8 @@ public class timerscript : MonoBehaviour {
         if (time <= 0)
         {
             timerOb.text = "Time's Up!";
-            SceneManager.LoadScene("Help_EndingSceneForAll");
+            //SceneManager.LoadScene("Help_EndingSceneForAll");
+            LevelManager.lvlmgr.LoadLevel("Help_EndingSceneForAll");
         }
 	}
 }

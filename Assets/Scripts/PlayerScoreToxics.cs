@@ -139,7 +139,8 @@ public class PlayerScoreToxics : MonoBehaviour {
     {
         yield return new WaitForSeconds(4);
 
-        SceneManager.LoadScene("Help_EndingSceneForAll");
+        //SceneManager.LoadScene("Help_EndingSceneForAll");
+        LevelManager.lvlmgr.LoadLevel("Help_EndingSceneForAll");
     }
 
     // Update is called once per frame

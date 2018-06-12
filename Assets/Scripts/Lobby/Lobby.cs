@@ -15,12 +15,14 @@ public class Lobby : MonoBehaviour {
         if (DataPersistor.persist.state.Equals("returning"))
         {
             Debug.Log("RETURNING ME");
-            SceneManager.LoadScene("Map");
+            //SceneManager.LoadScene("Map");
+            LevelManager.lvlmgr.LoadLevel("Map");
         }
         else
         {
             Debug.Log("DI AKO RETURNING");
-            SceneManager.LoadScene("Team Selection");
+            //SceneManager.LoadScene("Team Selection");
+            LevelManager.lvlmgr.LoadLevel("Team Selection");
         }
 	}
 	

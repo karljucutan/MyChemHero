@@ -14,6 +14,7 @@ public class CorrectAndTimesup : MonoBehaviour {
     {
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene("Help_EndingSceneForAll");
+        //SceneManager.LoadScene("Help_EndingSceneForAll");
+        LevelManager.lvlmgr.LoadLevel("Help_EndingSceneForAll");
     }
 }

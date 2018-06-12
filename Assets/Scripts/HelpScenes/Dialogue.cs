@@ -169,7 +169,8 @@ public class Dialogue : MonoBehaviour
                     {
                         yield return new WaitForSeconds(0.1f);
                     }
-                    SceneManager.LoadScene("Map");
+                //SceneManager.LoadScene("Map");
+                LevelManager.lvlmgr.LoadLevel("Map");
 
 
                 //}
@@ -181,7 +182,8 @@ public class Dialogue : MonoBehaviour
             }
             else// else punta sa mini games kasi same dialogue to sa help scenes
             {
-                SceneManager.LoadScene(minigame);
+                //SceneManager.LoadScene(minigame);
+                LevelManager.lvlmgr.LoadLevel(minigame);
             }
         }
     }

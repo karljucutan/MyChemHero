@@ -7,15 +7,32 @@ public class SceneRandomizer : MonoBehaviour {
 
     private int randomNumber;
     private int repeat;
+    private string[] scenesList;
+
     void Start()
     {
         randomNumber = 0;
+        scenesList = new string[]{
+            "Help_AsGoodAsNew",
+            "Help_BakersDilemma",
+            "Help_CloudSeeding",
+            "Help_Fire",
+            "Help_LandLubberScurvy",
+            "Help_MedicPanic",
+            "Help_Shokugeki",
+            "Help_StayCleanStaySafe",
+            "Help_ToothFairy",
+            "Help_ToSpace"};
+
     }
 
     public void loadrandomScene()
     {
-        randomNumber = Random.Range(2,12);
-        SceneManager.LoadScene(randomNumber);
+        //randomNumber = Random.Range(2,12);
+        randomNumber = Random.Range(0, 9);
+
+        //SceneManager.LoadScene(randomNumber);
+        LevelManager.lvlmgr.LoadLevel(scenesList[randomNumber]);
     }
 
  

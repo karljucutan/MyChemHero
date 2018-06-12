@@ -107,7 +107,8 @@ public class CharacterSetter : MonoBehaviour {
 
                 DataPersistor.persist.state = "returning";
             }
-            SceneManager.LoadScene("Map");
+            //SceneManager.LoadScene("Map");
+            LevelManager.lvlmgr.LoadLevel("Map");
         }
 
     }

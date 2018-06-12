@@ -177,7 +177,8 @@ public class PlayerScore : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
 
-        SceneManager.LoadScene("Help_EndingSceneForAll");
+        //SceneManager.LoadScene("Help_EndingSceneForAll");
+        LevelManager.lvlmgr.LoadLevel("Help_EndingSceneForAll");
     }
 
     void Start () {
