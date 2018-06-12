@@ -115,7 +115,9 @@ public class LoadScreeenControl : MonoBehaviour {
 
             //}
             slider.value += 0.25f;
-            GameObject.Find("LevelManager").GetComponent<LevelManager>().LoadLevel("Map"); 
+
+            LevelManager.lvlmgr.LoadLevel("Map");
+            //GameObject.Find("LevelManager").GetComponent<LevelManager>().LoadLevel("Map"); 
         }
 
       

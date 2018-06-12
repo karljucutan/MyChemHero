@@ -29,24 +29,24 @@ public class DropHandlerMinigameFullDragDrop : MonoBehaviour, IDropHandler
         //if not gameobject
         if (!item)
         {
-            if (DragHandler.startParent.tag == "InventorySlot")
-            {
+            //if (DragHandler.startParent.tag == "InventorySlot")
+            //{
                 
-                DestroyElementFromInventorySlot();
+            //    DestroyElementFromInventorySlot();
                      
-            }
+            //}
             
             DragHandler.itemBeingDragged.transform.SetParent(transform);
 
-            if (DragHandler.itemBeingDragged.CompareTag("Element") && DragHandler.startParent.parent.CompareTag("MixingPanel") && gameObject.transform.parent.CompareTag("InventoryCompoundPanel"))
-            {
+            //if (DragHandler.itemBeingDragged.CompareTag("Element") && DragHandler.startParent.parent.CompareTag("MixingPanel") && gameObject.transform.parent.CompareTag("InventoryCompoundPanel"))
+            //{
                
-                if (gameObject.transform.childCount > 0)
-                {
-                    gameObject.transform.GetChild(0).transform.SetParent(DragHandler.startParent);
-                }
+            //    if (gameObject.transform.childCount > 0)
+            //    {
+            //        gameObject.transform.GetChild(0).transform.SetParent(DragHandler.startParent);
+            //    }
 
-            }
+            //}w
             if (DragHandler.itemBeingDragged.CompareTag("Compound") && gameObject.transform.CompareTag("MixerSlot"))
             {
                 DragHandler.itemBeingDragged.transform.SetParent(DragHandler.startParent);
@@ -60,7 +60,7 @@ public class DropHandlerMinigameFullDragDrop : MonoBehaviour, IDropHandler
             //ifgameobject dito rin sa else ang checking kung same sila nung object tapos increment
         else
         {
-            DestroyElementFromInventorySlot();
+            //DestroyElementFromInventorySlot();
             
            // if (gameObject.transform.parent.CompareTag("MixingPanel"))
             if (DragHandler.startParent.CompareTag("MixerSlot") && gameObject.transform.parent.CompareTag("MixingPanel"))

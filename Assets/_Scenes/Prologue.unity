@@ -108,6 +108,11 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &594580852 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1792987371623866, guid: 7e1329a8369c6264db9b1a1d66e319c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 883490685}
 --- !u!1 &684932473
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +175,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1232225843
+--- !u!1001 &883490685
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -179,15 +184,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4112081595464972, guid: 7e1329a8369c6264db9b1a1d66e319c0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.382352
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4112081595464972, guid: 7e1329a8369c6264db9b1a1d66e319c0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.202663
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4112081595464972, guid: 7e1329a8369c6264db9b1a1d66e319c0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.978516
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4112081595464972, guid: 7e1329a8369c6264db9b1a1d66e319c0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -209,19 +214,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114862230383199150, guid: 7e1329a8369c6264db9b1a1d66e319c0,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e1329a8369c6264db9b1a1d66e319c0, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1232225844 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1792987371623866, guid: 7e1329a8369c6264db9b1a1d66e319c0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1232225843}
 --- !u!1 &1524992177
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidplayer: {fileID: 1524992178}
-  lvlmgr: {fileID: 1232225844}
+  lvlmgr: {fileID: 594580852}
 --- !u!1001 &1600280873
 Prefab:
   m_ObjectHideFlags: 0

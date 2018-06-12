@@ -12,7 +12,7 @@ public class DataPersistor : MonoBehaviour {
     public Dictionary<string, string> elementNameDictionary;
 
     public string colorStr;
-    
+
     public List<string> CompoundsList;  //new
     public List<string> MixingList;
     public List<string> ElementsListForToxicNonToxic;

@@ -6,7 +6,6 @@ using UnityEngine.Video;
 public class VideoPlayerScript : MonoBehaviour {
 
 	public VideoPlayer vidplayer;
-    public GameObject lvlmgr;
 
     void Update()
     {
@@ -16,7 +15,7 @@ public class VideoPlayerScript : MonoBehaviour {
         }
         if(vidplayer.isPlaying == false)
         {
-            lvlmgr.GetComponent<LevelManager>().LoadLevel("Load");
+            LevelManager.lvlmgr.LoadLevel("Load");
         }
     }
 }

@@ -39,7 +39,7 @@ public class MiniGameTimer : MonoBehaviour {
                 Time.text = "Time's up.";  
                 textFail.GetComponent<Text>().text = "Time's Up";
                 panelCorrectAnswerContainer.SetActive(true);
-                SetScoreFailed();
+                //SetScoreFailed();
 
 
             }

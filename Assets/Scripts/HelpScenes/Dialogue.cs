@@ -287,7 +287,7 @@ public class Dialogue : MonoBehaviour
             case "CityId_1": // level 2 difficulty
                 DataPersistor.persist.MixingList = new List<string>() { "Li", "Na", "Rb", "Cs", "Cl", "K", "H", "O", "C"  };
                 //DataPersistor.persist.ElementsList = new List<string>() { "H", "Li", "Na", "K", "Rb", "Cs" }; // ilagay yung iba pang elements na hindi part ng city pero pwede ipang mix sa ibang elements       
-                DataPersistor.persist.CompoundsList = new List<string>() { "NaCl" };//{ "H2O", "NaHCO3", "NaCl", "C4H10", "RbCl" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "H2O", "NaHCO3", "NaCl", "C4H10", "RbCl" };
                 DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "H", "Li", "Na", "K", "Rb", "Cs" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Na", "Li" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "H", "K", "Rb", "Cs" };
@@ -296,7 +296,7 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "MinigameFreeThrowVer1";
+                minigame = "MinigameFullDragDrop";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":
@@ -304,6 +304,14 @@ public class Dialogue : MonoBehaviour
                         dialogue[0] = "MinigameFullDragDrop";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
                         SetTime(0, 20, 10); break;
 
                     case "MinigameFreeThrowVer1":
@@ -428,6 +436,14 @@ public class Dialogue : MonoBehaviour
                         dialogue[0] = "MinigameFullDragDrop";
                         dialogue[1] = DataPersistor.persist.sectorCity;
                         dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[3];
+                        endSceneDialogueString[0] = "qwertyuiop";
+                        endSceneDialogueString[1] = "asdfghjkl";
+                        endSceneDialogueString[2] = "zxcvbnm";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
                         SetTime(0, 20, 10); break;
 
                     case "MinigameFreeThrowVer1":

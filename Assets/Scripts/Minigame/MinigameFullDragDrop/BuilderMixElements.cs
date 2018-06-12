@@ -44,7 +44,7 @@ public class BuilderMixElements : MonoBehaviour, IHasChanged{
 
 
         }
-        combinedElements = stringbuilder.ToString();
+        combinedElements = stringbuilder.ToString().Trim();
         mixer.text = combinedElements;
     }
 }

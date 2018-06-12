@@ -7,6 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
+    public static LevelManager lvlmgr;
+
+    void Awake()
+    {
+        if(lvlmgr == null)
+        {
+            lvlmgr = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public Animator animator;
     private string levelToLoad;
 
@@ -19,6 +34,7 @@ public class LevelManager : MonoBehaviour {
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(levelToLoad);
+        animator.SetTrigger("FadeIn");
     }
 
 }
