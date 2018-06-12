@@ -46,7 +46,8 @@ public class LoadScreeenControl : MonoBehaviour {
         }
         else
         {
-            DataPersistor.persist.user.ID = int.Parse(get.text);
+            //DataPersistor.persist.user.ID = int.Parse(get.text);
+            DataPersistor.persist.user.ID = 1;
         }
         slider.value += 0.25f;
         StartCoroutine(RetrieveUserInfo());
@@ -96,6 +97,7 @@ public class LoadScreeenControl : MonoBehaviour {
 
         DataPersistor.persist.state = get.text;
         Debug.Log("STATE:   " + DataPersistor.persist.state);
+       
         //Debug.Log("GET:   " + get.text);
         if (get.error != null)
         {
@@ -116,8 +118,9 @@ public class LoadScreeenControl : MonoBehaviour {
             //}
             slider.value += 0.25f;
 
-            LevelManager.lvlmgr.LoadLevel("Map");
+            LevelManager.lvlmgr.LoadLevel("Lobby");
             //GameObject.Find("LevelManager").GetComponent<LevelManager>().LoadLevel("Map"); 
+
         }
 
       

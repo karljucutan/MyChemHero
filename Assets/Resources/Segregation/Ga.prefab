@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54831148967721508}
   m_Layer: 0
   m_Name: Ga
-  m_TagString: Untagged
+  m_TagString: Liquid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
