@@ -85,18 +85,10 @@ public class CityColorManager : MonoBehaviour {
             {
                 var city = ListOfCity.Cities.Where(c => c.Id.Equals(i)).SingleOrDefault();
 
-                //var conquered = city.Sectors.All(s => s.conqueror.TeamId.Equals(DataPersistor.persist.user.TeamId));
-                //if(conquered)
-                //{
-                //    city.ConquerorTeam = DataPersistor.persist.user.TeamId;
-                //}
-                //else
-                //{
-                //    city.ConquerorTeam = -1;
-                //}
-    
-                var TeamColorId = Scoremanager.GetComponent<ScoreManager>().enemyTeamColorId;
-                TeamColorId.Add(DataPersistor.persist.user.TeamId);
+                //var TeamColorId = Scoremanager.GetComponent<ScoreManager>().enemyTeamColorId;
+                //TeamColorId.Add(DataPersistor.persist.user.TeamId);
+                var TeamColorId = ListOfTeams.TeamList.Select(t => t.teamColorId).ToList();
+             
                 for (int z = 0; z < TeamColorId.Count; z++)
                 {
                     var conquered = city.Sectors.All(s => s.conqueror.TeamId.Equals(TeamColorId[z]));

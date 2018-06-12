@@ -5,8 +5,11 @@ using Assets.Scripts;
 using UnityEngine.SceneManagement;
 
 public class Lobby : MonoBehaviour {
-
-	public void CheckState () {
+    private void Start()
+    {
+        Debug.Log("ID" + DataPersistor.persist.user.ID +" Name: " + DataPersistor.persist.user.UserName);
+    }
+    public void CheckState () {
        
 
         if (DataPersistor.persist.state.Equals("returning"))

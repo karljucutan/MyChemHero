@@ -30,6 +30,10 @@ public class ScoreManager : MonoBehaviour {
 
     //private bool postteam_running;
     // 1 = blue 2 = red 3 = green 4 = yellow
+    public void OnCick()
+    {
+        Debug.Log(enemyTeamColorId.Count());
+    }
     private void Awake()
     {
         TeamHeroes[0] = Resources.Load<Sprite>("CharacterandHeroAssets/HEROES/BLUE/800px/BLUE-A-800");
@@ -44,7 +48,7 @@ public class ScoreManager : MonoBehaviour {
 
     private void Start()
     {
-        if(teamNotCompleted)
+        if (teamNotCompleted)
         {
             StartCoroutine(GetTeamsCreated());
         }
@@ -53,7 +57,7 @@ public class ScoreManager : MonoBehaviour {
     }
 
     void Update () {
-       
+        
         if (teamNotCompleted)
         {
             if (ListOfTeams.TeamList.Count() > 1)
@@ -61,6 +65,7 @@ public class ScoreManager : MonoBehaviour {
                 enemyTeamColorId = ListOfTeams.TeamList.Where(t => !t.teamColorId.Equals(DataPersistor.persist.user.TeamId)).Select(t => t.teamColorId).ToList();
                 for (int i = 0; i < enemyTeamColorId.Count(); i++)
                 {
+                    
                     EnemiesContainer[i].SetActive(true);
                     enemyTeam_TeamLeaderHero[i].GetComponent<Image>().overrideSprite = TeamHeroes[enemyTeamColorId[i] - 1];
                 }
@@ -124,22 +129,35 @@ public class ScoreManager : MonoBehaviour {
         //Counter for the number of cities conquery by enemies team
         if (ListOfTeams.TeamList.Count() > 1)
         {
-            for (int i = 0; i < enemyTeamColorId.Count(); i++)
+            
+            var enemycount = enemyTeamColorId.Count();
+            
+            for (int i = 0; i < enemycount; i++)
             {
+                
+                //Debug.Log("i " + i);
+                //Debug.Log("i : " +i+"enemyTeamColorId " + enemyTeamColorId[i]);
+                //Debug.Log("TEAMIDKO: " + DataPersistor.persist.user.TeamId);
+                //Debug.Log("ENEMEY COUNT" + enemycount);
                 var enemyteam = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(enemyTeamColorId[i])).SingleOrDefault();
+                //Debug.Log("enemyteam.conqueredCities: " + enemyteam.conqueredCities[0]);
+                //Debug.Log("VALUE OF I " + i + " ENEMY TEAM COLOR ID: " + enemyTeamColorId[i] );
+
                 if (enemyteam.conqueredCities.Count() > 0)
                 {
                     var countCities = enemyteam.conqueredCities.Count().ToString();
+                    
                     if (countCities.ToString().Length > 1)
                     {
                         enemyTeam_ScoreTens[i].GetComponent<Image>().overrideSprite = NumbersImages[(int)char.GetNumericValue(countCities[0])];
                         enemyTeam_ScoreOnes[i].GetComponent<Image>().overrideSprite = NumbersImages[(int)char.GetNumericValue(countCities[1])];
-                        Debug.Log("First Char" + countCities[0] + "SECOND CHAR" + countCities[1]);
+                       // Debug.Log("First Char" + countCities[0] + "SECOND CHAR" + countCities[1]);
                     }
                     else
                     {
+                        
                         enemyTeam_ScoreOnes[i].GetComponent<Image>().overrideSprite = NumbersImages[(int)char.GetNumericValue(countCities[0])];
-                        //Debug.Log("First Char" + countCities[0]);
+                     
                     }
                 }
             }
