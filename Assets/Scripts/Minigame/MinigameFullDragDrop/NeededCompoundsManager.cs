@@ -69,7 +69,8 @@ public class NeededCompoundsManager : MonoBehaviour {
         {
             if (obj.GetComponent<Text>().text.Equals(CompoundValueFinder(compoundName)))
             {
-                Destroy(obj.gameObject); //remove from GameObject List
+                neededCompoundsGameObject.Remove(obj); //remove from GameObject List
+                Destroy(obj.gameObject); //remove actual GameObject in Scene
                 break;
             }
              

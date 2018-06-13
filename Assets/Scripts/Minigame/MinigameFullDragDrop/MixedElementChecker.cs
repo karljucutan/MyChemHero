@@ -16,13 +16,13 @@ public class MixedElementChecker : MonoBehaviour {
     public GameObject neededCompoundManager;
 
     private GameObject newCompound;
-    private List<string> neededCompoundsList;
+    //private List<string> neededCompoundsList;
 
     private string combinedElements;
 
     private void Start()
     {
-        neededCompoundsList = neededCompoundManager.GetComponent<NeededCompoundsManager>().neededCompounds;
+        //neededCompoundsList = neededCompoundManager.GetComponent<NeededCompoundsManager>().neededCompounds;
     }
 
     public void Mix()
@@ -76,15 +76,14 @@ public class MixedElementChecker : MonoBehaviour {
          
             //animate sabog ng elements
         }
- 
-     
+
         DestroyItemsInPanelSlot();
         
     }
 
     private bool CompoundNeededChecker(string compoundToCheck)
     {
-        if (neededCompoundsList.Exists(compound => compound.Equals(compoundToCheck)))
+        if (neededCompoundManager.GetComponent<NeededCompoundsManager>().neededCompounds.Exists(compound => compound.Equals(compoundToCheck)))
         {
             return true;
         }
@@ -189,9 +188,9 @@ public class MixedElementChecker : MonoBehaviour {
             var childSlot = panelCompound.transform.GetChild(i).gameObject;
             if (childSlot.transform.childCount > 0)
             {
-               var childObject = childSlot.transform.GetChild(0).gameObject;
-               childObject.transform.SetParent(null);
-               Destroy(childObject);
+                var childObject = childSlot.transform.GetChild(0).gameObject;
+                childObject.transform.SetParent(null);
+                Destroy(childObject);
             }
         }
 

@@ -314,7 +314,7 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[2] = "zxcvbnm";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 20, 10); break;
+                        SetTime(0, 40, 10); break;
 
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin

@@ -11,6 +11,8 @@ public class LoadScreeenControl : MonoBehaviour {
     public GameObject loadingScreenObj;
     public Slider slider;
     AsyncOperation async;
+    private bool sessionFlag = false, idFlag = false, infoFlag = false, loadFLag = false;
+
     void Start()
     {
         StartCoroutine(GetPlayerSession());
@@ -30,8 +32,10 @@ public class LoadScreeenControl : MonoBehaviour {
             // name =get.text;
             name = Configuration.NAME;
             Debug.Log("name is: " + name);
+            sessionFlag = true;
+            slider.value += 0.25f;
         }
-        slider.value += 0.25f;
+        
         StartCoroutine(GetPlayerId());
 
     }
@@ -48,8 +52,10 @@ public class LoadScreeenControl : MonoBehaviour {
         {
             //DataPersistor.persist.user.ID = int.Parse(get.text);
             DataPersistor.persist.user.ID = 1;
+            idFlag = true;
+            slider.value += 0.25f;
         }
-        slider.value += 0.25f;
+        
         StartCoroutine(RetrieveUserInfo());
     }
     public IEnumerator RetrieveUserInfo()//FOR USERS INFO
@@ -85,8 +91,10 @@ public class LoadScreeenControl : MonoBehaviour {
                 DataPersistor.persist.user.TeamId = int.Parse(userInfo[11]);
             }
             //user.SectorsHold = int.Parse();
+            infoFlag = true;
+            slider.value += 0.25f;
         }
-        slider.value += 0.25f;
+        
         StartCoroutine(LoadingScreen());
     }
     IEnumerator LoadingScreen()
@@ -116,14 +124,27 @@ public class LoadScreeenControl : MonoBehaviour {
             //        break;
 
             //}
+            loadFLag = true;
             slider.value += 0.25f;
-
-            LevelManager.lvlmgr.LoadLevel("Lobby");
+            
             //GameObject.Find("LevelManager").GetComponent<LevelManager>().LoadLevel("Map"); 
 
         }
+        proceedToLoad();
 
       
+    }
+
+    void proceedToLoad()
+    {
+        if (sessionFlag && idFlag && infoFlag && loadFLag)//check if all flags are true(no problem loading)
+            LevelManager.lvlmgr.LoadLevel("Lobby");
+        else // retry fetching
+        {
+            //some dialog box for confirmation on retry load
+            StartCoroutine(GetPlayerSession());
+        }
+           
     }
 
    
