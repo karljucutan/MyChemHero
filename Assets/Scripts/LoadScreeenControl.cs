@@ -11,14 +11,35 @@ public class LoadScreeenControl : MonoBehaviour {
     public GameObject loadingScreenObj;
     public Slider slider;
     AsyncOperation async;
-    private bool sessionFlag = false, idFlag = false, infoFlag = false, loadFLag = false;
+    private bool idFlag = false, infoFlag = false, loadFLag = false;
 
     void Start()
     {
-        StartCoroutine(GetPlayerSession());
+        StartCoroutine(GetPlayerId());
     }
 
-    IEnumerator GetPlayerSession()
+    //IEnumerator GetPlayerSession()
+    //{
+    //    WWW get = new WWW(Configuration.BASE_ADDRESS + "unityLink.php");
+    //    yield return get;
+
+    //    if (get.error != null)
+    //    {
+    //        Debug.Log("There was an error getting the high score: " + get.error);
+    //    }
+    //    else
+    //    {
+    //        name = get.text;
+    //        name = Configuration.NAME;
+    //        Debug.Log("name is: " + name);
+    //        sessionFlag = true;
+    //        slider.value += 0.25f;
+    //    }
+
+    //    StartCoroutine(GetPlayerId());
+
+    //}
+    IEnumerator GetPlayerId()
     {
         WWW get = new WWW(Configuration.BASE_ADDRESS + "unityLink.php");
         yield return get;
@@ -29,29 +50,8 @@ public class LoadScreeenControl : MonoBehaviour {
         }
         else
         {
-            // name =get.text;
-            name = Configuration.NAME;
-            Debug.Log("name is: " + name);
-            sessionFlag = true;
-            slider.value += 0.25f;
-        }
-        
-        StartCoroutine(GetPlayerId());
-
-    }
-    IEnumerator GetPlayerId()
-    {
-        WWW get = new WWW(Configuration.BASE_ADDRESS + "getplayerid.php?name=" + name);
-        yield return get;
-
-        if (get.error != null)
-        {
-            Debug.Log("There was an error getting the high score: " + get.error);
-        }
-        else
-        {
-            //DataPersistor.persist.user.ID = int.Parse(get.text);
-            DataPersistor.persist.user.ID = 1;
+            DataPersistor.persist.user.ID = int.Parse(get.text);
+            //DataPersistor.persist.user.ID = 4;
             idFlag = true;
             slider.value += 0.25f;
         }
@@ -77,6 +77,7 @@ public class LoadScreeenControl : MonoBehaviour {
             //temporary lng to kukuha pa sa php session ng value
             if (userInfo[1] != "")
             {
+                Debug.Log(userInfo[0]+" "+userInfo[1]);
                 DataPersistor.persist.user.UserName = userInfo[0];
                 DataPersistor.persist.user.UserCharacter.Body = int.Parse(userInfo[1]);
                 DataPersistor.persist.user.UserCharacter.Hair = int.Parse(userInfo[2]);
@@ -137,12 +138,12 @@ public class LoadScreeenControl : MonoBehaviour {
 
     void proceedToLoad()
     {
-        if (sessionFlag && idFlag && infoFlag && loadFLag)//check if all flags are true(no problem loading)
+        if (idFlag && infoFlag && loadFLag)//check if all flags are true(no problem loading)
             LevelManager.lvlmgr.LoadLevel("Lobby");
         else // retry fetching
         {
             //some dialog box for confirmation on retry load
-            StartCoroutine(GetPlayerSession());
+            StartCoroutine(GetPlayerId());
         }
            
     }

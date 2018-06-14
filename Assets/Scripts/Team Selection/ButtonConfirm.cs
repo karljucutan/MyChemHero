@@ -23,6 +23,7 @@ public class ButtonConfirm : MonoBehaviour {
         {
             DataPersistor.persist.colorStr = color;
             DataPersistor.persist.teamSelecetionFactionId = teamid;
+            LevelManager.lvlmgr.LoadLevel("Character Customization");
         }
     }
 }

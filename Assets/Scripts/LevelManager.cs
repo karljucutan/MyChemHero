@@ -27,12 +27,14 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadLevel(string levelname)
     {
+        //Debug.Log(levelname);
         levelToLoad = levelname;
         animator.SetTrigger("FadeOut");
     }
 
     public void OnFadeComplete()
     {
+        Debug.Log(levelToLoad);
         SceneManager.LoadScene(levelToLoad);
         animator.SetTrigger("FadeIn");
     }
