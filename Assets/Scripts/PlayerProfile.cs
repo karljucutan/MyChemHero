@@ -28,6 +28,7 @@ public class PlayerProfile : MonoBehaviour {
     //TeamProfile
     public GameObject TeamName;
     public GameObject ProHero;
+    public GameObject TeamFlag;
     public GameObject TeamID;
     public GameObject TeamTotalPoints;
     public GameObject TeamNoOfSectorsHold;
@@ -57,6 +58,7 @@ public class PlayerProfile : MonoBehaviour {
             team.members = teammembers;
 
             ProHero.GetComponent<Image>().overrideSprite = scoremanager.GetComponent<ScoreManager>().TeamHeroes[team.teamColorId - 1];
+            TeamFlag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[team.teamColorId - 1];
             TeamName.GetComponent<Text>().text = team.teamName;
             TeamID.GetComponent<Text>().text = team.teamId.ToString();
             TeamTotalPoints.GetComponent<Text>().text = team.members.Sum(u => u.TotalScore).ToString();

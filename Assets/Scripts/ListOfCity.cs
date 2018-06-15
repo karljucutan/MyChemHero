@@ -14,7 +14,7 @@ namespace Assets.Scripts
             {
                 //White ( 255, 255, 255)
                 Id = 1,
-                Name = "Group1",
+                Name = "M. Curie",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {   new Sector(){sectorNumber=1, conqueror = new User()},
@@ -28,7 +28,7 @@ namespace Assets.Scripts
             new City()
             {   //{ 255, 153, 153 }
                 Id = 2,
-                Name = "Group2",
+                Name = "L. Pasteur",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -43,7 +43,7 @@ namespace Assets.Scripts
             new City()
             {   // {188, 122, 255 }
                 Id = 3,
-                Name = "Group3",
+                Name = "J. Dalton",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -57,7 +57,7 @@ namespace Assets.Scripts
             new City()
             {   //{ 118, 255, 116 }
                 Id = 4,
-                Name = "Group4",
+                Name = "M. Faraday",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -72,7 +72,7 @@ namespace Assets.Scripts
             new City()
             {   //{ 250, 0, 240 }
                 Id = 5,
-                Name = "Group5",
+                Name = "R. Franklin",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -88,7 +88,7 @@ namespace Assets.Scripts
             {
                 //{ 184, 227, 255 }
                 Id = 6,
-                Name = "Group6",
+                Name = "A. Lavoisier",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -103,7 +103,7 @@ namespace Assets.Scripts
             new City()
             {   //{ 255, 166, 64 }
                 Id = 7,
-                Name = "Group7",
+                Name = "R. Boyle",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -119,7 +119,7 @@ namespace Assets.Scripts
             {
                 //{ 0, 255, 255 }
                 Id = 8,
-                Name = "Group8",
+                Name = "L. Pauling",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -134,7 +134,7 @@ namespace Assets.Scripts
             {   
                 //{ 255, 102, 255 }
                 Id = 9,
-                Name = "Group9",
+                Name = "D. Mendeleev",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -149,7 +149,7 @@ namespace Assets.Scripts
             {
                 //{ 174, 255, 187 }
                 Id = 10,
-                Name = "Group10",
+                Name = "J. Priestley",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -164,7 +164,7 @@ namespace Assets.Scripts
             {   
                 //{ 255, 173, 173 }
                 Id = 11,
-                Name = "Group11",
+                Name = "M. Molina",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -179,7 +179,7 @@ namespace Assets.Scripts
             {
                 //{ 113, 217, 255 }
                 Id = 12,
-                Name = "Group12",
+                Name = "H. Davy",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -193,7 +193,7 @@ namespace Assets.Scripts
             new City()
             {
                 //{ 255, 204, 153 }
-                Name = "Group13",
+                Name = "F. Haber",
                 Id = 13,
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
@@ -210,7 +210,7 @@ namespace Assets.Scripts
             {   
                 //{ 204, 255, 153 }
                 Id = 14,
-                Name = "Group14",
+                Name = "O. Hahn",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -225,7 +225,7 @@ namespace Assets.Scripts
             {   
                 //{ 102, 178, 255 }
                 Id = 15,
-                Name = "Group15",
+                Name = "S. Arrhenius",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -240,7 +240,7 @@ namespace Assets.Scripts
             {   
                 //{ 190, 190, 190 }
                 Id = 16,
-                Name = "Group16",
+                Name = "A. Zewail",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -255,7 +255,7 @@ namespace Assets.Scripts
             {
                 //{ 153, 255, 204 }
                 Id = 17,
-                Name = "Group17",
+                Name = "F. Sanger",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -270,7 +270,7 @@ namespace Assets.Scripts
             {
                 //{ 255, 231, 147 }
                 Id = 18,
-                Name = "Group18",
+                Name = "S. Cannizarro",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {
@@ -285,7 +285,7 @@ namespace Assets.Scripts
             {
                 //{ 255, 141, 141 }
                 Id = 19,
-                Name = "Group19",
+                Name = "T. Graham",
                 ConquerorTeam = -1,
                 Sectors = new List<Sector>()
                 {

@@ -10811,7 +10811,8 @@ MonoBehaviour:
   TeamContentSizeFilter: {fileID: 468378518}
   scoremanager: {fileID: 396335004}
   TeamName: {fileID: 1363081465}
-  ProHero: {fileID: 1716169217}
+  ProHero: {fileID: 1457498305}
+  TeamFlag: {fileID: 1976127299}
   TeamID: {fileID: 1933344540}
   TeamTotalPoints: {fileID: 1796000828}
   TeamNoOfSectorsHold: {fileID: 868276880}
@@ -26814,7 +26815,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 805629152}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.37844938
+  m_Size: 0.37844935
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -34175,7 +34176,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: e719c0572d352c049bee39d4e57d03bf, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

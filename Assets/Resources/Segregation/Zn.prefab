@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54475354635209550}
   m_Layer: 0
   m_Name: Zn
-  m_TagString: Untagged
+  m_TagString: NonToxic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
