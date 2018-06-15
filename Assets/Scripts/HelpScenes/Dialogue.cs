@@ -298,7 +298,7 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "MinigameFullDragDrop";
+                minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":
@@ -308,55 +308,53 @@ public class Dialogue : MonoBehaviour
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 40, 10); break;
 
                     case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M.Curie City";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M.Curie City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
                        
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     case "MinigameFreeThrowVer3": 
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M.Curie City";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound on a moving board";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
@@ -364,47 +362,47 @@ public class Dialogue : MonoBehaviour
                     //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M.Curie City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
 
                         DataPersistor.persist.segregationTimer = 50;break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M.Curie City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
 
                         DataPersistor.persist.segregationTimer = 50;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M.Curie City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
 
@@ -428,7 +426,7 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_2);
                 //temporary Delete bot line uncomment up line
-                minigame = "MinigameFullDragDrop";
+                minigame = "MinigameFreeThrowVer1";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "Minigame" +
@@ -440,53 +438,53 @@ public class Dialogue : MonoBehaviour
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 20, 10); break;
 
                     case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pasteur City";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pasteur City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     case "MinigameFreeThrowVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pasteur City";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound on a moving board";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
@@ -494,46 +492,49 @@ public class Dialogue : MonoBehaviour
                     //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pasteur City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pasteur City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pasteur City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
@@ -557,67 +558,101 @@ public class Dialogue : MonoBehaviour
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Dalton City";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Dalton City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     case "MinigameFreeThrowVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Dalton City";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound on a moving board";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
-                    case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                    case "SegregationVer1":
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Dalton City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
-                        break; //SetTime(0, 30, 10); break;
-                               //case "3rdgameVer2": SetTime(0, 30, 10); break;
-                               //case "3rdgameVer3": SetTime(0, 30, 10); break;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Dalton City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
+                        dialogueString = dialogue;
+
+
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 50;
+                        break;
+                    case "SegregationVer3":
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Dalton City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
+                        dialogueString = dialogue;
+
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 50;
+                        break;
                 }
                 break;
             case "CityId_4":// level 2 difficulty
@@ -633,52 +668,72 @@ public class Dialogue : MonoBehaviour
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M. Faraday City";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     
                     case "MinigameFreeThrowVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M. Faraday City";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound on a moving board";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     //case "MinigameFullDragDropVer1": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer2": SetTime(0, 30, 10); break;
                     //case "MinigameFullDragDropVer3s": SetTime(0, 30, 10); break;
-                    case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                    case "SegregationVer2":
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M. Faraday City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
-                        break; 
+                        break;
+                    case "SegregationVer3":
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M. Faraday City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
+                        dialogueString = dialogue;
+
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 50;
+                        break;
                 }
                 break;
 
@@ -698,61 +753,65 @@ public class Dialogue : MonoBehaviour
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to R. Franklin City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
 
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                       dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to R. Franklin City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to R. Franklin City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to R. Franklin City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
@@ -771,31 +830,33 @@ public class Dialogue : MonoBehaviour
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to A. Lavoisier City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
-                        break; 
+                        break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to A. Lavoisier City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
@@ -819,60 +880,48 @@ public class Dialogue : MonoBehaviour
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to R. Boyle City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to R. Boyle City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        DataPersistor.persist.segregationTimer = 60;
-                        break;
-                    case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to R. Boyle City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
@@ -896,60 +945,64 @@ public class Dialogue : MonoBehaviour
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pauling City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
                         //change to 60 yung time
                         SetTime(0, 30, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pauling City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pauling City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pauling City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
@@ -971,62 +1024,66 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    
+
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to D. Mendeleev City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                        //change to 60 yung time
+                        SetTime(0, 30, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to D. Mendeleev City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to D. Mendeleev City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to D. Mendeleev City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
@@ -1047,62 +1104,66 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    
+
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Priestley City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                        //change to 60 yung time
+                        SetTime(0, 30, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Priestley City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Priestley City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Priestley City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
@@ -1117,57 +1178,60 @@ public class Dialogue : MonoBehaviour
                 DataPersistor.persist.ToxicList = new List<string>() { "Te", "Po" };
                 DataPersistor.persist.NonToxicList = new List<string>() { "O", "S", "Se" };
                 // Level of Difficulty Multiplier
-                DataPersistor.persist.difficultyMultiplier = 1;
+                DataPersistor.persist.difficultyMultiplier = 2;
 
                 //minigame = Randomizer(gamesCityId_11);
                 //temporary Delete bot line uncomment up line
-                minigame = "SegregationVer3";
+                minigame = "SegregationVer1";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M. Molina City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
-                    case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
-                        dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        DataPersistor.persist.segregationTimer = 60;
-                        break;
+                        //change to 60 yung time
+                        SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M. Molina City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        DataPersistor.persist.segregationTimer = 60;
-                        break; 
+                        DataPersistor.persist.segregationTimer = 50;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M. Molina City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
+                        dialogueString = dialogue;
+
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        DataPersistor.persist.segregationTimer = 50;
+                        break;
                 }
                 break;
             case "CityId_12":// level 1 difficulty
@@ -1185,62 +1249,66 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    
+
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to H. Davy City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+                        //change to 60 yung time
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to H. Davy City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to H. Davy City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to H. Davy City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
@@ -1260,31 +1328,33 @@ public class Dialogue : MonoBehaviour
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to F. Haber City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to F. Haber City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
@@ -1304,35 +1374,37 @@ public class Dialogue : MonoBehaviour
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to O. Hahn City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to O. Hahn City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
-                        break;
+                        break; 
                 }
                 break;
             case "CityId_15":// level 3 difficulty
@@ -1348,35 +1420,37 @@ public class Dialogue : MonoBehaviour
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to S. Arrhenius City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to S. Arrhenius City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
-                        break;
+                        break; 
                 }
                 break;
             case "CityId_16":// level 1 difficulty
@@ -1393,62 +1467,66 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    
+
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to A. Zewail City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+                        //change to 60 yung time
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to A. Zewail City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to A. Zewail City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to A. Zewail City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
@@ -1470,62 +1548,66 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    
+
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to F. Sanger City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                        //change to 60 yung time
+                        SetTime(0, 30, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to F. Sanger City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to F. Sanger City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to F. Sanger City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
@@ -1546,66 +1628,70 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                   
+
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to S. Cannizarro City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                        //change to 60 yung time
+                        SetTime(0, 30, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer1";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to S. Cannizarro City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to S. Cannizarro City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to S. Cannizarro City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
-                        break;
+                        break; 
                 }
                 break;
             case "CityId_19":// level 1 difficulty
@@ -1621,63 +1707,67 @@ public class Dialogue : MonoBehaviour
                 //temporary Delete bot line uncomment up line
                 minigame = "SegregationVer3";
                 switch (minigame)
-                {   
-                   
+                {
+
                     case "MinigameFreeThrowVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFreeThrowVer2";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to T. Graham City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating Toxics from Non-Toxics";
+                        dialogue[2] = "Segregate each element by shooting the appropriate ball";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-                        SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
+                        //change to 60 yung time
+                        SetTime(0, 30, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to T. Graham City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
+                        dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer2":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to T. Graham City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "SegregationVer3";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to T. Graham City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Solid,Liquid or Gas";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
+
                         //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[3];
-                        endSceneDialogueString[0] = "qwertyuiop";
-                        endSceneDialogueString[1] = "asdfghjkl";
-                        endSceneDialogueString[2] = "zxcvbnm";
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
