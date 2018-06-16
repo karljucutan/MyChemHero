@@ -437,9 +437,9 @@ public class Dialogue : MonoBehaviour
                 break;
 
             case "CityId_2":// level 2 difficulty
-                DataPersistor.persist.MixingList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra", "Co", "O", "C", "S", "F", "N" };
+                DataPersistor.persist.MixingList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra","O", "C", "S", "F", "N" };
                 //DataPersistor.persist.ElementsList = new List<string>() { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" };
-                DataPersistor.persist.CompoundsList = new List<string>() { "BeO", "SrCo3", "BaSO4", "BeF2", "CaCN2" };
+                DataPersistor.persist.CompoundsList = new List<string>() { "BeO", "SrCO3", "BaSO4", "BeF2", "CaCN2" };
                 DataPersistor.persist.ElementsListForToxicNonToxic = new List<string> { "Be", "Mg", "Ca", "Sr", "Ba", "Ra" }; // only elements na part ng city
                 DataPersistor.persist.ToxicList = new List<string>() { "Be", "Sr", "Ra"};
                 DataPersistor.persist.NonToxicList = new List<string>() { "Mg", "Ca", "Ba"};
