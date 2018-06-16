@@ -8,6 +8,9 @@ using Assets.Scripts;
 [RequireComponent(typeof(Text))]
 public class Dialogue : MonoBehaviour
 {
+    public GameObject DialogueManager;
+    public GameObject ProHero;
+    private Sprite[] HeroAssets;
 
     private Text textcomponent;
     public string[] dialogueString;
@@ -78,6 +81,8 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
+        HeroAssets = DialogueManager.GetComponent<DialogueManager>().GetHeroByTeam(DataPersistor.persist.user.TeamId);
+        ProHero.GetComponent<Image>().overrideSprite = HeroAssets[0];
         postScoresRunning = false;
         postPointsAndHelpsMadeRunning = false;
         dialogInput = KeyCode.Mouse0;
@@ -97,7 +102,8 @@ public class Dialogue : MonoBehaviour
     {
         int stringLength = StringtoDisplay.Length;
         int currentCharacterIndex = 0;
-
+        int tempCharacterIndex = 5;
+        int heroAssetsIndex = 0;
         HideIcon();
 
         textcomponent.text = "";
@@ -105,6 +111,20 @@ public class Dialogue : MonoBehaviour
         {
             textcomponent.text += StringtoDisplay[currentCharacterIndex];
             currentCharacterIndex++;
+            //DITO ATA
+
+            if (currentCharacterIndex == tempCharacterIndex)
+            {
+                Debug.Log("HEROASSET: " + heroAssetsIndex);
+                ProHero.GetComponent<Image>().overrideSprite = HeroAssets[heroAssetsIndex];
+                heroAssetsIndex++;
+                tempCharacterIndex += 5;
+                if (heroAssetsIndex > 2)
+                {
+                    heroAssetsIndex = 0;
+                }
+            }
+
             if (currentCharacterIndex < stringLength)
             {
                 if (Input.GetKey(dialogInput))
@@ -119,6 +139,8 @@ public class Dialogue : MonoBehaviour
             }
             else
             {
+                //tempCharacterIndex = 2;
+                //heroAssetsIndex = 0;
                 break;
             }
         }
