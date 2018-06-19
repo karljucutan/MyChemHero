@@ -324,12 +324,12 @@ public class Dialogue : MonoBehaviour
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":
                         dialogue = new string[1];
-                        dialogue[0] = "LEzgo";
-                        //dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
-                        //dialogue[0] = "Welcome to M.Curie City";
-                        //dialogue[1] = "We have received reports that they need assistance in creating certain compounds";
-                        //dialogue[2] = "You are given a special device in which you could mix elements by filling up the slots and pressing the Mix button";
-                        //dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
+                        //dialogue[0] = "LEzgo";
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M.Curie City";
+                        dialogue[1] = "We have received reports that they need assistance in creating certain compounds";
+                        dialogue[2] = "You are given a special device in which you could mix elements by filling up the slots and pressing the Mix button";
+                        dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
@@ -454,12 +454,14 @@ public class Dialogue : MonoBehaviour
                 minigame = "MinigameFreeThrowVer1";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
-                    case "Minigame" +
-                    "" +
-                    "FullDragDrop":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFullDragDrop";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                    case "MinigameFullDragDrop":
+                        dialogue = new string[1];
+                        //dialogue[0] = "LEzgo";
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to L. Pasteur City";
+                        dialogue[1] = "We have received reports that they need assistance in creating certain compounds";
+                        dialogue[2] = "You are given a special device in which you could mix elements by filling up the slots and pressing the Mix button";
+                        dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene
@@ -467,7 +469,7 @@ public class Dialogue : MonoBehaviour
                         endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
                         DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
-                        SetTime(0, 20, 10); break;
+                        SetTime(0, 40, 10); break;
 
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -582,6 +584,23 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFullDragDrop":
+                        dialogue = new string[1];
+                        //dialogue[0] = "LEzgo";
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to J. Dalton City";
+                        dialogue[1] = "We have received reports that they need assistance in creating certain compounds";
+                        dialogue[2] = "You are given a special device in which you could mix elements by filling up the slots and pressing the Mix button";
+                        dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        SetTime(0, 40, 10); break;
+
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to J. Dalton City";
@@ -692,6 +711,23 @@ public class Dialogue : MonoBehaviour
                 minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
+                    case "MinigameFullDragDrop":
+                        dialogue = new string[1];
+                        //dialogue[0] = "LEzgo";
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to M. Faraday City";
+                        dialogue[1] = "We have received reports that they need assistance in creating certain compounds";
+                        dialogue[2] = "You are given a special device in which you could mix elements by filling up the slots and pressing the Mix button";
+                        dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
+                        dialogueString = dialogue;
+
+                        //dialogue ng hero sa end scene
+                        endSceneDialogueString = new string[1];
+                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
+                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
+
+                        SetTime(0, 40, 10); break;
+
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to M. Faraday City";
