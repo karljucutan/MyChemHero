@@ -29,24 +29,23 @@ public class Dialogue : MonoBehaviour
     private bool postPointsAndHelpsMadeRunning;
     private bool postScoresRunning;
     //minigames
-    //G1 = Mixing Compounds(Elements Names)
-    //G2 = Mixing Compounds(Elements Symbols)
-    //G3 = Mixing Compounds(Swapping Slots)
-    //G4 = Segregation(Toxicity)
+    //G1 = Mixing Compounds(Elements Common Names)
+    //G2 = Mixing Compounds(Elements Scientific Names)
+
+    //G4 = Segregation(Toxic, Nontoxic)
     //G5 = Segregation(Metal, Nonmetal, Metalloids
     //G6 = Segregation(Solid, Liquid, Gas)
     //G7 = Freethrow(Elements found in item)
     //G8 = Freethrow(Toxic or NonToxic)
-    //G9 = Freethrow(Fill in the blanks)
+    //G9 = Freethrow(Elements found in item w/ moving board)
 
 
     //mingames scene name                           // Temporary Names //Replace with Scene Names
-    List<string> gamesCityId_1 = new List<string>() { 
-        "SegregationVer2"};
-    List<string> gamesCityId_2 = new List<string>() { "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9" };
-    List<string> gamesCityId_3 = new List<string>() { "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9" };
-    List<string> gamesCityId_4 = new List<string>() { "G1", "G2", "G3", "G5", "G6", "G7", "G9" };
-    List<string> gamesCityId_5 = new List<string>() { "G4", "G5", "G6", "G8" };
+    List<string> gamesCityId_1 = new List<string>() { "MixingGameFullDragDrop", "MixingGameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3"};
+    List<string> gamesCityId_2 = new List<string>() { "MixingGameFullDragDrop", "MixingGameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3" };
+    List<string> gamesCityId_3 = new List<string>() { "MixingGameFullDragDrop", "MixingGameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3" };
+    List<string> gamesCityId_4 = new List<string>() { "MixingGameFullDragDrop", "MixingGameFullDragDrop", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer3" };//{ "G1", "G2", "G3", "G5", "G6", "G7", "G9" };
+    List<string> gamesCityId_5 = new List<string>() { "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer2" };//{ "G4", "G5", "G6", "G8" };
     List<string> gamesCityId_6 = new List<string>() { "G5", "G6", "G9" };
     List<string> gamesCityId_7 = new List<string>() { "G4", "G7", "G8" };
     List<string> gamesCityId_8 = new List<string>() { "G4", "G5", "G6", "G8" };
@@ -320,13 +319,17 @@ public class Dialogue : MonoBehaviour
 
                 //minigame = Randomizer(gamesCityId_1);
                 //temporary Delete bot line uncomment up line
-                minigame = "SegregationVer3";
+                minigame = "MinigameFullDragDrop";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":
-                        dialogue = new string[2]; // change size depende sa dami ng lines ng saasabihin
-                        dialogue[0] = "MinigameFullDragDrop";
-                        dialogue[1] = DataPersistor.persist.sectorCity;
+                        dialogue = new string[1];
+                        dialogue[0] = "LEzgo";
+                        //dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        //dialogue[0] = "Welcome to M.Curie City";
+                        //dialogue[1] = "We have received reports that they need assistance in creating certain compounds";
+                        //dialogue[2] = "You are given a special device in which you could mix elements by filling up the slots and pressing the Mix button";
+                        //dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
                         //dialogue ng hero sa end scene

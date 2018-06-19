@@ -14,6 +14,7 @@ public class MixedElementChecker : MonoBehaviour {
     public GameObject prefabCompound;
     public GameObject PanelCorrectAnswerContainer;
     public GameObject neededCompoundManager;
+    public GameObject smokeEmitter;
 
     private GameObject newCompound;
     //private List<string> neededCompoundsList;
@@ -27,13 +28,24 @@ public class MixedElementChecker : MonoBehaviour {
 
     public void Mix()
     {
-        //Debug.Log(DataPersistor.persist.mTime.minutes+":"+DataPersistor.persist.mTime.seconds+":"+DataPersistor.persist.mTime.milliseconds );
-        combinedElements = GameObject.Find("Canvas").GetComponent<BuilderMixElements>().combinedElements;
-        //string compound = CompoundValueFinder(combinedElements);//check in all list of compounds
-        if (combinedElements != null)
-        {
+        StartCoroutine("StartMixing");
+    }
 
+    private IEnumerator StartMixing()
+    {
+        combinedElements = GameObject.Find("Canvas").GetComponent<BuilderMixElements>().combinedElements;
+
+        if (!string.IsNullOrEmpty(combinedElements)) //if may laman yung mixer
+        {
+            GameObject.Find("MixButton").GetComponent<Button>().enabled = false; //disable Mix button spamming for the entire mixing process
+
+            //Debug.Log(DataPersistor.persist.mTime.minutes+":"+DataPersistor.persist.mTime.seconds+":"+DataPersistor.persist.mTime.milliseconds );
+            //string compound = CompoundValueFinder(combinedElements);//check in all list of compounds
+
+            smokeEmitter.GetComponent<ParticleSystem>().Play();                                                // Mixing smoke
+            yield return new WaitUntil(() => smokeEmitter.GetComponent<ParticleSystem>().isEmitting == false); // animation
             //animate yung MIXING
+
 
             /*AALISIN NA YUNG BADGES SA MIXING TOP 1 - 3 LANG MUNA
             //check sa userlistofbadges kung meron ng ganun
@@ -52,16 +64,30 @@ public class MixedElementChecker : MonoBehaviour {
 
             if (CompoundNeededChecker(combinedElements)) //check if matches any in the needed list, returns true if exists
             {
+                
+                GameObject.Find("GreenLight").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Minigame/GreenLit");//green light
+
                 DataPersistor.persist.accumulatedPoints += 1; //points
                 neededCompoundManager.GetComponent<NeededCompoundsManager>().removeCompound(combinedElements);//remove from list, and delete gameobjects
-                
+
+                yield return new WaitForSeconds(2);
+                GameObject.Find("GreenLight").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Minigame/GreenOff");//green light
                 //check if all compounds already created(happens when list is epty)
-                if(neededCompoundManager.GetComponent<NeededCompoundsManager>().neededCompounds.Count == 0)
+                if (neededCompoundManager.GetComponent<NeededCompoundsManager>().neededCompounds.Count == 0)
                 {
                     GameObject.Find("Timer").GetComponent<MiniGameTimer>().pause();//pause timer
                     PanelCorrectAnswerContainer.SetActive(true);
                 }
             }
+            else //hindi needed yung element na nacreate
+            {
+                GameObject.Find("RedLight").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Minigame/RedLit");//red light
+                yield return new WaitForSeconds(2);
+                GameObject.Find("RedLight").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Minigame/RedOff");//red light
+            }
+
+
+            GameObject.Find("MixButton").GetComponent<Button>().enabled = true; //re-enable Mix button
 
             //GameObject.Find("MixButton").GetComponent<Button>().enabled = false;
             //compoundCreatedPanel.SetActive(true);
@@ -73,12 +99,10 @@ public class MixedElementChecker : MonoBehaviour {
         }
         else
         {
-         
-            //animate sabog ng elements
+            //do nothing because mixing slots is empty
         }
 
         DestroyItemsInPanelSlot();
-        
     }
 
     private bool CompoundNeededChecker(string compoundToCheck)
@@ -92,20 +116,6 @@ public class MixedElementChecker : MonoBehaviour {
             return false;
         }
     }
-
-    private string CompoundValueFinder(string compoundKey)
-    {
-        string compoundValue = null;
-
-        compoundValue = PairOfElementCompound.listOfPairElementCompoundScientific.Where(ec => ec.elementcompound.Key == compoundKey).Select(ec => ec.elementcompound.Value).SingleOrDefault();
-        if(compoundValue != null)
-        {
-             return compoundValue;
-        }
-
-        return compoundValue;
-    }
-
 
     //public void UseCompound()
     //{//use compound sa  compound created panel

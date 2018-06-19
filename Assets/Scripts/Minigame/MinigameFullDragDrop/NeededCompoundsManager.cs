@@ -9,6 +9,7 @@ public class NeededCompoundsManager : MonoBehaviour {
 
     public List<GameObject> neededCompoundsGameObject;
     public List<string> neededCompounds;
+    private bool flashing;
 
     private void Awake()
     {
@@ -34,7 +35,11 @@ public class NeededCompoundsManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
+        //randomize Difficulty
+        int n = Random.Range(1,3);
+        Debug.Log("Random Range: " + n);
+        DataPersistor.persist.difficultyMultiplier = n; //set multiplier to difficulty randomized
+
         //populate
 		foreach(string compound in neededCompounds)
         {
@@ -69,21 +74,57 @@ public class NeededCompoundsManager : MonoBehaviour {
         {
             if (obj.GetComponent<Text>().text.Equals(CompoundValueFinder(compoundName)))
             {
-                neededCompoundsGameObject.Remove(obj); //remove from GameObject List
-                Destroy(obj.gameObject); //remove actual GameObject in Scene
+                //Sound effect here
+                //StartCoroutine("removeGameObject");
+                StartCoroutine("startFlashing", obj);//flashing animations before removal
+                StartCoroutine("removeGameObject", obj);
                 break;
             }
-             
+
         }
-        //GameObject removeObject = neededCompoundsGameObject.Find(gameObj => gameObj.GetComponent<Text>().Equals(compoundName));
-        //neededCompoundsGameObject.Remove(removeObject);
+    }
+
+
+    private IEnumerator removeGameObject(GameObject obj)
+    {
+        while (flashing)//trap in while to prevent deletion while still flashing text
+            yield return new WaitForSeconds(0.1f);
+
+        neededCompoundsGameObject.Remove(obj); //remove from GameObject List
+        Destroy(obj);//remove actual GameObject in Scene
+    }
+
+
+    private IEnumerator startFlashing(GameObject obj)
+    {
+        flashing = true;
+
+        obj.GetComponent<Text>().color = Color.green;
+        yield return new WaitForSeconds(0.5f);
+        obj.GetComponent<Text>().color = Color.white;
+        yield return new WaitForSeconds(0.5f);
+        obj.GetComponent<Text>().color = Color.green;
+        yield return new WaitForSeconds(0.5f);
+        obj.GetComponent<Text>().color = Color.white;
+        yield return new WaitForSeconds(0.5f);
+        obj.GetComponent<Text>().color = Color.green;
+
+
+        flashing = false;
     }
 
     private string CompoundValueFinder(string compoundKey)
     {
+        int difficulty = DataPersistor.persist.difficultyMultiplier;
         string compoundValue = null;
 
-        compoundValue = PairOfElementCompound.listOfPairElementCompoundScientific.Where(ec => ec.elementcompound.Key == compoundKey).Select(ec => ec.elementcompound.Value).SingleOrDefault();
+        switch(difficulty)
+        {
+            case 1: compoundValue = PairOfElementCompound.listOfPairElementCompound.Where(ec => ec.elementcompound.Key == compoundKey).Select(ec => ec.elementcompound.Value).SingleOrDefault(); break;
+            case 2: compoundValue = PairOfElementCompound.listOfPairElementCompoundScientific.Where(ec => ec.elementcompound.Key == compoundKey).Select(ec => ec.elementcompound.Value).SingleOrDefault(); break;
+            //case 3: compoundValue = PairOfElementCompound.listOfPairElementCompoundScientific.Where(ec => ec.elementcompound.Key == compoundKey).Select(ec => ec.elementcompound.Value).SingleOrDefault(); break;
+        }
+
         if (compoundValue != null)
         {
             return compoundValue;

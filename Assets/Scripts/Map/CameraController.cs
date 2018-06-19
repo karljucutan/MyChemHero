@@ -4,22 +4,34 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-    public float panSpeed;
+    public float panSpeed, oldPanSpeed;
     public float panBorderThickness;
-    public Vector2 panLimit;
-    public float scrollSpeed;
-    public float minZoom;
-    public float maxZoom;
+    public float scrollSpeed, oldScrollSpeed;
+    public float minSize;
+    public float maxSize;
     public static bool isPaused = false;
+
+    public Camera cam;
+    public GameObject bg;
+    float size;
+    float camVertExtent, camHorzExtent;
+    float leftBound, rightBound, bottomBound, topBound;
+
+
+    void Awake()
+    {
+        oldPanSpeed = panSpeed;
+        oldScrollSpeed = scrollSpeed;
+    }
     // Update is called once per frame
     void Update () {
-        CameraMovement();
+        cameraBounds();
         CanMove();
-     
 	}
-
-    private void CameraMovement()
+    
+    void cameraBounds()
     {
+        getExtents();
         Vector3 pos = transform.position;
 
         if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
@@ -40,18 +52,26 @@ public class CameraController : MonoBehaviour {
         }
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        pos.z += scroll * scrollSpeed * 100f * Time.deltaTime;
-        panLimit.x += scroll * scrollSpeed * 100f * Time.deltaTime;
-        panLimit.y += scroll * (scrollSpeed / 2) * 100f * Time.deltaTime;
+        size -= scroll * scrollSpeed * Time.deltaTime;
 
-        panLimit.x = Mathf.Clamp(panLimit.x, minZoom, maxZoom);
-        panLimit.y = Mathf.Clamp(panLimit.y, minZoom / 2, maxZoom / 2);
+        pos.x = Mathf.Clamp(pos.x, leftBound, rightBound);
+        pos.y = Mathf.Clamp(pos.y, bottomBound, topBound);
+        size = Mathf.Clamp(size, minSize, maxSize);
 
-        pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x);
-        pos.y = Mathf.Clamp(pos.y, -panLimit.y, panLimit.y);
-        pos.z = Mathf.Clamp(pos.z, minZoom, maxZoom);
+        transform.position = Vector3.Lerp(transform.position, pos, 1.0f);
+        cam.orthographicSize = size;
+    }
 
-        transform.position = pos;
+    void getExtents()
+    {
+        size = cam.orthographicSize;
+        camVertExtent = cam.orthographicSize;
+        camHorzExtent = cam.aspect * camVertExtent;
+
+        leftBound = bg.GetComponent<Collider2D>().bounds.min.x + camHorzExtent;
+        rightBound = bg.GetComponent<Collider2D>().bounds.max.x - camHorzExtent;
+        bottomBound = bg.GetComponent<Collider2D>().bounds.min.y + camVertExtent;
+        topBound = bg.GetComponent<Collider2D>().bounds.max.y - camVertExtent;
     }
 
     private void CanMove()
@@ -63,8 +83,8 @@ public class CameraController : MonoBehaviour {
         }
         else 
         {
-            panSpeed = 250;
-            scrollSpeed = 100;
+            panSpeed = oldPanSpeed;
+            scrollSpeed = oldScrollSpeed;
         }
     }
 
