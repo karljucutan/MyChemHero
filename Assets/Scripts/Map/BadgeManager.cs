@@ -45,19 +45,24 @@ public class BadgeManager : MonoBehaviour {
 
     private void BadgeByPointsChecker()
     {
-        var playersByPoints = ListOfUser.ALLUSERS.Where(u => u.TotalScore != 0).Select(u => new { u.ID, u.TotalScore }).OrderByDescending(u => u.TotalScore).ToList();
+        var playersByPoints = ListOfUser.ALLUSERS.Where(u => u.TotalScore > 0).Select(u => new { u.ID, u.TotalScore }).OrderByDescending(u => u.TotalScore).ToList();
         int count = 3;
-        if (playersByPoints.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
-        if (playersByPoints.Count == 2) count = 2;
-
-        for (int i = 0; i < count; i++)
+        if (playersByPoints.Count > 0)
         {
-            if (playersByPoints[i].ID.Equals(DataPersistor.persist.user.ID))
+
+
+            if (playersByPoints.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
+            if (playersByPoints.Count == 2) count = 2;
+
+            for (int i = 0; i < count; i++)
             {
-                if (!DataPersistor.persist.user.Badges.Contains("Top"+(i+1).ToString()+"InPoints"))
+                if (playersByPoints[i].ID.Equals(DataPersistor.persist.user.ID))
                 {
-                    // NOTIFICATION NA MAY NA RECEIVE NA BADGE
-                    StartCoroutine(PostBadge("Top" +(i+1).ToString()+ "InPoints"));    //POST YUNG BADGE
+                    if (!DataPersistor.persist.user.Badges.Contains("Top" + (i + 1).ToString() + "InPoints"))
+                    {
+                        // NOTIFICATION NA MAY NA RECEIVE NA BADGE
+                        StartCoroutine(PostBadge("Top" + (i + 1).ToString() + "InPoints"));    //POST YUNG BADGE
+                    }
                 }
             }
         }
@@ -65,18 +70,21 @@ public class BadgeManager : MonoBehaviour {
 
     private void BadgeBySectorsChecker()
     {
-        var playersBySectors = ListOfUser.ALLUSERS.Where(u => u.SectorsHold != 0).Select(u => new { u.ID, u.SectorsHold }).OrderByDescending(u => u.SectorsHold).ToList();
-        int count = 3;
-        if (playersBySectors.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
-        if (playersBySectors.Count == 2) count = 2;
-        for (int i = 0; i < count; i++)
+        var playersBySectors = ListOfUser.ALLUSERS.Where(u => u.SectorsHold > 0).Select(u => new { u.ID, u.SectorsHold }).OrderByDescending(u => u.SectorsHold).ToList();
+        if (playersBySectors.Count > 0)
         {
-            if (playersBySectors[i].ID.Equals(DataPersistor.persist.user.ID))
+            int count = 3;
+            if (playersBySectors.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
+            if (playersBySectors.Count == 2) count = 2;
+            for (int i = 0; i < count; i++)
             {
-                if (!DataPersistor.persist.user.Badges.Contains("Top" + (i+1).ToString() + "InSectors"))
+                if (playersBySectors[i].ID.Equals(DataPersistor.persist.user.ID))
                 {
-                    // NOTIFICATION NA MAY NA RECEIVE NA BADGE
-                    StartCoroutine(PostBadge("Top" + (i+1).ToString() + "InSectors"));    //POST YUNG BADGE
+                    if (!DataPersistor.persist.user.Badges.Contains("Top" + (i + 1).ToString() + "InSectors"))
+                    {
+                        // NOTIFICATION NA MAY NA RECEIVE NA BADGE
+                        StartCoroutine(PostBadge("Top" + (i + 1).ToString() + "InSectors"));    //POST YUNG BADGE
+                    }
                 }
             }
         }
@@ -84,18 +92,21 @@ public class BadgeManager : MonoBehaviour {
 
     private void BadgeByHelpsMadeChecker()
     {
-        var playersBySectors = ListOfUser.ALLUSERS.Where(u => u.HelpsMade != 0).Select(u => new { u.ID, u.HelpsMade }).OrderByDescending(u => u.HelpsMade).ToList();
-        int count = 3;
-        if (playersBySectors.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
-        if (playersBySectors.Count == 2) count = 2;
-        for (int i = 0; i < count; i++)
+        var playersBySectors = ListOfUser.ALLUSERS.Where(u => u.HelpsMade > 0).Select(u => new { u.ID, u.HelpsMade }).OrderByDescending(u => u.HelpsMade).ToList();
+        if (playersBySectors.Count > 0)
         {
-            if (playersBySectors[i].ID.Equals(DataPersistor.persist.user.ID))
+            int count = 3;
+            if (playersBySectors.Count == 1) count = 1;  // need para ndi mag error kapag players lessthan 3
+            if (playersBySectors.Count == 2) count = 2;
+            for (int i = 0; i < count; i++)
             {
-                if (!DataPersistor.persist.user.Badges.Contains("Top" + (i + 1).ToString() + "InHelpsMade"))
+                if (playersBySectors[i].ID.Equals(DataPersistor.persist.user.ID))
                 {
-                    // NOTIFICATION NA MAY NA RECEIVE NA BADGE
-                    StartCoroutine(PostBadge("Top" + (i + 1).ToString() + "InHelpsMade"));    //POST YUNG BADGE
+                    if (!DataPersistor.persist.user.Badges.Contains("Top" + (i + 1).ToString() + "InHelpsMade"))
+                    {
+                        // NOTIFICATION NA MAY NA RECEIVE NA BADGE
+                        StartCoroutine(PostBadge("Top" + (i + 1).ToString() + "InHelpsMade"));    //POST YUNG BADGE
+                    }
                 }
             }
         }

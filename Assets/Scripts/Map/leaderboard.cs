@@ -40,7 +40,7 @@ public class LeaderBoard : MonoBehaviour {
         deleteContent(contentsizefilter);
         int i = 1;
 
-        var players = ListOfUser.ALLUSERS.Select(u => new { u.UserName, u.TeamId, u.TotalScore }).OrderByDescending(u => u.TotalScore).ToList();
+        var players = ListOfUser.ALLUSERS.Where(u => u.TotalScore > 0 ).Select(u => new { u.UserName, u.TeamId, u.TotalScore }).OrderByDescending(u => u.TotalScore).ToList();
         foreach (var player in players)
         {
             var clone = Instantiate(prefabPanelPlayerPoints, contentsizefilter);
@@ -64,7 +64,7 @@ public class LeaderBoard : MonoBehaviour {
         deleteContent(contentsizefilter);
         int i = 1;
 
-        var players = ListOfUser.ALLUSERS.Select(u => new { u.UserName, u.TeamId, u.SectorsHold }).OrderByDescending(u => u.SectorsHold).ToList();
+        var players = ListOfUser.ALLUSERS.Where(u => u.SectorsHold > 0 ).Select(u => new { u.UserName, u.TeamId, u.SectorsHold }).OrderByDescending(u => u.SectorsHold).ToList();
         foreach (var player in players)
         {
             var clone = Instantiate(prefabPlanelPlayerSectors, contentsizefilter);
@@ -88,7 +88,7 @@ public class LeaderBoard : MonoBehaviour {
         deleteContent(contentsizefilter);
         int i = 1;
 
-        var players = ListOfUser.ALLUSERS.Select(u => new { u.UserName, u.TeamId, u.HelpsMade }).OrderByDescending(u => u.HelpsMade).ToList();
+        var players = ListOfUser.ALLUSERS.Where(u => u.HelpsMade > 0).Select(u => new { u.UserName, u.TeamId, u.HelpsMade }).OrderByDescending(u => u.HelpsMade).ToList();
         foreach (var player in players)
         {
             var clone = Instantiate(prefabPanelPlayersHelpsMade, contentsizefilter);
@@ -117,19 +117,23 @@ public class LeaderBoard : MonoBehaviour {
                     .Select(u => new {
                          teamid = u.Key,
                          total = u.Sum(g => g.TotalScore)});
-        foreach(var p in players)
+        foreach (var p in players)
         {
-            var clone = Instantiate(prefabTeamPanelPlayerPoints, Teamcontentsizefilter);
-            var rank = clone.transform.GetChild(0).gameObject;
-            rank.GetComponent<Text>().text = i.ToString();
-            var flag = clone.transform.GetChild(1).gameObject;
-            flag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[p.teamid - 1];
-            var teamname = clone.transform.GetChild(2).gameObject;
-            teamname.GetComponent<Text>().text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(p.teamid)).Select(t => t.teamName).SingleOrDefault();
-            var points = clone.transform.GetChild(4).gameObject;
-            points.GetComponent<Text>().text = p.total.ToString();
+            if (p.total > 0)
+            {
+                var clone = Instantiate(prefabTeamPanelPlayerPoints, Teamcontentsizefilter);
+                var rank = clone.transform.GetChild(0).gameObject;
+                rank.GetComponent<Text>().text = i.ToString();
+                var flag = clone.transform.GetChild(1).gameObject;
+                flag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[p.teamid - 1];
+                var teamname = clone.transform.GetChild(2).gameObject;
+                teamname.GetComponent<Text>().text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(p.teamid)).Select(t => t.teamName).SingleOrDefault();
+                var points = clone.transform.GetChild(4).gameObject;
+                points.GetComponent<Text>().text = p.total.ToString();
 
-            i++;
+                i++;
+            }
+      
         }
     }
 
@@ -146,17 +150,20 @@ public class LeaderBoard : MonoBehaviour {
                     });
         foreach (var p in players)
         {
-            var clone = Instantiate(prefabTeamPanelPlayerSectors, Teamcontentsizefilter);
-            var rank = clone.transform.GetChild(0).gameObject;
-            rank.GetComponent<Text>().text = i.ToString();
-            var flag = clone.transform.GetChild(1).gameObject;
-            flag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[p.teamid - 1];
-            var teamname = clone.transform.GetChild(2).gameObject;
-            teamname.GetComponent<Text>().text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(p.teamid)).Select(t => t.teamName).SingleOrDefault();
-            var points = clone.transform.GetChild(4).gameObject;
-            points.GetComponent<Text>().text = p.total.ToString();
+            if (p.total > 0)
+            {
+                var clone = Instantiate(prefabTeamPanelPlayerSectors, Teamcontentsizefilter);
+                var rank = clone.transform.GetChild(0).gameObject;
+                rank.GetComponent<Text>().text = i.ToString();
+                var flag = clone.transform.GetChild(1).gameObject;
+                flag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[p.teamid - 1];
+                var teamname = clone.transform.GetChild(2).gameObject;
+                teamname.GetComponent<Text>().text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(p.teamid)).Select(t => t.teamName).SingleOrDefault();
+                var points = clone.transform.GetChild(4).gameObject;
+                points.GetComponent<Text>().text = p.total.ToString();
 
-            i++;
+                i++;
+            }
         }
     }
 
@@ -173,17 +180,20 @@ public class LeaderBoard : MonoBehaviour {
                     });
         foreach (var p in players)
         {
-            var clone = Instantiate(prefabTeamPanelPlayersHelpsMade, Teamcontentsizefilter);
-            var rank = clone.transform.GetChild(0).gameObject;
-            rank.GetComponent<Text>().text = i.ToString();
-            var flag = clone.transform.GetChild(1).gameObject;
-            flag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[p.teamid - 1];
-            var teamname = clone.transform.GetChild(2).gameObject;
-            teamname.GetComponent<Text>().text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(p.teamid)).Select(t => t.teamName).SingleOrDefault();
-            var points = clone.transform.GetChild(4).gameObject;
-            points.GetComponent<Text>().text = p.total.ToString();
+            if (p.total > 0)
+            {
+                var clone = Instantiate(prefabTeamPanelPlayersHelpsMade, Teamcontentsizefilter);
+                var rank = clone.transform.GetChild(0).gameObject;
+                rank.GetComponent<Text>().text = i.ToString();
+                var flag = clone.transform.GetChild(1).gameObject;
+                flag.GetComponent<Image>().overrideSprite = profilesetter.GetComponent<ProfileSetter>().TeamFlag[p.teamid - 1];
+                var teamname = clone.transform.GetChild(2).gameObject;
+                teamname.GetComponent<Text>().text = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(p.teamid)).Select(t => t.teamName).SingleOrDefault();
+                var points = clone.transform.GetChild(4).gameObject;
+                points.GetComponent<Text>().text = p.total.ToString();
 
-            i++;
+                i++;
+            }
         }
     }
 
