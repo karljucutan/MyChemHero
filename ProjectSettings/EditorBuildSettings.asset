@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Scenes/Prologue.unity
+    guid: 33ff445090150ba4382b94367c29069b
+  - enabled: 1
     path: Assets/_Scenes/Load.unity
     guid: c4ee6305a07408e41964fec3f441cf0d
   - enabled: 1
@@ -74,6 +77,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/SegregationVer3.unity
     guid: 5e91e62cf02b8c145b7c4571be724082
-  - enabled: 1
-    path: Assets/_Scenes/Prologue.unity
-    guid: 33ff445090150ba4382b94367c29069b

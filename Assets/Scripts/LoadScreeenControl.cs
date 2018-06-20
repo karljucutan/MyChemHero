@@ -51,7 +51,7 @@ public class LoadScreeenControl : MonoBehaviour {
         else
         {
             //DataPersistor.persist.user.ID = int.Parse(get.text);
-            DataPersistor.persist.user.ID = 1;
+            DataPersistor.persist.user.ID = 3;
             idFlag = true;
             slider.value += 0.25f;
         }

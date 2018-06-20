@@ -1928,7 +1928,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1976317948}
+      - m_Target: {fileID: 0}
         m_MethodName: LeaderBoardPoints
         m_Mode: 1
         m_Arguments:
@@ -10214,7 +10214,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -10239,7 +10239,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -10249,7 +10249,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -11783,7 +11783,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -11808,7 +11808,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -11818,7 +11818,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -14449,7 +14449,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -14474,7 +14474,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -14484,7 +14484,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -14614,7 +14614,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1976317948}
+      - m_Target: {fileID: 0}
         m_MethodName: TeamLeaderBoardPoints
         m_Mode: 1
         m_Arguments:
@@ -17932,7 +17932,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1976317948}
+      - m_Target: {fileID: 0}
         m_MethodName: LeaderboardHelpsMade
         m_Mode: 1
         m_Arguments:
@@ -18553,7 +18553,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -18578,7 +18578,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -18588,7 +18588,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -21239,7 +21239,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -21264,7 +21264,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -21274,7 +21274,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -26689,7 +26689,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -26714,7 +26714,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -26724,7 +26724,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -28627,7 +28627,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1976317948}
+      - m_Target: {fileID: 0}
         m_MethodName: LeaderboardSectors
         m_Mode: 1
         m_Arguments:
@@ -30495,7 +30495,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -30520,7 +30520,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -30530,7 +30530,7 @@ Prefab:
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224049045936208490, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
         type: 2}
@@ -33366,7 +33366,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1976317948}
+      - m_Target: {fileID: 0}
         m_MethodName: TeamLeaderBoardHelpsMade
         m_Mode: 1
         m_Arguments:
@@ -34036,7 +34036,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1976317948}
+      - m_Target: {fileID: 0}
         m_MethodName: TeamLeaderBoardSectors
         m_Mode: 1
         m_Arguments:
@@ -34809,7 +34809,7 @@ MonoBehaviour:
   prefabPanelPlayersHelpsMade: {fileID: 1516409747958502, guid: 419130634bae8f14885b46663799cdf7,
     type: 2}
   Teamcontentsizefilter: {fileID: 1582349768}
-  prefabTeamPanelPlayerPoints: {fileID: 1679914197280638, guid: 8609773b4651dd54d847995d6d2b688d,
+  prefabTeamPanelPlayerPoints: {fileID: 1109874870543602, guid: e5ecc3d21f403b84dada351d84a7687c,
     type: 2}
   prefabTeamPanelPlayerSectors: {fileID: 1722765086377298, guid: fdf4a419bb737ad4c826f25486017966,
     type: 2}
