@@ -262,29 +262,29 @@ namespace Assets.Scripts
                     }
                 }
            },
-           //new ElementGroups{cityNum=11,elements=new List<Element>(){
-           //         new Element{
-           //             name="O",
-           //             tag="Gas"
-           //         },
-           //         new Element{
-           //             name="S",
-           //             tag="Solid"
-           //         },
-           //         new Element{
-           //             name="Se",
-           //             tag="Solid"
-           //         },
-           //         new Element{
-           //             name="Te",
-           //             tag="Solid"
-           //         },
-           //         new Element{
-           //             name="Po",
-           //             tag="Solid"
-           //         }
-           //     }
-           //},
+           new ElementGroups{city="cityId_11",elements=new List<Element>(){
+                    new Element{
+                        name="O",
+                        tag="Gas"
+                    },
+                    new Element{
+                        name="S",
+                        tag="Solid"
+                    },
+                    new Element{
+                        name="Se",
+                        tag="Solid"
+                    },
+                    new Element{
+                        name="Te",
+                        tag="Solid"
+                    },
+                    new Element{
+                        name="Po",
+                        tag="Solid"
+                    }
+                }
+           },
            new ElementGroups{city="CityId_12",elements=new List<Element>(){
                     new Element{
                         name="F",
