@@ -18,6 +18,11 @@ public class backdisabler : MonoBehaviour {
         }
 
     }
+
+    public void GoBack()
+    {
+        LevelManager.lvlmgr.LoadLevel("Team Selection");
+    }
 	
 	
 }

@@ -23,7 +23,16 @@ public class MinigameFreeThrowTimer : MonoBehaviour {
 
     private void Start()
     {
-       
+        AudioManager.instance.StopAll();//stops music playing from previous scene
+
+        Scene scene = SceneManager.GetActiveScene();
+        switch (scene.name) //plays BGM based on version randomized
+        {
+            case "MinigameFreeThrowVer1": AudioManager.instance.Play("Shooting1"); break;
+            case "MinigameFreeThrowVer2": AudioManager.instance.Play("Shooting2"); break;
+            case "MinigameFreeThrowVer3": AudioManager.instance.Play("Shooting3"); break;
+        }
+
         mTime = new ModelTime();
         mTime.milliseconds = 10;
         mTime.seconds = 3;

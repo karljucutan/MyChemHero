@@ -15,6 +15,9 @@ public class ColorChanger : MonoBehaviour
 
     void Start()
     {
+        AudioManager.instance.StopAll();//stops music playing from previous scene
+        AudioManager.instance.Play("Customize");
+
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
         if(DataPersistor.persist != null)
         spriteRend.color = setColor(DataPersistor.persist.colorStr);

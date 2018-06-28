@@ -71,6 +71,20 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
+        AudioManager.instance.StopAll(); //stop music playing from previous scene
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (!currentScene.name.Equals("Help_EndingSceneForAll")) // hindi end scene
+        {
+            AudioManager.instance.Play("StartScene"); //play scene start music
+        }
+        else
+        {
+            //play random success endscene music
+            string nameStr = "EndScene";
+            AudioManager.instance.Play(nameStr + Random.Range(1, 4).ToString());
+
+        }
+
         HeroAssets = DialogueManager.GetComponent<DialogueManager>().GetHeroByTeam(DataPersistor.persist.user.TeamId);
         ProHero.GetComponent<Image>().overrideSprite = HeroAssets[0];
         postScoresRunning = false;

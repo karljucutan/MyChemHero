@@ -16,6 +16,7 @@ public class LoadScreeenControl : MonoBehaviour {
     void Start()
     {
         StartCoroutine(GetPlayerId());
+        AudioManager.instance.Play("Title");
     }
 
     //IEnumerator GetPlayerSession()
@@ -140,7 +141,10 @@ public class LoadScreeenControl : MonoBehaviour {
     void proceedToLoad()
     {
         if (idFlag && infoFlag && loadFLag)//check if all flags are true(no problem loading)
+        {
             LevelManager.lvlmgr.LoadLevel("Lobby");
+        }
+           
         else // retry fetching
         {
             //some dialog box for confirmation on retry load

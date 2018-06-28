@@ -85,6 +85,16 @@ public class ElementSpawner : MonoBehaviour {
         
     }
 	void Start () {
+        AudioManager.instance.StopAll();//stops music playing from previous scene
+
+        Scene scene = SceneManager.GetActiveScene();
+        switch (scene.name) //plays BGM based on version randomized
+        {
+            case "SegregationVer1": AudioManager.instance.Play("Segregation1"); break;
+            case "SegregationVer2": AudioManager.instance.Play("Segregation2"); break;
+            case "SegregationVer3": AudioManager.instance.Play("Segregation3"); break;
+        }
+        
         queueElement();
 	}
 	

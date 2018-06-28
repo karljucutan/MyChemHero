@@ -8,6 +8,9 @@ public class ScrollingBG : MonoBehaviour
     private new Renderer renderer;
     private void Start()
     {
+        AudioManager.instance.StopAll();
+        AudioManager.instance.Play("Team");
+
         renderer = GetComponent<Renderer>();
     }
 

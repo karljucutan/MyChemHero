@@ -35,13 +35,19 @@ public class NeededCompoundsManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        AudioManager.instance.StopAll(); //stop music playing from previous scene
+
         //randomize Difficulty
         int n = Random.Range(1,3);
         Debug.Log("Random Range: " + n);
         DataPersistor.persist.difficultyMultiplier = n; //set multiplier to difficulty randomized
 
+        //set BGM
+        string nameStr = "Mixing";
+        AudioManager.instance.Play(nameStr + n.ToString());
+
         //populate
-		foreach(string compound in neededCompounds)
+        foreach (string compound in neededCompounds)
         {
             string text = CompoundValueFinder(compound);//will only return text if string matches a key in the Dictionary
             foreach(GameObject obj in neededCompoundsGameObject)

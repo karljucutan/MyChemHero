@@ -11,7 +11,7 @@ public class VideoPlayerScript : MonoBehaviour {
     {
         if(Input.anyKeyDown)
         {
-            vidplayer.Stop();
+            vidplayer.Pause();
         }
         if(vidplayer.isPlaying == false)
         {

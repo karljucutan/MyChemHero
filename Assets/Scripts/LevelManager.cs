@@ -35,8 +35,9 @@ public class LevelManager : MonoBehaviour {
     public void OnFadeComplete()
     {
         Debug.Log(levelToLoad);
+        animator.ResetTrigger("FadeOut");
         SceneManager.LoadScene(levelToLoad);
         animator.SetTrigger("FadeIn");
+        
     }
-
 }

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-    public float panSpeed, oldPanSpeed;
+    public float panSpeed;
+    private float oldPanSpeed;
     public float panBorderThickness;
-    public float scrollSpeed, oldScrollSpeed;
+    public float scrollSpeed;
+    private float oldScrollSpeed;
     public float minSize;
     public float maxSize;
     public static bool isPaused = false;
@@ -23,6 +25,13 @@ public class CameraController : MonoBehaviour {
         oldPanSpeed = panSpeed;
         oldScrollSpeed = scrollSpeed;
     }
+
+    private void Start()
+    {
+        AudioManager.instance.StopAll();
+        AudioManager.instance.Play("Map");
+    }
+
     // Update is called once per frame
     void Update () {
         cameraBounds();

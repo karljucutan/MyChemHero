@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1819265845305208}
+  m_IsPrefabParent: 1
+--- !u!1 &1819265845305208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4201552858469694}
+  - component: {fileID: 114200739650446724}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4201552858469694
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1819265845305208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114200739650446724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1819265845305208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19d10ee62b029b4498e39d5bc51613d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmVolume: 1
+  sfxVolume: 0.5
+  sounds:
+  - name: Title
+    tag: 0
+    clip: {fileID: 8300000, guid: 79fc32feb9f53b147ab0c47c95752288, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Team
+    tag: 0
+    clip: {fileID: 8300000, guid: 2b885029979a8314bbe27f71a21c8076, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Customize
+    tag: 0
+    clip: {fileID: 8300000, guid: 5b500d67dfd396041ad22a80c4d15add, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Map
+    tag: 0
+    clip: {fileID: 8300000, guid: 172a828ceed52e54c89df8b7a9eae466, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Settings
+    tag: 0
+    clip: {fileID: 8300000, guid: 10f2c530156263649bfe7e08ddd5e38b, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: StartScene
+    tag: 0
+    clip: {fileID: 8300000, guid: f592ebd7016f0364a8386b7a241e3b4d, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: EndScene1
+    tag: 0
+    clip: {fileID: 8300000, guid: b6aacc1934e497d4a841772eb75fa1a5, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: EndScene2
+    tag: 0
+    clip: {fileID: 8300000, guid: 4bf001fee7aef694fb6ace3943838d18, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: EndScene3
+    tag: 0
+    clip: {fileID: 8300000, guid: fd97996c050a78747a5c7be2bcca102c, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Mixing1
+    tag: 0
+    clip: {fileID: 8300000, guid: 42dcd72357f2bd74ba065e242ac46bd5, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Mixing2
+    tag: 0
+    clip: {fileID: 8300000, guid: 2692a80bbaaeaa440aac41ee38ca03d5, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Mixing3
+    tag: 0
+    clip: {fileID: 8300000, guid: 429a92ad0b41ea045ab961ce9f10a8e9, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Segregation1
+    tag: 0
+    clip: {fileID: 8300000, guid: 3c9d711a02ecca84ea35cfe2a0a049e5, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Segregation2
+    tag: 0
+    clip: {fileID: 8300000, guid: 2a8176ba9d6e58c4cba72ed70dcfdc37, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Segregation3
+    tag: 0
+    clip: {fileID: 8300000, guid: 6da16de695683ef4489c376b4f61355e, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Shooting1
+    tag: 0
+    clip: {fileID: 8300000, guid: 88542b962a79fc94ca81f80f9f96e76b, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Shooting2
+    tag: 0
+    clip: {fileID: 8300000, guid: b2de47a15aeb2a542bc90bdfd6c2fd9f, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - name: Shooting3
+    tag: 0
+    clip: {fileID: 8300000, guid: d0041fed0f6ef8040ac60836cbe1e51c, type: 3}
+    loop: 1
+    source: {fileID: 0}

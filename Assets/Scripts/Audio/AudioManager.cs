@@ -1,13 +1,17 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
+
 
 public class AudioManager : MonoBehaviour {
 
-    public Sound[] sounds;
-
     public static AudioManager instance;
 
+    public float bgmVolume = 1.0f;
+    public float sfxVolume = 1.0f;
+
+    public Sound[] sounds;
 
     void Awake()
     {
@@ -30,8 +34,11 @@ public class AudioManager : MonoBehaviour {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
+            if(s.tag.Equals(SoundTags.BGM))
+                s.source.volume = bgmVolume;
+            else if(s.tag.Equals(SoundTags.SFX))
+                s.source.volume = sfxVolume;
+
             s.source.loop = s.loop;
         }
     }
@@ -43,7 +50,7 @@ public class AudioManager : MonoBehaviour {
             Sound s = findSound(name);
             s.source.Play();
         }
-        catch { }
+        catch (Exception ex) { Debug.Log("Error: " + ex.Message); }
     }
 
     public void Stop(string name)
@@ -53,17 +60,20 @@ public class AudioManager : MonoBehaviour {
             Sound s = findSound(name);
             s.source.Stop();
         }
-        catch { }
+        catch(Exception ex) { Debug.Log("Error: " + ex.Message); }
+    }
+
+    public void StopAll()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.Stop();
+        }
     }
 
     public Sound findSound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return null;
-        }
         return s;
     }
 
