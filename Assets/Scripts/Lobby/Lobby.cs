@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class Lobby : MonoBehaviour {
     private void Start()
     {
+        AudioManager.instance.StopAll();
+        AudioManager.instance.Play("Title");
         Debug.Log("ID" + DataPersistor.persist.user.ID +" Name: " + DataPersistor.persist.user.UserName);
     }
     public void CheckState () {

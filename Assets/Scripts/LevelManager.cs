@@ -38,6 +38,5 @@ public class LevelManager : MonoBehaviour {
         animator.ResetTrigger("FadeOut");
         SceneManager.LoadScene(levelToLoad);
         animator.SetTrigger("FadeIn");
-        
     }
 }

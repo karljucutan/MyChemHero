@@ -23,6 +23,8 @@ public class TeamCreation : MonoBehaviour
     public GameObject Back, Create;
     public void Start()
     {
+        AudioManager.instance.StopAll();
+        AudioManager.instance.Play("Team");
         teamNameInputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         StartCoroutine(starPollingGetTeamsCreated());
 

@@ -38,5 +38,10 @@ public class SceneRandomizer : MonoBehaviour {
         LevelManager.lvlmgr.LoadLevel(scenesList[randomNumber]);
     }
 
+    public void GoToLobby()
+    {
+        LevelManager.lvlmgr.LoadLevel("Lobby");      
+    }
+
  
 }

@@ -34,12 +34,23 @@ public class AudioManager : MonoBehaviour {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
-            if(s.tag.Equals(SoundTags.BGM))
+            if (s.tag.Equals(SoundTags.BGM))
                 s.source.volume = bgmVolume;
-            else if(s.tag.Equals(SoundTags.SFX))
+            else if (s.tag.Equals(SoundTags.SFX))
                 s.source.volume = sfxVolume;
 
             s.source.loop = s.loop;
+        }
+    }
+
+    public void SetSoundProperties()
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.tag.Equals(SoundTags.BGM))
+                s.source.volume = bgmVolume;
+            else if (s.tag.Equals(SoundTags.SFX))
+                s.source.volume = sfxVolume;
         }
     }
 	
