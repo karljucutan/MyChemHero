@@ -116,7 +116,7 @@ public class LeaderBoard : MonoBehaviour {
                     .GroupBy(u => u.TeamId)
                     .Select(u => new {
                          teamid = u.Key,
-                         total = u.Sum(g => g.TotalScore)});
+                         total = u.Sum(g => g.TotalScore)}).OrderByDescending(u => u.total);
         foreach (var p in players)
         {
             if (p.total > 0)
@@ -147,7 +147,7 @@ public class LeaderBoard : MonoBehaviour {
                     .Select(u => new {
                         teamid = u.Key,
                         total = u.Sum(g => g.SectorsHold)
-                    });
+                    }).OrderByDescending(u => u.total);
         foreach (var p in players)
         {
             if (p.total > 0)
@@ -177,7 +177,7 @@ public class LeaderBoard : MonoBehaviour {
                     .Select(u => new {
                         teamid = u.Key,
                         total = u.Sum(g => g.HelpsMade)
-                    });
+                    }).OrderByDescending(u => u.total);
         foreach (var p in players)
         {
             if (p.total > 0)

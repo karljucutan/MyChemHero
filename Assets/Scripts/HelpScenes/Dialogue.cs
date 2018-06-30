@@ -32,10 +32,10 @@ public class Dialogue : MonoBehaviour
 
 
     //mingames scene name                           // Temporary Names //Replace with Scene Names
-    List<string> gamesCityId_1 = new List<string>() { "MixingGameFullDragDrop", "MixingGameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3"};
-    List<string> gamesCityId_2 = new List<string>() { "MixingGameFullDragDrop", "MixingGameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3" };
-    List<string> gamesCityId_3 = new List<string>() { "MixingGameFullDragDrop", "MixingGameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3" };
-    List<string> gamesCityId_4 = new List<string>() { "MixingGameFullDragDrop", "MixingGameFullDragDrop", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer3" };
+    List<string> gamesCityId_1 = new List<string>() { "MinigameFullDragDrop", "MinigameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3"};
+    List<string> gamesCityId_2 = new List<string>() { "MinigameFullDragDrop", "MinigameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3" };
+    List<string> gamesCityId_3 = new List<string>() { "MinigameFullDragDrop", "MinigameFullDragDrop", "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer2", "MinigameFreeThrowVer3" };
+    List<string> gamesCityId_4 = new List<string>() { "MinigameFullDragDrop", "MinigameFullDragDrop", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer3" };
     List<string> gamesCityId_5 = new List<string>() { "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer2" };
     List<string> gamesCityId_6 = new List<string>() { "SegregationVer2", "SegregationVer3" };
     List<string> gamesCityId_7 = new List<string>() { "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer2" };
@@ -449,11 +449,11 @@ public class Dialogue : MonoBehaviour
                 DataPersistor.persist.difficultyMultiplier = 2;
 
                 minigame = Randomizer(gamesCityId_2);
-                
+         
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":
-                        dialogue = new string[1];
+                        //dialogue = new string[1];
                         //dialogue[0] = "LEzgo";
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to L. Pasteur City";
