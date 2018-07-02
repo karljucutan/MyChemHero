@@ -57,8 +57,9 @@ public class EndScenePropertyLoader : MonoBehaviour {
     {
         endSceneBG = DataPersistor.persist.endSceneBG;
 
-        Background.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/"+endSceneBG);
-    
+        //Background.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/"+endSceneBG);
+        Background.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CityBG/" + endSceneBG);
+
         // HERO IMAGE GAWING NAG BABAGO BAGO
         HeroImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + endSceneHeroImage);
 

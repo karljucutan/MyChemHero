@@ -6,7 +6,7 @@ using UnityEngine;
 public class Sound {
 
     public string name;
-    public SoundTags tag = SoundTags.BGM;
+    public SoundTags tag;
 
     public AudioClip clip;
     
