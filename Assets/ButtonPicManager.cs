@@ -18,6 +18,8 @@ public class ButtonPicManager : MonoBehaviour {
     public GameObject TopTeamPoints;
     public GameObject TopTeamSectors;
     public GameObject TopTeamHelpsMade;
+
+    public GameObject PlayerProfile, TeamProfile;
 	// Use this for initialization
 	void Start () {
         ButtonPic = new Sprite[2];
@@ -77,5 +79,17 @@ public class ButtonPicManager : MonoBehaviour {
         TopTeamHelpsMade.GetComponent<Image>().sprite = ButtonPic[1];
         TopTeamPoints.GetComponent<Image>().sprite = ButtonPic[0];
         TopTeamSectors.GetComponent<Image>().sprite = ButtonPic[0];
+    }
+
+    public void PlayerProfile_OnCLick()
+    {
+        PlayerProfile.GetComponent<Image>().sprite = ButtonPic[1];
+        TeamProfile.GetComponent<Image>().sprite = ButtonPic[0];
+    }
+
+    public void TeamProfile_OnClick()
+    {
+        TeamProfile.GetComponent<Image>().sprite = ButtonPic[1];
+        PlayerProfile.GetComponent<Image>().sprite = ButtonPic[0];
     }
 }
