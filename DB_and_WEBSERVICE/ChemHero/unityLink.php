@@ -6,4 +6,4 @@
  * and open the template in the editor.
  */
 session_start();
-echo($_SESSION['FNAME']);
+echo($_SESSION['PLAYERID']);
