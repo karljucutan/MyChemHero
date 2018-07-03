@@ -169,7 +169,7 @@ public class SectorScript : MonoBehaviour {
         if (DataPersistor.persist.doneLoadingAllUsers)
         {
             sectorInfo = DataPersistor.persist.values[sectorNumber - 1].Split(';');
-            if (sectorInfo[0] != "")
+            if (!string.IsNullOrEmpty(sectorInfo[0]))
             {
                 conqueror = ListOfUser.ALLUSERS.Where(u => u.ID.Equals(int.Parse(sectorInfo[0]))).FirstOrDefault();
 

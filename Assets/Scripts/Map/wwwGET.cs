@@ -43,7 +43,6 @@ public class wwwGET : MonoBehaviour {
        if (hs_get.error != null)
        {
            Debug.Log("There was an error getting the high score: " + hs_get.error);
-
        }
        else
        {

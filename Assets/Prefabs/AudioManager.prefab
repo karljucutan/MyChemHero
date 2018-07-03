@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmVolume: 1
-  sfxVolume: 0.5
+  sfxVolume: 1
   sounds:
   - name: Title
     tag: 0
@@ -143,4 +143,14 @@ MonoBehaviour:
     tag: 0
     clip: {fileID: 8300000, guid: d0041fed0f6ef8040ac60836cbe1e51c, type: 3}
     loop: 1
+    source: {fileID: 0}
+  - name: Hover
+    tag: 1
+    clip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - name: Click
+    tag: 1
+    clip: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
+    loop: 0
     source: {fileID: 0}

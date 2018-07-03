@@ -27,7 +27,7 @@ public class GameOverManager : MonoBehaviour {
         else
         {
             var teamid = get.text;
-            if(teamid != "")
+            if(!string.IsNullOrEmpty(teamid))
             {
                 int.TryParse(teamid, out winnerTeamId);
                 GameOverPanel.SetActive(true);
