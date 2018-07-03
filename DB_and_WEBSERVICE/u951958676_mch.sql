@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2018 at 05:09 AM
+-- Generation Time: Jul 03, 2018 at 08:12 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.2.2
 
@@ -67,13 +67,20 @@ INSERT INTO `player_badge` (`player_id`, `badge`) VALUES
 ('1', 'Top1InHelpsMade'),
 ('1', 'Top1InPoints'),
 ('1', 'Top1InSectors'),
+('1', 'Top2InPoints'),
+('2', 'Top1InPoints'),
 ('2', 'Top2InHelpsMade'),
+('2', 'Top2InPoints'),
 ('2', 'Top3InHelpsMade'),
 ('2', 'Top3InPoints'),
 ('2', 'Top3InSectors'),
 ('3', 'Top2InHelpsMade'),
 ('3', 'Top2InPoints'),
-('3', 'Top2InSectors');
+('3', 'Top2InSectors'),
+('3', 'Top3InHelpsMade'),
+('3', 'Top3InPoints'),
+('4', 'Top2InSectors'),
+('4', 'Top3InSectors');
 
 -- --------------------------------------------------------
 
@@ -94,9 +101,10 @@ CREATE TABLE `player_game` (
 --
 
 INSERT INTO `player_game` (`player_id`, `team_id`, `player_points`, `player_state`, `helps_made`) VALUES
-('1', 113, 365, 'returning', 14),
-('2', 119, 20, 'returning', 2),
-('3', 114, 53, 'returning', 1);
+('1', 113, 369, 'returning', 14),
+('2', 119, 381, 'returning', 2),
+('3', 114, 53, 'returning', 1),
+('4', 120, 47, 'returning', 0);
 
 -- --------------------------------------------------------
 
@@ -122,7 +130,8 @@ CREATE TABLE `player_preset` (
 INSERT INTO `player_preset` (`player_id`, `body_preset`, `hair_preset`, `eyebrows_preset`, `eyes_preset`, `nose_preset`, `mouth_preset`, `gender`) VALUES
 ('1', 1, 0, 0, 0, 0, 0, 'female'),
 ('2', 3, 5, 2, 2, 4, 3, 'female'),
-('3', 0, 0, 0, 0, 0, 0, 'male');
+('3', 0, 0, 0, 0, 0, 0, 'male'),
+('4', 2, 18, 19, 24, 4, 3, 'male');
 
 -- --------------------------------------------------------
 
@@ -144,7 +153,9 @@ INSERT INTO `score` (`teamid`, `cityid`) VALUES
 (113, 10),
 (113, 13),
 (114, 11),
-(114, 12);
+(114, 12),
+(120, 7),
+(120, 8);
 
 -- --------------------------------------------------------
 
@@ -167,7 +178,7 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (2, '1', 5),
 (3, '1', 20),
 (4, '', 0),
-(5, '', 0),
+(5, '4', 1),
 (6, '', 0),
 (7, '3', 2),
 (8, '3', 2),
@@ -175,7 +186,7 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (10, '1', 1),
 (11, '1', 10),
 (12, '', 0),
-(13, '', 0),
+(13, '4', 2),
 (14, '', 0),
 (15, '1', 2),
 (16, '3', 1),
@@ -191,15 +202,15 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (26, '', 0),
 (27, '', 0),
 (28, '', 0),
-(29, '', 0),
-(30, '', 0),
-(31, '', 0),
+(29, '4', 11),
+(30, '4', 6),
+(31, '4', 1),
 (32, '', 0),
 (33, '1', 4),
 (34, '3', 2),
 (35, '3', 1),
 (36, '1', 2),
-(37, '1', 30),
+(37, '2', 50),
 (38, '', 0),
 (39, '2', 10),
 (40, '', 0),
@@ -209,15 +220,15 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (44, '', 0),
 (45, '', 0),
 (46, '', 0),
-(47, '', 0),
-(48, '', 0),
-(49, '', 0),
+(47, '4', 10),
+(48, '4', 10),
+(49, '4', 1),
 (50, '1', 50),
 (51, '1', 12),
 (52, '3', 12),
 (53, '3', 1),
 (54, '1', 1),
-(55, '1', 20),
+(55, '2', 300),
 (56, '', 0),
 (57, '', 0),
 (58, '', 0),
@@ -241,9 +252,9 @@ INSERT INTO `sector_score` (`sector_id`, `player_id`, `player_score`) VALUES
 (76, '', 0),
 (77, '', 0),
 (78, '', 0),
-(79, '', 0),
-(80, '', 0),
-(81, '1', 30),
+(79, '4', 2),
+(80, '4', 2),
+(81, '4', 1),
 (82, '1', 50),
 (83, '1', 20),
 (84, '3', 10),
@@ -302,7 +313,8 @@ CREATE TABLE `team` (
 INSERT INTO `team` (`team_id`, `team_name`, `team_colorID`, `team_leader`) VALUES
 (113, 'zxc', 2, 1),
 (114, 'asd', 1, 3),
-(119, 'QWE', 4, 2);
+(119, 'QWE', 4, 2),
+(120, 'TEST', 3, 4);
 
 --
 -- Indexes for dumped tables
@@ -364,7 +376,7 @@ ALTER TABLE `player`
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
