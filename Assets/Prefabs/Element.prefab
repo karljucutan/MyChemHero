@@ -123,9 +123,10 @@ GameObject:
   - component: {fileID: 114161469624323720}
   - component: {fileID: 114335716026848888}
   - component: {fileID: 114898295091272222}
+  - component: {fileID: 114494050041860856}
   m_Layer: 5
   m_Name: Element
-  m_TagString: NonMetals
+  m_TagString: CityId_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,6 +446,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114494050041860856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1366005655534926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114657248083587938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -614,7 +626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000025749, y: 0.0000014305}
+  m_AnchoredPosition: {x: 0.000025749, y: 0}
   m_SizeDelta: {x: 320, y: 320}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224025375238314448

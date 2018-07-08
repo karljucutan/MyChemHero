@@ -41,7 +41,7 @@ public class MixedElementChecker : MonoBehaviour {
 
             //Debug.Log(DataPersistor.persist.mTime.minutes+":"+DataPersistor.persist.mTime.seconds+":"+DataPersistor.persist.mTime.milliseconds );
             //string compound = CompoundValueFinder(combinedElements);//check in all list of compounds
-
+            AudioManager.instance.Play("Mixing");//play mixing SFX
             smokeEmitter.GetComponent<ParticleSystem>().Play();                                                // Mixing smoke
             yield return new WaitUntil(() => smokeEmitter.GetComponent<ParticleSystem>().isEmitting == false); // animation
             //animate yung MIXING
@@ -64,7 +64,7 @@ public class MixedElementChecker : MonoBehaviour {
 
             if (CompoundNeededChecker(combinedElements)) //check if matches any in the needed list, returns true if exists
             {
-                
+                AudioManager.instance.Play("Correct");
                 GameObject.Find("GreenLight").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Minigame/GreenLit");//green light
 
                 DataPersistor.persist.accumulatedPoints += 1; //points
@@ -81,6 +81,7 @@ public class MixedElementChecker : MonoBehaviour {
             }
             else //hindi needed yung element na nacreate
             {
+                AudioManager.instance.Play("Wrong");
                 GameObject.Find("RedLight").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Minigame/RedLit");//red light
                 yield return new WaitForSeconds(2);
                 GameObject.Find("RedLight").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Minigame/RedOff");//red light

@@ -9,18 +9,20 @@ using UnityEngine.UI;
 public class ColorChanger : MonoBehaviour
 {
     SpriteRenderer spriteRend;
-    void Awake()
-    {
-    }
 
     void Start()
     {
         AudioManager.instance.StopAll();//stops music playing from previous scene
         AudioManager.instance.Play("Customize");
 
-        spriteRend = gameObject.GetComponent<SpriteRenderer>();
-        if(DataPersistor.persist != null)
-        spriteRend.color = setColor(DataPersistor.persist.colorStr);
+        
+        if(!string.IsNullOrEmpty(DataPersistor.persist.colorStr))
+        {
+            spriteRend = gameObject.GetComponent<SpriteRenderer>();
+            //spriteRend.color = setColor(DataPersistor.persist.colorStr);
+            spriteRend.sprite = setSprite(DataPersistor.persist.colorStr);
+        }
+            
 
     }
     public Color setColor(string _color)
@@ -34,6 +36,21 @@ public class ColorChanger : MonoBehaviour
             case "yellow": newColor = Color.yellow; SetTeamId(4); break;
         }
         return newColor;
+    }
+    public Sprite setSprite(string color)
+    {
+        Sprite newSprite = new Sprite();
+
+        switch (color)
+        {
+            case "blue": newSprite = Resources.Load<Sprite>("Sprites/BGHexBlue"); SetTeamId(1); break;
+            case "red": newSprite = Resources.Load<Sprite>("Sprites/BGHexRed"); SetTeamId(2); break;
+            case "green": newSprite = Resources.Load<Sprite>("Sprites/BGHexGreen"); SetTeamId(3); break;
+            case "yellow": newSprite = Resources.Load<Sprite>("Sprites/BGHexYellow"); SetTeamId(4); break;
+        }
+
+        return newSprite;
+
     }
 
     // 1 = blue 2 = red 3 = green 4 = yellow

@@ -850,6 +850,7 @@ GameObject:
   - component: {fileID: 14150666}
   - component: {fileID: 14150665}
   - component: {fileID: 14150664}
+  - component: {fileID: 14150667}
   m_Layer: 5
   m_Name: NoButton
   m_TagString: Untagged
@@ -972,6 +973,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 14150662}
+--- !u!114 &14150667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14150662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &15984089
 Prefab:
   m_ObjectHideFlags: 0
@@ -1294,6 +1306,7 @@ GameObject:
   - component: {fileID: 18544798}
   - component: {fileID: 18544797}
   - component: {fileID: 18544796}
+  - component: {fileID: 18544795}
   m_Layer: 5
   m_Name: YesButton
   m_TagString: Untagged
@@ -1320,6 +1333,17 @@ RectTransform:
   m_AnchoredPosition: {x: 142, y: 127}
   m_SizeDelta: {x: 550, y: 150}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &18544795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18544793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &18544796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,6 +1877,7 @@ GameObject:
   - component: {fileID: 39155304}
   - component: {fileID: 39155303}
   - component: {fileID: 39155306}
+  - component: {fileID: 39155307}
   m_Layer: 5
   m_Name: ButtonPoints
   m_TagString: Untagged
@@ -2000,6 +2025,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &39155307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 39155301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &42707279
 Prefab:
   m_ObjectHideFlags: 0
@@ -2443,6 +2479,7 @@ GameObject:
   - component: {fileID: 53092556}
   - component: {fileID: 53092555}
   - component: {fileID: 53092554}
+  - component: {fileID: 53092557}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -2555,6 +2592,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53092552}
+--- !u!114 &53092557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 53092552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &54653302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,6 +2868,7 @@ GameObject:
   - component: {fileID: 72953156}
   - component: {fileID: 72953155}
   - component: {fileID: 72953154}
+  - component: {fileID: 72953157}
   m_Layer: 5
   m_Name: NoButton
   m_TagString: Untagged
@@ -2931,6 +2980,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72953152}
+--- !u!114 &72953157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72953152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &75447063
 GameObject:
   m_ObjectHideFlags: 0
@@ -5148,8 +5208,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 316707083}
   m_HandleRect: {fileID: 316707082}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.9999998
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7419,7 +7479,7 @@ RectTransform:
   m_Father: {fileID: 65034131}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.00000017881393}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -8839,6 +8899,7 @@ GameObject:
   - component: {fileID: 398714734}
   - component: {fileID: 398714733}
   - component: {fileID: 398714736}
+  - component: {fileID: 398714737}
   m_Layer: 5
   m_Name: ButtonTeam
   m_TagString: Untagged
@@ -8986,6 +9047,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &398714737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 398714731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &400181120
 GameObject:
   m_ObjectHideFlags: 0
@@ -9102,6 +9174,7 @@ GameObject:
   - component: {fileID: 404544961}
   - component: {fileID: 404544960}
   - component: {fileID: 404544963}
+  - component: {fileID: 404544964}
   m_Layer: 5
   m_Name: SettingsConfirmButton
   m_TagString: Untagged
@@ -9227,6 +9300,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &404544964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404544958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &407327838
 GameObject:
   m_ObjectHideFlags: 0
@@ -11412,6 +11496,7 @@ GameObject:
   - component: {fileID: 546675398}
   - component: {fileID: 546675397}
   - component: {fileID: 546675400}
+  - component: {fileID: 546675401}
   m_Layer: 5
   m_Name: ButtonPlayers
   m_TagString: Untagged
@@ -11559,6 +11644,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &546675401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546675395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &546890269
 Prefab:
   m_ObjectHideFlags: 0
@@ -15112,6 +15208,7 @@ GameObject:
   - component: {fileID: 739559228}
   - component: {fileID: 739559229}
   - component: {fileID: 739559230}
+  - component: {fileID: 739559231}
   m_Layer: 5
   m_Name: ViewProfile
   m_TagString: Untagged
@@ -15265,6 +15362,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AlphaThreshold: 0.1
+--- !u!114 &739559231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739559224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &742175399
 GameObject:
   m_ObjectHideFlags: 0
@@ -15702,6 +15810,7 @@ GameObject:
   - component: {fileID: 761177253}
   - component: {fileID: 761177252}
   - component: {fileID: 761177255}
+  - component: {fileID: 761177256}
   m_Layer: 5
   m_Name: TeamButtonPoints
   m_TagString: Untagged
@@ -15849,6 +15958,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &761177256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 761177250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &766020304
 GameObject:
   m_ObjectHideFlags: 0
@@ -16685,6 +16805,7 @@ GameObject:
   - component: {fileID: 815752076}
   - component: {fileID: 815752075}
   - component: {fileID: 815752074}
+  - component: {fileID: 815752077}
   m_Layer: 5
   m_Name: ServerButton
   m_TagString: Untagged
@@ -16797,6 +16918,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815752072}
+--- !u!114 &815752077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815752072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &825225813
 Prefab:
   m_ObjectHideFlags: 0
@@ -19283,6 +19415,7 @@ GameObject:
   - component: {fileID: 956809935}
   - component: {fileID: 956809934}
   - component: {fileID: 956809937}
+  - component: {fileID: 956809938}
   m_Layer: 5
   m_Name: ButtonHelpsMade
   m_TagString: Untagged
@@ -19430,6 +19563,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &956809938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956809932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &958693409
 GameObject:
   m_ObjectHideFlags: 0
@@ -19441,6 +19585,7 @@ GameObject:
   - component: {fileID: 958693413}
   - component: {fileID: 958693412}
   - component: {fileID: 958693411}
+  - component: {fileID: 958693414}
   m_Layer: 5
   m_Name: butt_leader
   m_TagString: Untagged
@@ -19553,6 +19698,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958693409}
+--- !u!114 &958693414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958693409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &960030726
 Prefab:
   m_ObjectHideFlags: 0
@@ -22462,6 +22618,7 @@ GameObject:
   - component: {fileID: 1160710121}
   - component: {fileID: 1160710120}
   - component: {fileID: 1160710119}
+  - component: {fileID: 1160710123}
   m_Layer: 5
   m_Name: ButtonTeam
   m_TagString: Untagged
@@ -22609,6 +22766,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160710117}
+--- !u!114 &1160710123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160710117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1162391190
 Prefab:
   m_ObjectHideFlags: 0
@@ -28709,15 +28877,6 @@ Prefab:
       propertyPath: m_Name
       value: H
       objectReference: {fileID: 0}
-    - target: {fileID: 1366005655534926, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
-      propertyPath: m_TagString
-      value: CityId_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224010516311026372, guid: 6850d03ad92d1ff4bb4b7e258bb5e006,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6850d03ad92d1ff4bb4b7e258bb5e006, type: 2}
   m_IsPrefabParent: 0
@@ -29281,6 +29440,7 @@ GameObject:
   - component: {fileID: 1543063632}
   - component: {fileID: 1543063631}
   - component: {fileID: 1543063634}
+  - component: {fileID: 1543063635}
   m_Layer: 5
   m_Name: ButtonMyProfile
   m_TagString: Untagged
@@ -29428,6 +29588,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1543063635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1543063629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1544585272
 Prefab:
   m_ObjectHideFlags: 0
@@ -30615,6 +30786,7 @@ GameObject:
   - component: {fileID: 1592738744}
   - component: {fileID: 1592738743}
   - component: {fileID: 1592738746}
+  - component: {fileID: 1592738747}
   m_Layer: 5
   m_Name: ButtonSectors
   m_TagString: Untagged
@@ -30762,6 +30934,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1592738747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592738741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1594959432
 GameObject:
   m_ObjectHideFlags: 0
@@ -33385,6 +33568,7 @@ GameObject:
   - component: {fileID: 1777066781}
   - component: {fileID: 1777066780}
   - component: {fileID: 1777066779}
+  - component: {fileID: 1777066782}
   m_Layer: 5
   m_Name: YesButton
   m_TagString: Untagged
@@ -33496,6 +33680,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1777066777}
+--- !u!114 &1777066782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1777066777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1779084005
 GameObject:
   m_ObjectHideFlags: 0
@@ -35629,6 +35824,7 @@ GameObject:
   - component: {fileID: 1870758292}
   - component: {fileID: 1870758291}
   - component: {fileID: 1870758294}
+  - component: {fileID: 1870758295}
   m_Layer: 5
   m_Name: TeamButtonHelpsMade
   m_TagString: Untagged
@@ -35776,6 +35972,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1870758295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1870758289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1874003033
 GameObject:
   m_ObjectHideFlags: 0
@@ -35875,8 +36082,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -122}
-  m_SizeDelta: {x: 576.25, y: 149.7}
+  m_AnchoredPosition: {x: 9.9, y: -122}
+  m_SizeDelta: {x: 596, y: 149.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875653805
 MonoBehaviour:
@@ -36466,6 +36673,7 @@ GameObject:
   - component: {fileID: 1909025954}
   - component: {fileID: 1909025953}
   - component: {fileID: 1909025952}
+  - component: {fileID: 1909025955}
   m_Layer: 5
   m_Name: TeamButtonSectors
   m_TagString: Untagged
@@ -36599,6 +36807,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1909025950}
+--- !u!114 &1909025955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909025950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1916401524
 GameObject:
   m_ObjectHideFlags: 0

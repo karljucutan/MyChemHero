@@ -23,7 +23,6 @@ public class DropHandler : MonoBehaviour, IDropHandler {
 
     public void OnDrop(PointerEventData eventData)
     {
-        
         if (!item)
         {
             if (DragHandler.startParent.tag == "InventorySlot")

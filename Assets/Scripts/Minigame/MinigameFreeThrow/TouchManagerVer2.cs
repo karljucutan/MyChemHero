@@ -69,7 +69,10 @@ public class TouchManagerVer2 : MonoBehaviour {
         requiredForce = new Vector3(xAxisForce/50f, yAxisForce/50f, zAxisForce * 15);
         ball.useGravity = true;
         ball.velocity = requiredForce;
-      
+
+        
+        AudioManager.instance.Play("Shoot"+ Random.Range(1, 3).ToString());
+
         //ball.GetComponent<Rigidbody>().AddForce(requiredForce, ForceMode.Impulse);
     }
 

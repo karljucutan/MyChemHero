@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonConfirm : MonoBehaviour {
 
-    public string color;
+    private string color;
     private int teamid;
 
     public void setColor(string _color)

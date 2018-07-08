@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using Assets.Scripts;
 
 public class VideoPlayerScript : MonoBehaviour {
 
 	public VideoPlayer vidplayer;
+
+    private void Awake()
+    {
+        vidplayer.url = Configuration.VideoURL;
+        vidplayer.Play();
+    }
 
     void Update()
     {

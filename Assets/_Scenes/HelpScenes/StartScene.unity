@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 773378942}
   - component: {fileID: 773378941}
   - component: {fileID: 773378939}
+  - component: {fileID: 773378940}
   m_Layer: 5
   m_Name: Dialouge Text
   m_TagString: Untagged
@@ -298,6 +299,20 @@ MonoBehaviour:
   characterRateMultiplier: 0.1
   dialogInput: 323
   continueIcon: {fileID: 2146080833}
+--- !u!114 &773378940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773378937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!114 &773378941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,9 +333,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 70
@@ -330,7 +345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: wtf
+  m_Text: A generic text
 --- !u!222 &773378942
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -603,7 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.972, g: 0.991, b: 0.991, a: 1}
+  m_Color: {r: 0.972, g: 0.991, b: 0.991, a: 0.472}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -836,6 +851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860920431}
   - component: {fileID: 1860920430}
+  - component: {fileID: 1860920432}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -898,6 +914,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1860920432
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1860920429}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2edd6f25085f9a142b13355d0c0f0897, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2110895995
 GameObject:
   m_ObjectHideFlags: 0

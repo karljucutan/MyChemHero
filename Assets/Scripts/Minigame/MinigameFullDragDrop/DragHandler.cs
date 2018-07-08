@@ -60,6 +60,8 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        AudioManager.instance.Play("Pickup");
+
         itemBeingDragged = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
@@ -76,8 +78,8 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndDra
     }
 
     public void OnEndDrag(PointerEventData eventData)
-    {       
-        
+    {
+        AudioManager.instance.Play("Drop");
         itemBeingDragged = null;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         if (transform.parent == canvas)

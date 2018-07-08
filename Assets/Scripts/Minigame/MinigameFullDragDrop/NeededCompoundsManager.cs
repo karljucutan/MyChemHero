@@ -80,7 +80,6 @@ public class NeededCompoundsManager : MonoBehaviour {
         {
             if (obj.GetComponent<Text>().text.Equals(CompoundValueFinder(compoundName)))
             {
-                //Sound effect here
                 //StartCoroutine("removeGameObject");
                 StartCoroutine("startFlashing", obj);//flashing animations before removal
                 StartCoroutine("removeGameObject", obj);

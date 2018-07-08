@@ -146,11 +146,46 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Hover
     tag: 1
-    clip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+    clip: {fileID: 8300000, guid: 6c3409bd2f1a0f14bad1853a19ff8fb3, type: 3}
     loop: 0
     source: {fileID: 0}
   - name: Click
     tag: 1
-    clip: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
+    clip: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - name: Correct
+    tag: 1
+    clip: {fileID: 8300000, guid: b22bcb34d44dab640bea8bad7c74c919, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - name: Wrong
+    tag: 1
+    clip: {fileID: 8300000, guid: a33735cd2c2b4eb42923fd484938e720, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - name: Pickup
+    tag: 1
+    clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - name: Drop
+    tag: 1
+    clip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - name: Mixing
+    tag: 1
+    clip: {fileID: 8300000, guid: 587025726ba4bba4b9243d08a8829ad7, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot1
+    tag: 1
+    clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot2
+    tag: 1
+    clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
     loop: 0
     source: {fileID: 0}

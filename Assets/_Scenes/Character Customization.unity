@@ -140,8 +140,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -211.15002, y: -61.000046}
-  m_SizeDelta: {x: 261.4, y: 69}
+  m_AnchoredPosition: {x: -140.4, y: -55}
+  m_SizeDelta: {x: 402.9, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &18114860
 MonoBehaviour:
@@ -163,17 +163,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Eye Brows
 --- !u!222 &18114861
@@ -214,8 +214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -265.99994, y: -164}
-  m_SizeDelta: {x: 151.7, y: 59.229}
+  m_AnchoredPosition: {x: -224.9, y: -154}
+  m_SizeDelta: {x: 233.8, y: 59.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &52246541
 MonoBehaviour:
@@ -237,17 +237,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Eyes
 
@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 191756780}
   - component: {fileID: 191756779}
   - component: {fileID: 191756778}
+  - component: {fileID: 191756781}
   m_Layer: 5
   m_Name: EyesPreviousButton
   m_TagString: Untagged
@@ -410,6 +411,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 191756776}
+--- !u!114 &191756781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191756776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &212579559
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,9 +477,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
@@ -811,8 +823,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -266, y: 40.394974}
-  m_SizeDelta: {x: 151.7, y: 59.229}
+  m_AnchoredPosition: {x: -224.95, y: 48}
+  m_SizeDelta: {x: 233.8, y: 59.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527948531
 MonoBehaviour:
@@ -834,17 +846,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Hair
 --- !u!222 &527948532
@@ -864,6 +876,7 @@ GameObject:
   - component: {fileID: 534904901}
   - component: {fileID: 534904900}
   - component: {fileID: 534904899}
+  - component: {fileID: 534904902}
   m_Layer: 5
   m_Name: MaleButton
   m_TagString: Untagged
@@ -964,6 +977,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534904897}
+--- !u!114 &534904902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534904897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &552655169
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,8 +1020,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255.09991, y: 141.91}
-  m_SizeDelta: {x: 173.5, y: 59.2}
+  m_AnchoredPosition: {x: -208.10004, y: 145.05005}
+  m_SizeDelta: {x: 267.4, y: 59.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &552655171
 MonoBehaviour:
@@ -1019,17 +1043,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Gender
 
@@ -1137,7 +1161,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 638451352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7375792, y: -0.2249548, z: 0}
+  m_LocalPosition: {x: 1.59, y: -0.2249548, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2137536926}
@@ -1293,8 +1317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -266, y: -362}
-  m_SizeDelta: {x: 151.7, y: 59.229}
+  m_AnchoredPosition: {x: -224.95, y: -359}
+  m_SizeDelta: {x: 233.8, y: 59.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &655374252
 MonoBehaviour:
@@ -1316,17 +1340,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Mouth
 
@@ -1348,6 +1372,7 @@ GameObject:
   - component: {fileID: 665215786}
   - component: {fileID: 665215785}
   - component: {fileID: 665215784}
+  - component: {fileID: 665215787}
   m_Layer: 5
   m_Name: MouthPreviousButton
   m_TagString: Untagged
@@ -1448,6 +1473,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 665215782}
+--- !u!114 &665215787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665215782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &723739689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1566,7 @@ GameObject:
   - component: {fileID: 733963502}
   - component: {fileID: 733963501}
   - component: {fileID: 733963500}
+  - component: {fileID: 733963503}
   m_Layer: 5
   m_Name: EyesNextButton
   m_TagString: Untagged
@@ -1630,6 +1667,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733963498}
+--- !u!114 &733963503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 733963498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &906781925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,6 +1836,7 @@ GameObject:
   - component: {fileID: 924665962}
   - component: {fileID: 924665961}
   - component: {fileID: 924665960}
+  - component: {fileID: 924665963}
   m_Layer: 5
   m_Name: FemaleButton
   m_TagString: Untagged
@@ -1888,6 +1937,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924665958}
+--- !u!114 &924665963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 924665958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &932822934
 Prefab:
   m_ObjectHideFlags: 0
@@ -2055,8 +2115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 243}
-  m_SizeDelta: {x: 658.1, y: 136.69}
+  m_AnchoredPosition: {x: 11.4, y: 243}
+  m_SizeDelta: {x: 742.9, y: 136.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005009957
 MonoBehaviour:
@@ -2078,19 +2138,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 63
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 85
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 64
+    m_MaxSize: 85
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: My Hero Customization
+  m_Text: Apprentice Customization
 --- !u!222 &1005009958
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2300,9 +2360,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
@@ -2351,8 +2411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -266, y: -265.13}
-  m_SizeDelta: {x: 151.7, y: 59.229}
+  m_AnchoredPosition: {x: -224.9, y: -258}
+  m_SizeDelta: {x: 233.8, y: 59.2}
   m_Pivot: {x: 0.5, y: 0.49999994}
 --- !u!114 &1107374455
 MonoBehaviour:
@@ -2374,17 +2434,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 14ad4579571458f4ba56d1e55fa2ad20, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Nose
 
@@ -2406,6 +2466,7 @@ GameObject:
   - component: {fileID: 1128840850}
   - component: {fileID: 1128840849}
   - component: {fileID: 1128840848}
+  - component: {fileID: 1128840851}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -2517,6 +2578,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1128840846}
+--- !u!114 &1128840851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128840846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1151304622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,7 +2640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 72.576}
+  m_AnchoredPosition: {x: -52, y: 54}
   m_SizeDelta: {x: 900, y: 934.65}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1151304624
@@ -2615,6 +2687,7 @@ GameObject:
   - component: {fileID: 1152906487}
   - component: {fileID: 1152906486}
   - component: {fileID: 1152906485}
+  - component: {fileID: 1152906488}
   m_Layer: 5
   m_Name: MouthNextButton
   m_TagString: Untagged
@@ -2715,6 +2788,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1152906483}
+--- !u!114 &1152906488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152906483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1208161165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,6 +2958,7 @@ GameObject:
   - component: {fileID: 1400927753}
   - component: {fileID: 1400927752}
   - component: {fileID: 1400927751}
+  - component: {fileID: 1400927754}
   m_Layer: 5
   m_Name: FacePreviousButton
   m_TagString: Untagged
@@ -2974,6 +3059,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1400927749}
+--- !u!114 &1400927754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1400927749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1447789839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,6 +3143,7 @@ GameObject:
   - component: {fileID: 1521651466}
   - component: {fileID: 1521651465}
   - component: {fileID: 1521651464}
+  - component: {fileID: 1521651467}
   m_Layer: 5
   m_Name: HairNextButton
   m_TagString: Untagged
@@ -3147,6 +3244,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1521651462}
+--- !u!114 &1521651467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1521651462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1558516319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3229,6 +3337,7 @@ GameObject:
   - component: {fileID: 1569879812}
   - component: {fileID: 1569879811}
   - component: {fileID: 1569879810}
+  - component: {fileID: 1569879813}
   m_Layer: 5
   m_Name: HairPreviousButton
   m_TagString: Untagged
@@ -3329,6 +3438,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569879808}
+--- !u!114 &1569879813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1569879808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1612136080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,6 +3605,7 @@ GameObject:
   - component: {fileID: 1658035403}
   - component: {fileID: 1658035402}
   - component: {fileID: 1658035401}
+  - component: {fileID: 1658035404}
   m_Layer: 5
   m_Name: FaceNextButton
   m_TagString: Untagged
@@ -3585,6 +3706,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1658035399}
+--- !u!114 &1658035404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1658035399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1726130795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3670,6 +3802,7 @@ GameObject:
   - component: {fileID: 1820940736}
   - component: {fileID: 1820940735}
   - component: {fileID: 1820940734}
+  - component: {fileID: 1820940737}
   m_Layer: 5
   m_Name: NoseNextButton
   m_TagString: Untagged
@@ -3770,6 +3903,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1820940732}
+--- !u!114 &1820940737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820940732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1822039909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,6 +4079,7 @@ GameObject:
   - component: {fileID: 1950146283}
   - component: {fileID: 1950146282}
   - component: {fileID: 1950146281}
+  - component: {fileID: 1950146284}
   m_Layer: 5
   m_Name: NosePreviousButton
   m_TagString: Untagged
@@ -4035,6 +4180,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950146279}
+--- !u!114 &1950146284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1950146279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1964900594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,6 +4276,7 @@ GameObject:
   - component: {fileID: 1968866302}
   - component: {fileID: 1968866301}
   - component: {fileID: 1968866300}
+  - component: {fileID: 1968866303}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -4231,6 +4388,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1968866298}
+--- !u!114 &1968866303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1968866298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2070975851
 GameObject:
   m_ObjectHideFlags: 0

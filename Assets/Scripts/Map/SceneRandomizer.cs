@@ -25,7 +25,7 @@ public class SceneRandomizer : MonoBehaviour {
         //    "Help_ToSpace"};
 
         scenesList = new string[]{
-            "Help_AsGoodAsNew"
+            "StartScene"
         };
     }
 

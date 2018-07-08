@@ -38,24 +38,28 @@ public class TeamCreation : MonoBehaviour
     public void BlueTeam()
     {
         teamColor = 1;
+        DataPersistor.persist.colorStr = "blue";
         
     }
 
     public void RedTeam()
     {
         teamColor = 2;
+        DataPersistor.persist.colorStr = "red";
 
     }
 
     public void GreenTeam()
     {
         teamColor = 3;
+        DataPersistor.persist.colorStr = "green";
 
     }
 
     public void YellowTeam()
     {
         teamColor = 4;
+        DataPersistor.persist.colorStr = "yellow";
 
     }
    
@@ -70,19 +74,28 @@ public class TeamCreation : MonoBehaviour
 
     public void CreateTeam()
     {
-        DataPersistor.persist.teamSelecetionFactionId = teamColor;
+        //DataPersistor.persist.teamSelecetionFactionId = teamColor;
         // check kung may kapangalan yung team at validations kung may team na or team name
         var has = ListOfTeams.TeamList.Any(t => t.teamName.Equals(teamNameInputField.text));
 
         if (teamColor != 0 && teamNameInputField.text != "" && has != true)
         {
-            // check kung di pa na ccreate yung team
+            DataPersistor.persist.teamSelecetionFactionId = teamColor;
+            // check kung di pa na ccreate yung team color
             var teamIsCreated = ListOfTeams.TeamList.Any(t => t.teamColorId.Equals(teamColor));
             if (!teamIsCreated)
             {
                 StartCoroutine(PostCreatedTeam());
             }
-          
+            else
+            {
+                //failed to create team, teamColor already taken
+            }
+
+        }
+        else
+        {
+            //failed to create team, either teamColor = 0 or team name already exists
         }
 
 
