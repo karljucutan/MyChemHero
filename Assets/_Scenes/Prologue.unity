@@ -263,8 +263,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1524992179}
   - component: {fileID: 1524992178}
-  - component: {fileID: 1524992180}
   - component: {fileID: 1524992181}
+  - component: {fileID: 1524992180}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged

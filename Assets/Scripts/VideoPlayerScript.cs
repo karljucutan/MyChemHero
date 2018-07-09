@@ -11,18 +11,22 @@ public class VideoPlayerScript : MonoBehaviour {
     private void Awake()
     {
         vidplayer.url = Configuration.VideoURL;
+        vidplayer.SetTargetAudioSource(0, GetComponent<AudioSource>());
         vidplayer.Play();
     }
 
     void Update()
     {
-        if(Input.anyKeyDown)
+        if (vidplayer.isPrepared)
         {
-            vidplayer.Pause();
-        }
-        if(vidplayer.isPlaying == false)
-        {
-            LevelManager.lvlmgr.LoadLevel("Load");
+            if (Input.anyKeyDown)
+            {
+                vidplayer.Pause();
+            }
+            if (vidplayer.isPlaying == false)
+            {
+                LevelManager.lvlmgr.LoadLevel("Load");
+            }
         }
     }
 }
