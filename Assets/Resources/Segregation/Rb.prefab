@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54573865365485290}
   m_Layer: 0
   m_Name: Rb
-  m_TagString: Metal
+  m_TagString: NonToxic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

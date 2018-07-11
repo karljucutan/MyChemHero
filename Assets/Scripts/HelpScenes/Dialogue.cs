@@ -174,6 +174,7 @@ public class Dialogue : MonoBehaviour
                     Debug.Log("ID:" + (info[0]) + " SectorNumber:  " + DataPersistor.persist.currentSectorNumber + " Score: " + currentScore);
 
                     DataPersistor.persist.totalPoints = DataPersistor.persist.accumulatedPoints * DataPersistor.persist.difficultyMultiplier;
+                    
                     if (DataPersistor.persist.totalPoints > currentScore)
                     {
                         //Debug.Log(DataPersistor.persist.totalPoints);
@@ -183,8 +184,9 @@ public class Dialogue : MonoBehaviour
                     {
                         yield return new WaitForSeconds(0.1f);
                     }
-                    if (DataPersistor.persist.totalPoints > 0 || DataPersistor.persist.helpsMade > 0)
+                    if (DataPersistor.persist.totalPoints > 0)
                     {
+                        DataPersistor.persist.helpsMade += 1;
                         StartCoroutine(PostPointsAndHelpsMade());
                     }
 
