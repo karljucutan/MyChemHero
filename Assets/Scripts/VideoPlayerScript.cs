@@ -17,8 +17,7 @@ public class VideoPlayerScript : MonoBehaviour {
 
     void Update()
     {
-        if (vidplayer.isPrepared)
-        {
+        
             if (Input.anyKeyDown)
             {
                 vidplayer.Pause();
@@ -27,6 +26,6 @@ public class VideoPlayerScript : MonoBehaviour {
             {
                 LevelManager.lvlmgr.LoadLevel("Load");
             }
-        }
+        
     }
 }

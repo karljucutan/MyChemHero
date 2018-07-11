@@ -43,6 +43,7 @@ public class LoadScreeenControl : MonoBehaviour {
     IEnumerator GetPlayerId()
     {
         WWW get = new WWW(Configuration.BASE_ADDRESS + "unityLink.php");
+
         yield return get;
 
         if (get.error != null)
