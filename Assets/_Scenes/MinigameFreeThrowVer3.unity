@@ -2051,6 +2051,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114340889636836232, guid: 05023e8d4bc44d048991d04f48fdafba,
+        type: 2}
+      propertyPath: GameOverPanel
+      value: 
+      objectReference: {fileID: 1404320492}
+    - target: {fileID: 114340889636836232, guid: 05023e8d4bc44d048991d04f48fdafba,
+        type: 2}
+      propertyPath: VictorTeamName
+      value: 
+      objectReference: {fileID: 1404320491}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05023e8d4bc44d048991d04f48fdafba, type: 2}
   m_IsPrefabParent: 0
@@ -2194,6 +2204,17 @@ Prefab:
 --- !u!224 &1404320490 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224707394541303794, guid: fae7d87b3b296754b8d5b266b58ef35c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1404320489}
+--- !u!114 &1404320491 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114933462132682994, guid: fae7d87b3b296754b8d5b266b58ef35c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1404320489}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1404320492 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1691694443981046, guid: fae7d87b3b296754b8d5b266b58ef35c,
     type: 2}
   m_PrefabInternal: {fileID: 1404320489}
 --- !u!1 &1410857686
