@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class ButtonConfirm : MonoBehaviour {
 
+    public GameObject confirmDialogObj;
+
     private string color;
     private int teamid;
+
+    private void Start()
+    {
+        teamid = 0;
+        color = "";
+    }
 
     public void setColor(string _color)
     {
@@ -16,6 +24,19 @@ public class ButtonConfirm : MonoBehaviour {
     {
         teamid = id;
     }
+
+    public void checkJoin()
+    {
+        if(teamid == 0)//no team selected yet in Join
+        {
+            //some alert
+        }
+        else
+        {
+            confirmDialogObj.SetActive(true);
+        }
+    }
+
 
     public void confirmChoice()
     {
