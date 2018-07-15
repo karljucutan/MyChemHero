@@ -39,7 +39,7 @@ public class TeamCreation : MonoBehaviour
     {
         teamColor = 1;
         DataPersistor.persist.colorStr = "blue";
-        
+
     }
 
     public void RedTeam()
@@ -163,7 +163,8 @@ public class TeamCreation : MonoBehaviour
                 tempTeam.teamId = int.Parse(individualValues[0]);
                 tempTeam.teamName = individualValues[1];
                 tempTeam.teamColorId = int.Parse(individualValues[2]);
-              
+                tempTeam.teamLeaderId = int.Parse(individualValues[3]);
+
                 ListOfTeams.TeamList.Add(tempTeam);
             }
             dipslayteamlist();

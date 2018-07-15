@@ -194,6 +194,7 @@ public class ScoreManager : MonoBehaviour {
                     tempTeam.teamId = int.Parse(individualValues[0]);
                     tempTeam.teamName = individualValues[1];
                     tempTeam.teamColorId = int.Parse(individualValues[2]);
+                    tempTeam.teamLeaderId = int.Parse(individualValues[3]);
 
                     if(!ListOfTeams.TeamList.Exists(t => t.teamId.Equals(tempTeam.teamId)))
                     {
