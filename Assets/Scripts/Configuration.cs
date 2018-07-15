@@ -16,6 +16,6 @@ namespace Assets.Scripts
         public static string VideoURL = Application.streamingAssetsPath + "/MCH_OP.mp4"; //"file://C:/Users/Kenneth/Documents/MCH_OP.mp4";
         //public static string VideoURL = "http://mychemhero.com/assets/MCH_OP.mp4";
         //public const string NAME = "kealu";
-        public const int ID = 4;
+        public const int ID = 1;
     }
 }

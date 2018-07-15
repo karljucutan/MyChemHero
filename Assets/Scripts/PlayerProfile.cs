@@ -33,6 +33,7 @@ public class PlayerProfile : MonoBehaviour {
     public GameObject TeamTotalPoints;
     public GameObject TeamNoOfSectorsHold;
     public GameObject TeamHelpsMade;
+    public GameObject TeamStars;
 
     private void OnEnable()
     {
@@ -64,6 +65,8 @@ public class PlayerProfile : MonoBehaviour {
             TeamTotalPoints.GetComponent<Text>().text = team.members.Sum(u => u.TotalScore).ToString();
             TeamNoOfSectorsHold.GetComponent<Text>().text = team.members.Sum(u => u.SectorsHold).ToString();
             TeamHelpsMade.GetComponent<Text>().text = team.members.Sum(u => u.HelpsMade).ToString();
+            var myteam = ListOfTeams.TeamList.Where(t => t.teamColorId.Equals(DataPersistor.persist.user.TeamId)).SingleOrDefault();
+            TeamStars.GetComponent<Text>().text = myteam.conqueredCities.Count().ToString() + " / 19";
 
             foreach (var player in team.members)
             {
