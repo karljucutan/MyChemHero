@@ -62,6 +62,12 @@ public class TeamCreation : MonoBehaviour
         DataPersistor.persist.colorStr = "yellow";
 
     }
+
+    public void NoTeam()
+    {
+        teamColor = 0;
+        DataPersistor.persist.colorStr = "";
+    }
    
     public void CheckNoOfTeams()
     {
