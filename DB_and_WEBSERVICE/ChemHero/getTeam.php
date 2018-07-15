@@ -12,5 +12,5 @@ $query="select * from team";
 $result= mysqli_query($connection, $query);
 while($row= mysqli_fetch_assoc($result))
 {
-    echo $row['team_id'].";".$row['team_name'].";".$row['team_colorID']."+";
+    echo $row['team_id'].";".$row['team_name'].";".$row['team_colorID'].";".$row['team_leader']."+";
 }
