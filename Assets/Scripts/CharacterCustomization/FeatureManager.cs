@@ -78,7 +78,35 @@ public class FeatureManager : MonoBehaviour {
         features[currentFeature].currIndex--;
         features[currentFeature].UpdateFeature();
     }
+    public int PreviousChoiceTest()
+    {
+        
+        CheckFeatureIfNull();
+        features[currentFeature].currIndex--;
+        var index = features[currentFeature].currIndex;
+        features[currentFeature].UpdateFeature();
 
+        if (index == 0)
+            return 1;
+        else if (index == -1)
+            return features[currentFeature].choices.Length;
+        else
+            return index + 1;
+
+    }
+    public int NextChoiceTest()
+    {
+        
+        CheckFeatureIfNull();
+        features[currentFeature].currIndex++;
+        var index = features[currentFeature].currIndex;
+        features[currentFeature].UpdateFeature();
+
+        if (index == features[currentFeature].choices.Length)
+            return 1;
+        else
+            return index + 1;
+    }
     private void CheckFeatureIfNull()
     {
         if (features == null)
