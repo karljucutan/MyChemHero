@@ -11,7 +11,7 @@ namespace Assets.Scripts
         {
             new Compound()
             {
-                Name = "H20",
+                Name = "H2O",
                 Composition = new List<string>()
                 {
                     "H", "O"
@@ -59,10 +59,10 @@ namespace Assets.Scripts
             },
             new Compound()
             {
-                Name = "SrCo3",
+            Name = "SrCO3",
                 Composition = new List<string>()
                 {
-                    "Sr", "Co"
+                    "Sr", "C", "O"
                 }
             },
             new Compound()

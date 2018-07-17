@@ -81,7 +81,7 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
         randomItem = DataPersistor.persist.CompoundsList[RandomCompound()];
         //var elementsInCompounds = DataPersistor.persist.ElementsList.Where(e => FirstItem.Contains(e)).ToList();
         //var elementsInCompounds = DataPersistor.persist.MixingList.Where(e => randomItem.Contains(e)).ToList();
-        var elementsInCompound = ListOfCompounds.Compounds.Where(c => c.Name.Equals(randomItem)).Select(c => c.Composition).FirstOrDefault();
+        var elementsInCompound = ListOfCompounds.Compounds.Where(c => c.Name.Equals(randomItem)).Select(c => c.Composition).SingleOrDefault();
         ShuffleList(elementsInCompound);
         ball[0] = elementsInCompound[0];
 
@@ -128,5 +128,6 @@ public class BallChoiceManagerVer1and3 : MonoBehaviour {
             list[i] = t;
         }
     }
+
 
 }
