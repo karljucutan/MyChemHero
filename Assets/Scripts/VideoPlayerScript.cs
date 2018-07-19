@@ -10,7 +10,7 @@ public class VideoPlayerScript : MonoBehaviour {
 
     private void Awake()
     {
-        vidplayer.url = Configuration.VideoURL;
+        //vidplayer.url = Configuration.VideoURL;
         vidplayer.SetTargetAudioSource(0, GetComponent<AudioSource>());
         vidplayer.Play();
     }
@@ -18,14 +18,19 @@ public class VideoPlayerScript : MonoBehaviour {
     void Update()
     {
         
-            if (Input.anyKeyDown)
-            {
-                vidplayer.Pause();
-            }
+            //if (Input.anyKeyDown)
+            //{
+            //    vidplayer.Pause();
+            //}
             if (vidplayer.isPlaying == false)
             {
                 LevelManager.lvlmgr.LoadLevel("Load");
             }
         
+    }
+
+    public void StopVideo()
+    {
+        vidplayer.Stop();
     }
 }

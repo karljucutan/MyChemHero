@@ -50,6 +50,8 @@ public class UIManager : MonoBehaviour {
             transform.Find("NavigationPanel").Find("MouthNum").GetComponent<Text>().text = featureManager.NextChoiceTest().ToString() + "/5";
         });
 
+        transform.Find("NavigationPanel").Find("MaleButton").GetComponent<Image>().color = new Color32(245, 133, 23, 255);
+
         transform.Find("NavigationPanel").Find("MaleButton").GetComponent<Button>().onClick.AddListener(() => {
             featureManager.LoadMaleFeatures();
             transform.Find("NavigationPanel").Find("FemaleButton").GetComponent<Image>().color = new Color32(255, 255, 255, 255);

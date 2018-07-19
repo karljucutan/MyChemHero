@@ -65,11 +65,9 @@ public class DataPersistor : MonoBehaviour {
             persist = this;
                
         }
-        else if (persist != this)
+        else
         {
-            
-            Destroy(gameObject);
-            
+            Destroy(gameObject);     
         }
         user = new User();
         user.UserCharacter = new Character();

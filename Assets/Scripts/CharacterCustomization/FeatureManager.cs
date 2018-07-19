@@ -9,7 +9,7 @@ public class FeatureManager : MonoBehaviour {
     public int currentFeature;
     public string gender;
 
-    void OnEnable()
+    void Start()
     {
         LoadFemaleFeatures();
         LoadMaleFeatures();

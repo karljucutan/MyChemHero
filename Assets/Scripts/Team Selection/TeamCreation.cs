@@ -18,9 +18,10 @@ public class TeamCreation : MonoBehaviour
     private Team tempTeam;
 
     public GameObject Blue, Red, Green, Yellow;  
-    public Button CreateBlue, CreateRed, CreateGreen, CreateYellow;
+    public Toggle CreateBlue, CreateRed, CreateGreen, CreateYellow;
     public Text BlueText, RedText, GreenText, YellowText;
     public GameObject Back, Create;
+    public GameObject AlertPanelGameObj;
     public void Start()
     {
         AudioManager.instance.StopAll();
@@ -33,6 +34,20 @@ public class TeamCreation : MonoBehaviour
     public void ValueChangeCheck()
     {
         teamName = teamNameInputField.text;
+    }
+
+    public void CheckToggleState(Toggle toggle)
+    {
+        if(toggle.isOn)
+        {
+            switch(toggle.gameObject.name)
+            {
+                case "Blue": BlueTeam(); break;
+                case "Red": RedTeam(); break;
+                case "Green": GreenTeam(); break;
+                case "Yellow": YellowTeam(); break;
+            }
+        }
     }
 
     public void BlueTeam()
@@ -82,27 +97,67 @@ public class TeamCreation : MonoBehaviour
     {
         //DataPersistor.persist.teamSelecetionFactionId = teamColor;
         // check kung may kapangalan yung team at validations kung may team na or team name
-        var has = ListOfTeams.TeamList.Any(t => t.teamName.Equals(teamNameInputField.text));
-
-        if (teamColor != 0 && teamNameInputField.text != "" && has != true)
+        //var has = ListOfTeams.TeamList.Any(t => t.teamName.Equals(teamNameInputField.text));
+        if(!string.IsNullOrEmpty(teamNameInputField.text))
         {
-            DataPersistor.persist.teamSelecetionFactionId = teamColor;
-            // check kung di pa na ccreate yung team color
-            var teamIsCreated = ListOfTeams.TeamList.Any(t => t.teamColorId.Equals(teamColor));
-            if (!teamIsCreated)
+            if(teamColor != 0)
             {
-                StartCoroutine(PostCreatedTeam());
+                var has = ListOfTeams.TeamList.Any(t => t.teamName.Equals(teamNameInputField.text));
+                if (has != true)
+                {
+                    var teamIsCreated = ListOfTeams.TeamList.Any(t => t.teamColorId.Equals(teamColor));
+                    if (!teamIsCreated)
+                    {
+                        StartCoroutine(PostCreatedTeam());
+                    }
+                    else
+                    {
+                        //Alert : Team Color already taken
+                        AlertPanelGameObj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Failed to create team, Team Color already taken!";
+                        AlertPanelGameObj.SetActive(true);
+                    }
+                }
+                else
+                {
+                    //Alert : Team Name Already Exists
+                    AlertPanelGameObj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Failed to create team, Team Name already taken!";
+                    AlertPanelGameObj.SetActive(true);
+                }
             }
             else
             {
-                //failed to create team, teamColor already taken
+                //Alert : Select A Team First
+                AlertPanelGameObj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Please Select a Team Flag to create first!";
+                AlertPanelGameObj.SetActive(true);
             }
-
         }
         else
         {
-            //failed to create team, either teamColor = 0 or team name already exists
+            //Alert : Team Name Can't be Null
+            AlertPanelGameObj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Please input Team Name first!";
+            AlertPanelGameObj.SetActive(true);
         }
+
+        //var has = ListOfTeams.TeamList.Any(t => t.teamName.Equals(teamNameInputField.text));
+        //if (teamColor != 0 && teamNameInputField.text != "" && has != true)
+        //{
+        //    DataPersistor.persist.teamSelecetionFactionId = teamColor;
+        //    // check kung di pa na ccreate yung team color
+        //    var teamIsCreated = ListOfTeams.TeamList.Any(t => t.teamColorId.Equals(teamColor));
+        //    if (!teamIsCreated)
+        //    {
+        //        StartCoroutine(PostCreatedTeam());
+        //    }
+        //    else
+        //    {
+        //        //failed to create team, teamColor already taken
+        //    }
+
+        //}
+        //else
+        //{
+        //    //failed to create team, either teamColor = 0 or team name already exists
+        //}
 
 
     }
@@ -152,7 +207,7 @@ public class TeamCreation : MonoBehaviour
         else
         {
             string teams = get.text;
-            Debug.Log(teams + "");
+            //Debug.Log(teams + "");
             string[] teamInfo = teams.Split('+');
             ListOfTeams.TeamList.Clear();
 
@@ -167,7 +222,7 @@ public class TeamCreation : MonoBehaviour
 
                 ListOfTeams.TeamList.Add(tempTeam);
             }
-            dipslayteamlist();
+            //dipslayteamlist();
 
         }
      

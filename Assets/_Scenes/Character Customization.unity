@@ -371,7 +371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &191756776
 GameObject:
@@ -661,7 +661,7 @@ RectTransform:
   - {fileID: 1128840847}
   - {fileID: 1968866299}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.040000003}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -740,7 +740,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5757c7541862d504684a57f03981d53f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56ab5a6c843c6224c86a700c63054b42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -789,7 +789,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &431282143
 GameObject:
@@ -1240,7 +1240,7 @@ Transform:
   m_Children:
   - {fileID: 2137536926}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &638451354
 MonoBehaviour:
@@ -1254,108 +1254,108 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   features:
-  - ID: FEMALE SET/BODY/800px
+  - ID: MALE SET/BODY/800px
     currIndex: 0
     choices:
-    - {fileID: 21300000, guid: 5415eb4bed479744e9a8f4b6f070f27b, type: 3}
-    - {fileID: 21300000, guid: ac3a796b6d2d8a04783b913dff6abd0e, type: 3}
-    - {fileID: 21300000, guid: 4b3371c6efb818146aaf8c541ffec3a2, type: 3}
-    - {fileID: 21300000, guid: 5c587749af4d6f24c8278de8a959f3ee, type: 3}
+    - {fileID: 21300000, guid: d2bef9ac89e9daa4cbc64c8822601784, type: 3}
+    - {fileID: 21300000, guid: e91e4a6bfeb1aab4c9c1307ffd76b1a9, type: 3}
+    - {fileID: 21300000, guid: 79c4decb5b119094085bbf04ecf665a9, type: 3}
+    - {fileID: 21300000, guid: 8e7db97683a7aba40abc0255cfb1a7ef, type: 3}
     renderer: {fileID: 2137536927}
-  - ID: FEMALE SET/HAIR/800px
+  - ID: MALE SET/HAIR/800px
     currIndex: 0
     choices:
-    - {fileID: 21300000, guid: 5757c7541862d504684a57f03981d53f, type: 3}
-    - {fileID: 21300000, guid: ac848174332710f449159ecd8c7dbeac, type: 3}
-    - {fileID: 21300000, guid: acedd088838d547459e583795a7ed37a, type: 3}
-    - {fileID: 21300000, guid: 71d2d2a5e472442479102af05d5f8e57, type: 3}
-    - {fileID: 21300000, guid: 8884cd031f1a9324b9a5104bef20e3a2, type: 3}
-    - {fileID: 21300000, guid: 141e60aee53b4b349b98928f86acbea2, type: 3}
-    - {fileID: 21300000, guid: e1d846b13a631484b9932ed6b207eb09, type: 3}
-    - {fileID: 21300000, guid: 0a03523ba37ae5343834692ae8dfaa78, type: 3}
-    - {fileID: 21300000, guid: a7b434568f6d8dc4c8768a4871084214, type: 3}
-    - {fileID: 21300000, guid: 6a1403c7f60e04e49ac381b67510e146, type: 3}
-    - {fileID: 21300000, guid: f541444ef10a50844995d81baa6e3fee, type: 3}
-    - {fileID: 21300000, guid: d680976f04d45af4a9484cacbabf06ca, type: 3}
-    - {fileID: 21300000, guid: 094fde8d4b37de84bb4a8e1d08d9a9bd, type: 3}
-    - {fileID: 21300000, guid: 3a856e27dfdd30241af6bf692561ddd9, type: 3}
-    - {fileID: 21300000, guid: 9138d0382e2f0ef47a9c222147e98d7c, type: 3}
-    - {fileID: 21300000, guid: 538dbe6323a34c948ac51261fe70cb69, type: 3}
-    - {fileID: 21300000, guid: 1eab7b2cb18e2d24c8cd24961e05b942, type: 3}
-    - {fileID: 21300000, guid: 4f044acc2ecebe44fae4a77b48caac9d, type: 3}
-    - {fileID: 21300000, guid: c38a7edb365a18e4ea360a0faa106d36, type: 3}
-    - {fileID: 21300000, guid: 71fcb69763c59bd44ad7b7966648cb3e, type: 3}
+    - {fileID: 21300000, guid: 56ab5a6c843c6224c86a700c63054b42, type: 3}
+    - {fileID: 21300000, guid: e963540fc923a204eb4e26a930961156, type: 3}
+    - {fileID: 21300000, guid: fe18176060537f542a0aff2fd950749c, type: 3}
+    - {fileID: 21300000, guid: 5990cf579d234f341b4d71b4280b5ca0, type: 3}
+    - {fileID: 21300000, guid: 073e0e516b60b14418abd3c044984d0b, type: 3}
+    - {fileID: 21300000, guid: 29b5cb7e422da5245a27fce49d2136e0, type: 3}
+    - {fileID: 21300000, guid: b653c7145e1ca3945bf7d72572d66fc6, type: 3}
+    - {fileID: 21300000, guid: dfd2c1dbc045edc4e959af6c646da307, type: 3}
+    - {fileID: 21300000, guid: b6843d7eca578314b8b14822b33e03e9, type: 3}
+    - {fileID: 21300000, guid: 5c9fbcedce7ac5c49a8fe0da312ad63b, type: 3}
+    - {fileID: 21300000, guid: 0f5ab0a9915757e45ac6a662cc091ba7, type: 3}
+    - {fileID: 21300000, guid: b738cebc2af31e34baf7a3fe79008d2c, type: 3}
+    - {fileID: 21300000, guid: 08e8727f6d37d6d4592014bc053e146b, type: 3}
+    - {fileID: 21300000, guid: a4e0d4ae28ca97c42ae32626bd694924, type: 3}
+    - {fileID: 21300000, guid: 8a370e9d5da47f74a9fe5a3fb6314325, type: 3}
+    - {fileID: 21300000, guid: 1538cef92153ed64ea80f8e7ef6a0710, type: 3}
+    - {fileID: 21300000, guid: 1acf701b64d958d41b51679d7f9ed3c5, type: 3}
+    - {fileID: 21300000, guid: a79b923db3ca6494ebdbdd000b39f6f1, type: 3}
+    - {fileID: 21300000, guid: b04f3083a3d5bec47b89bda85f5f6544, type: 3}
+    - {fileID: 21300000, guid: f70715561c537dc4c804b1f1b774f15b, type: 3}
     renderer: {fileID: 378545950}
-  - ID: FEMALE SET/BROWS/800px
+  - ID: MALE SET/BROWS/800px
     currIndex: 0
     choices:
-    - {fileID: 21300000, guid: eff40783295a211408c799eca641b700, type: 3}
-    - {fileID: 21300000, guid: 189fb780361a4be418f3b59547dfc792, type: 3}
-    - {fileID: 21300000, guid: 78fb89b0e02ba1348a2e79992c336fc2, type: 3}
-    - {fileID: 21300000, guid: b1e4585011b8e954b81501a0403b8d35, type: 3}
-    - {fileID: 21300000, guid: 293d28c6d7d971d4b9b3c33b925a1d82, type: 3}
-    - {fileID: 21300000, guid: 979f1f6b7a531614d9c10a3ba2f01825, type: 3}
-    - {fileID: 21300000, guid: a1268afa03705ba4ebd25c9b35a13e3d, type: 3}
-    - {fileID: 21300000, guid: b3ef6d6bfcade9347925126b708cc43c, type: 3}
-    - {fileID: 21300000, guid: a06d61351061baa4191d30cd651470eb, type: 3}
-    - {fileID: 21300000, guid: 022febb392b392446a38ae5a3e93e9ff, type: 3}
-    - {fileID: 21300000, guid: 6b0c70c9ee91dad40a9716bd6634f648, type: 3}
-    - {fileID: 21300000, guid: 688fcd396fd301549920f02255f70087, type: 3}
-    - {fileID: 21300000, guid: 3b4ec99e3e203054ab8aaab6f371467b, type: 3}
-    - {fileID: 21300000, guid: a730d95f5812abb4399a8667cc677f87, type: 3}
-    - {fileID: 21300000, guid: cf0ca2d715117a14bba30f47c04ac913, type: 3}
-    - {fileID: 21300000, guid: 7bf369c991dca754cb3f1231a5e55982, type: 3}
-    - {fileID: 21300000, guid: bc37389e38bbf174abd7c0f77980c22c, type: 3}
-    - {fileID: 21300000, guid: e0d274eca6bb26e429ec2c5a3749784c, type: 3}
-    - {fileID: 21300000, guid: 091718cbbeabede42a3c6cdbd89b2184, type: 3}
-    - {fileID: 21300000, guid: cd287eaef11b290498fa1baa7f3bc714, type: 3}
+    - {fileID: 21300000, guid: c95b64056cd388d49aadf204d0ea398e, type: 3}
+    - {fileID: 21300000, guid: 3c17645451ae09a44ba66cc05c95b1af, type: 3}
+    - {fileID: 21300000, guid: 009856faf2c3ce542a394f4a67814aee, type: 3}
+    - {fileID: 21300000, guid: 5a600bc6cf2d1054ea00b968e04ad72a, type: 3}
+    - {fileID: 21300000, guid: 6d32b3e5e1234a94aa160dc62af81a5d, type: 3}
+    - {fileID: 21300000, guid: 64ca7d0fae45def4c8d387a941c5c49a, type: 3}
+    - {fileID: 21300000, guid: 0e13f86a69b846e4480e6bcb4d6376e1, type: 3}
+    - {fileID: 21300000, guid: 58a80a2ab579c2b4c8cdb6c51db796ab, type: 3}
+    - {fileID: 21300000, guid: 8441887b886f830469d63ab158051060, type: 3}
+    - {fileID: 21300000, guid: 2c73e70df490b4c419c9af21cb2f5bae, type: 3}
+    - {fileID: 21300000, guid: 734ababe52f3dd247924ff8589680e60, type: 3}
+    - {fileID: 21300000, guid: 5fdd5266886d25a4b9ab46bbf2e770a3, type: 3}
+    - {fileID: 21300000, guid: 2a2180fae39d339469952d9408eda493, type: 3}
+    - {fileID: 21300000, guid: e6951311a7850fb4b8c180ddc0b3481b, type: 3}
+    - {fileID: 21300000, guid: 1179ebe4584566b40a5221172846afd9, type: 3}
+    - {fileID: 21300000, guid: aabe1cf0d11e9c44ca848f9bd65b0303, type: 3}
+    - {fileID: 21300000, guid: 17435e616006ebe4593808e6f2639532, type: 3}
+    - {fileID: 21300000, guid: 1e5b503162fc45642b1cb3b35f3c7f9b, type: 3}
+    - {fileID: 21300000, guid: dd8754e8657ce1740bb57f80439cc04f, type: 3}
+    - {fileID: 21300000, guid: ea81d9bd25567074ab6384fa314fad9c, type: 3}
     renderer: {fileID: 1558516321}
-  - ID: FEMALE SET/EYES/800px
+  - ID: MALE SET/EYES/800px
     currIndex: 0
     choices:
-    - {fileID: 21300000, guid: 650480408bacb9044ae21482aeb9a088, type: 3}
-    - {fileID: 21300000, guid: 365a6fbbb6bc78143979d0a2a2b4ac1b, type: 3}
-    - {fileID: 21300000, guid: 7b15c6978cbcf244f81e16dc2cbd8f05, type: 3}
-    - {fileID: 21300000, guid: edf85f8e7f3e061468f3ea8691e79ec0, type: 3}
-    - {fileID: 21300000, guid: d4553073eb42e9c48a9f0df127f9335e, type: 3}
-    - {fileID: 21300000, guid: 5537c5c314cb32642b2f1f780aa6fc70, type: 3}
-    - {fileID: 21300000, guid: c62e72241a4220a469e84cb251140a24, type: 3}
-    - {fileID: 21300000, guid: d68799a1cc0bb404db57ec2d06b81fe5, type: 3}
-    - {fileID: 21300000, guid: 434660fbe58adc34a8d6ef4a7f0fdf95, type: 3}
-    - {fileID: 21300000, guid: 4ad8900d82f9c6648a90a43b6725305e, type: 3}
-    - {fileID: 21300000, guid: a290eb670bafb0544864b586adf60630, type: 3}
-    - {fileID: 21300000, guid: 26be53a2cf75a2a41b27617bfbde7261, type: 3}
-    - {fileID: 21300000, guid: 4ebdb312b104bd44a807e10cbe8aa3f8, type: 3}
-    - {fileID: 21300000, guid: 17ddbfe362fec94449f2ec218484f45f, type: 3}
-    - {fileID: 21300000, guid: 83353fa764026ba4680b305b5a2510bf, type: 3}
-    - {fileID: 21300000, guid: c8453dab774389946bdab1a3cd6b0390, type: 3}
-    - {fileID: 21300000, guid: d491d4f5120f7ed479dc1a1e897406c1, type: 3}
-    - {fileID: 21300000, guid: 27e0da79f08913a4c8979317dcc07d8f, type: 3}
-    - {fileID: 21300000, guid: 04823b28e0043ae4996592c7476bb343, type: 3}
-    - {fileID: 21300000, guid: 4138627ce71c8c04b962dfa52db42cf1, type: 3}
-    - {fileID: 21300000, guid: c4b42fa66c21e144cbda3a53eb35d9b6, type: 3}
-    - {fileID: 21300000, guid: 2a13168ecbf4cdd44b94b81fb402d9eb, type: 3}
-    - {fileID: 21300000, guid: d13ab25c67537a446bd36166ad7a95a7, type: 3}
-    - {fileID: 21300000, guid: 4cfca2705262046429eb822a490cd378, type: 3}
-    - {fileID: 21300000, guid: ce2796eb03039284e920f416afbacbef, type: 3}
+    - {fileID: 21300000, guid: 026a51602320c13419552448aa2a3455, type: 3}
+    - {fileID: 21300000, guid: 21fbec19236446942b8e297330110001, type: 3}
+    - {fileID: 21300000, guid: e3f90f18da64cbf40be25f2f4f0a5e1c, type: 3}
+    - {fileID: 21300000, guid: d3c22ac299253f24ea2ce574178fffdb, type: 3}
+    - {fileID: 21300000, guid: c8be43761a5a9914eb75892c0972a897, type: 3}
+    - {fileID: 21300000, guid: ea00cb1ce86087d46909ae6a6bb026dd, type: 3}
+    - {fileID: 21300000, guid: d0152fd7c1ddfdf489d6367382ba33b3, type: 3}
+    - {fileID: 21300000, guid: 69999f2a63b750b46919a954623495f6, type: 3}
+    - {fileID: 21300000, guid: 0fe3362cb4671f448b8e477669ace900, type: 3}
+    - {fileID: 21300000, guid: 0c75257fead7d3749b4f10e4ac33d856, type: 3}
+    - {fileID: 21300000, guid: a1ef45ffdcf91244b8a0d6920ed73568, type: 3}
+    - {fileID: 21300000, guid: d93d78c6f62268d49aa5563211786cdc, type: 3}
+    - {fileID: 21300000, guid: 4ddeb75754b71c84e8fc02467a26051f, type: 3}
+    - {fileID: 21300000, guid: 1247df4edc8231443ae0842332c69583, type: 3}
+    - {fileID: 21300000, guid: f950d3ed893bb48408ac24e96e7b8201, type: 3}
+    - {fileID: 21300000, guid: 9d79891fa722bef4d8b08829c4da74f6, type: 3}
+    - {fileID: 21300000, guid: b12f9097de5d3af47bb94a58d9427079, type: 3}
+    - {fileID: 21300000, guid: d34cdbc4911037548a0ea40cc408d2be, type: 3}
+    - {fileID: 21300000, guid: cc9dfc5b62dbe8f4ba91cd45a788083d, type: 3}
+    - {fileID: 21300000, guid: f100ac4225cef874ebfeea30fa408c99, type: 3}
+    - {fileID: 21300000, guid: bc5f97518498ea14fae073f1db7e93de, type: 3}
+    - {fileID: 21300000, guid: dd49a1194a9a8ea499ab3f52bc217860, type: 3}
+    - {fileID: 21300000, guid: 1f9c2831f794fe04ebd9b3be2beeaf35, type: 3}
+    - {fileID: 21300000, guid: c96dbc142a259e842beeca239ebdb185, type: 3}
+    - {fileID: 21300000, guid: 997d652eca8cc1c46870569e2f1df07f, type: 3}
     renderer: {fileID: 1645455085}
-  - ID: FEMALE SET/NOSE/800px
+  - ID: MALE SET/NOSE/800px
     currIndex: 0
     choices:
-    - {fileID: 21300000, guid: 8d25ad718aab81e4b857530c9009fbc7, type: 3}
-    - {fileID: 21300000, guid: e954e1d2b0ba034489ff36b2a1621e3d, type: 3}
-    - {fileID: 21300000, guid: 8d689397f2f305f4aa73f847cfc5aaf3, type: 3}
-    - {fileID: 21300000, guid: 39177e33ee2e24c4ca740c5390d2bd1d, type: 3}
-    - {fileID: 21300000, guid: 8e9e1ab2f3b211646be5049e4548420a, type: 3}
+    - {fileID: 21300000, guid: 4194a324aea6d994090781c39d8e9754, type: 3}
+    - {fileID: 21300000, guid: a6a4417e550631145866c2f9e735938c, type: 3}
+    - {fileID: 21300000, guid: 3ad6138a51773b14584ee35d4598d87e, type: 3}
+    - {fileID: 21300000, guid: 4a82092a320aeb546a62acbcf0fbaae2, type: 3}
+    - {fileID: 21300000, guid: 046d0c9c0c699054c8abff436da24e09, type: 3}
     renderer: {fileID: 922484064}
-  - ID: FEMALE SET/MOUTH/800px
+  - ID: MALE SET/MOUTH/800px
     currIndex: 0
     choices:
-    - {fileID: 21300000, guid: f35bb6297d8f90248831f9393e1aa2f4, type: 3}
-    - {fileID: 21300000, guid: 470194fb0e1f8cf4b87a7d7bd784c991, type: 3}
-    - {fileID: 21300000, guid: b48040a39bb9e7141a784e96ced366ca, type: 3}
-    - {fileID: 21300000, guid: 7dcbc852b2f0cfb4488c5e6d56d771d0, type: 3}
-    - {fileID: 21300000, guid: a5df7bd328eca824299c9ac04f9321bb, type: 3}
+    - {fileID: 21300000, guid: 93242169e2373574d91ec70280bc5e44, type: 3}
+    - {fileID: 21300000, guid: 406e758e2905a3e469197f23afef5ec8, type: 3}
+    - {fileID: 21300000, guid: 21d66c674a51a004eae03eca569214c7, type: 3}
+    - {fileID: 21300000, guid: c7ab3344112c44443abb76db9ea43fec, type: 3}
+    - {fileID: 21300000, guid: f010394366bd9af419dfd88f867eedaf, type: 3}
     renderer: {fileID: 723739691}
   currentFeature: 0
   gender: male
@@ -1619,7 +1619,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f35bb6297d8f90248831f9393e1aa2f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93242169e2373574d91ec70280bc5e44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1889,7 +1889,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8d25ad718aab81e4b857530c9009fbc7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4194a324aea6d994090781c39d8e9754, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2022,52 +2022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacd831fa48e3c44589f5038f09d355d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &932822934
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4762467233569252, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 350.8354
-      objectReference: {fileID: 0}
-    - target: {fileID: 4762467233569252, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 443.0906
-      objectReference: {fileID: 0}
-    - target: {fileID: 4762467233569252, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4762467233569252, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4762467233569252, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4762467233569252, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4762467233569252, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4762467233569252, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1099651659576798, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c996edabf402dea4b98b8a213fdae44e, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &979957299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2109,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005009955
 GameObject:
@@ -3283,7 +3237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1521651462
 GameObject:
@@ -3469,7 +3423,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: eff40783295a211408c799eca641b700, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c95b64056cd388d49aadf204d0ea398e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3737,7 +3691,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 650480408bacb9044ae21482aeb9a088, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 026a51602320c13419552448aa2a3455, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4905,7 +4859,7 @@ SpriteRenderer:
   m_Size: {x: 8, y: 3.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &2108075639
 Transform:
@@ -4918,7 +4872,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2108075640
 MonoBehaviour:
@@ -4997,7 +4951,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5415eb4bed479744e9a8f4b6f070f27b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2bef9ac89e9daa4cbc64c8822601784, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

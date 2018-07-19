@@ -1,19 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonConfirm : MonoBehaviour {
 
     public GameObject confirmDialogObj;
+    public GameObject AlertPanelGameObj;
 
-    private string color;
-    private int teamid;
+    static string color = "";
+    static int teamid = 0;
 
-    private void Start()
-    {
-        teamid = 0;
-        color = "";
-    }
 
     public void setColor(string _color)
     {
@@ -23,28 +20,28 @@ public class ButtonConfirm : MonoBehaviour {
     public void setTeamid(int id)
     {
         teamid = id;
+        Debug.Log("Team ID: " + teamid);
     }
 
     public void checkJoin()
     {
         if(teamid == 0)//no team selected yet in Join
         {
-            //some alert
+            AlertPanelGameObj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Please Select a Team to Join!";
+            AlertPanelGameObj.SetActive(true);//some alert
         }
         else
         {
             confirmDialogObj.SetActive(true);
+            Debug.Log("Team ID: " + teamid);
         }
     }
 
 
     public void confirmChoice()
     {
-        if (DataPersistor.persist != null)
-        {
-            DataPersistor.persist.colorStr = color;
-            DataPersistor.persist.teamSelecetionFactionId = teamid;
-            LevelManager.lvlmgr.LoadLevel("Character Customization");
-        }
+        DataPersistor.persist.colorStr = color;
+        DataPersistor.persist.teamSelecetionFactionId = teamid;
+        LevelManager.lvlmgr.LoadLevel("Character Customization");
     }
 }
