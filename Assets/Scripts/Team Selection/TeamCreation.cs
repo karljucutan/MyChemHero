@@ -20,8 +20,8 @@ public class TeamCreation : MonoBehaviour
     public GameObject Blue, Red, Green, Yellow;  
     public Toggle CreateBlue, CreateRed, CreateGreen, CreateYellow;
     public Text BlueText, RedText, GreenText, YellowText;
-    public GameObject Back, Create;
-    public GameObject AlertPanelGameObj;
+    public GameObject JoinTeamBtn, CreateTeamBtn;
+    public GameObject PanelCreateTeamObj, AlertPanelGameObj;
     public void Start()
     {
         AudioManager.instance.StopAll();
@@ -38,9 +38,9 @@ public class TeamCreation : MonoBehaviour
 
     public void CheckToggleState(Toggle toggle)
     {
-        if(toggle.isOn)
+        if (toggle.isOn)
         {
-            switch(toggle.gameObject.name)
+            switch (toggle.gameObject.name)
             {
                 case "Blue": BlueTeam(); break;
                 case "Red": RedTeam(); break;
@@ -48,11 +48,14 @@ public class TeamCreation : MonoBehaviour
                 case "Yellow": YellowTeam(); break;
             }
         }
+        else
+            NoTeam();
     }
 
     public void BlueTeam()
     {
         teamColor = 1;
+        DataPersistor.persist.teamSelecetionFactionId = teamColor;
         DataPersistor.persist.colorStr = "blue";
 
     }
@@ -60,6 +63,7 @@ public class TeamCreation : MonoBehaviour
     public void RedTeam()
     {
         teamColor = 2;
+        DataPersistor.persist.teamSelecetionFactionId = teamColor;
         DataPersistor.persist.colorStr = "red";
 
     }
@@ -67,6 +71,7 @@ public class TeamCreation : MonoBehaviour
     public void GreenTeam()
     {
         teamColor = 3;
+        DataPersistor.persist.teamSelecetionFactionId = teamColor;
         DataPersistor.persist.colorStr = "green";
 
     }
@@ -74,6 +79,7 @@ public class TeamCreation : MonoBehaviour
     public void YellowTeam()
     {
         teamColor = 4;
+        DataPersistor.persist.teamSelecetionFactionId = teamColor;
         DataPersistor.persist.colorStr = "yellow";
 
     }
@@ -81,6 +87,7 @@ public class TeamCreation : MonoBehaviour
     public void NoTeam()
     {
         teamColor = 0;
+        DataPersistor.persist.teamSelecetionFactionId = teamColor;
         DataPersistor.persist.colorStr = "";
     }
    
@@ -88,8 +95,17 @@ public class TeamCreation : MonoBehaviour
     {
         if (ListOfTeams.TeamList.Count >= 4)
         {
-            Create.SetActive(false);
-            Back.SetActive(true);
+            //Alert: no more teams to create
+            AlertPanelGameObj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Can't create beyond 4 teams, please join an existing one instead";
+            AlertPanelGameObj.SetActive(true);
+
+        }
+        else
+        {
+            NoTeam(); //clear DataPersistor Values if player tried to Join Team first, but Clicked Create afterwards
+            JoinTeamBtn.SetActive(false);
+            CreateTeamBtn.SetActive(false);
+            PanelCreateTeamObj.SetActive(true);
         }
     }
 
