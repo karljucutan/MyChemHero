@@ -262,7 +262,7 @@ namespace Assets.Scripts
                     }
                 }
            },
-           new ElementGroups{city="cityId_11",elements=new List<Element>(){
+           new ElementGroups{city="CityId_11",elements=new List<Element>(){
                     new Element{
                         name="O",
                         tag="Gas"
