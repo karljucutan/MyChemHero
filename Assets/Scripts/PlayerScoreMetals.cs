@@ -158,6 +158,7 @@ public class PlayerScoreMetals : MonoBehaviour {
                 {
                     jars.gameObject.GetComponent<BoxCollider>().enabled = false;
                 }
+                GameObject.Find("TimerText").GetComponent<timerscript>().StopTime();
                 gameOverPanel.SetActive(true);
                 StartCoroutine("LoadEndingScene");
             }

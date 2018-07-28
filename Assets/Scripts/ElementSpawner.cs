@@ -35,34 +35,54 @@ public class ElementSpawner : MonoBehaviour {
         if (SceneManager.GetActiveScene().name.Equals("SegregationVer1"))
         {
             var elemento = ListElementGroup.TOXICNONTOXIC.Where(x => x.city.Equals(DataPersistor.persist.sectorCity)).SingleOrDefault();
-            foreach (Element ele in elemento.elements)
+            var eles = elemento.elements.Take(3);
+            //foreach (Element ele in elemento.elements)
+            //{
+            //    elementos.Add(ele);
+            //}
+            for (int x = 0; x <= 3; x++)
             {
-                elementos.Add(ele);
+                elementos.Add(Randomizer(elemento.elements));
             }
-            var asd = elementos;
+
+            
         }
         else if (SceneManager.GetActiveScene().name.Equals("SegregationVer2"))
         {
             var elemento = ListElementGroup.METALS.Where(x => x.city.Equals(DataPersistor.persist.sectorCity)).SingleOrDefault();
-            foreach (Element ele in elemento.elements)
+            //foreach (Element ele in elemento.elements)
+            //{
+            //    elementos.Add(ele);
+            //}
+            for (int x = 0; x <= 3; x++)
             {
-                elementos.Add(ele);
+                elementos.Add(Randomizer(elemento.elements));
             }
         }
         else if (SceneManager.GetActiveScene().name.Equals("SegregationVer3"))
         {
             var elemento = ListElementGroup.SOLIDLIQUIDGAS.Where(x => x.city.Equals(DataPersistor.persist.sectorCity)).SingleOrDefault();
-            foreach (Element ele in elemento.elements)
+            //foreach (Element ele in elemento.elements)
+            //{
+            //    elementos.Add(ele);
+            //}
+            for (int x = 0; x <= 3; x++)
             {
-                elementos.Add(ele);
+                elementos.Add(Randomizer(elemento.elements));
             }
         }
+        var asd = elementos;
         // var elemento = ListElementGroup.SOLIDLIQUIDGAS.Where(x => x.cityNum == 5).SingleOrDefault(); //change 5 depends sa citynum nung icoconquer
 
 
         collider = GetComponent<BoxCollider>();
         x1 = transform.position.x - collider.bounds.size.x / 2f;
         x2 = transform.position.x + collider.bounds.size.x / 2f;
+    }
+    private Element Randomizer(List<Element> elements)
+    {
+        var randomnum = Random.Range(0, elements.Count);
+        return elements[randomnum];
     }
     public void queueElement()
     {

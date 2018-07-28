@@ -165,6 +165,7 @@ public class PlayerScore : MonoBehaviour {
                 {
                     jars.gameObject.GetComponent<BoxCollider>().enabled = false;
                 }
+                GameObject.Find("TimerText").GetComponent<timerscript>().StopTime();
                 gameOverUI.SetActive(true);
                 StartCoroutine("LoadEndingScene");
             }

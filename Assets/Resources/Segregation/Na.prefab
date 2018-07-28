@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54172532821345184}
   m_Layer: 0
   m_Name: Na
-  m_TagString: Metal
+  m_TagString: Toxic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

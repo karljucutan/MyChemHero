@@ -324,7 +324,7 @@ public class Dialogue : MonoBehaviour
                 DataPersistor.persist.difficultyMultiplier = 2;
 
                 minigame = Randomizer(gamesCityId_1);
-                //minigame = "MinigameFreeThrowVer1";
+                //minigame = "SegregationVer3";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":

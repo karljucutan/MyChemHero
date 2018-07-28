@@ -16,6 +16,10 @@ public class timerscript : MonoBehaviour {
         timerOb = GetComponent<Text>();
         InvokeRepeating("StartTimer", 0, 0.1f);
 	}
+    public void StopTime()
+    {
+        CancelInvoke("StartTimer");
+    }
     private void StartTimer()
     {
         milli--;

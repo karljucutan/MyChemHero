@@ -45,6 +45,7 @@ public class PlayerScoreToxics : MonoBehaviour {
 
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
         scoreText.text = score.ToString();
+
 	}
 
     void OnTriggerEnter(Collider target)
@@ -126,6 +127,7 @@ public class PlayerScoreToxics : MonoBehaviour {
                 {
                     jars.gameObject.GetComponent<BoxCollider>().enabled = false;
                 }
+                GameObject.Find("TimerText").GetComponent<timerscript>().StopTime();
                 gameOverUI.SetActive(true);
                 StartCoroutine("LoadEndingScene");
             }
