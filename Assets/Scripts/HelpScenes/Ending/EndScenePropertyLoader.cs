@@ -32,7 +32,30 @@ public class EndScenePropertyLoader : MonoBehaviour {
     public GameObject TotalPoints;
     private void Awake()
     {
-        DialogueText.GetComponent<Dialogue>().dialogueString = DataPersistor.persist.endSceneDialogueString;
+        //    
+        string[] endSceneDialogueStringWIN = new string[2];
+        endSceneDialogueStringWIN[0] = "Wow! You have conquered the sector!";
+        endSceneDialogueStringWIN[1] = "Good Job Apprentice, keep up the good work and keep up conquering the sectors!";
+
+        string[] endSceneDialogueStringLOSE = new string[2];
+        endSceneDialogueStringLOSE[0] = "Ughhhhh, You have failed to conquer the sector...";
+        endSceneDialogueStringLOSE[1] = "Try again and better luck next time!";
+
+        string[] info = DataPersistor.persist.values[DataPersistor.persist.currentSectorNumber - 1].Split(';');
+        var currentScore = int.Parse(info[1]);
+
+        DataPersistor.persist.totalPoints = DataPersistor.persist.accumulatedPoints * DataPersistor.persist.difficultyMultiplier;
+        Debug.Log("ID:" + (info[0]) + " SectorNumber:  " + DataPersistor.persist.currentSectorNumber + " Score: " + currentScore);
+        Debug.Log("TOTALPOINTS: " + DataPersistor.persist.totalPoints);
+        if (DataPersistor.persist.totalPoints > currentScore)
+        {
+            DialogueText.GetComponent<Dialogue>().dialogueString = endSceneDialogueStringWIN;
+        }
+        else
+        {
+            DialogueText.GetComponent<Dialogue>().dialogueString = endSceneDialogueStringLOSE;
+        }
+        //DialogueText.GetComponent<Dialogue>().dialogueString = DataPersistor.persist.endSceneDialogueString;
     }
     private void Start()
     {

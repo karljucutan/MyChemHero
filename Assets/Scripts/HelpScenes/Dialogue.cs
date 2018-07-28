@@ -169,11 +169,11 @@ public class Dialogue : MonoBehaviour
             {
                 //if (DataPersistor.persist.mTime.minutes <= 0 && DataPersistor.persist.mTime.seconds <= 0)
                 //{
-                    string[] info = DataPersistor.persist.values[DataPersistor.persist.currentSectorNumber - 1].Split(';');
-                    var currentScore = int.Parse(info[1]);
-                    Debug.Log("ID:" + (info[0]) + " SectorNumber:  " + DataPersistor.persist.currentSectorNumber + " Score: " + currentScore);
+                        string[] info = DataPersistor.persist.values[DataPersistor.persist.currentSectorNumber - 1].Split(';');
+                        var currentScore = int.Parse(info[1]);
+                        //Debug.Log("ID:" + (info[0]) + " SectorNumber:  " + DataPersistor.persist.currentSectorNumber + " Score: " + currentScore);
 
-                    DataPersistor.persist.totalPoints = DataPersistor.persist.accumulatedPoints * DataPersistor.persist.difficultyMultiplier;
+                        //DataPersistor.persist.totalPoints = DataPersistor.persist.accumulatedPoints * DataPersistor.persist.difficultyMultiplier;
                     
                     if (DataPersistor.persist.totalPoints > currentScore)
                     {
@@ -310,7 +310,7 @@ public class Dialogue : MonoBehaviour
         //         40 / x 3 multiplier - level 3 difficulty
     
         string[] dialogue;
-        string[] endSceneDialogueString;
+        
 
         switch (DataPersistor.persist.sectorCity)
         {
@@ -324,7 +324,7 @@ public class Dialogue : MonoBehaviour
                 DataPersistor.persist.difficultyMultiplier = 2;
 
                 minigame = Randomizer(gamesCityId_1);
-               
+                minigame = "SegregationVer1";
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":
@@ -337,11 +337,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); break;
 
                     case "MinigameFreeThrowVer1":
@@ -352,11 +347,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -366,13 +356,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                       
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     case "MinigameFreeThrowVer3": 
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -381,12 +364,7 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object on a moving board";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
+                        
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
   
                     case "SegregationVer1":
@@ -397,12 +375,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
-
                         DataPersistor.persist.segregationTimer = 50;break;
                     case "SegregationVer2":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -411,12 +383,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
 
                         DataPersistor.persist.segregationTimer = 50;
                         break;
@@ -427,12 +393,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
 
                         DataPersistor.persist.segregationTimer = 50;
                         break; 
@@ -464,11 +424,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); break;
 
                     case "MinigameFreeThrowVer1":
@@ -479,12 +434,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -494,11 +443,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     case "MinigameFreeThrowVer3":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -507,12 +451,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object on a moving board";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
 
@@ -524,11 +462,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 50;
                         break;
                     case "SegregationVer2":
@@ -539,13 +472,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 50;
                         break;
                     case "SegregationVer3":
@@ -555,12 +481,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
                         break;
@@ -591,11 +511,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); break;
 
                     case "MinigameFreeThrowVer1":
@@ -605,13 +520,7 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
+                        
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     case "MinigameFreeThrowVer2":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -621,12 +530,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
                     case "MinigameFreeThrowVer3":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -635,12 +538,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object on a moving board";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
           
@@ -652,11 +549,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 50;
                         break;
                     case "SegregationVer2":
@@ -667,13 +559,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 50;
                         break;
                     case "SegregationVer3":
@@ -683,12 +568,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
                         break;
@@ -715,11 +594,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); break;
 
                     case "MinigameFreeThrowVer1":
@@ -729,12 +603,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break; // DataPersistor.persist.Timechange - n sa time ,every n seconds change ng compound sa freethrowgame
                     
@@ -746,12 +614,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 50, 10); DataPersistor.persist.Timechange = 10; break;
    
                     case "SegregationVer2":
@@ -762,13 +624,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 50;
                         break;
                     case "SegregationVer3":
@@ -778,12 +633,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 50;
                         break;
@@ -811,12 +660,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
 
                     case "SegregationVer1":
@@ -826,12 +669,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -843,12 +680,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -858,12 +689,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
@@ -886,12 +711,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 40;
                         break;
                     case "SegregationVer3":
@@ -901,12 +720,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
                         break; 
@@ -934,12 +747,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -948,12 +755,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -965,12 +766,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -980,12 +775,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1011,12 +800,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Segregate each element by shooting the appropriate ball";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
                    
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1026,12 +809,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1043,12 +820,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1058,12 +829,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
@@ -1091,11 +856,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
                         //change to 60 yung time
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1105,12 +865,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1122,12 +876,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1137,12 +885,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
@@ -1169,11 +911,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
                         //change to 60 yung time
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1183,12 +920,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1200,12 +931,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1215,12 +940,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
@@ -1246,12 +965,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Segregate each element by shooting the appropriate ball";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
              
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1261,12 +974,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1278,12 +985,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1293,12 +994,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1325,12 +1020,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Segregate each element by shooting the appropriate ball";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
                
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1340,12 +1029,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1357,12 +1040,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1372,12 +1049,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
@@ -1401,12 +1072,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 40;
                         break;
                     case "SegregationVer3":
@@ -1416,12 +1081,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
                         break; 
@@ -1444,12 +1103,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 40;
                         break;
                     case "SegregationVer3":
@@ -1459,12 +1112,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
                         break; 
@@ -1488,12 +1135,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 40;
                         break;
                     case "SegregationVer3":
@@ -1503,12 +1144,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 40;
                         break; 
@@ -1534,12 +1169,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Segregate each element by shooting the appropriate ball";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
                    
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1549,12 +1178,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1566,12 +1189,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1581,12 +1198,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
@@ -1613,12 +1224,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Segregate each element by shooting the appropriate ball";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
          
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1628,12 +1233,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1645,12 +1244,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1660,12 +1253,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
@@ -1691,12 +1278,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Segregate each element by shooting the appropriate ball";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
              
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1706,12 +1287,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1723,12 +1298,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1738,12 +1307,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
@@ -1769,12 +1332,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Segregate each element by shooting the appropriate ball";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
          
                         SetTime(0, 60, 10); DataPersistor.persist.Timechange = 10; break;
                     case "SegregationVer1":
@@ -1784,12 +1341,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break;
@@ -1801,12 +1352,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
-
                         DataPersistor.persist.segregationTimer = 60;
                         break;
                     case "SegregationVer3":
@@ -1816,12 +1361,6 @@ public class Dialogue : MonoBehaviour
                         dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
-
-
-                        //dialogue ng hero sa end scene
-                        endSceneDialogueString = new string[1];
-                        endSceneDialogueString[0] = "Good Job Apprentice, Keep up the good work!";
-                        DataPersistor.persist.endSceneDialogueString = endSceneDialogueString;
 
                         DataPersistor.persist.segregationTimer = 60;
                         break; 
