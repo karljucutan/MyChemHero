@@ -324,7 +324,7 @@ public class Dialogue : MonoBehaviour
                 DataPersistor.persist.difficultyMultiplier = 2;
 
                 minigame = Randomizer(gamesCityId_1);
-                //minigame = "SegregationVer3";
+               
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFullDragDrop":
@@ -347,8 +347,8 @@ public class Dialogue : MonoBehaviour
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to M.Curie City";
-                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
-                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the object";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
@@ -377,8 +377,8 @@ public class Dialogue : MonoBehaviour
                     case "MinigameFreeThrowVer3": 
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to M.Curie City";
-                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
-                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound on a moving board";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the object";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object on a moving board";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
@@ -474,8 +474,8 @@ public class Dialogue : MonoBehaviour
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to L. Pasteur City";
-                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
-                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the object";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
@@ -503,8 +503,8 @@ public class Dialogue : MonoBehaviour
                     case "MinigameFreeThrowVer3":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to L. Pasteur City";
-                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
-                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound on a moving board";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the object";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object on a moving board";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
@@ -601,8 +601,8 @@ public class Dialogue : MonoBehaviour
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to J. Dalton City";
-                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
-                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the object";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
@@ -631,8 +631,8 @@ public class Dialogue : MonoBehaviour
                     case "MinigameFreeThrowVer3":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to J. Dalton City";
-                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
-                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound on a moving board";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the object";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object on a moving board";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
@@ -725,8 +725,8 @@ public class Dialogue : MonoBehaviour
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to M. Faraday City";
-                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
-                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the object";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
@@ -741,8 +741,8 @@ public class Dialogue : MonoBehaviour
                     case "MinigameFreeThrowVer3":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
                         dialogue[0] = "Welcome to M. Faraday City";
-                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the compound";
-                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the compound on a moving board";
+                        dialogue[1] = "We have received reports that they need assistance on identifying elements that can be found on the object";
+                        dialogue[2] = "Do this by shooting the ball with respective Element that you think is a composition of the object on a moving board";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 
