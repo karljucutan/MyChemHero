@@ -4,25 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ButtonConfirm : MonoBehaviour {
+public class JoinTeamManager : MonoBehaviour {
 
-    public GameObject confirmDialogObj;
+    public GameObject JoinTeamButtonObj;
     public GameObject AlertPanelGameObj;
-    public GameObject JoinGameButtonObj;
-
-
     private bool SelectedTeam = false;
+
+    private void Start()
+    {
+        NoTeam();
+    }
 
     private void Update()
     {
         if (SelectedTeam)
         {
-            JoinGameButtonObj.GetComponent<Button>().interactable = true;
+            JoinTeamButtonObj.GetComponent<Button>().interactable = true;
             var pointer = new PointerEventData(EventSystem.current); // pointer event for Execute
-            ExecuteEvents.Execute(JoinGameButtonObj, pointer, ExecuteEvents.pointerEnterHandler);//force hover
+            ExecuteEvents.Execute(JoinTeamButtonObj, pointer, ExecuteEvents.pointerEnterHandler);//force hover
         }
         else
-            JoinGameButtonObj.GetComponent<Button>().interactable = false;
+            JoinTeamButtonObj.GetComponent<Button>().interactable = false;
     }
 
     public void SetSelectedTeamTeamState(bool state)
@@ -48,7 +50,7 @@ public class ButtonConfirm : MonoBehaviour {
             NoTeam();
             SetSelectedTeamTeamState(false);
         }
-            
+
     }
 
     public void BlueTeam()
@@ -83,14 +85,14 @@ public class ButtonConfirm : MonoBehaviour {
 
     public void checkJoin()
     {
-        if(DataPersistor.persist.teamSelecetionFactionId == 0)//no team selected yet in Join
+        if (DataPersistor.persist.teamSelecetionFactionId == 0)//no team selected yet in Join
         {
             AlertPanelGameObj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Please Select a Team to Join!";
             AlertPanelGameObj.SetActive(true);//some alert
         }
         else
         {
-            confirmDialogObj.SetActive(true);
+            confirmChoice();
         }
     }
 

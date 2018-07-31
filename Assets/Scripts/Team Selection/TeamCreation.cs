@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Assets.Scripts.Minigame.Models;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using UnityEngine.EventSystems;
 using System;
 
 public class TeamCreation : MonoBehaviour
@@ -16,11 +17,12 @@ public class TeamCreation : MonoBehaviour
     private string teamName = "";
     public InputField teamNameInputField;
     private Team tempTeam;
+    private bool teamNameSupplied = false, teamFlagSelected = false;
 
     public GameObject Blue, Red, Green, Yellow;  
     public Toggle CreateBlue, CreateRed, CreateGreen, CreateYellow;
     public Text BlueText, RedText, GreenText, YellowText;
-    public GameObject JoinTeamBtn, CreateTeamBtn;
+    public GameObject JoinTeamBtn, CreateTeamBtn, CreateConfirmBtn;
     public GameObject PanelCreateTeamObj, AlertPanelGameObj;
     public void Start()
     {
@@ -30,10 +32,45 @@ public class TeamCreation : MonoBehaviour
         StartCoroutine(starPollingGetTeamsCreated());
 
     }
+
+    public void setTeamNameState(bool state)
+    {
+        teamNameSupplied = state;
+    }
+
+    public void setFlagState(bool state)
+    {
+        teamFlagSelected = state;
+    }
+
+    private void Update()
+    {
+        if (teamNameSupplied && teamFlagSelected)
+        {
+            CreateConfirmBtn.GetComponent<Button>().interactable = true;
+
+            var pointer = new PointerEventData(EventSystem.current); // pointer event for Execute
+            ExecuteEvents.Execute(CreateConfirmBtn, pointer, ExecuteEvents.pointerEnterHandler);//force hover
+        }
+        else
+            CreateConfirmBtn.GetComponent<Button>().interactable = false;
+    }
     // Invoked when the value of the text field changes.
     public void ValueChangeCheck()
     {
-        teamName = teamNameInputField.text;
+        string textOnField = teamNameInputField.text.Trim();
+
+        if(!string.IsNullOrEmpty(textOnField))
+        {
+            teamName = teamNameInputField.text;
+            setTeamNameState(true);
+        }
+        else
+        {
+            teamName = "";
+            setTeamNameState(false);
+        }
+        
     }
 
     public void CheckToggleState(Toggle toggle)
@@ -47,9 +84,14 @@ public class TeamCreation : MonoBehaviour
                 case "Green": GreenTeam(); break;
                 case "Yellow": YellowTeam(); break;
             }
+            setFlagState(true);
         }
         else
+        {
             NoTeam();
+            setFlagState(false);
+        }
+            
     }
 
     public void BlueTeam()

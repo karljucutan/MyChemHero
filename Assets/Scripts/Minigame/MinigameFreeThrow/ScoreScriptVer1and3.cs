@@ -19,8 +19,8 @@ public class ScoreScriptVer1and3 : MonoBehaviour {
             if (compound.Composition.Contains(collide.gameObject.name) && DataPersistor.persist.mTime.seconds > 0)
             {
                 DataPersistor.persist.accumulatedPoints += 1;
-               
-                //SOUND EFFECT
+
+                AudioManager.instance.Play("Cheer");//SOUND EFFECT
                 text.text = string.Format("{0:00}", DataPersistor.persist.accumulatedPoints);
             }
         }

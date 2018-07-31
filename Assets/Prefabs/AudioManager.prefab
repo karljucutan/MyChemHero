@@ -189,3 +189,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
     loop: 0
     source: {fileID: 0}
+  - name: Cheer
+    tag: 1
+    clip: {fileID: 8300000, guid: 95b7828ba1d6cc24f8674410b1379f1c, type: 3}
+    loop: 0
+    source: {fileID: 0}
