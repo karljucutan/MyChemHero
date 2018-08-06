@@ -18,31 +18,31 @@ EditorBuildSettings:
     path: Assets/_Scenes/HelpScenes/StartScene.unity
     guid: cc47d5af639222246b59f6271029fb26
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_BakersDilemma.unity
+    path: 
     guid: 471361c7c29d8024c9b1e355f412c9eb
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_CloudSeeding.unity
+    path: 
     guid: 414d8216489623f4e84d3ede3a07d959
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_Fire.unity
+    path: 
     guid: 20405000150daad4cbde3eb4595838d6
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_LandLubberScurvy.unity
+    path: 
     guid: 72078e6d98f50284aa535de5836d3e9a
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_MedicPanic.unity
+    path: 
     guid: c242ef876fc87a148af1fef4f62d7689
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_Shokugeki.unity
+    path: 
     guid: fb663f3cf123c494397549ec55c96b95
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_StayCleanStaySafe.unity
+    path: 
     guid: c8303ea445e4da942811e5696b4b4d66
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_ToothFairy.unity
+    path: 
     guid: 985beb3159c8db740af80732734a8ba7
   - enabled: 0
-    path: Assets/_Scenes/HelpScenes/Help_ToSpace.unity
+    path: 
     guid: 944487dfd79f4c8478ba4858d72b8376
   - enabled: 1
     path: Assets/_Scenes/Character Customization.unity
