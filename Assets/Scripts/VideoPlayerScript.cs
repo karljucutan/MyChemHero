@@ -8,29 +8,37 @@ public class VideoPlayerScript : MonoBehaviour {
 
 	public VideoPlayer vidplayer;
 
+    private bool playStarted = false;
+    private bool clickedSkip = false;
+
     private void Awake()
     {
-        //vidplayer.url = Configuration.VideoURL;
+        vidplayer.url = Configuration.VideoURL;
         vidplayer.SetTargetAudioSource(0, GetComponent<AudioSource>());
-        vidplayer.Play();
+        vidplayer.Prepare();
     }
+
 
     void Update()
     {
-        
-            //if (Input.anyKeyDown)
-            //{
-            //    vidplayer.Pause();
-            //}
-            if (vidplayer.isPlaying == false)
+        if(playStarted == false)
+        {
+            if(vidplayer.isPrepared)
             {
-                LevelManager.lvlmgr.LoadLevel("Load");
+                vidplayer.Play();
+                playStarted = true;
             }
-        
+        }
+
+        if ((playStarted || clickedSkip) && vidplayer.isPlaying == false)
+        {
+            LevelManager.lvlmgr.LoadLevel("Load");
+        }
     }
 
     public void StopVideo()
     {
         vidplayer.Stop();
+        clickedSkip = true;
     }
 }
