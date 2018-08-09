@@ -175,7 +175,7 @@ public class Dialogue : MonoBehaviour
 
                         //DataPersistor.persist.totalPoints = DataPersistor.persist.accumulatedPoints * DataPersistor.persist.difficultyMultiplier;
                     
-                    if (DataPersistor.persist.totalPoints >= currentScore)
+                    if (DataPersistor.persist.totalPoints >= currentScore && DataPersistor.persist.totalPoints!=0)
                     {
                         //Debug.Log(DataPersistor.persist.totalPoints);
                         StartCoroutine(PostScores());

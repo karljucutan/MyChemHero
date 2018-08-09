@@ -47,7 +47,7 @@ public class EndScenePropertyLoader : MonoBehaviour {
         DataPersistor.persist.totalPoints = DataPersistor.persist.accumulatedPoints * DataPersistor.persist.difficultyMultiplier;
         Debug.Log("ID:" + (info[0]) + " SectorNumber:  " + DataPersistor.persist.currentSectorNumber + " Score: " + currentScore);
         Debug.Log("TOTALPOINTS: " + DataPersistor.persist.totalPoints);
-        if (DataPersistor.persist.totalPoints > currentScore)
+        if (DataPersistor.persist.totalPoints >= currentScore && DataPersistor.persist.totalPoints!=0)
         {
             DialogueText.GetComponent<Dialogue>().dialogueString = endSceneDialogueStringWIN;
         }
