@@ -337,7 +337,7 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
-                        SetTime(0, 50, 10); break;
+                        SetTime(0, 59, 0); break;
 
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -424,7 +424,7 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
-                        SetTime(0, 50, 10); break;
+                        SetTime(0, 59, 0); break;
 
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -511,7 +511,7 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
-                        SetTime(0, 50, 10); break;
+                        SetTime(0, 59, 0); break;
 
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
@@ -594,7 +594,7 @@ public class Dialogue : MonoBehaviour
                         dialogue[3] = "Lets do our best and prove that our Agency is first-rate!";
                         dialogueString = dialogue;
 
-                        SetTime(0, 50, 10); break;
+                        SetTime(0, 59, 0); break;
 
                     case "MinigameFreeThrowVer1":
                         dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
