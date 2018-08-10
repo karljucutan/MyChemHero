@@ -38,7 +38,7 @@ public class Dialogue : MonoBehaviour
     List<string> gamesCityId_4 = new List<string>() { "MinigameFullDragDrop", "MinigameFullDragDrop", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer1", "MinigameFreeThrowVer3" };
     List<string> gamesCityId_5 = new List<string>() { "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer2" };
     List<string> gamesCityId_6 = new List<string>() { "SegregationVer2", "SegregationVer3" };
-    List<string> gamesCityId_7 = new List<string>() { "SegregationVer1", "SegregationVer3", "MinigameFreeThrowVer2" };
+    List<string> gamesCityId_7 = new List<string>() { "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer2" };
     List<string> gamesCityId_8 = new List<string>() { "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer2" };
     List<string> gamesCityId_9 = new List<string>() { "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer2" };
     List<string> gamesCityId_10 = new List<string>() { "SegregationVer1", "SegregationVer2", "SegregationVer3", "MinigameFreeThrowVer2" };
@@ -736,7 +736,6 @@ public class Dialogue : MonoBehaviour
                 DataPersistor.persist.difficultyMultiplier = 1;
 
                 minigame = Randomizer(gamesCityId_7);
-               
                 switch (minigame)
                 {   // mag kakamali tong time change sa shootinggame ballchoicemanager update method kapag may minutes na kasi 1:00:00 seconds yung miniminusan sa start ng time
                     case "MinigameFreeThrowVer2":
@@ -753,6 +752,16 @@ public class Dialogue : MonoBehaviour
                         dialogue[0] = "Welcome to R. Boyle City";
                         dialogue[1] = "We have received reports that they need assistance on Segregating elements from Toxic to Non-Toxic";
                         dialogue[2] = "Do this by clicking on the jar with the appropriate Label to successfully segregate each elements";
+                        dialogue[3] = "Lets do our best and prove that our Agency is the best";
+                        dialogueString = dialogue;
+
+                        DataPersistor.persist.segregationTimer = 60;
+                        break;
+                    case "SegregationVer2":
+                        dialogue = new string[4]; // change size depende sa dami ng lines ng saasabihin
+                        dialogue[0] = "Welcome to R. Boyle City";
+                        dialogue[1] = "We have received reports that they need assistance on Segregating elements to identify if it's Metal,NonMetal or Metalloid";
+                        dialogue[2] = "Do this by clicking on the jar with appropriate the Label to successfully segregate each elements";
                         dialogue[3] = "Lets do our best and prove that our Agency is the best";
                         dialogueString = dialogue;
 

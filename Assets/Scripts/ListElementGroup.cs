@@ -975,7 +975,34 @@ namespace Assets.Scripts
                     },
                     new Element{
                         name="Pt",
-                        tag="Solid"
+                        tag="Metal"
+                    }
+                }
+           },
+            new ElementGroups{city="CityId_7",elements=new List<Element>(){
+                    new Element{
+                        name="Cu",
+                        tag="Metal"
+                    },
+                    new Element{
+                        name="Ag",
+                        tag="Metal"
+                    },
+                    new Element{
+                        name="Au",
+                        tag="Metal"
+                    },
+                    new Element{
+                        name="Zn",
+                        tag="Metal"
+                    },
+                    new Element{
+                        name="Cd",
+                        tag="Metal"
+                    },
+                    new Element{
+                        name="Hg",
+                        tag="Metal"
                     }
                 }
            },
