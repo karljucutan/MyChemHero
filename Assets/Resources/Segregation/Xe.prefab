@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54173693835121072}
   m_Layer: 0
   m_Name: Xe
-  m_TagString: NonMetal
+  m_TagString: Gas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -53,8 +53,8 @@ public class LoadScreeenControl : MonoBehaviour {
         else
         {
 
-            DataPersistor.persist.user.ID = int.Parse(get.text); //set actual retrieved ID from unityLink
-            //DataPersistor.persist.user.ID = Configuration.ID; //temporary player ID set thru Configuration.CS
+            //DataPersistor.persist.user.ID = int.Parse(get.text); //set actual retrieved ID from unityLink
+            DataPersistor.persist.user.ID = Configuration.ID; //temporary player ID set thru Configuration.CS
             idFlag = true;
             slider.value += 0.25f;
         }

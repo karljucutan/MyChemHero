@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54888251829988024}
   m_Layer: 0
   m_Name: Co
-  m_TagString: Metal
+  m_TagString: Solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
